@@ -1,0 +1,19 @@
+{
+ "timezone": "Africa/Johannesburg",
+ "days_ahead": 2,
+ "slots": [
+  {
+   "id": "A",
+   "tiktok": "07:15",
+   "instagram": "19:45",
+   "youtube": "19:45"
+  },
+  {
+   "id": "B",
+   "tiktok": "20:45"
+  }
+ ],
+ "handle": "@calmquraan.daily",
+ "credit_footage": true,
+ "x264_preset": "medium"
+}
