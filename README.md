@@ -20,7 +20,7 @@ Total cost: R0. GitHub Actions, GitHub Pages, Buffer Free (3 channels, 10 queued
 ## Setup (done once)
 
 1. Buffer: TikTok + Instagram (Creator/Business) connected; a personal API key with `account:read`, `posts:read`, `posts:write`.
-2. Repo secret `QURAANI_SECRETS` (Settings > Secrets and variables > Actions) containing one line: `BUFFER_API_KEY=...`
+2. Repo secret `BUFFER_API_KEY` (Settings > Secrets and variables > Actions) holding the Buffer key. Buffer keys last up to a year: when it expires, make a new one in Buffer (Settings > API) and paste it over this secret.
 3. Actions > Quraani daily > Run workflow > `check`. Then Settings > Pages > Deploy from a branch > `gh-pages` / root. Run `check` again until all lines say OK, then run `daily` once.
 
 ## Changing things
