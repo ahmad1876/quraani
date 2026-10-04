@@ -94,6 +94,15 @@ def _request_build() -> None:
         pass
 
 
+def is_live(url: str) -> bool:
+    try:
+        req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "quraani"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return r.status == 200
+    except Exception:
+        return False
+
+
 def wait_live(url: str, timeout: int = 900) -> None:
     t0 = time.time()
     while time.time() - t0 < timeout:

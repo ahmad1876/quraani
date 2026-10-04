@@ -23,7 +23,7 @@ def _weighted_order(items, weight, rng):
 
 
 def choose(n: int, history: list[dict], rng: random.Random | None = None,
-           passage_gap: int = 28, reciter_gap: int = 3) -> list[tuple[dict, str]]:
+           passage_gap: int = 60, reciter_gap: int = 3) -> list[tuple[dict, str]]:
     """Return n (passage, reciter_key) pairs that fit the length limit."""
     rng = rng or random.Random()
     recs = recitation.reciters()

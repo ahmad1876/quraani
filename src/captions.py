@@ -25,7 +25,7 @@ ARABIC_TAGS = ["قرآن", "تلاوة"]
 def plain(text: str) -> str:
     """ASCII-friendly English: straight quotes, no dashes or invisible characters."""
     rep = {"—": " - ", "–": "-", "‘": "'", "’": "'", "“": '"', "”": '"',
-           "…": "...", " ": " "}
+           "…": "...", "\u00a0": " "}
     for k, v in rep.items():
         text = text.replace(k, v)
     text = "".join(c for c in text if unicodedata.category(c) not in ("Cf", "Co", "Cs"))
@@ -58,7 +58,11 @@ def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True) -> s
     ref = meta["ref"]
     surah = plain(meta["surah_en"])
     hook = plain(meta.get("hook") or "")
-    tr = _short(meta.get("translation", ""), 420 if platform == "instagram" else 300).replace('"', "'")
+    tr = _short(meta.get("translation", ""), 420 if platform in ("instagram", "youtube") else 300).replace('"', "'")
+    if tr and not tr.endswith("..."):  # a verse cut mid-sentence ends with a dash or comma in the translation
+        tr = re.sub(r"[\s,;:-]+$", "", tr)
+        if tr and tr[-1] not in ".!?')]":
+            tr += " ..."
     tags_extra = [reciter_hashtag(meta, reciter_tag), surah_tag(meta["surah_en"])]
     if meta["passage"] == "2:255":
         tags_extra.append("ayatulkursi")
@@ -80,7 +84,10 @@ def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True) -> s
             lines += [footage, ""]
         lines.append(" ".join(tags))
     elif platform == "youtube":
-        lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} - {plain(meta['reciter_en'])}", "", " ".join(tags[:6])]
+        lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} - {plain(meta['reciter_en'])}", ""]
+        if footage:
+            lines += [footage, ""]
+        lines.append(" ".join(["#shorts"] + tags[:6]))
     else:  # tiktok
         lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} | {plain(meta['reciter_en'])}", ""]
         if footage:
@@ -90,4 +97,10 @@ def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True) -> s
 
 
 def youtube_title(meta: dict) -> str:
-    return plain(f"{meta['hook'].rstrip('.')} | Surah {meta['surah_en']} {meta['ref']} | {meta['reciter_en']}")[:95]
+    """YouTube allows 100 characters: drop the reciter before cutting anything else."""
+    hook = plain(meta["hook"]).rstrip(".")
+    surah = f"Surah {plain(meta['surah_en'])} {meta['ref']}"
+    for title in (f"{hook} | {surah} | {plain(meta['reciter_en'])}", f"{hook} | {surah}"):
+        if len(title) <= 100:
+            return title
+    return hook[:100].rsplit(" ", 1)[0]
