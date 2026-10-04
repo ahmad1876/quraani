@@ -1,6 +1,6 @@
 {
  "timezone": "Africa/Johannesburg",
- "days_ahead": 2,
+ "days_ahead": 1,
  "slots": [
   {
    "id": "A",
@@ -12,6 +12,14 @@
    "id": "B",
    "tiktok": "20:45",
    "youtube": "16:15"
+  },
+  {
+   "id": "C",
+   "tiktok": "12:15"
+  },
+  {
+   "id": "D",
+   "tiktok": "16:45"
   }
  ],
  "handle": "@calmquraan.daily",

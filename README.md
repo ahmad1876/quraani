@@ -1,6 +1,6 @@
 # Quraani: automatic Quran recitation shorts
 
-Every day this repo makes two 9:16 videos (up to 45 s) and schedules them through Buffer's free plan: TikTok (2 a day), YouTube Shorts (2 a day) and Instagram Reels (1 a day).
+Every day this repo makes four 9:16 videos (up to 45 s) and schedules them through Buffer's free plan: TikTok (4 a day), YouTube Shorts (2 a day) and Instagram Reels (1 a day).
 
 Each video is:
 - a popular passage (`catalog/passages.json`, 109 passages) recited by a well-known reciter (`catalog/reciters.json`, 28 reciters). Clips always start and end on whole ayahs.
@@ -12,10 +12,10 @@ Total cost: R0. GitHub Actions, GitHub Pages, Buffer Free (3 channels, 10 queued
 
 ## How it runs
 
-`.github/workflows/daily.yml` runs every night at 03:17 (SA time):
+`.github/workflows/daily.yml` runs every night at 03:17 (SA time), plus a safety-net run at 15:17:
 1. picks the next passages and reciters (no repeats), renders the videos,
 2. publishes them on this repo's GitHub Pages (`gh-pages` branch, only files with posts still waiting),
-3. schedules them on Buffer for the times in `config.json`, two days ahead. If a channel is connected later, or a post failed, the next run adds the missing posts for videos that are still online.
+3. schedules them on Buffer for the times in `config.json`, one day ahead (Buffer Free allows 10 queued posts per channel). If a channel is connected later, a post failed or a queue was full, the next run adds the missing posts for videos that are still online.
 
 ## Setup (done once)
 
