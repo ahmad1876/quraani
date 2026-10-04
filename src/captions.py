@@ -71,7 +71,8 @@ def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True) -> s
         if t and t not in seen:
             seen.add(t)
             tags.append("#" + t)
-    footage = "Footage: Pexels" if credit and meta.get("credits") else ""
+    names = [{"pexels": "Pexels", "mixkit": "Mixkit"}[s] for s in meta.get("sources", [])]
+    footage = ("Footage: " + " / ".join(names)) if credit and names else ""
     if platform == "instagram":
         lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref}", f"Recited by {plain(meta['reciter_en'])}", "",
                  "Save this and share it with someone who needs to hear it today.", ""]

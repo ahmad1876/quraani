@@ -110,6 +110,7 @@ def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list 
         "clips": [c["id"] for c in clips],
         "footage_theme": clips[0].get("theme", "") if clips else "",
         "credits": sorted({c["credit"] for c in clips if c.get("credit")}),
+        "sources": sorted({c["source"] for c in clips if c.get("source") in ("pexels", "mixkit")}),
         "hook": passage.get("hook", ""),
         "theme": passage.get("theme", ""),
         "translation": join_translation([quran.verse(f"{ch}:{k}")["translation"] for k in range(a, b + 1)]),

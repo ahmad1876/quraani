@@ -19,7 +19,7 @@ class BufferError(RuntimeError):
 def _key() -> str:
     k = os.environ.get("BUFFER_API_KEY", "").strip()
     if not k:
-        raise BufferError("BUFFER_API_KEY is not set")
+        raise BufferError("BUFFER_API_KEY is not set: add it under repo Settings > Secrets and variables > Actions")
     return k
 
 
