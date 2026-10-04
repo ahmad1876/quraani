@@ -1,6 +1,6 @@
 # Quraani: automatic Quran recitation shorts
 
-Every day this repo makes 9:16 videos (up to 45 s) and schedules them on TikTok (2 a day) and Instagram Reels (1 a day) through Buffer's free plan. Optional: connect YouTube as Buffer's third free channel and Shorts are posted too.
+Every day this repo makes two 9:16 videos (up to 45 s) and schedules them through Buffer's free plan: TikTok (2 a day), YouTube Shorts (2 a day) and Instagram Reels (1 a day).
 
 Each video is:
 - a popular passage (`catalog/passages.json`, 109 passages) recited by a well-known reciter (`catalog/reciters.json`, 28 reciters). Clips always start and end on whole ayahs.
@@ -15,11 +15,11 @@ Total cost: R0. GitHub Actions, GitHub Pages, Buffer Free (3 channels, 10 queued
 `.github/workflows/daily.yml` runs every night at 03:17 (SA time):
 1. picks the next passages and reciters (no repeats), renders the videos,
 2. publishes them on this repo's GitHub Pages (`gh-pages` branch, only files with posts still waiting),
-3. schedules them on Buffer for the times in `config.json`, two days ahead.
+3. schedules them on Buffer for the times in `config.json`, two days ahead. If a channel is connected later, or a post failed, the next run adds the missing posts for videos that are still online.
 
 ## Setup (done once)
 
-1. Buffer: TikTok + Instagram (Creator/Business) connected; a personal API key with `account:read`, `posts:read`, `posts:write`.
+1. Buffer: TikTok, Instagram (Creator/Business) and YouTube connected; a personal API key with `account:read`, `posts:read`, `posts:write`.
 2. Repo secret `BUFFER_API_KEY` (Settings > Secrets and variables > Actions) holding the Buffer key. Buffer keys last up to a year: when it expires, make a new one in Buffer (Settings > API) and paste it over this secret.
 3. Actions > Quraani daily > Run workflow > `check`. Then Settings > Pages > Deploy from a branch > `gh-pages` / root. Run `check` again until all lines say OK, then run `daily` once.
 
