@@ -1,4 +1,4 @@
-"""Daily job: keep the next few days of TikTok / Instagram (and optional YouTube) posts scheduled.
+"""Daily job: keep the next few days of TikTok / Instagram / YouTube Shorts posts scheduled.
 
 Run by GitHub Actions once a day. Safe to re-run: filled slots are skipped.
   python scripts/daily.py             # render, publish to GitHub Pages, schedule on Buffer
@@ -21,6 +21,7 @@ import buffer_api  # noqa: E402
 import captions  # noqa: E402
 import make  # noqa: E402
 import planner  # noqa: E402
+import quran  # noqa: E402
 import recitation  # noqa: E402
 import storage  # noqa: E402
 from common import STATE, config, load_json, save_json  # noqa: E402
@@ -43,6 +44,66 @@ def open_slots(cfg: dict, schedule: dict, now: dt.datetime, days_ahead: int) -> 
             out.append((day, slot))
     return out
 
+
+
+def due_utc(day: dt.date, when: str, tz) -> dt.datetime:
+    return dt.datetime.combine(day, dt.time.fromisoformat(when), tz).astimezone(dt.timezone.utc)
+
+
+def post_one(platform: str, ch: dict, due: dt.datetime, meta: dict, rec: dict, url: str, cfg: dict) -> dict:
+    """Schedule one video on one Buffer channel. Returns the history record for that post."""
+    text = captions.build(meta, platform, rec["tag"], credit=cfg.get("credit_footage", True))
+    post = buffer_api.schedule_video(
+        ch, text, url, due.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
+        youtube_title=captions.youtube_title(meta) if platform == "youtube" else "")
+    return {"id": post["id"], "due": post.get("dueAt") or due.isoformat()}
+
+
+def caption_meta(entry: dict) -> dict:
+    """Rebuild the caption fields for a video that is already online (from its history entry)."""
+    ch, rng = entry["ref"].split(":")
+    a, b = (rng.split("-") + [rng])[:2]
+    ch, a, b = int(ch), int(a), int(b)
+    passage = next((p for p in planner.passages() if p["id"] == entry["passage"]), {})
+    rec = recitation.reciters()[entry["reciter"]]
+    return {
+        "passage": entry["passage"], "ref": entry["ref"], "surah": ch,
+        "surah_en": quran.chapter(ch)["name_en"], "reciter": entry["reciter"], "reciter_en": rec["name_en"],
+        "hook": passage.get("hook", ""), "theme": passage.get("theme", ""),
+        "translation": make.join_translation([quran.verse(f"{ch}:{k}")["translation"] for k in range(a, b + 1)]),
+        "sources": sorted({c.split(":")[0] for c in entry.get("clips", []) if c.split(":")[0] in ("pexels", "mixkit")}),
+    }
+
+
+def backfill(cfg: dict, history: list[dict], chans: dict, tz) -> int:
+    """Add posts that are missing for videos already online: a channel connected later
+    (e.g. YouTube) or a post that failed on an earlier run. Only for times still ahead."""
+    slots = {s["id"]: s for s in cfg["slots"]}
+    soon = dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=20)
+    added = 0
+    for entry in history:
+        slot = slots.get(entry.get("slot"))
+        if not slot or not entry.get("url") or "posts" not in entry:
+            continue
+        day = dt.date.fromisoformat(entry["date"])
+        todo = [p for p in PLATFORMS if slot.get(p) and chans.get(p) and p not in entry["posts"]
+                and due_utc(day, slot[p], tz) > soon]
+        if not todo:
+            continue
+        if not storage.is_live(entry["url"]):
+            print(f"   {entry['ref']}: video no longer online, cannot add {todo}", flush=True)
+            continue
+        meta = caption_meta(entry)
+        rec = recitation.reciters()[entry["reciter"]]
+        for platform in todo:
+            try:
+                entry["posts"][platform] = post_one(platform, chans[platform], due_utc(day, slot[platform], tz),
+                                                    meta, rec, entry["url"], cfg)
+                added += 1
+                print(f"   {entry['ref']}: added {platform} for {day} {slot[platform]}", flush=True)
+            except Exception as e:
+                print(f"   {entry['ref']}: {platform} failed: {e}", flush=True)
+    return added
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -69,6 +130,10 @@ def main() -> int:
         if not chans:
             print("No Buffer channels connected - nothing to schedule.")
             return 1
+        added = backfill(cfg, history, chans, tz)
+        if added:
+            save_json(STATE / "history.json", history[-2000:])
+            print(f"Added {added} missing post(s) for videos already online.", flush=True)
 
     slots = open_slots(cfg, schedule, now, days_ahead)
     if args.max:
@@ -122,16 +187,12 @@ def main() -> int:
             when, ch = slot.get(platform), chans.get(platform)
             if not when or not ch:
                 continue
-            due = dt.datetime.combine(day, dt.time.fromisoformat(when), tz).astimezone(dt.timezone.utc)
+            due = due_utc(day, when, tz)
             if due < dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=15):
                 print(f"   {meta['ref']}: {platform} time {day} {when} has passed, skipped", flush=True)
                 continue
-            text = captions.build(meta, platform, rec["tag"], credit=cfg.get("credit_footage", True))
             try:
-                post = buffer_api.schedule_video(
-                    ch, text, url, due.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
-                    youtube_title=captions.youtube_title(meta) if platform == "youtube" else "")
-                entry["posts"][platform] = {"id": post["id"], "due": post.get("dueAt") or due.isoformat()}
+                entry["posts"][platform] = post_one(platform, ch, due, meta, rec, url, cfg)
                 print(f"   {meta['ref']}: scheduled on {platform} for {day} {when} ({ch['name']})", flush=True)
             except Exception as e:
                 print(f"   {meta['ref']}: {platform} failed: {e}", flush=True)
