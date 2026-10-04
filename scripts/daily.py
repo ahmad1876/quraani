@@ -101,6 +101,8 @@ def backfill(cfg: dict, history: list[dict], chans: dict, tz) -> int:
                                                     meta, rec, entry["url"], cfg)
                 added += 1
                 print(f"   {entry['ref']}: added {platform} for {day} {slot[platform]}", flush=True)
+            except buffer_api.QueueFull as e:
+                print(f"   {entry['ref']}: {platform} queue is full, will retry next run ({e})", flush=True)
             except Exception as e:
                 print(f"   {entry['ref']}: {platform} failed: {e}", flush=True)
     return added
@@ -194,6 +196,8 @@ def main() -> int:
             try:
                 entry["posts"][platform] = post_one(platform, ch, due, meta, rec, url, cfg)
                 print(f"   {meta['ref']}: scheduled on {platform} for {day} {when} ({ch['name']})", flush=True)
+            except buffer_api.QueueFull as e:
+                print(f"   {meta['ref']}: {platform} queue is full, will retry next run ({e})", flush=True)
             except Exception as e:
                 print(f"   {meta['ref']}: {platform} failed: {e}", flush=True)
                 errors += 1
