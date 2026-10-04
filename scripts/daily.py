@@ -37,8 +37,8 @@ def open_slots(cfg: dict, schedule: dict, now: dt.datetime, days_ahead: int) -> 
             if schedule.get(day.isoformat(), {}).get(slot["id"]):
                 continue
             times = [slot[p] for p in PLATFORMS if slot.get(p)]
-            earliest = min(dt.datetime.combine(day, dt.time.fromisoformat(t), tz) for t in times)
-            if earliest < now + dt.timedelta(minutes=50):
+            latest = max(dt.datetime.combine(day, dt.time.fromisoformat(t), tz) for t in times)
+            if latest < now + dt.timedelta(minutes=50):  # every post time of this slot is too close or past
                 continue
             out.append((day, slot))
     return out
@@ -123,6 +123,9 @@ def main() -> int:
             if not when or not ch:
                 continue
             due = dt.datetime.combine(day, dt.time.fromisoformat(when), tz).astimezone(dt.timezone.utc)
+            if due < dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=15):
+                print(f"   {meta['ref']}: {platform} time {day} {when} has passed, skipped", flush=True)
+                continue
             text = captions.build(meta, platform, rec["tag"], credit=cfg.get("credit_footage", True))
             try:
                 post = buffer_api.schedule_video(
