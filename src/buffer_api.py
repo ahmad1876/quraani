@@ -16,6 +16,10 @@ class BufferError(RuntimeError):
     pass
 
 
+class QueueFull(BufferError):
+    """The channel already has as many scheduled posts as the plan allows (Free: 10)."""
+
+
 def _key() -> str:
     k = os.environ.get("BUFFER_API_KEY", "").strip()
     if not k:
@@ -59,6 +63,7 @@ def pick_channels(wanted=("tiktok", "instagram", "youtube")) -> dict[str, dict]:
 
 CREATE = """mutation($input: CreatePostInput!) {
   createPost(input: $input) {
+    __typename
     ... on PostActionSuccess { post { id dueAt } }
     ... on MutationError { message }
   }
@@ -88,5 +93,6 @@ def schedule_video(channel: dict, text: str, video_url: str, due_at_utc: str, *,
     }
     res = gql(CREATE, {"input": inp})["createPost"]
     if "post" not in res:
-        raise BufferError(res.get("message", "createPost failed"))
+        err = QueueFull if res.get("__typename") == "LimitReachedError" else BufferError
+        raise err(f"{res.get('__typename', '')}: {res.get('message', 'createPost failed')}")
     return res["post"]
