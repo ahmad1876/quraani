@@ -1,0 +1,86 @@
+name: Quraani daily
+
+on:
+  schedule:
+    - cron: "17 1 * * *"   # every day 03:17 South Africa time
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "daily = make + schedule, check = test the setup, dry-run = render 2 previews only"
+        type: choice
+        options: [daily, check, dry-run]
+        default: daily
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: quraani
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      QURAANI_SECRETS: ${{ secrets.QURAANI_SECRETS }}
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu-core > /dev/null
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/ms-playwright
+            .cache/http
+            .cache/models
+            .cache/cbr_probe.json
+            .cache/footage_rejected.json
+          key: quraani-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: quraani-${{ runner.os }}-
+
+      - name: Install Python packages
+        run: |
+          pip install -q -r requirements.txt
+          python -m playwright install --with-deps chromium > /dev/null
+
+      - name: Check setup
+        if: ${{ github.event.inputs.mode == 'check' }}
+        run: python scripts/check_setup.py
+
+      - name: Render two preview videos (nothing is posted)
+        if: ${{ github.event.inputs.mode == 'dry-run' }}
+        run: python scripts/batch.py 2 out
+
+      - name: Make and schedule videos
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.mode == 'daily' }}
+        run: python scripts/daily.py
+
+      - name: Save rotation state
+        if: ${{ always() && (github.event_name == 'schedule' || github.event.inputs.mode == 'daily') }}
+        run: |
+          git config user.name "quraani-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/
+          git diff --cached --quiet || git commit -q -m "state $(date -u +%F)"
+          git push -q || true
+
+      - name: Keep dry-run videos for preview
+        if: ${{ github.event.inputs.mode == 'dry-run' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-videos
+          path: |
+            out/*.mp4
+            out/*.txt
+          retention-days: 3
