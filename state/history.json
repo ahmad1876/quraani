@@ -159,5 +159,49 @@
     "due": "2026-10-06T14:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-05",
+  "slot": "C",
+  "made": "2026-10-04T18:26:15+02:00",
+  "passage": "1:1-7",
+  "ref": "1:1-7",
+  "reciter": "ahmad-alnufais",
+  "duration": 44.18,
+  "clips": [
+   "pexels:31413578",
+   "pexels:33114351",
+   "pexels:28805528",
+   "pexels:11995874"
+  ],
+  "footage_theme": "clouds",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-05_C_1-1-7_ahmad-alnufais.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ac27ee62dd93d8b00f60b54",
+    "due": "2026-10-05T10:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-05",
+  "slot": "D",
+  "made": "2026-10-04T18:26:15+02:00",
+  "passage": "15:97-99",
+  "ref": "15:97-99",
+  "reciter": "haitham-aldukhain",
+  "duration": 24.4,
+  "clips": [
+   "pexels:39481766",
+   "pexels:15499818"
+  ],
+  "footage_theme": "sunrise",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-05_D_15-97-99_haitham-aldukhain.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ac27ee763761da98b532c51",
+    "due": "2026-10-05T14:45:00.000Z"
+   }
+  }
  }
 ]
