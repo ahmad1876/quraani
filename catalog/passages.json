@@ -1,0 +1,1001 @@
+[
+ {
+  "id": "1:1-7",
+  "surah": 1,
+  "start": 1,
+  "end": 7,
+  "hook": "The prayer we repeat in every rak'ah.",
+  "priority": 1,
+  "theme": "fatiha"
+ },
+ {
+  "id": "2:255",
+  "surah": 2,
+  "start": 255,
+  "end": 255,
+  "hook": "Ayat al-Kursi, the greatest verse in the Quran.",
+  "priority": 1,
+  "theme": "protection"
+ },
+ {
+  "id": "2:285-286",
+  "surah": 2,
+  "start": 285,
+  "end": 286,
+  "hook": "The closing verses of Surah Al-Baqarah.",
+  "priority": 1,
+  "theme": "dua"
+ },
+ {
+  "id": "2:286",
+  "surah": 2,
+  "start": 286,
+  "end": 286,
+  "hook": "Allah does not burden a soul beyond what it can bear.",
+  "priority": 1,
+  "theme": "hope"
+ },
+ {
+  "id": "2:186",
+  "surah": 2,
+  "start": 186,
+  "end": 186,
+  "hook": "When My servants ask about Me, I am near.",
+  "priority": 1,
+  "theme": "dua"
+ },
+ {
+  "id": "2:152-153",
+  "surah": 2,
+  "start": 152,
+  "end": 153,
+  "hook": "Remember Me, and I will remember you.",
+  "priority": 2,
+  "theme": "dhikr"
+ },
+ {
+  "id": "2:155-157",
+  "surah": 2,
+  "start": 155,
+  "end": 157,
+  "hook": "Give good news to the patient.",
+  "priority": 1,
+  "theme": "sabr",
+  "need": 155
+ },
+ {
+  "id": "2:201",
+  "surah": 2,
+  "start": 201,
+  "end": 201,
+  "hook": "Our Lord, give us good in this world and good in the Hereafter.",
+  "priority": 2,
+  "theme": "dua"
+ },
+ {
+  "id": "2:216",
+  "surah": 2,
+  "start": 216,
+  "end": 216,
+  "hook": "You may dislike something that is good for you.",
+  "priority": 1,
+  "theme": "trust"
+ },
+ {
+  "id": "2:45-46",
+  "surah": 2,
+  "start": 45,
+  "end": 46,
+  "hook": "Seek help through patience and prayer.",
+  "priority": 2,
+  "theme": "sabr"
+ },
+ {
+  "id": "2:1-5",
+  "surah": 2,
+  "start": 1,
+  "end": 5,
+  "hook": "This is the Book about which there is no doubt.",
+  "priority": 2,
+  "theme": "guidance",
+  "need": 2
+ },
+ {
+  "id": "3:8-9",
+  "surah": 3,
+  "start": 8,
+  "end": 9,
+  "hook": "Our Lord, do not let our hearts deviate after You have guided us.",
+  "priority": 2,
+  "theme": "dua"
+ },
+ {
+  "id": "3:26-27",
+  "surah": 3,
+  "start": 26,
+  "end": 27,
+  "hook": "You give sovereignty to whom You will.",
+  "priority": 2,
+  "theme": "tawheed"
+ },
+ {
+  "id": "3:133-136",
+  "surah": 3,
+  "start": 133,
+  "end": 136,
+  "hook": "Hasten to forgiveness and a Garden as wide as the heavens and the earth.",
+  "priority": 2,
+  "theme": "jannah"
+ },
+ {
+  "id": "3:139",
+  "surah": 3,
+  "start": 139,
+  "end": 139,
+  "hook": "Do not weaken and do not grieve.",
+  "priority": 2,
+  "theme": "hope"
+ },
+ {
+  "id": "3:160",
+  "surah": 3,
+  "start": 160,
+  "end": 160,
+  "hook": "If Allah helps you, no one can overcome you.",
+  "priority": 2,
+  "theme": "trust"
+ },
+ {
+  "id": "3:173-174",
+  "surah": 3,
+  "start": 173,
+  "end": 174,
+  "hook": "Allah is sufficient for us, and He is the best Disposer of affairs.",
+  "priority": 2,
+  "theme": "tawakkul",
+  "need": 173
+ },
+ {
+  "id": "3:185",
+  "surah": 3,
+  "start": 185,
+  "end": 185,
+  "hook": "Every soul will taste death.",
+  "priority": 1,
+  "theme": "akhirah"
+ },
+ {
+  "id": "3:190-194",
+  "surah": 3,
+  "start": 190,
+  "end": 194,
+  "hook": "In the creation of the heavens and the earth are signs.",
+  "priority": 1,
+  "theme": "reflection"
+ },
+ {
+  "id": "6:59",
+  "surah": 6,
+  "start": 59,
+  "end": 59,
+  "hook": "With Him are the keys of the unseen.",
+  "priority": 2,
+  "theme": "tawheed"
+ },
+ {
+  "id": "6:162-163",
+  "surah": 6,
+  "start": 162,
+  "end": 163,
+  "hook": "My prayer, my sacrifice, my living and my dying are for Allah.",
+  "priority": 2,
+  "theme": "ikhlas"
+ },
+ {
+  "id": "7:23",
+  "surah": 7,
+  "start": 23,
+  "end": 23,
+  "hook": "The prayer of Adam: Our Lord, we have wronged ourselves.",
+  "priority": 2,
+  "theme": "tawbah"
+ },
+ {
+  "id": "9:40",
+  "surah": 9,
+  "start": 40,
+  "end": 40,
+  "hook": "Do not grieve, Allah is with us.",
+  "priority": 1,
+  "theme": "hope"
+ },
+ {
+  "id": "9:128-129",
+  "surah": 9,
+  "start": 128,
+  "end": 129,
+  "hook": "Allah is sufficient for me. There is no god but Him.",
+  "priority": 2,
+  "theme": "tawakkul"
+ },
+ {
+  "id": "10:57-58",
+  "surah": 10,
+  "start": 57,
+  "end": 58,
+  "hook": "A healing for what is in the hearts.",
+  "priority": 2,
+  "theme": "healing"
+ },
+ {
+  "id": "11:6",
+  "surah": 11,
+  "start": 6,
+  "end": 6,
+  "hook": "There is no creature on earth except that Allah provides for it.",
+  "priority": 2,
+  "theme": "rizq"
+ },
+ {
+  "id": "12:86-87",
+  "surah": 12,
+  "start": 86,
+  "end": 87,
+  "hook": "I only complain of my grief and sorrow to Allah.",
+  "priority": 1,
+  "theme": "grief",
+  "need": 86
+ },
+ {
+  "id": "12:101",
+  "surah": 12,
+  "start": 101,
+  "end": 101,
+  "hook": "Let me die a Muslim and join me with the righteous.",
+  "priority": 2,
+  "theme": "dua"
+ },
+ {
+  "id": "13:28-29",
+  "surah": 13,
+  "start": 28,
+  "end": 29,
+  "hook": "In the remembrance of Allah do hearts find rest.",
+  "priority": 1,
+  "theme": "peace"
+ },
+ {
+  "id": "14:7",
+  "surah": 14,
+  "start": 7,
+  "end": 7,
+  "hook": "If you are grateful, I will surely give you more.",
+  "priority": 1,
+  "theme": "shukr"
+ },
+ {
+  "id": "14:24-25",
+  "surah": 14,
+  "start": 24,
+  "end": 25,
+  "hook": "A good word is like a good tree.",
+  "priority": 3,
+  "theme": "reflection"
+ },
+ {
+  "id": "14:40-41",
+  "surah": 14,
+  "start": 40,
+  "end": 41,
+  "hook": "My Lord, make me establish prayer, and my descendants too.",
+  "priority": 2,
+  "theme": "dua",
+  "need": 40
+ },
+ {
+  "id": "15:97-99",
+  "surah": 15,
+  "start": 97,
+  "end": 99,
+  "hook": "Worship your Lord until certainty comes to you.",
+  "priority": 3,
+  "theme": "sabr",
+  "need": 99
+ },
+ {
+  "id": "16:18",
+  "surah": 16,
+  "start": 18,
+  "end": 18,
+  "hook": "If you tried to count the favours of Allah, you could never count them.",
+  "priority": 2,
+  "theme": "shukr"
+ },
+ {
+  "id": "16:97",
+  "surah": 16,
+  "start": 97,
+  "end": 97,
+  "hook": "Whoever does good as a believer, We will give them a good life.",
+  "priority": 2,
+  "theme": "hope"
+ },
+ {
+  "id": "17:23-24",
+  "surah": 17,
+  "start": 23,
+  "end": 24,
+  "hook": "Your Lord has decreed that you worship none but Him, and be good to your parents.",
+  "priority": 1,
+  "theme": "parents"
+ },
+ {
+  "id": "17:82",
+  "surah": 17,
+  "start": 82,
+  "end": 82,
+  "hook": "We send down in the Quran healing and mercy for the believers.",
+  "priority": 2,
+  "theme": "healing"
+ },
+ {
+  "id": "18:1-5",
+  "surah": 18,
+  "start": 1,
+  "end": 5,
+  "hook": "The opening of Surah Al-Kahf.",
+  "priority": 1,
+  "theme": "kahf"
+ },
+ {
+  "id": "18:10",
+  "surah": 18,
+  "start": 10,
+  "end": 10,
+  "hook": "Our Lord, grant us mercy from Yourself.",
+  "priority": 2,
+  "theme": "dua"
+ },
+ {
+  "id": "18:46",
+  "surah": 18,
+  "start": 46,
+  "end": 46,
+  "hook": "Wealth and children are the adornment of this world.",
+  "priority": 2,
+  "theme": "dunya"
+ },
+ {
+  "id": "18:107-110",
+  "surah": 18,
+  "start": 107,
+  "end": 110,
+  "hook": "The closing verses of Surah Al-Kahf.",
+  "priority": 1,
+  "theme": "kahf"
+ },
+ {
+  "id": "19:2-6",
+  "surah": 19,
+  "start": 2,
+  "end": 6,
+  "hook": "Zakariyya called upon his Lord in secret.",
+  "priority": 1,
+  "theme": "dua"
+ },
+ {
+  "id": "19:16-21",
+  "surah": 19,
+  "start": 16,
+  "end": 21,
+  "hook": "The story of Maryam.",
+  "priority": 1,
+  "theme": "maryam"
+ },
+ {
+  "id": "19:23-26",
+  "surah": 19,
+  "start": 23,
+  "end": 26,
+  "hook": "Maryam beneath the palm tree.",
+  "priority": 2,
+  "theme": "maryam"
+ },
+ {
+  "id": "19:93-96",
+  "surah": 19,
+  "start": 93,
+  "end": 96,
+  "hook": "Everyone in the heavens and the earth will come to the Most Merciful as a servant.",
+  "priority": 2,
+  "theme": "hope"
+ },
+ {
+  "id": "20:1-8",
+  "surah": 20,
+  "start": 1,
+  "end": 8,
+  "hook": "We did not send down the Quran to you to cause you distress.",
+  "priority": 1,
+  "theme": "taha",
+  "need": 2
+ },
+ {
+  "id": "20:25-28",
+  "surah": 20,
+  "start": 25,
+  "end": 28,
+  "hook": "My Lord, expand my chest and ease my task for me.",
+  "priority": 1,
+  "theme": "dua"
+ },
+ {
+  "id": "20:45-46",
+  "surah": 20,
+  "start": 45,
+  "end": 46,
+  "hook": "Do not fear. I am with you both, I hear and I see.",
+  "priority": 2,
+  "theme": "trust",
+  "need": 46
+ },
+ {
+  "id": "20:114",
+  "surah": 20,
+  "start": 114,
+  "end": 114,
+  "hook": "My Lord, increase me in knowledge.",
+  "priority": 2,
+  "theme": "dua"
+ },
+ {
+  "id": "20:124-126",
+  "surah": 20,
+  "start": 124,
+  "end": 126,
+  "hook": "Whoever turns away from My remembrance will have a hard life.",
+  "priority": 1,
+  "theme": "reminder"
+ },
+ {
+  "id": "21:83-84",
+  "surah": 21,
+  "start": 83,
+  "end": 84,
+  "hook": "The prayer of Ayyub: harm has touched me, and You are the Most Merciful.",
+  "priority": 1,
+  "theme": "sabr"
+ },
+ {
+  "id": "21:87-88",
+  "surah": 21,
+  "start": 87,
+  "end": 88,
+  "hook": "The prayer of Yunus from the darkness.",
+  "priority": 1,
+  "theme": "dua",
+  "need": 87
+ },
+ {
+  "id": "21:89-90",
+  "surah": 21,
+  "start": 89,
+  "end": 90,
+  "hook": "My Lord, do not leave me alone.",
+  "priority": 2,
+  "theme": "dua"
+ },
+ {
+  "id": "23:1-11",
+  "surah": 23,
+  "start": 1,
+  "end": 11,
+  "hook": "Successful indeed are the believers.",
+  "priority": 2,
+  "theme": "salah"
+ },
+ {
+  "id": "23:115-118",
+  "surah": 23,
+  "start": 115,
+  "end": 118,
+  "hook": "Did you think We created you without purpose?",
+  "priority": 1,
+  "theme": "reminder"
+ },
+ {
+  "id": "24:35",
+  "surah": 24,
+  "start": 35,
+  "end": 35,
+  "hook": "Allah is the Light of the heavens and the earth.",
+  "priority": 2,
+  "theme": "tawheed"
+ },
+ {
+  "id": "25:63-70",
+  "surah": 25,
+  "start": 63,
+  "end": 70,
+  "hook": "The servants of the Most Merciful walk upon the earth humbly.",
+  "priority": 1,
+  "theme": "character"
+ },
+ {
+  "id": "25:74",
+  "surah": 25,
+  "start": 74,
+  "end": 74,
+  "hook": "Our Lord, grant us spouses and children who are the comfort of our eyes.",
+  "priority": 2,
+  "theme": "dua"
+ },
+ {
+  "id": "26:78-89",
+  "surah": 26,
+  "start": 78,
+  "end": 89,
+  "hook": "He feeds me and gives me drink, and when I am ill He heals me.",
+  "priority": 1,
+  "theme": "tawakkul",
+  "need": 80
+ },
+ {
+  "id": "27:62",
+  "surah": 27,
+  "start": 62,
+  "end": 62,
+  "hook": "Who answers the distressed when they call upon Him?",
+  "priority": 1,
+  "theme": "dua"
+ },
+ {
+  "id": "28:24",
+  "surah": 28,
+  "start": 24,
+  "end": 24,
+  "hook": "My Lord, I am in need of whatever good You send down to me.",
+  "priority": 2,
+  "theme": "dua"
+ },
+ {
+  "id": "29:57-58",
+  "surah": 29,
+  "start": 57,
+  "end": 58,
+  "hook": "Every soul will taste death, then to Us you will be returned.",
+  "priority": 1,
+  "theme": "akhirah"
+ },
+ {
+  "id": "29:69",
+  "surah": 29,
+  "start": 69,
+  "end": 69,
+  "hook": "Those who strive for Us, We will surely guide them to Our ways.",
+  "priority": 2,
+  "theme": "guidance"
+ },
+ {
+  "id": "30:21",
+  "surah": 30,
+  "start": 21,
+  "end": 21,
+  "hook": "He placed between you love and mercy.",
+  "priority": 2,
+  "theme": "marriage"
+ },
+ {
+  "id": "31:16-19",
+  "surah": 31,
+  "start": 16,
+  "end": 19,
+  "hook": "Luqman's advice to his son.",
+  "priority": 2,
+  "theme": "character"
+ },
+ {
+  "id": "33:41-44",
+  "surah": 33,
+  "start": 41,
+  "end": 44,
+  "hook": "Remember Allah with much remembrance.",
+  "priority": 2,
+  "theme": "dhikr"
+ },
+ {
+  "id": "33:56",
+  "surah": 33,
+  "start": 56,
+  "end": 56,
+  "hook": "Send blessings upon the Prophet.",
+  "priority": 2,
+  "theme": "salawat"
+ },
+ {
+  "id": "36:1-12",
+  "surah": 36,
+  "start": 1,
+  "end": 12,
+  "hook": "The opening of Surah Yasin.",
+  "priority": 1,
+  "theme": "yasin"
+ },
+ {
+  "id": "36:55-58",
+  "surah": 36,
+  "start": 55,
+  "end": 58,
+  "hook": "The people of Paradise, busy in joy.",
+  "priority": 2,
+  "theme": "jannah"
+ },
+ {
+  "id": "36:77-83",
+  "surah": 36,
+  "start": 77,
+  "end": 83,
+  "hook": "The closing verses of Surah Yasin.",
+  "priority": 1,
+  "theme": "yasin"
+ },
+ {
+  "id": "39:10",
+  "surah": 39,
+  "start": 10,
+  "end": 10,
+  "hook": "The patient will be given their reward without measure.",
+  "priority": 2,
+  "theme": "sabr"
+ },
+ {
+  "id": "39:53-54",
+  "surah": 39,
+  "start": 53,
+  "end": 54,
+  "hook": "Do not despair of the mercy of Allah.",
+  "priority": 1,
+  "theme": "mercy"
+ },
+ {
+  "id": "39:73-75",
+  "surah": 39,
+  "start": 73,
+  "end": 75,
+  "hook": "Those who feared their Lord will be led to Paradise in groups.",
+  "priority": 1,
+  "theme": "jannah"
+ },
+ {
+  "id": "40:44",
+  "surah": 40,
+  "start": 44,
+  "end": 44,
+  "hook": "I entrust my affair to Allah.",
+  "priority": 2,
+  "theme": "tawakkul"
+ },
+ {
+  "id": "40:60",
+  "surah": 40,
+  "start": 60,
+  "end": 60,
+  "hook": "Call upon Me, I will respond to you.",
+  "priority": 1,
+  "theme": "dua"
+ },
+ {
+  "id": "41:30-32",
+  "surah": 41,
+  "start": 30,
+  "end": 32,
+  "hook": "Do not fear and do not grieve, receive good news of Paradise.",
+  "priority": 2,
+  "theme": "jannah"
+ },
+ {
+  "id": "50:16-22",
+  "surah": 50,
+  "start": 16,
+  "end": 22,
+  "hook": "We are closer to him than his jugular vein.",
+  "priority": 1,
+  "theme": "reminder"
+ },
+ {
+  "id": "51:56-58",
+  "surah": 51,
+  "start": 56,
+  "end": 58,
+  "hook": "I did not create jinn and mankind except to worship Me.",
+  "priority": 2,
+  "theme": "purpose"
+ },
+ {
+  "id": "55:1-13",
+  "surah": 55,
+  "start": 1,
+  "end": 13,
+  "hook": "The Most Merciful taught the Quran.",
+  "priority": 1,
+  "theme": "rahman"
+ },
+ {
+  "id": "55:26-28",
+  "surah": 55,
+  "start": 26,
+  "end": 28,
+  "hook": "Everyone on earth will perish, and the Face of your Lord remains.",
+  "priority": 2,
+  "theme": "akhirah",
+  "need": 27
+ },
+ {
+  "id": "55:46-55",
+  "surah": 55,
+  "start": 46,
+  "end": 55,
+  "hook": "For whoever fears standing before his Lord are two gardens.",
+  "priority": 1,
+  "theme": "jannah"
+ },
+ {
+  "id": "56:1-12",
+  "surah": 56,
+  "start": 1,
+  "end": 12,
+  "hook": "When the inevitable event occurs.",
+  "priority": 2,
+  "theme": "akhirah"
+ },
+ {
+  "id": "56:83-96",
+  "surah": 56,
+  "start": 83,
+  "end": 96,
+  "hook": "When the soul reaches the throat.",
+  "priority": 2,
+  "theme": "akhirah"
+ },
+ {
+  "id": "57:16",
+  "surah": 57,
+  "start": 16,
+  "end": 16,
+  "hook": "Has the time not come for the hearts of the believers to be humbled?",
+  "priority": 1,
+  "theme": "reminder"
+ },
+ {
+  "id": "59:21-24",
+  "surah": 59,
+  "start": 21,
+  "end": 24,
+  "hook": "If We had sent down this Quran upon a mountain.",
+  "priority": 1,
+  "theme": "names"
+ },
+ {
+  "id": "59:22-24",
+  "surah": 59,
+  "start": 22,
+  "end": 24,
+  "hook": "He is Allah, other than whom there is no god.",
+  "priority": 1,
+  "theme": "names"
+ },
+ {
+  "id": "65:3",
+  "surah": 65,
+  "start": 3,
+  "end": 3,
+  "hook": "Whoever relies upon Allah, He is sufficient for him.",
+  "priority": 1,
+  "theme": "tawakkul"
+ },
+ {
+  "id": "67:1-5",
+  "surah": 67,
+  "start": 1,
+  "end": 5,
+  "hook": "Blessed is He in whose hand is the dominion.",
+  "priority": 1,
+  "theme": "mulk"
+ },
+ {
+  "id": "71:10-12",
+  "surah": 71,
+  "start": 10,
+  "end": 12,
+  "hook": "Ask forgiveness of your Lord, He is ever Forgiving.",
+  "priority": 1,
+  "theme": "istighfar"
+ },
+ {
+  "id": "73:1-9",
+  "surah": 73,
+  "start": 1,
+  "end": 9,
+  "hook": "Stand in prayer by night.",
+  "priority": 2,
+  "theme": "qiyam",
+  "need": 2
+ },
+ {
+  "id": "75:26-30",
+  "surah": 75,
+  "start": 26,
+  "end": 30,
+  "hook": "When the soul reaches the collarbones.",
+  "priority": 2,
+  "theme": "akhirah"
+ },
+ {
+  "id": "76:7-12",
+  "surah": 76,
+  "start": 7,
+  "end": 12,
+  "hook": "They fulfil their vows and fear a Day whose evil will be widespread.",
+  "priority": 2,
+  "theme": "jannah"
+ },
+ {
+  "id": "78:31-40",
+  "surah": 78,
+  "start": 31,
+  "end": 40,
+  "hook": "For the righteous is success.",
+  "priority": 1,
+  "theme": "jannah"
+ },
+ {
+  "id": "79:37-41",
+  "surah": 79,
+  "start": 37,
+  "end": 41,
+  "hook": "Whoever feared standing before his Lord, Paradise is their refuge.",
+  "priority": 2,
+  "theme": "jannah",
+  "need": 41
+ },
+ {
+  "id": "80:33-42",
+  "surah": 80,
+  "start": 33,
+  "end": 42,
+  "hook": "The Day a man will flee from his brother.",
+  "priority": 1,
+  "theme": "akhirah",
+  "need": 34
+ },
+ {
+  "id": "81:1-14",
+  "surah": 81,
+  "start": 1,
+  "end": 14,
+  "hook": "When the sun is wrapped up.",
+  "priority": 1,
+  "theme": "akhirah"
+ },
+ {
+  "id": "82:6-12",
+  "surah": 82,
+  "start": 6,
+  "end": 12,
+  "hook": "O mankind, what has deceived you about your Lord, the Most Generous?",
+  "priority": 2,
+  "theme": "reminder"
+ },
+ {
+  "id": "87:1-9",
+  "surah": 87,
+  "start": 1,
+  "end": 9,
+  "hook": "Glorify the name of your Lord, the Most High.",
+  "priority": 2,
+  "theme": "tasbih"
+ },
+ {
+  "id": "88:8-16",
+  "surah": 88,
+  "start": 8,
+  "end": 16,
+  "hook": "Faces that Day will be joyful.",
+  "priority": 2,
+  "theme": "jannah"
+ },
+ {
+  "id": "89:27-30",
+  "surah": 89,
+  "start": 27,
+  "end": 30,
+  "hook": "O reassured soul, return to your Lord, well-pleased and pleasing.",
+  "priority": 1,
+  "theme": "jannah"
+ },
+ {
+  "id": "89:21-30",
+  "surah": 89,
+  "start": 21,
+  "end": 30,
+  "hook": "No! When the earth is pounded to dust.",
+  "priority": 2,
+  "theme": "akhirah"
+ },
+ {
+  "id": "93:1-11",
+  "surah": 93,
+  "start": 1,
+  "end": 11,
+  "hook": "Your Lord has not forsaken you.",
+  "priority": 1,
+  "theme": "hope",
+  "need": 3
+ },
+ {
+  "id": "94:1-8",
+  "surah": 94,
+  "start": 1,
+  "end": 8,
+  "hook": "With hardship comes ease.",
+  "priority": 1,
+  "theme": "hope",
+  "need": 6
+ },
+ {
+  "id": "97:1-5",
+  "surah": 97,
+  "start": 1,
+  "end": 5,
+  "hook": "The Night of Decree is better than a thousand months.",
+  "priority": 2,
+  "theme": "qadr",
+  "need": 3
+ },
+ {
+  "id": "103:1-3",
+  "surah": 103,
+  "start": 1,
+  "end": 3,
+  "hook": "By time, mankind is in loss.",
+  "priority": 2,
+  "theme": "reminder",
+  "need": 2
+ },
+ {
+  "id": "110:1-3",
+  "surah": 110,
+  "start": 1,
+  "end": 3,
+  "hook": "When the victory of Allah comes.",
+  "priority": 3,
+  "theme": "nasr"
+ },
+ {
+  "id": "112:1-4",
+  "surah": 112,
+  "start": 1,
+  "end": 4,
+  "hook": "Say: He is Allah, the One.",
+  "priority": 1,
+  "theme": "tawheed"
+ },
+ {
+  "id": "113:1-5",
+  "surah": 113,
+  "start": 1,
+  "end": 5,
+  "hook": "Say: I seek refuge in the Lord of daybreak.",
+  "priority": 1,
+  "theme": "protection"
+ },
+ {
+  "id": "114:1-6",
+  "surah": 114,
+  "start": 1,
+  "end": 6,
+  "hook": "Say: I seek refuge in the Lord of mankind.",
+  "priority": 1,
+  "theme": "protection"
+ }
+]
