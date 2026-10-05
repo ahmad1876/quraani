@@ -203,5 +203,45 @@
     "due": "2026-10-05T14:45:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-06",
+  "slot": "C",
+  "made": "2026-10-05T09:02:11+02:00",
+  "passage": "18:10",
+  "ref": "18:10",
+  "reciter": "mansour-alsalimi",
+  "duration": 14.37,
+  "clips": [
+   "pexels:39584336"
+  ],
+  "footage_theme": "ocean",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-06_C_18-10_mansour-alsalimi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ac34beed467abe8cfdbdde5",
+    "due": "2026-10-06T10:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-06",
+  "slot": "D",
+  "made": "2026-10-05T09:02:11+02:00",
+  "passage": "7:23",
+  "ref": "7:23",
+  "reciter": "bandar-baleela",
+  "duration": 13.24,
+  "clips": [
+   "pexels:35974278"
+  ],
+  "footage_theme": "snow",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-06_D_7-23_bandar-baleela.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ac34befca1380ada84bc044",
+    "due": "2026-10-06T14:45:00.000Z"
+   }
+  }
  }
 ]
