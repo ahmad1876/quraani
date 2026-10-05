@@ -1,6 +1,6 @@
 # Quraani: automatic Quran recitation shorts
 
-Every day this repo makes four 9:16 videos (up to 45 s) and schedules them through Buffer's free plan: TikTok (4 a day), YouTube Shorts (2 a day) and Instagram Reels (1 a day).
+Every day this repo makes up to four 9:16 videos (up to 45 s) and schedules them through Buffer's free plan: Instagram Reels (3 a day), YouTube Shorts (2 a day) and TikTok (up to 4 a day).
 
 Each video is:
 - a popular passage (`catalog/passages.json`, 109 passages) recited by a well-known reciter (`catalog/reciters.json`, 28 reciters). Clips always start and end on whole ayahs.
