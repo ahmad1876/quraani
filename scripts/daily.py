@@ -29,6 +29,21 @@ from common import STATE, config, load_json, save_json  # noqa: E402
 PLATFORMS = ("tiktok", "instagram", "youtube")
 
 
+def platform_on(cfg: dict, platform: str, slot_id: str, day: dt.date) -> bool:
+    """config "platform_plan" can pause a platform or limit it to some slots from a date on."""
+    rules = sorted(cfg.get("platform_plan", {}).get(platform, []), key=lambda r: r["from"])
+    current = None
+    for r in rules:
+        if r["from"] <= day.isoformat():
+            current = r
+    return current is None or slot_id in current.get("slots", [])
+
+
+def active_slot(cfg: dict, slot: dict, day: dt.date) -> dict:
+    """The slot with only the platforms that post on that day."""
+    return {k: v for k, v in slot.items() if k not in PLATFORMS or platform_on(cfg, k, slot["id"], day)}
+
+
 def open_slots(cfg: dict, schedule: dict, now: dt.datetime, days_ahead: int) -> list[tuple[dt.date, dict]]:
     tz = now.tzinfo
     out = []
@@ -37,7 +52,10 @@ def open_slots(cfg: dict, schedule: dict, now: dt.datetime, days_ahead: int) -> 
         for slot in cfg["slots"]:
             if schedule.get(day.isoformat(), {}).get(slot["id"]):
                 continue
+            slot = active_slot(cfg, slot, day)
             times = [slot[p] for p in PLATFORMS if slot.get(p)]
+            if not times:  # nothing posts from this slot on that day
+                continue
             latest = max(dt.datetime.combine(day, dt.time.fromisoformat(t), tz) for t in times)
             if latest < now + dt.timedelta(minutes=50):  # every post time of this slot is too close or past
                 continue
@@ -86,6 +104,7 @@ def backfill(cfg: dict, history: list[dict], chans: dict, tz) -> int:
         if not slot or not entry.get("url") or "posts" not in entry:
             continue
         day = dt.date.fromisoformat(entry["date"])
+        slot = active_slot(cfg, slot, day)
         todo = [p for p in PLATFORMS if slot.get(p) and chans.get(p) and p not in entry["posts"]
                 and due_utc(day, slot[p], tz) > soon]
         if not todo:
@@ -158,7 +177,8 @@ def main() -> int:
         print(f"\n== {day} slot {slot['id']}: {passage['id']} / {rec['name_en']}", flush=True)
         try:
             meta = make.make_video(passage, rk, out, history=history, handle=cfg.get("handle", ""),
-                                   seed=rng.randint(0, 10 ** 6), preset=cfg.get("x264_preset", "medium"))
+                                   seed=rng.randint(0, 10 ** 6), preset=cfg.get("x264_preset", "medium"),
+                                   english=cfg.get("english", True))
         except Exception:
             traceback.print_exc()
             errors += 1
