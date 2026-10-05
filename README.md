@@ -27,6 +27,6 @@ Total cost: R0. GitHub Actions, GitHub Pages, Buffer Free (3 channels, 10 queued
 
 `config.json`: posting times (`slots`, Africa/Johannesburg time), how many days ahead to schedule, `handle` (e.g. `@calmquraan.daily`) printed small on the videos, `english` (true/false) for the translation line, and `platform_plan` to pause a platform or limit it to some slots from a date on (used to warm up TikTok: paused, then 1, 2 and 4 posts a day).
 
-After a style change, Actions > Quraani daily > Run workflow > `rerender` redoes the videos that are already scheduled, under the same links.
+After a style change, Actions > Quraani daily > Run workflow > `rerender` redoes the videos that are already scheduled, under the same links. `new-footage` does the same with fresh clips from the library (useful after adding footage).
 
 Run locally: `pip install -r requirements.txt && python -m playwright install chromium`, then `python scripts/batch.py 5 out/batch` renders five videos with their captions.
