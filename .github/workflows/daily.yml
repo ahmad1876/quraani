@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "daily = make + schedule, check = test the setup, dry-run = render 2 previews only, rerender = redo scheduled videos in the current style"
+        description: "daily = make + schedule, check = test the setup, dry-run = render 2 previews only, rerender = redo scheduled videos in the current style, new-footage = redo scheduled videos with fresh clips"
         type: choice
-        options: [daily, check, dry-run, rerender]
+        options: [daily, check, dry-run, rerender, new-footage]
         default: daily
 
 permissions:
@@ -67,12 +67,16 @@ jobs:
         if: ${{ github.event.inputs.mode == 'rerender' }}
         run: python scripts/rerender.py
 
+      - name: Re-render scheduled videos with fresh footage
+        if: ${{ github.event.inputs.mode == 'new-footage' }}
+        run: python scripts/rerender.py --new-footage
+
       - name: Make and schedule videos
         if: ${{ github.event_name == 'schedule' || github.event.inputs.mode == 'daily' }}
         run: python scripts/daily.py
 
       - name: Save rotation state
-        if: ${{ always() && (github.event_name == 'schedule' || github.event.inputs.mode == 'daily') }}
+        if: ${{ always() && (github.event_name == 'schedule' || github.event.inputs.mode == 'daily' || github.event.inputs.mode == 'new-footage') }}
         run: |
           git config user.name "quraani-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
