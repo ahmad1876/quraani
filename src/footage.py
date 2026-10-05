@@ -1,9 +1,11 @@
 """Real nature footage for backgrounds.
 
 Default source: catalog/footage.json, a library of free stock clips (Pexels and
-Mixkit) that were screened for people, animals and symbols. Clips are streamed
-from the original free CDNs on demand; nothing is re-hosted. Optional sources: a
-local folder (QURAANI_LOCAL_FOOTAGE) or the Pexels API (PEXELS_API_KEY).
+Mixkit) that were screened for people, animals and symbols. Each video uses one
+mood (theme); clips with a higher "score" (3 breathtaking, 2 strong, 1 calm) are
+picked more often and the best one opens the video. Clips are streamed from the
+original free CDNs on demand; nothing is re-hosted. Optional sources: a local
+folder (QURAANI_LOCAL_FOOTAGE) or the Pexels API (PEXELS_API_KEY).
 
 Every clip goes through a small person/animal detector before first use.
 """
@@ -87,6 +89,17 @@ def _mark_bad(cid: str) -> None:
     save_json(CACHE / "footage_rejected.json", bad)
 
 
+def _weight(c: dict) -> float:
+    """score 3 = breathtaking, 2 = strong, 1 = calm filler (default)."""
+    return {3: 3.0, 2: 1.7}.get(int(c.get("score", 1)), 1.0)
+
+
+def _weighted_order(items: list, weights: list[float], rng: random.Random) -> list:
+    """Random order in which heavier items tend to come first (weighted sampling without replacement)."""
+    keyed = sorted(((rng.random() ** (1.0 / max(w, 1e-6)), k) for k, w in enumerate(weights)), reverse=True)
+    return [items[k] for _, k in keyed]
+
+
 def _from_manifest(n, min_len, used, rng, recent_themes) -> list[Clip]:
     lib = [c for c in json.loads((CATALOG / "footage.json").read_text(encoding="utf-8")) if c.get("ok", True)]
     bad = _bad_ids()
@@ -95,12 +108,14 @@ def _from_manifest(n, min_len, used, rng, recent_themes) -> list[Clip]:
         if c["id"] not in bad:
             by_theme[c["theme"]].append(c)
     themes = [t for t in by_theme if len(by_theme[t]) >= n]
-    rng.shuffle(themes)
-    themes.sort(key=lambda t: t in recent_themes)  # fresh moods first
+    # moods with better (and more) footage come up more often; recent moods go last
+    themes = _weighted_order(themes, [sum(_weight(c) for c in by_theme[t]) / len(by_theme[t]) ** 0.5
+                                      for t in themes], rng)
+    themes.sort(key=lambda t: t in recent_themes)
     for theme in themes:
-        pool = by_theme[theme][:]
-        rng.shuffle(pool)
+        pool = _weighted_order(by_theme[theme], [_weight(c) for c in by_theme[theme]], rng)
         pool.sort(key=lambda c: (c["id"] in used, c.get("duration", 0) * 2 < min_len))
+        weight = {c["id"]: _weight(c) for c in pool}
         picked: list[Clip] = []
         for c in pool:
             dest = CACHE / "footage" / (c["id"].replace(":", "_") + ".mp4")
@@ -116,6 +131,7 @@ def _from_manifest(n, min_len, used, rng, recent_themes) -> list[Clip]:
             picked.append(Clip(path=str(dest), duration=float(dur), source=c.get("src", ""), id=c["id"],
                                credit=c.get("credit", ""), url=c.get("page", ""), theme=theme))
             if len(picked) == n:
+                picked.sort(key=lambda p: -weight[p["id"]])  # the strongest shot opens the video (cover + hook)
                 return picked
     raise RuntimeError("could not assemble clips from the footage library")
 
