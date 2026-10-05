@@ -144,11 +144,16 @@ def build_units(ch: int, a: int, b: int, t: dict, env: np.ndarray, raw0: float,
             starts = [wt[g[0]][0] for g in groups]
         else:
             starts = _ayah_level_starts(groups, words, env, raw0, a0, a1)
+        share, acc = [], 0           # how far through the ayah (by letters) each word ends
+        for w in words:
+            acc += quran.letters(w["text"])
+            share.append(acc)
         for gi, g in enumerate(groups):
             text = " ".join(words[i]["text"] for i in g)
             if gi == len(groups) - 1:
                 text += "\u00a0" + quran.ayah_marker(k)
-            units.append({"text": text, "abs_start": max(starts[gi], a0 if gi == 0 else starts[gi]), "ayah": k})
+            units.append({"text": text, "abs_start": max(starts[gi], a0 if gi == 0 else starts[gi]), "ayah": k,
+                          "f1": share[g[-1]] / max(1, acc)})
     # convert to clip-relative display windows
     dur = total if total else cut1 - cut0
     for i, u in enumerate(units):
@@ -162,6 +167,7 @@ def build_units(ch: int, a: int, b: int, t: dict, env: np.ndarray, raw0: float,
         if merged and (u["end"] - u["start"]) < 0.9 and merged[-1]["ayah"] == u["ayah"]:
             merged[-1]["text"] += " " + u["text"]
             merged[-1]["end"] = u["end"]
+            merged[-1]["f1"] = u["f1"]
         else:
             merged.append(dict(u))
     return merged

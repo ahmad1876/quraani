@@ -15,17 +15,18 @@ XF = 0.8  # crossfade between background clips
 
 def grade_png() -> Path:
     """Soft darkening so white text stays readable on bright skies."""
-    p = CACHE / "grade_v3.png"
+    p = CACHE / "grade_v4.png"
     if p.exists():
         return p
     y = np.linspace(0, 1, H)[:, None]
     x = np.linspace(-1, 1, W)[None, :]
-    top = np.clip(1 - y / 0.36, 0, 1) ** 1.6 * 0.55
-    bottom = np.clip((y - 0.70) / 0.30, 0, 1) ** 1.4 * 0.50
+    # lighter than before: smaller text needs less help, so more of the scenery shows
+    top = np.clip(1 - y / 0.30, 0, 1) ** 1.6 * 0.45
+    bottom = np.clip((y - 0.72) / 0.28, 0, 1) ** 1.4 * 0.42
     cy = 900 / H
-    radial = np.exp(-(((x / 1.25) ** 2) + ((y - cy) / 0.26) ** 2)) * 0.36
-    base = 0.20
-    a = np.clip(base + top + bottom + radial, 0, 0.85)
+    radial = np.exp(-(((x / 1.1) ** 2) + ((y - cy) / 0.19) ** 2)) * 0.30
+    base = 0.10
+    a = np.clip(base + top + bottom + radial, 0, 0.8)
     rgba = np.zeros((H, W, 4), dtype=np.uint8)
     rgba[..., 3] = (a * 255).astype(np.uint8)
     p.parent.mkdir(parents=True, exist_ok=True)
@@ -44,6 +45,34 @@ def clip_luma(path: str) -> float:
         return 0.4
 
 
+def clip_texture(path: str) -> tuple[float, float]:
+    """(brightness, busyness) of the area behind the text, from a few small frames.
+    Busyness is the mean pixel-to-pixel change: leaves and branches score high, sky and sand low."""
+    import subprocess
+    try:
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-vf",
+                              "fps=1,scale=180:320:force_original_aspect_ratio=increase,crop=180:320,format=gray",
+                              "-frames:v", "6", "-f", "rawvideo", "-"], capture_output=True, check=True).stdout
+        a = np.frombuffer(raw, dtype=np.uint8).reshape(-1, 320, 180).astype(np.float32) / 255
+        mid = a[:, 110:210, 20:160]
+        busy = (np.abs(np.diff(mid, axis=1)).mean() + np.abs(np.diff(mid, axis=2)).mean()) / 2
+        return float(mid.mean()), float(busy)
+    except Exception:
+        return 0.45, 0.03
+
+
+def text_shade(clip_paths: list[str]) -> float:
+    """How dark the soft shade behind the text should be for these clips."""
+    tex = [clip_texture(p) for p in clip_paths] or [(0.45, 0.03)]
+    busy = max(t[1] for t in tex)
+    bright = max(t[0] for t in tex)
+    if busy > 0.06:
+        return 0.46
+    if busy > 0.025:
+        return 0.32
+    return 0.28 if bright > 0.55 else 0.18
+
+
 def tone(luma: float) -> str:
     """Per-clip tone so dark night/forest clips are lifted and bright skies are calmed."""
     if luma < 0.16:
@@ -52,7 +81,9 @@ def tone(luma: float) -> str:
         return "eq=gamma=1.12:brightness=0.01:saturation=1.0"
     if luma > 0.58:
         return "eq=contrast=1.03:saturation=0.92:brightness=-0.08"
-    return "eq=contrast=1.04:saturation=0.94:brightness=-0.03"
+    if luma > 0.44:
+        return "eq=contrast=1.03:saturation=0.94:brightness=-0.05"
+    return "eq=contrast=1.04:saturation=0.95:brightness=-0.02"
 
 
 def plan_cuts(duration: float, unit_starts: list[float], n: int) -> list[float]:

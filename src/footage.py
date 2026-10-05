@@ -62,6 +62,22 @@ def pick_clips(n: int, min_len: float, history: list[dict], *, seed: int | None 
 
 
 # ------------------------------------------------------------------ library --
+def clips_by_ids(ids: list[str]) -> list[Clip]:
+    """The given library clips, in order (used to re-render a video with the same footage)."""
+    lib = {c["id"]: c for c in json.loads((CATALOG / "footage.json").read_text(encoding="utf-8"))}
+    out = []
+    for cid in ids:
+        c = lib.get(cid)
+        if not c:
+            raise RuntimeError(f"clip {cid} is not in the footage library")
+        dest = CACHE / "footage" / (cid.replace(":", "_") + ".mp4")
+        download(c["url"], dest)
+        out.append(Clip(path=str(dest), duration=float(c.get("duration") or ffprobe_duration(dest)),
+                        source=c.get("src", ""), id=cid, credit=c.get("credit", ""), url=c.get("page", ""),
+                        theme=c["theme"]))
+    return out
+
+
 def _bad_ids() -> set[str]:
     return set(load_json(CACHE / "footage_rejected.json", []) or [])
 

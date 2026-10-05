@@ -6,6 +6,7 @@ from pathlib import Path
 
 import audio
 import compose
+import english as english_text
 import footage
 import overlay
 import quran
@@ -44,7 +45,7 @@ def plan_span(passage: dict, reciter_key: str):
 
 def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list | None = None,
                handle: str = "", seed: int = 0, work: Path | None = None, preset: str = "medium",
-               local_footage: str | None = None) -> dict:
+               local_footage: str | None = None, english: bool = True, clip_ids: list[str] | None = None) -> dict:
     history = history or []
     rec = recitation.reciters()[reciter_key]
     ch = passage["surah"]
@@ -81,14 +82,21 @@ def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list 
 
     # 2) on-screen phrases synced to the reciter
     units = segments.build_units(ch, a, b, t, env, r0, cut0, cut1, total=dur)
+    if english:
+        english_text.attach(units, ch)
 
     # 3) real nature footage, no people or animals
     n = max(1, min(4, round(dur / 12.5)))
-    clips = footage.pick_clips(n, dur / n + 1.2, history, seed=seed, local_dir=local_footage)
+    if clip_ids:  # re-render with the same footage as before
+        clips = footage.clips_by_ids(clip_ids)
+    else:
+        clips = footage.pick_clips(n, dur / n + 1.2, history, seed=seed, local_dir=local_footage)
 
     # 4) text overlays + final render
     chap = quran.chapter(ch)
-    ov = overlay.render(units, "سورة " + chap["name_ar"], rec["name_ar"], work / "ov", handle=handle)
+    backdrop = compose.text_shade([c["path"] for c in clips])
+    ov = overlay.render(units, "سورة " + chap["name_ar"], rec["name_ar"], work / "ov", handle=handle,
+                        english=english, backdrop=backdrop)
     compose.build(clips, final_wav, ov, out_mp4, dur, seed=seed, preset=preset)
     shutil.rmtree(work, ignore_errors=True)
 
