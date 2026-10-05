@@ -4,7 +4,7 @@ Every day this repo makes four 9:16 videos (up to 45 s) and schedules them throu
 
 Each video is:
 - a popular passage (`catalog/passages.json`, 109 passages) recited by a well-known reciter (`catalog/reciters.json`, 28 reciters). Clips always start and end on whole ayahs.
-- the Arabic text (Uthmani script, Amiri Quran font) shown phrase by phrase in sync with the reciter (word timings from quran.com, ayah timings from mp3quran.net).
+- the Arabic text (Uthmani script, Amiri Quran font) shown phrase by phrase in sync with the reciter (word timings from quran.com, ayah timings from mp3quran.net), with the English meaning (Saheeh International) underneath, split to follow each phrase. The text is kept small and the background shade light so the scenery leads; the shade gets a little stronger only on busy footage like leaves.
 - real nature footage from a screened library of free stock clips (`catalog/footage.json`, Pexels and Mixkit). Clips with people, animals or symbols were removed, and each clip is checked again by a small detector before use. Clips are streamed from the original free CDNs, not re-hosted.
 - exported as a clean H.264 MP4. Posts are marked "not AI-generated" on Buffer: the recitation and footage are real.
 
@@ -25,6 +25,8 @@ Total cost: R0. GitHub Actions, GitHub Pages, Buffer Free (3 channels, 10 queued
 
 ## Changing things
 
-`config.json`: posting times (`slots`, Africa/Johannesburg time), how many days ahead to schedule, and `handle` (e.g. `@calmquraan.daily`) to print a small handle on the videos.
+`config.json`: posting times (`slots`, Africa/Johannesburg time), how many days ahead to schedule, `handle` (e.g. `@calmquraan.daily`) printed small on the videos, `english` (true/false) for the translation line, and `platform_plan` to pause a platform or limit it to some slots from a date on (used to warm up TikTok: paused, then 1, 2 and 4 posts a day).
+
+After a style change, Actions > Quraani daily > Run workflow > `rerender` redoes the videos that are already scheduled, under the same links.
 
 Run locally: `pip install -r requirements.txt && python -m playwright install chromium`, then `python scripts/batch.py 5 out/batch` renders five videos with their captions.

@@ -24,5 +24,37 @@
  ],
  "handle": "@calmquraan.daily",
  "credit_footage": true,
- "x264_preset": "medium"
+ "x264_preset": "medium",
+ "english": true,
+ "platform_plan": {
+  "tiktok": [
+   {
+    "from": "2026-10-05",
+    "slots": [],
+    "note": "paused while the new account warms up"
+   },
+   {
+    "from": "2026-10-08",
+    "slots": [
+     "B"
+    ]
+   },
+   {
+    "from": "2026-10-15",
+    "slots": [
+     "B",
+     "D"
+    ]
+   },
+   {
+    "from": "2026-10-22",
+    "slots": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ]
+   }
+  ]
+ }
 }
