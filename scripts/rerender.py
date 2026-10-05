@@ -4,14 +4,17 @@ Same passage, reciter, ayahs and footage; same file name and URL, so the posts a
 waiting in Buffer pick up the new version when they go out (Buffer fetches media at
 publish time). Nothing in Buffer is changed.
 
-  python scripts/rerender.py            # all pending videos
-  python scripts/rerender.py --dry-run  # list them only
+  python scripts/rerender.py                # all pending videos
+  python scripts/rerender.py --dry-run      # list them only
+  python scripts/rerender.py --new-footage  # same, but with fresh clips from the library
+                                            # (state/history.json is updated)
 """
 from __future__ import annotations
 
 import argparse
 import datetime as dt
 import importlib.util
+import random
 import sys
 import traceback
 from pathlib import Path
@@ -23,7 +26,7 @@ sys.path.insert(0, str(ROOT / "src"))
 import make  # noqa: E402
 import planner  # noqa: E402
 import storage  # noqa: E402
-from common import STATE, config, load_json  # noqa: E402
+from common import STATE, config, load_json, save_json  # noqa: E402
 
 _spec = importlib.util.spec_from_file_location("daily", ROOT / "scripts" / "daily.py")
 daily = importlib.util.module_from_spec(_spec)
@@ -51,6 +54,7 @@ def pending(cfg: dict, history: list[dict], tz) -> list[dict]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--new-footage", action="store_true", help="pick fresh clips from the footage library")
     ap.add_argument("--out", default=str(ROOT / "out" / "rerender"))
     args = ap.parse_args()
     cfg = config()
@@ -65,19 +69,27 @@ def main() -> int:
     by_id = {p["id"]: p for p in planner.passages()}
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
-    made, errors = [], 0
+    made, errors, picked = [], 0, {}
     for e in todo:
         name = e["url"].rsplit("/", 1)[-1]
         try:
-            meta = make.make_video(by_id[e["passage"]], e["reciter"], out_dir / name, handle=cfg.get("handle", ""),
-                                   seed=7, preset=cfg.get("x264_preset", "medium"),
-                                   english=cfg.get("english", True), clip_ids=e["clips"])
+            if args.new_footage:  # fresh clips; the old ones, other videos' and this run's picks count as used
+                fresh = [{"clips": m["clips"], "footage_theme": m.get("footage_theme", "")} for _, m in picked.values()]
+                others = [h for h in history if h is not e] + [{"clips": e["clips"]}] + fresh
+                seed = random.Random(name).randint(0, 10 ** 6)
+                clip_ids = None
+            else:
+                others, seed, clip_ids = [], 7, e["clips"]
+            meta = make.make_video(by_id[e["passage"]], e["reciter"], out_dir / name, history=others,
+                                   handle=cfg.get("handle", ""), seed=seed, preset=cfg.get("x264_preset", "medium"),
+                                   english=cfg.get("english", True), clip_ids=clip_ids)
             if meta["ref"] != e["ref"]:
                 print(f"  {name}: ayahs changed ({e['ref']} -> {meta['ref']}), keeping the old video", flush=True)
                 (out_dir / name).unlink(missing_ok=True)
                 continue
             made.append(str(out_dir / name))
-            print(f"  re-rendered {name} ({meta['duration']}s)", flush=True)
+            picked[name] = (e, meta)
+            print(f"  re-rendered {name} ({meta['duration']}s, {meta.get('footage_theme', '')})", flush=True)
         except Exception:
             traceback.print_exc()
             errors += 1
@@ -85,6 +97,10 @@ def main() -> int:
         keep = storage.pending_names(history, dt.datetime.now(dt.timezone.utc))
         urls = storage.publish(made, keep)
         print("Updated:", *urls.values(), sep="\n  ", flush=True)
+        if args.new_footage:  # only once the new files are live
+            for e, meta in picked.values():
+                e["clips"], e["footage_theme"] = meta["clips"], meta.get("footage_theme", "")
+            save_json(STATE / "history.json", history)
     return 1 if errors else 0
 
 
