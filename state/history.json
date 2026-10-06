@@ -251,5 +251,77 @@
     "due": "2026-10-06T14:45:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-07",
+  "slot": "A",
+  "made": "2026-10-06T09:33:51+02:00",
+  "passage": "76:7-12",
+  "ref": "76:7-9",
+  "reciter": "abdulbasit-murattal",
+  "duration": 37.44,
+  "clips": [
+   "pexels:35297804",
+   "pexels:16487657",
+   "pexels:35289378"
+  ],
+  "footage_theme": "autumn",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-07_A_76-7-12_abdulbasit-murattal.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ac4a57d1438456395abb642",
+    "due": "2026-10-07T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ac4a57d1438456395abb66b",
+    "due": "2026-10-07T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-07",
+  "slot": "B",
+  "made": "2026-10-06T09:33:51+02:00",
+  "passage": "78:31-40",
+  "ref": "78:31-36",
+  "reciter": "nasser-alqatami",
+  "duration": 34.33,
+  "clips": [
+   "pexels:39199765",
+   "pexels:34260073",
+   "pexels:28074591"
+  ],
+  "footage_theme": "water",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-07_B_78-31-40_nasser-alqatami.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ac4a57ed807824c4fcc7467",
+    "due": "2026-10-07T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ac4a57e1438456395abb6a8",
+    "due": "2026-10-07T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-07",
+  "slot": "C",
+  "made": "2026-10-06T09:33:51+02:00",
+  "passage": "20:25-28",
+  "ref": "20:25-28",
+  "reciter": "yasser-aldosari",
+  "duration": 12.04,
+  "clips": [
+   "pexels:33813928"
+  ],
+  "footage_theme": "golden",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-07_C_20-25-28_yasser-aldosari.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ac4a57e4f27e781dc7eaeb9",
+    "due": "2026-10-07T06:15:00.000Z"
+   }
+  }
  }
 ]
