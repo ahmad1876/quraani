@@ -323,5 +323,82 @@
     "due": "2026-10-07T06:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-08",
+  "slot": "A",
+  "made": "2026-10-07T09:13:41+02:00",
+  "passage": "19:16-21",
+  "ref": "19:16-19",
+  "reciter": "abdullah-aljuhany",
+  "duration": 36.1,
+  "clips": [
+   "pexels:31443906",
+   "pexels:31442548",
+   "pexels:12219155"
+  ],
+  "footage_theme": "blossom",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-08_A_19-16-21_abdullah-aljuhany.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ac5f24f36c2a7788dd3d4d2",
+    "due": "2026-10-08T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ac5f24fc22c37a573bd60b0",
+    "due": "2026-10-08T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-08",
+  "slot": "B",
+  "made": "2026-10-07T09:13:41+02:00",
+  "passage": "3:173-174",
+  "ref": "3:173",
+  "reciter": "ahmed-alajmi",
+  "duration": 21.53,
+  "clips": [
+   "pexels:36166627",
+   "pexels:37591340"
+  ],
+  "footage_theme": "mountains",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-08_B_3-173-174_ahmed-alajmi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ac5f250c22c37a573bd60db",
+    "due": "2026-10-08T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ac5f250203d24e39e126708",
+    "due": "2026-10-08T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ac5f25036c2a7788dd3d500",
+    "due": "2026-10-08T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-08",
+  "slot": "C",
+  "made": "2026-10-07T09:13:41+02:00",
+  "passage": "29:57-58",
+  "ref": "29:57-58",
+  "reciter": "saad-alghamdi",
+  "duration": 32.88,
+  "clips": [
+   "pexels:35092789",
+   "pexels:39201728",
+   "pexels:36744510"
+  ],
+  "footage_theme": "sunset",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-08_C_29-57-58_saad-alghamdi.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ac5f251c22c37a573bd610d",
+    "due": "2026-10-08T06:15:00.000Z"
+   }
+  }
  }
 ]
