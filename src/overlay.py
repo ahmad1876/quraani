@@ -38,12 +38,43 @@ body{{width:{W}px;height:{H}px;position:relative;overflow:hidden}}
 #hdr .orn b{{display:block;width:9px;height:9px;transform:rotate(45deg);background:#E7CF9A;box-shadow:0 0 6px rgba(0,0,0,.5)}}
 #hdr .r{{font-family:'AM';font-size:34px;line-height:1.4;color:rgba(255,255,255,.9);
   text-shadow:0 0 14px rgba(0,0,0,.75),0 0 4px rgba(0,0,0,.55),0 2px 5px rgba(0,0,0,.7)}}
-#handle{{position:absolute;left:0;width:{W}px;top:1440px;text-align:center;font:500 27px 'DejaVu Sans',sans-serif;
-  color:rgba(255,255,255,.6);letter-spacing:.5px;text-shadow:0 1px 4px rgba(0,0,0,.6);padding:8px 0}}
+#handle{{position:absolute;left:0;width:{W}px;top:1440px;text-align:center;font:600 31px 'DejaVu Sans',sans-serif;
+  color:rgba(255,255,255,.84);letter-spacing:.6px;text-shadow:0 0 10px rgba(0,0,0,.55),0 1px 4px rgba(0,0,0,.8);padding:8px 0}}
+#hook{{position:absolute;left:100px;width:880px;top:0;text-align:center;direction:ltr;padding:18px 0 22px;display:none}}
+#hook .t{{font-family:'AMB';color:#F2E2BC;line-height:1.2;text-wrap:balance;
+  text-shadow:0 0 22px rgba(0,0,0,.75),0 0 8px rgba(0,0,0,.55),0 2px 6px rgba(0,0,0,.8)}}
+#hook .orn{{display:flex;align-items:center;justify-content:center;gap:14px;margin:12px 0 0}}
+#hook .orn i{{display:block;height:2px;width:120px;background:linear-gradient(90deg,transparent,#E7CF9A,transparent);opacity:.9}}
+#hook .orn b{{display:block;width:9px;height:9px;transform:rotate(45deg);background:#E7CF9A;box-shadow:0 0 6px rgba(0,0,0,.5)}}
 </style></head><body>
 <div id="hdr"><div class="s">{surah}</div><div class="orn"><i></i><b></b><i></i></div><div class="r">{reciter}</div></div>
+<div id="hook"><div class="t"></div><div class="orn"><i></i><b></b><i></i></div></div>
 <div id="ayah"><div id="ar"></div><div id="en"></div></div><div id="handle">{handle}</div>
 </body></html>"""
+
+# Hook title: largest size (px) at which the line fits in two lines (three for long lines),
+# centred on the header so the crossfade from hook to header stays in one place.
+HOOK_JS = """([text, maxPx, minPx]) => {
+  const box = document.getElementById('hook'), t = box.querySelector('.t'), hdr = document.getElementById('hdr');
+  box.style.display = 'block'; t.textContent = text;
+  const lines = () => Math.round(t.offsetHeight / parseFloat(getComputedStyle(t).lineHeight));
+  const maxLines = text.length <= 44 ? 2 : 3;
+  let s = maxPx;
+  for (;;) {
+    t.style.fontSize = s + 'px';
+    if (lines() <= maxLines || s <= minPx) break;
+    s -= 2;
+  }
+  const hc = hdr.offsetTop + hdr.offsetHeight / 2;
+  box.style.top = Math.max(150, Math.round(hc - box.offsetHeight / 2)) + 'px';
+  return [s, lines(), box.offsetTop, box.offsetHeight];
+}"""
+
+
+def hook_title(text: str) -> str:
+    """The passage's hook line as an on-screen title: no closing full stop, single spaces."""
+    t = " ".join((text or "").split())
+    return t[:-1] if t.endswith(".") and not t.endswith("...") else t
 
 # Largest sizes (Arabic first, English follows at about half) that fit the box; English keeps to 4 lines.
 FIT_JS = """([ar, en, arMax, arMin, enMax, enMin]) => {
@@ -71,10 +102,11 @@ PLACE_JS = """([ar, en, s, es]) => {
 
 
 def render(units: list[dict], surah_ar: str, reciter_ar: str, out_dir: Path, handle: str = "",
-           english: bool = True, backdrop: float = 0.34) -> dict:
-    """Writes header.png (+handle.png) and unit_XX.png. Returns positions for compositing.
+           english: bool = True, backdrop: float = 0.34, hook: str = "") -> dict:
+    """Writes header.png (+handle.png, +hook.png) and unit_XX.png. Returns positions for compositing.
 
-    backdrop: darkness of the soft shade behind the text (higher on bright, busy footage)."""
+    backdrop: darkness of the soft shade behind the text (higher on bright, busy footage).
+    hook: short title shown in place of the header for the first seconds (empty = no title)."""
     from playwright.sync_api import sync_playwright
 
     out_dir = Path(out_dir).resolve()
@@ -84,7 +116,7 @@ def render(units: list[dict], surah_ar: str, reciter_ar: str, out_dir: Path, han
                             handle=html.escape(handle), B1=f"{backdrop:.2f}", B2=f"{backdrop * 0.65:.2f}")
     page_file = out_dir / "overlay.html"
     page_file.write_text(page_html, encoding="utf-8")
-    result = {"units": [], "header": None, "handle": None}
+    result = {"units": [], "header": None, "handle": None, "hook": None}
     with sync_playwright() as p:
         browser = p.chromium.launch(args=["--font-render-hinting=none"])
         page = browser.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
@@ -101,6 +133,16 @@ def render(units: list[dict], surah_ar: str, reciter_ar: str, out_dir: Path, han
             bb = hl.bounding_box()
             hl.screenshot(path=str(out_dir / "handle.png"), omit_background=True)
             result["handle"] = {"png": str(out_dir / "handle.png"), "x": int(bb["x"]), "y": int(bb["y"])}
+        title = hook_title(hook)
+        if title:
+            page.evaluate(HOOK_JS, [title, 66, 46])  # measures against the header, so before hiding it
+            page.evaluate("document.getElementById('hdr').style.visibility='hidden';"
+                          "document.getElementById('handle').style.visibility='hidden'")
+            hk = page.locator("#hook")
+            bb = hk.bounding_box()
+            hk.screenshot(path=str(out_dir / "hook.png"), omit_background=True)
+            result["hook"] = {"png": str(out_dir / "hook.png"), "x": int(bb["x"]), "y": int(bb["y"])}
+            page.evaluate("document.getElementById('hook').style.display='none'")
         page.evaluate("document.getElementById('hdr').style.display='none';document.getElementById('handle').style.display='none'")
         texts = [(u["text"], u.get("en", "") if english else "") for u in units]
         # each phrase fits on its own, but sizes stay within a narrow band per video

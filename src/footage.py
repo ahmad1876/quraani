@@ -110,8 +110,15 @@ def _from_manifest(n, min_len, used, rng, recent_themes) -> list[Clip]:
     themes = [t for t in by_theme if len(by_theme[t]) >= n]
     # moods with better (and more) footage come up more often; calm filler moods (no clip above
     # score 1, e.g. plain sky or rain on leaves) almost never; recent moods go last
+    try:
+        import stats
+        learned = stats.weights()  # moods that did well in past posts come up a little more often
+    except Exception:
+        learned = {}
+
     def mood_weight(t: str) -> float:
         w = sum(_weight(c) for c in by_theme[t]) / len(by_theme[t]) ** 0.5
+        w *= float(learned.get("mood", {}).get(t, 1.0))
         return w if any(_weight(c) > 1 for c in by_theme[t]) else w * 0.05
     themes = _weighted_order(themes, [mood_weight(t) for t in themes], rng)
     themes.sort(key=lambda t: t in recent_themes)

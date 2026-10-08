@@ -45,7 +45,8 @@ def plan_span(passage: dict, reciter_key: str):
 
 def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list | None = None,
                handle: str = "", seed: int = 0, work: Path | None = None, preset: str = "medium",
-               local_footage: str | None = None, english: bool = True, clip_ids: list[str] | None = None) -> dict:
+               local_footage: str | None = None, english: bool = True, clip_ids: list[str] | None = None,
+               hook_title: bool = True) -> dict:
     history = history or []
     rec = recitation.reciters()[reciter_key]
     ch = passage["surah"]
@@ -96,7 +97,7 @@ def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list 
     chap = quran.chapter(ch)
     backdrop = compose.text_shade([c["path"] for c in clips])
     ov = overlay.render(units, "سورة " + chap["name_ar"], rec["name_ar"], work / "ov", handle=handle,
-                        english=english, backdrop=backdrop)
+                        english=english, backdrop=backdrop, hook=passage.get("hook", "") if hook_title else "")
     compose.build(clips, final_wav, ov, out_mp4, dur, seed=seed, preset=preset)
     shutil.rmtree(work, ignore_errors=True)
 

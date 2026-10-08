@@ -54,8 +54,19 @@ def _short(text: str, limit: int) -> str:
     return cut.rstrip(",;") + " ..."
 
 
-def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True) -> str:
+def follow_line(platform: str, handle: str = "") -> str:
+    """One short call to follow, in each platform's own words."""
+    if platform == "youtube":
+        return "Subscribe for a calm ayah every day."
+    h = handle.strip()
+    if h and not h.startswith("@"):
+        h = "@" + h
+    return f"Follow {h} for a calm ayah every day." if h else "Follow for a calm ayah every day."
+
+
+def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True, handle: str = "") -> str:
     ref = meta["ref"]
+    follow = follow_line(platform, handle)
     surah = plain(meta["surah_en"])
     hook = plain(meta.get("hook") or "")
     tr = _short(meta.get("translation", ""), 420 if platform in ("instagram", "youtube") else 300).replace('"', "'")
@@ -79,17 +90,17 @@ def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True) -> s
     footage = ("Footage: " + " / ".join(names)) if credit and names else ""
     if platform == "instagram":
         lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref}", f"Recited by {plain(meta['reciter_en'])}", "",
-                 "Save this and share it with someone who needs to hear it today.", ""]
+                 "Save this and share it with someone who needs to hear it today.", follow, ""]
         if footage:
             lines += [footage, ""]
         lines.append(" ".join(tags))
     elif platform == "youtube":
-        lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} - {plain(meta['reciter_en'])}", ""]
+        lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} - {plain(meta['reciter_en'])}", "", follow, ""]
         if footage:
             lines += [footage, ""]
         lines.append(" ".join(["#shorts"] + tags[:6]))
     else:  # tiktok
-        lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} | {plain(meta['reciter_en'])}", ""]
+        lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} | {plain(meta['reciter_en'])}", "", follow]
         if footage:
             lines += [footage]
         lines.append(" ".join(tags[:7]))

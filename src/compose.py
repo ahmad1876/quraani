@@ -11,6 +11,8 @@ from common import CACHE, run
 
 W, H, FPS = 1080, 1920, 30
 XF = 0.8  # crossfade between background clips
+HOOK_END = 3.2   # the hook title is on screen until here (s), then the header takes its place
+HOOK_FADE = 0.5
 
 
 def grade_png() -> Path:
@@ -140,9 +142,21 @@ def build(clips: list[dict], audio_wav: Path, ov: dict, out_mp4: Path, duration:
     idx += 1
     cur = "g"
     hdr = ov["header"]
-    args += ["-i", hdr["png"]]
-    # a single still frame; overlay repeats it for the whole video (visible from frame 0 for the cover)
-    fl.append(f"[{cur}][{idx}:v]overlay={hdr['x']}:{hdr['y']}:eof_action=repeat[h0]")
+    hook = ov.get("hook")
+    if hook and duration > HOOK_END + 2:
+        # hook title first (on the cover and the first seconds), then the surah/reciter header fades in
+        args += ["-loop", "1", "-framerate", str(FPS), "-t", f"{HOOK_END:.2f}", "-i", hook["png"]]
+        fl.append(f"[{idx}:v]format=rgba,fade=t=out:st={HOOK_END - HOOK_FADE:.2f}:d={HOOK_FADE:.2f}:alpha=1[hk]")
+        fl.append(f"[{cur}][hk]overlay={hook['x']}:{hook['y']}:eof_action=pass[k0]")
+        cur = "k0"
+        idx += 1
+        args += ["-loop", "1", "-framerate", str(FPS), "-t", f"{duration + 0.5:.3f}", "-i", hdr["png"]]
+        fl.append(f"[{idx}:v]format=rgba,fade=t=in:st={HOOK_END - HOOK_FADE * 0.6:.2f}:d={HOOK_FADE:.2f}:alpha=1[hd]")
+        fl.append(f"[{cur}][hd]overlay={hdr['x']}:{hdr['y']}:eof_action=pass[h0]")
+    else:
+        args += ["-i", hdr["png"]]
+        # a single still frame; overlay repeats it for the whole video (visible from frame 0 for the cover)
+        fl.append(f"[{cur}][{idx}:v]overlay={hdr['x']}:{hdr['y']}:eof_action=repeat[h0]")
     cur = "h0"
     idx += 1
     if ov.get("handle"):
