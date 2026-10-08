@@ -23,6 +23,7 @@ import make  # noqa: E402
 import planner  # noqa: E402
 import quran  # noqa: E402
 import recitation  # noqa: E402
+import stats  # noqa: E402
 import storage  # noqa: E402
 from common import STATE, config, load_json, save_json  # noqa: E402
 
@@ -70,7 +71,8 @@ def due_utc(day: dt.date, when: str, tz) -> dt.datetime:
 
 def post_one(platform: str, ch: dict, due: dt.datetime, meta: dict, rec: dict, url: str, cfg: dict) -> dict:
     """Schedule one video on one Buffer channel. Returns the history record for that post."""
-    text = captions.build(meta, platform, rec["tag"], credit=cfg.get("credit_footage", True))
+    text = captions.build(meta, platform, rec["tag"], credit=cfg.get("credit_footage", True),
+                          handle=cfg.get("handle", ""))
     post = buffer_api.schedule_video(
         ch, text, url, due.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
         youtube_title=captions.youtube_title(meta) if platform == "youtube" else "")
@@ -155,6 +157,11 @@ def main() -> int:
         if added:
             save_json(STATE / "history.json", history[-2000:])
             print(f"Added {added} missing post(s) for videos already online.", flush=True)
+        if cfg.get("learn_from_stats", True):
+            try:  # best effort: never let stats stop the posting
+                print(stats.update(history, chans), "(see state/stats.md)", flush=True)
+            except Exception as e:
+                print(f"stats: skipped this run ({type(e).__name__}: {str(e)[:300]})", flush=True)
 
     slots = open_slots(cfg, schedule, now, days_ahead)
     if args.max:
@@ -178,7 +185,7 @@ def main() -> int:
         try:
             meta = make.make_video(passage, rk, out, history=history, handle=cfg.get("handle", ""),
                                    seed=rng.randint(0, 10 ** 6), preset=cfg.get("x264_preset", "medium"),
-                                   english=cfg.get("english", True))
+                                   english=cfg.get("english", True), hook_title=cfg.get("hook_title", True))
         except Exception:
             traceback.print_exc()
             errors += 1

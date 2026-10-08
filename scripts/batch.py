@@ -39,13 +39,14 @@ def main() -> None:
         mp4 = out_dir / f"{stem}.mp4"
         print(f"[{i}/{len(picks)}] {p['id']} - {rec['name_en']}", flush=True)
         meta = make.make_video(p, rk, mp4, history=history, handle=cfg.get("handle", ""),
-                               seed=rng.randint(0, 10 ** 6), preset=cfg.get("x264_preset", "medium"))
+                               seed=rng.randint(0, 10 ** 6), preset=cfg.get("x264_preset", "medium"),
+                               english=cfg.get("english", True), hook_title=cfg.get("hook_title", True))
         history.append({"passage": meta["passage"], "reciter": rk, "clips": meta["clips"],
                         "footage_theme": meta.get("footage_theme", "")})
         txt = [
             f"{meta['ref']} | {meta['reciter_en']} | {meta['duration']}s", "",
-            "=== TikTok caption ===", captions.build(meta, "tiktok", rec["tag"]), "",
-            "=== Instagram caption ===", captions.build(meta, "instagram", rec["tag"]), "",
+            "=== TikTok caption ===", captions.build(meta, "tiktok", rec["tag"], handle=cfg.get("handle", "")), "",
+            "=== Instagram caption ===", captions.build(meta, "instagram", rec["tag"], handle=cfg.get("handle", "")), "",
         ]
         (out_dir / f"{stem}.txt").write_text("\n".join(txt), encoding="utf-8")
         print(f"   -> {mp4.name} ({meta['duration']}s, {meta['ref']})", flush=True)
