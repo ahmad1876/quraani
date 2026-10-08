@@ -161,7 +161,12 @@ def main() -> int:
             try:  # best effort: never let stats stop the posting
                 print(stats.update(history, chans), "(see state/stats.md)", flush=True)
             except Exception as e:
-                print(f"stats: skipped this run ({type(e).__name__}: {str(e)[:300]})", flush=True)
+                if "insights:read" in str(e):
+                    print("stats: skipped - the Buffer API key needs the insights:read permission. Make a new key in "
+                          "Buffer (Settings > API) with account:read, posts:read, posts:write and insights:read, and "
+                          "paste it over the BUFFER_API_KEY secret.", flush=True)
+                else:
+                    print(f"stats: skipped this run ({type(e).__name__}: {str(e)[:300]})", flush=True)
 
     slots = open_slots(cfg, schedule, now, days_ahead)
     if args.max:
