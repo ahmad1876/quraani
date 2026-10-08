@@ -1,9 +1,10 @@
 # Quraani: automatic Quran recitation shorts
 
-Every day this repo makes up to four 9:16 videos (up to 45 s) and schedules them through Buffer's free plan: Instagram Reels (3 a day), YouTube Shorts (2 a day) and TikTok (up to 4 a day).
+Every day this repo makes up to four 9:16 videos (up to 45 s) and schedules them through Buffer's free plan: Instagram Reels (3 a day), YouTube Shorts (3 a day) and TikTok (up to 4 a day).
 
 Each video is:
 - a popular passage (`catalog/passages.json`, 109 passages) recited by a well-known reciter (`catalog/reciters.json`, 28 reciters). Clips always start and end on whole ayahs.
+- opened by a hook title: the passage's key line (e.g. "Do not despair of the mercy of Allah") large at the top for the first 3 seconds, then the surah and reciter names fade in. It is also on the cover.
 - the Arabic text (Uthmani script, Amiri Quran font) shown phrase by phrase in sync with the reciter (word timings from quran.com, ayah timings from mp3quran.net), with the English meaning (Saheeh International) underneath, split to follow each phrase. The text is kept small and the background shade light so the scenery leads; the shade gets a little stronger only on busy footage like leaves.
 - real nature footage from a screened library of free stock clips (`catalog/footage.json`, Pexels and Mixkit), grouped by mood: mountains above the clouds, glaciers, waterfalls, turquoise lakes, coastlines, canyons, dunes, night skies and more. Every clip was hand-picked and checked frame by frame (2 per second) by a person/animal detector; clips with people, animals, buildings or symbols were left out. Each clip has a `score` (3 = breathtaking, 2 = strong, 1 = calm): higher scores are picked more often and each video opens with its strongest shot. Clips are streamed from the original free CDNs, not re-hosted.
 - exported as a clean H.264 MP4. Posts are marked "not AI-generated" on Buffer: the recitation and footage are real.
@@ -16,6 +17,7 @@ Total cost: R0. GitHub Actions, GitHub Pages, Buffer Free (3 channels, 10 queued
 1. picks the next passages and reciters (no repeats), renders the videos,
 2. publishes them on this repo's GitHub Pages (`gh-pages` branch, only files with posts still waiting),
 3. schedules them on Buffer for the times in `config.json`, one day ahead (Buffer Free allows 10 queued posts per channel). If a channel is connected later, a post failed or a queue was full, the next run adds the missing posts for videos that are still online.
+4. learns from the numbers: it reads every sent post's stats from Buffer (views, likes, follows and more) into `state/metrics.json`, compares each post with a typical post of the same age on the same platform, and gently favours the passage themes, reciters and footage moods that do better (weights between 0.6 and 1.8, so nothing is ever dropped). `state/stats.md` is a readable summary, refreshed every run.
 
 ## Setup (done once)
 
@@ -25,7 +27,7 @@ Total cost: R0. GitHub Actions, GitHub Pages, Buffer Free (3 channels, 10 queued
 
 ## Changing things
 
-`config.json`: posting times (`slots`, Africa/Johannesburg time), how many days ahead to schedule, `handle` (e.g. `@calmquraan.daily`) printed small on the videos, `english` (true/false) for the translation line, and `platform_plan` to pause a platform or limit it to some slots from a date on (used to warm up TikTok: paused, then 1, 2 and 4 posts a day).
+`config.json`: posting times (`slots`, Africa/Johannesburg time), how many days ahead to schedule, `handle` (e.g. `@calmquraan.daily`) printed small on the videos, `english` (true/false) for the translation line, `hook_title` (true/false) for the opening title, `learn_from_stats` (true/false) for the stats step, and `platform_plan` to pause a platform or limit it to some slots from a date on (used to warm up TikTok: paused, then 1, 2 and 4 posts a day).
 
 After a style change, Actions > Quraani daily > Run workflow > `rerender` redoes the videos that are already scheduled, under the same links. `new-footage` does the same with fresh clips from the library (useful after adding footage).
 

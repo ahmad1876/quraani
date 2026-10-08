@@ -17,7 +17,8 @@
   {
    "id": "C",
    "tiktok": "12:15",
-   "instagram": "08:15"
+   "instagram": "08:15",
+   "youtube": "21:45"
   },
   {
    "id": "D",
@@ -28,6 +29,7 @@
  "credit_footage": true,
  "x264_preset": "medium",
  "english": true,
+ "hook_title": true,
  "platform_plan": {
   "tiktok": [
    {
