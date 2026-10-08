@@ -400,5 +400,81 @@
     "due": "2026-10-08T06:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-09",
+  "slot": "A",
+  "made": "2026-10-08T09:23:04+02:00",
+  "passage": "21:89-90",
+  "ref": "21:89-90",
+  "reciter": "raad-alkurdi",
+  "duration": 42.1,
+  "clips": [
+   "pexels:36259621",
+   "pexels:36259626",
+   "pexels:11968144"
+  ],
+  "footage_theme": "desert",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-09_A_21-89-90_raad-alkurdi.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ac74614cec38ef8c047cd57",
+    "due": "2026-10-09T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ac74614448f2e0d85da0471",
+    "due": "2026-10-09T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-09",
+  "slot": "B",
+  "made": "2026-10-08T09:23:04+02:00",
+  "passage": "23:1-11",
+  "ref": "23:1-7",
+  "reciter": "yasser-aldosari",
+  "duration": 42.47,
+  "clips": [
+   "pexels:17060699",
+   "pexels:27797322",
+   "pexels:16265186"
+  ],
+  "footage_theme": "glacier",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-09_B_23-1-11_yasser-aldosari.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ac74615666792b0f3ea8b23",
+    "due": "2026-10-09T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ac74615448f2e0d85da04ba",
+    "due": "2026-10-09T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ac74616c9ee621485c4f402",
+    "due": "2026-10-09T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-09",
+  "slot": "C",
+  "made": "2026-10-08T09:23:04+02:00",
+  "passage": "3:139",
+  "ref": "3:139",
+  "reciter": "abdulrahman-alossi",
+  "duration": 11.7,
+  "clips": [
+   "pexels:17929836"
+  ],
+  "footage_theme": "sunrise",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-09_C_3-139_abdulrahman-alossi.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ac74617cec38ef8c047cde9",
+    "due": "2026-10-09T06:15:00.000Z"
+   }
+  }
  }
 ]
