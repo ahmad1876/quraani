@@ -484,5 +484,85 @@
     "due": "2026-10-09T19:45:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-10",
+  "slot": "A",
+  "made": "2026-10-09T09:23:02+02:00",
+  "passage": "6:59",
+  "ref": "6:59",
+  "reciter": "fares-abbad",
+  "duration": 26.88,
+  "clips": [
+   "pexels:20414184",
+   "pexels:12460328"
+  ],
+  "footage_theme": "storm",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-10_A_6-59_fares-abbad.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ac8972a987e694c3c473b58",
+    "due": "2026-10-10T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ac8972af07e682de6a9b63f",
+    "due": "2026-10-10T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-10",
+  "slot": "B",
+  "made": "2026-10-09T09:23:02+02:00",
+  "passage": "19:93-96",
+  "ref": "19:93-96",
+  "reciter": "haitham-aldukhain",
+  "duration": 32.67,
+  "clips": [
+   "pexels:35237402",
+   "pexels:12902301",
+   "pexels:32909168"
+  ],
+  "footage_theme": "desert",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-10_B_19-93-96_haitham-aldukhain.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ac8972bf07e682de6a9b66a",
+    "due": "2026-10-10T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ac8972b9db755aaaacb7319",
+    "due": "2026-10-10T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ac8972cf07e682de6a9b693",
+    "due": "2026-10-10T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-10",
+  "slot": "C",
+  "made": "2026-10-09T09:23:02+02:00",
+  "passage": "94:1-8",
+  "ref": "94:1-8",
+  "reciter": "nasser-alqatami",
+  "duration": 30.4,
+  "clips": [
+   "pexels:28615718",
+   "pexels:28615730"
+  ],
+  "footage_theme": "tropic",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-10_C_94-1-8_nasser-alqatami.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ac8972c7d9f9f33012bf38f",
+    "due": "2026-10-10T06:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ac8972d7d9f9f33012bf3b8",
+    "due": "2026-10-10T19:45:00.000Z"
+   }
+  }
  }
 ]
