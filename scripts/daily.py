@@ -25,6 +25,7 @@ import quran  # noqa: E402
 import recitation  # noqa: E402
 import stats  # noqa: E402
 import storage  # noqa: E402
+import trends  # noqa: E402
 from common import STATE, config, load_json, save_json  # noqa: E402
 
 PLATFORMS = ("tiktok", "instagram", "youtube")
@@ -167,6 +168,11 @@ def main() -> int:
                           "paste it over the BUFFER_API_KEY secret.", flush=True)
                 else:
                     print(f"stats: skipped this run ({type(e).__name__}: {str(e)[:300]})", flush=True)
+        if cfg.get("learn_from_trends", True):
+            try:  # best effort, like the stats step
+                print(trends.update(), flush=True)
+            except Exception as e:
+                print(f"trends: skipped this run ({type(e).__name__}: {str(e)[:300]})", flush=True)
 
     slots = open_slots(cfg, schedule, now, days_ahead)
     if args.max:
