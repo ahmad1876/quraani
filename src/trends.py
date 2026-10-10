@@ -3,7 +3,8 @@
 Once a week (scripts/daily.py calls update()):
   1. search YouTube for the most viewed Quran recitation Shorts of the last 30 days (a few searches,
      about 400 of the free 10,000 daily units)
-  2. read each video's title and description for the surah and the reciter (English or Arabic names)
+  2. read each video's title (and, when the title names none, a description naming exactly one) for the
+     surah and the reciter (English or Arabic names)
   3. add up the views per surah and per reciter we have in our catalog, and give the most watched a
      small boost: weight 1.0 (not trending) up to 1.4 (the top one), so our own stats still lead
      (stats weights go from 0.6 to 1.8)
@@ -17,6 +18,7 @@ import datetime as dt
 import math
 import re
 from collections import defaultdict
+from functools import lru_cache
 
 import youtube
 from common import CATALOG, STATE, load_json, save_json
@@ -29,6 +31,7 @@ LOOKBACK_DAYS = 30    # videos published in this window
 QUERIES = ["quran recitation", "beautiful quran recitation", "quran shorts", "تلاوة خاشعة", "سورة قرآن"]
 BOOST = 0.4           # the top surah/reciter gets weight 1 + BOOST
 W_MAX = 1.0 + BOOST
+VERSION = 2          # bump when the matching changes: the next run searches again
 AL = r"(?:a[lnrstdz]|adh|ash|al)"
 
 
@@ -98,6 +101,27 @@ def match(text: str, rpats: dict, spats: dict) -> tuple[set, set]:
     return recs, surahs
 
 
+def credit(title: str, description: str, rpats: dict, spats: dict) -> tuple[set, set]:
+    """The surahs and reciters a video is about: the title decides; the description only fills in when it
+    names exactly one (descriptions are often keyword lists naming many surahs, even on Azan clips)."""
+    t_recs, t_surahs = match(title, rpats, spats)
+    d_recs, d_surahs = match(description, rpats, spats)
+    recs = t_recs or (d_recs if len({_tag(r) for r in d_recs}) == 1 else set())
+    surahs = t_surahs or (d_surahs if len(d_surahs) == 1 else set())
+    if len(surahs) > 2:  # a title listing many surahs is a compilation: not a signal for any one
+        surahs = set()
+    if len({_tag(r) for r in recs}) > 2:
+        recs = set()
+    return recs, surahs
+
+
+@lru_cache(maxsize=None)
+def _tag(key: str) -> str:
+    """Reciters that share a tag (Abdul Basit murattal and mujawwad) count as one person."""
+    tags = {r["key"]: r["tag"] for r in load_json(CATALOG / "reciters.json", []) or []}
+    return tags.get(key, key)
+
+
 # ---------------------------------------------------------------- weights --
 def _weights(total: dict) -> dict:
     """Views per value -> 1.0 .. 1.4: the most watched gets 1.4, a quarter of its views about 1.2."""
@@ -129,7 +153,7 @@ def update(force: bool = False) -> str:
         return "trends: skipped (no YOUTUBE_API_KEY)"
     old = load_json(TRENDS, {}) or {}
     last = old.get("updated")
-    if not force and last:
+    if not force and last and old.get("version") == VERSION:
         age = _now() - dt.datetime.fromisoformat(last)
         if age < dt.timedelta(days=REFRESH_DAYS):
             return f"trends: up to date ({age.days} day(s) old, next search in {REFRESH_DAYS - age.total_seconds() / 86400:.1f} days)"
@@ -145,7 +169,7 @@ def update(force: bool = False) -> str:
     count_r: dict[str, int] = defaultdict(int)
     top = []
     for vid, v in vids.items():
-        recs, surahs = match(f"{v['title']}\n{v['description']}", rpats, spats)
+        recs, surahs = credit(v["title"], v["description"], rpats, spats)
         for r in recs:
             by_rec[r] += v["views"] / len(recs)
             count_r[r] += 1
@@ -157,6 +181,7 @@ def update(force: bool = False) -> str:
     top.sort(key=lambda x: -x["views"])
     data = {
         "updated": _now().isoformat(timespec="seconds"),
+        "version": VERSION,
         "videos": len(vids),
         "weights": {"surah": _weights(by_surah), "reciter": _weights(by_rec)},
         "views": {"surah": {k: round(v) for k, v in by_surah.items()}, "reciter": {k: round(v) for k, v in by_rec.items()}},
