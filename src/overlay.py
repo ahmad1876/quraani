@@ -36,8 +36,11 @@ body{{width:{W}px;height:{H}px;position:relative;overflow:hidden}}
 #hdr .orn{{display:flex;align-items:center;justify-content:center;gap:14px;margin:4px 0 3px}}
 #hdr .orn i{{display:block;height:2px;width:96px;background:linear-gradient(90deg,transparent,#E7CF9A,transparent);opacity:.9}}
 #hdr .orn b{{display:block;width:9px;height:9px;transform:rotate(45deg);background:#E7CF9A;box-shadow:0 0 6px rgba(0,0,0,.5)}}
-#hdr .r{{font-family:'AM';font-size:34px;line-height:1.4;color:rgba(255,255,255,.9);
-  text-shadow:0 0 14px rgba(0,0,0,.75),0 0 4px rgba(0,0,0,.55),0 2px 5px rgba(0,0,0,.7)}}
+#hdr .r{{font-family:'AM';font-size:40px;line-height:1.35;color:#fff;
+  text-shadow:0 0 18px rgba(0,0,0,.85),0 0 6px rgba(0,0,0,.7),0 2px 5px rgba(0,0,0,.85)}}
+#hdr .re{{direction:ltr;font-family:'AM';font-size:29px;line-height:1.3;color:rgba(255,255,255,.92);letter-spacing:.3px;
+  text-shadow:0 0 16px rgba(0,0,0,.85),0 0 5px rgba(0,0,0,.7),0 1px 4px rgba(0,0,0,.9)}}
+#hdr .re:empty{{display:none}}
 #handle{{position:absolute;left:0;width:{W}px;top:1440px;text-align:center;font:600 31px 'DejaVu Sans',sans-serif;
   color:rgba(255,255,255,.84);letter-spacing:.6px;text-shadow:0 0 10px rgba(0,0,0,.55),0 1px 4px rgba(0,0,0,.8);padding:8px 0}}
 #hook{{position:absolute;left:100px;width:880px;top:0;text-align:center;direction:ltr;padding:18px 0 22px;display:none}}
@@ -47,7 +50,7 @@ body{{width:{W}px;height:{H}px;position:relative;overflow:hidden}}
 #hook .orn i{{display:block;height:2px;width:120px;background:linear-gradient(90deg,transparent,#E7CF9A,transparent);opacity:.9}}
 #hook .orn b{{display:block;width:9px;height:9px;transform:rotate(45deg);background:#E7CF9A;box-shadow:0 0 6px rgba(0,0,0,.5)}}
 </style></head><body>
-<div id="hdr"><div class="s">{surah}</div><div class="orn"><i></i><b></b><i></i></div><div class="r">{reciter}</div></div>
+<div id="hdr"><div class="s">{surah}</div><div class="orn"><i></i><b></b><i></i></div><div class="r">{reciter}</div><div class="re">{reciter_en}</div></div>
 <div id="hook"><div class="t"></div><div class="orn"><i></i><b></b><i></i></div></div>
 <div id="ayah"><div id="ar"></div><div id="en"></div></div><div id="handle">{handle}</div>
 </body></html>"""
@@ -102,17 +105,18 @@ PLACE_JS = """([ar, en, s, es]) => {
 
 
 def render(units: list[dict], surah_ar: str, reciter_ar: str, out_dir: Path, handle: str = "",
-           english: bool = True, backdrop: float = 0.34, hook: str = "") -> dict:
+           english: bool = True, backdrop: float = 0.34, hook: str = "", reciter_en: str = "") -> dict:
     """Writes header.png (+handle.png, +hook.png) and unit_XX.png. Returns positions for compositing.
 
     backdrop: darkness of the soft shade behind the text (higher on bright, busy footage).
-    hook: short title shown in place of the header for the first seconds (empty = no title)."""
+    hook: short title shown in place of the header for the first seconds (empty = no title).
+    reciter_en: the reciter's name in English under the Arabic one (people search for reciters by name)."""
     from playwright.sync_api import sync_playwright
 
     out_dir = Path(out_dir).resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
     page_html = PAGE.format(fonts=FONTS.as_uri(), W=W, H=H, L=TEXT_LEFT, TW=TEXT_WIDTH,
-                            surah=html.escape(surah_ar), reciter=html.escape(reciter_ar),
+                            surah=html.escape(surah_ar), reciter=html.escape(reciter_ar), reciter_en=html.escape(reciter_en),
                             handle=html.escape(handle), B1=f"{backdrop:.2f}", B2=f"{backdrop * 0.65:.2f}")
     page_file = out_dir / "overlay.html"
     page_file.write_text(page_html, encoding="utf-8")

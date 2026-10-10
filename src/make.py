@@ -1,6 +1,7 @@
 """Build one finished short: pick span, cut audio, time the text, add footage, render."""
 from __future__ import annotations
 
+import re
 import shutil
 from pathlib import Path
 
@@ -16,6 +17,8 @@ from common import ffprobe_duration
 
 MAX_SEC = 44.6   # hard ceiling is 45 s
 MIN_SEC = 9.0
+LONG_MAX_SEC = 175.0  # weekly long video (catalog/long_passages.json): still a Short everywhere (3 min)
+LONG_MIN_SEC = 60.0
 TAIL = 0.4      # calm silence after the last ayah
 
 
@@ -37,9 +40,15 @@ def join_translation(parts: list[str]) -> str:
     return out
 
 
+def limits(passage: dict) -> tuple[float, float]:
+    """(longest, shortest) video length in seconds for this passage."""
+    return (LONG_MAX_SEC, LONG_MIN_SEC) if passage.get("long") else (MAX_SEC, MIN_SEC)
+
+
 def plan_span(passage: dict, reciter_key: str):
     t = recitation.timing(reciter_key, passage["surah"])
-    return t, recitation.fit_span(t, passage["start"], passage["end"], MAX_SEC - 0.9, MIN_SEC,
+    max_sec, min_sec = limits(passage)
+    return t, recitation.fit_span(t, passage["start"], passage["end"], max_sec - 0.9, min_sec,
                                   passage.get("need", 0))
 
 
@@ -52,7 +61,7 @@ def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list 
     ch = passage["surah"]
     t, span = plan_span(passage, reciter_key)
     if not span:
-        raise ValueError(f"{passage['id']} does not fit {MAX_SEC}s for {reciter_key}")
+        raise ValueError(f"{passage['id']} does not fit {limits(passage)[0]}s for {reciter_key}")
     a, b, t0, t1 = span
     vs = t["verses"]
     out_mp4 = Path(out_mp4).resolve()
@@ -77,7 +86,7 @@ def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list 
     else:
         cut0 = r0 + audio.quietest(env, t0 - r0, 0.35)
         cut1 = r0 + audio.quietest(env, t1 - r0, 0.35)
-    cut1 = min(cut1, cut0 + MAX_SEC - TAIL)
+    cut1 = min(cut1, cut0 + limits(passage)[0] - TAIL)
     final_wav = work / "audio.wav"
     dur = audio.finalize(raw, cut0 - r0, cut1 - r0, final_wav, tail=TAIL)
 
@@ -87,7 +96,7 @@ def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list 
         english_text.attach(units, ch)
 
     # 3) real nature footage, no people or animals
-    n = max(1, min(4, round(dur / 12.5)))
+    n = max(1, min(8, round(dur / 20))) if passage.get("long") else max(1, min(4, round(dur / 12.5)))
     if clip_ids:  # re-render with the same footage as before
         clips = footage.clips_by_ids(clip_ids)
     else:
@@ -97,14 +106,15 @@ def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list 
     chap = quran.chapter(ch)
     backdrop = compose.text_shade([c["path"] for c in clips])
     ov = overlay.render(units, "سورة " + chap["name_ar"], rec["name_ar"], work / "ov", handle=handle,
-                        english=english, backdrop=backdrop, hook=passage.get("hook", "") if hook_title else "")
-    compose.build(clips, final_wav, ov, out_mp4, dur, seed=seed, preset=preset)
+                        english=english, backdrop=backdrop, hook=passage.get("hook", "") if hook_title else "",
+                        reciter_en=re.sub(r"\s*\(.*?\)", "", rec["name_en"]) if english else "")
+    compose.build(clips, final_wav, ov, out_mp4, dur, seed=seed, preset=preset, small=bool(passage.get("long")))
     shutil.rmtree(work, ignore_errors=True)
 
     ref = f"{ch}:{a}" if a == b else f"{ch}:{a}-{b}"
     return {
         "file": str(out_mp4),
-        "passage": passage["id"],
+        "passage": ("long:" if passage.get("long") else "") + passage["id"],
         "ref": ref,
         "surah": ch,
         "ayah_from": a,

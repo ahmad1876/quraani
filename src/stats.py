@@ -101,7 +101,9 @@ def fetch_sent(chans: dict, since: dt.datetime, gql=None) -> dict[str, dict]:
 
 def _passage_theme() -> dict[str, str]:
     ps = load_json(CATALOG / "passages.json", []) or []
-    return {p["id"]: p.get("theme", "") for p in ps}
+    out = {p["id"]: p.get("theme", "") for p in ps}
+    out.update({"long:" + p["id"]: p.get("theme", "") for p in load_json(CATALOG / "long_passages.json", []) or []})
+    return out
 
 
 def collect(history: list[dict], chans: dict, gql=None) -> dict:
@@ -229,7 +231,8 @@ def scores(store: dict, now: dt.datetime | None = None) -> dict[str, dict]:
         due = _when(r.get("due"))
         if not due or due > now - dt.timedelta(hours=MIN_AGE_H) or _views(r.get("m") or {}) is None:
             continue
-        by_platform[r["platform"]].append((pid, r))
+        # the weekly 3-minute videos are compared with each other, not with the daily shorts
+        by_platform[r["platform"] + ("/long" if str(r.get("passage", "")).startswith("long:") else "")].append((pid, r))
     out = {}
     for platform, items in by_platform.items():
         if len(items) < 4:  # too few to say what "typical" is

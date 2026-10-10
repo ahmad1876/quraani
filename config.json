@@ -23,6 +23,17 @@
   {
    "id": "D",
    "tiktok": "16:45"
+  },
+  {
+   "id": "L",
+   "long": true,
+   "weekdays": [
+    4
+   ],
+   "note": "weekly long video (up to 3 min) on Fridays",
+   "youtube": "14:15",
+   "instagram": "17:15",
+   "tiktok": "18:15"
   }
  ],
  "handle": "@calmquraan.daily",
@@ -56,7 +67,8 @@
      "A",
      "B",
      "C",
-     "D"
+     "D",
+     "L"
     ]
    }
   ]

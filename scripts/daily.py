@@ -54,6 +54,8 @@ def open_slots(cfg: dict, schedule: dict, now: dt.datetime, days_ahead: int) -> 
         for slot in cfg["slots"]:
             if schedule.get(day.isoformat(), {}).get(slot["id"]):
                 continue
+            if "weekdays" in slot and day.weekday() not in slot["weekdays"]:  # e.g. the weekly long video
+                continue
             slot = active_slot(cfg, slot, day)
             times = [slot[p] for p in PLATFORMS if slot.get(p)]
             if not times:  # nothing posts from this slot on that day
@@ -85,7 +87,7 @@ def caption_meta(entry: dict) -> dict:
     ch, rng = entry["ref"].split(":")
     a, b = (rng.split("-") + [rng])[:2]
     ch, a, b = int(ch), int(a), int(b)
-    passage = next((p for p in planner.passages() if p["id"] == entry["passage"]), {})
+    passage = planner.by_id().get(entry["passage"], {})
     rec = recitation.reciters()[entry["reciter"]]
     return {
         "passage": entry["passage"], "ref": entry["ref"], "surah": ch,
@@ -181,7 +183,15 @@ def main() -> int:
         print("Nothing to do: the next", days_ahead, "days are already scheduled.")
         return 0
     rng = random.Random()
-    picks = planner.choose(len(slots), history, rng)
+    # the weekly long slot picks from the long list; the rest from the daily shorts
+    longs = [x for x in slots if x[1].get("long")]
+    slots = [x for x in slots if not x[1].get("long")] + longs
+    picks = planner.choose(len(slots) - len(longs), history, rng)
+    if longs:
+        long_picks = planner.choose(len(longs), history, rng, long=True)
+        if len(picks) < len(slots) - len(longs):  # keep each pick next to its own kind of slot
+            slots = slots[:len(picks)] + longs
+        picks += long_picks
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     errors = 0
