@@ -42,8 +42,15 @@ def platform_on(cfg: dict, platform: str, slot_id: str, day: dt.date) -> bool:
 
 
 def active_slot(cfg: dict, slot: dict, day: dt.date) -> dict:
-    """The slot with only the platforms that post on that day."""
-    return {k: v for k, v in slot.items() if k not in PLATFORMS or platform_on(cfg, k, slot["id"], day)}
+    """The slot with only the platforms that post on that day. A weekly slot with "replaces" (the Friday
+    long video) takes the place of that slot's posts on its days, so the posts per day stay the same."""
+    out = {k: v for k, v in slot.items() if k not in PLATFORMS or platform_on(cfg, k, slot["id"], day)}
+    for other in cfg.get("slots", []):
+        if other.get("replaces") == slot["id"] and day.weekday() in other.get("weekdays", []):
+            for p in PLATFORMS:
+                if other.get(p) and platform_on(cfg, p, other["id"], day):
+                    out.pop(p, None)
+    return out
 
 
 def open_slots(cfg: dict, schedule: dict, now: dt.datetime, days_ahead: int) -> list[tuple[dt.date, dict]]:
