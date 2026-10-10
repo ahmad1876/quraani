@@ -106,7 +106,8 @@ def plan_cuts(duration: float, unit_starts: list[float], n: int) -> list[float]:
 
 
 def build(clips: list[dict], audio_wav: Path, ov: dict, out_mp4: Path, duration: float,
-          seed: int = 0, preset: str = "medium") -> Path:
+          seed: int = 0, preset: str = "medium", small: bool = False) -> Path:
+    """small: a lighter encode for the 3-minute videos, so the file stays under GitHub's 100 MB limit."""
     rng = random.Random(seed)
     unit_starts = [u["start"] for u in ov["units"]]
     segs = plan_cuts(duration, unit_starts, len(clips))
@@ -191,8 +192,9 @@ def build(clips: list[dict], audio_wav: Path, ov: dict, out_mp4: Path, duration:
     args += [
         "-filter_complex_script", str(filter_path),
         "-map", "[vout]", "-map", f"{aidx}:a",
-        "-c:v", "libx264", "-preset", preset, "-crf", "18", "-profile:v", "high", "-level:v", "4.2",
-        "-pix_fmt", "yuv420p", "-r", str(FPS), "-g", "60", "-maxrate", "8M", "-bufsize", "16M",
+        "-c:v", "libx264", "-preset", preset, "-crf", "21" if small else "18", "-profile:v", "high", "-level:v", "4.2",
+        "-pix_fmt", "yuv420p", "-r", str(FPS), "-g", "60", "-maxrate", "3.6M" if small else "8M",
+        "-bufsize", "7M" if small else "16M",
         "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
         "-t", f"{duration:.3f}", "-movflags", "+faststart",
         # clean file: no tool tags, no encoder banners, no metadata of any kind

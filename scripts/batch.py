@@ -29,7 +29,7 @@ def main() -> None:
     rng = random.Random()
     chosen = [a.split("=") for a in sys.argv[3:] if "=" in a]
     if chosen:
-        by_id = {p["id"]: p for p in planner.passages()}
+        by_id = planner.by_id()  # long ones as long:<id>, e.g. long:67:1-11
         picks = [(by_id[pid], rk) for pid, rk in chosen]
     else:
         picks = planner.choose(n, history, rng)

@@ -2,13 +2,15 @@
 
 Once a week (scripts/daily.py calls update()):
   1. search YouTube for the most viewed Quran recitation Shorts of the last 30 days (a few searches,
-     about 400 of the free 10,000 daily units)
+     500 units, plus 100 per reciter: about 3,300 of the free 10,000 daily units)
   2. read each video's title (and, when the title names none, a description naming exactly one) for the
      surah and the reciter (English or Arabic names)
-  3. add up the views per surah and per reciter we have in our catalog, and give the most watched a
+  3. search YouTube once per reciter in our catalog ("<name> quran", Shorts of the last 30 days, on any
+     channel) and rank them by the views of their 10 most watched Shorts: the reciter leaderboard
+  4. add up the views per surah (and per reciter, from the leaderboard), and give the most watched a
      small boost: weight 1.0 (not trending) up to 1.4 (the top one), so our own stats still lead
      (stats weights go from 0.6 to 1.8)
-  4. save state/trends.json (read by planner.py) and a readable state/trends.md
+  5. save state/trends.json (read by planner.py) and a readable state/trends.md
 
 Needs YOUTUBE_API_KEY; without it nothing happens and the picks stay as they were.
 """
@@ -31,7 +33,7 @@ LOOKBACK_DAYS = 30    # videos published in this window
 QUERIES = ["quran recitation", "beautiful quran recitation", "quran shorts", "تلاوة خاشعة", "سورة قرآن"]
 BOOST = 0.4           # the top surah/reciter gets weight 1 + BOOST
 W_MAX = 1.0 + BOOST
-VERSION = 2          # bump when the matching changes: the next run searches again
+VERSION = 3          # bump when the matching changes: the next run searches again
 AL = r"(?:a[lnrstdz]|adh|ash|al)"
 
 
@@ -48,6 +50,25 @@ def _strip_al(word: str) -> str:
 
 
 # ---------------------------------------------------------------- matching --
+# other common spellings in titles (compared without spaces, hyphens or case)
+ALIASES = {
+    "yasser-aldosari": ["dossary", "dossari", "dosary", "aldawsari", "dawsari"],
+    "mishary-alafasy": ["afasy", "alafasi", "afasi", "mishari"],
+    "maher-almuaiqly": ["muaiqli", "mueaqly", "muaiqlee", "maheralmu"],
+    "abdulrahman-alsudais": ["sudais", "sudays"],
+    "saad-alghamdi": ["ghamdi"],
+    "nasser-alqatami": ["qatami", "katami"],
+    "ahmed-alajmi": ["alajmi", "alajami"],
+    "mahmoud-alhusary": ["husary", "hussary", "husari", "hussari"],
+    "minshawi": ["minshawy"],
+    "abdulbasit-murattal": ["abdulbaset", "abdelbasset", "abdelbaset", "abdulbasit"],
+    "abdulbasit-mujawwad": ["abdulbaset", "abdelbasset", "abdelbaset", "abdulbasit"],
+    "saud-alshuraim": ["shuraim", "shuraym"],
+    "abu-bakr-alshatri": ["shatri", "shatiri"],
+    "hani-alrifai": ["rifai", "alrifai"],
+    "idris-abkar": ["abkar"],
+}
+
 def reciter_patterns() -> dict[str, list]:
     """{reciter_key: [compiled patterns]} from catalog/reciters.json (English and Arabic names)."""
     out: dict[str, list] = {}
@@ -59,6 +80,7 @@ def reciter_patterns() -> dict[str, list]:
         if len(surname) >= 5 and surname not in {"samad", "abdul"}:
             latin.add(surname)
         pats = [re.compile(re.escape(x)) for x in latin if len(x) >= 5]  # matched on compacted text
+        pats += [re.compile(re.escape(x)) for x in ALIASES.get(r["key"], [])]
         ar = r.get("name_ar", "").split()
         ar_alias = {" ".join(ar)}
         if ar and len(ar[-1]) >= 4 and ar[-1] not in {"الصمد"}:
@@ -146,6 +168,32 @@ def weight(kind: str, value, table: dict | None = None) -> float:
     return float(table.get(kind, {}).get(str(value), 1.0))
 
 
+def leaderboard(since: dt.datetime, rpats: dict, spats: dict) -> dict[str, dict]:
+    """{tag: {...}}: how each reciter's recent Shorts do across YouTube, from one search per reciter."""
+    people: dict[str, dict] = {}
+    for r in load_json(CATALOG / "reciters.json", []) or []:
+        people.setdefault(r["tag"], {"keys": [], "name": re.sub(r"\s*\(.*?\)", "", r["name_en"])})
+        people[r["tag"]]["keys"].append(r["key"])
+    board: dict[str, dict] = {}
+    for tag, who in people.items():
+        try:
+            ids = youtube.search_shorts(f"{who['name']} quran", since, max_results=25)
+            vids = youtube.stats(ids)
+        except youtube.YouTubeError as e:
+            print(f"trends: reciter search stopped at {who['name']} ({e})", flush=True)
+            return {}  # a half-filled board would favour whoever came first: use none of it
+        mine = []
+        for vid, v in vids.items():
+            recs, _ = credit(v["title"], v["description"], rpats, spats)
+            if {_tag(k) for k in recs} == {tag}:  # about this reciter alone
+                mine.append({"id": vid, "views": v["views"], "channel": v["channel"], "title": v["title"][:100]})
+        mine.sort(key=lambda x: -x["views"])
+        board[tag] = {"keys": who["keys"], "name": who["name"], "videos": len(mine),
+                      "channels": len({m["channel"] for m in mine}),
+                      "top10": sum(m["views"] for m in mine[:10]), "best": mine[0] if mine else None}
+    return board
+
+
 # ------------------------------------------------------------------- main --
 def update(force: bool = False) -> str:
     """Search, score and save. Returns a one-line summary for the log."""
@@ -179,19 +227,26 @@ def update(force: bool = False) -> str:
         top.append({"id": vid, "title": v["title"][:120], "channel": v["channel"], "views": v["views"],
                     "reciters": sorted(recs), "surahs": sorted(surahs)})
     top.sort(key=lambda x: -x["views"])
+    board = leaderboard(since, rpats, spats)
+    rec_weights = _weights(by_rec)
+    if board:  # a direct search per reciter says more than reciters named in general results
+        per_key = {k: b["top10"] for b in board.values() for k in b["keys"] if b["top10"] > 0}
+        rec_weights = _weights(per_key)
     data = {
         "updated": _now().isoformat(timespec="seconds"),
         "version": VERSION,
         "videos": len(vids),
-        "weights": {"surah": _weights(by_surah), "reciter": _weights(by_rec)},
+        "weights": {"surah": _weights(by_surah), "reciter": rec_weights},
+        "leaderboard": board,
         "views": {"surah": {k: round(v) for k, v in by_surah.items()}, "reciter": {k: round(v) for k, v in by_rec.items()}},
         "counts": {"surah": dict(count_s), "reciter": dict(count_r)},
         "top": top[:30],
     }
     save_json(TRENDS, data)
     REPORT.write_text(report(data), encoding="utf-8")
-    return (f"trends: {len(vids)} popular Quran Shorts read, {len(by_surah)} surahs and {len(by_rec)} "
-            f"of our reciters found (see state/trends.md)")
+    lead = max(board.values(), key=lambda b: b["top10"])["name"] if board else "none"
+    return (f"trends: {len(vids)} popular Quran Shorts read, {len(by_surah)} surahs found, "
+            f"{len(board)} reciters compared (top: {lead}) - see state/trends.md")
 
 
 def report(data: dict) -> str:
@@ -205,8 +260,24 @@ def report(data: dict) -> str:
              f"The {data['videos']} most viewed Quran Shorts of the last {LOOKBACK_DAYS} days. Surahs and reciters "
              "that show up in them get a small boost when the next videos are picked (weight 1.0 to "
              f"{W_MAX:.1f}; our own post stats still count more).", ""]
+    board = data.get("leaderboard") or {}
+    if board:
+        lines += ["## Reciter leaderboard", "",
+                  "One YouTube search per reciter: their Shorts from the last 30 days on any channel. Ranked by the "
+                  "views of their 10 most watched; the weight is the boost when picking the next reciter.", "",
+                  "| | Reciter | Shorts found | Channels | Top 10 views | Weight | Most watched |", "|---|---|---|---|---|---|---|"]
+        ranked = sorted(board.values(), key=lambda b: -b["top10"])
+        for n, b in enumerate(ranked, 1):
+            w = data["weights"]["reciter"].get(b["keys"][0], 1.0)
+            best = b.get("best")
+            link = (f"[{best['views']:,} views](https://youtube.com/shorts/{best['id']}) - {best['channel'].replace('|', '/')}"
+                    if best else "")
+            lines.append(f"| {n} | {b['name']} | {b['videos']} | {b['channels']} | {b['top10']:,} | {w:.2f} | {link} |")
+        lines.append("")
     for kind, title, label in (("surah", "Surahs", lambda k: f"{k}. {names.get(k, '')}"),
                                ("reciter", "Reciters", lambda k: recs.get(k, k))):
+        if kind == "reciter" and board:
+            continue
         w = data["weights"].get(kind) or {}
         if not w:
             continue

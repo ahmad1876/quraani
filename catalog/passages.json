@@ -997,5 +997,87 @@
   "hook": "Say: I seek refuge in the Lord of mankind.",
   "priority": 1,
   "theme": "protection"
+ },
+ {
+  "id": "108:1-3",
+  "surah": 108,
+  "start": 1,
+  "end": 3,
+  "hook": "Indeed, We have granted you al-Kawthar.",
+  "priority": 1,
+  "theme": "shukr"
+ },
+ {
+  "id": "67:12-15",
+  "surah": 67,
+  "start": 12,
+  "end": 15,
+  "hook": "Those who fear their Lord unseen will have forgiveness and great reward.",
+  "priority": 1,
+  "theme": "mulk"
+ },
+ {
+  "id": "67:19",
+  "surah": 67,
+  "start": 19,
+  "end": 19,
+  "hook": "None holds them aloft except the Most Merciful.",
+  "priority": 2,
+  "theme": "reflection"
+ },
+ {
+  "id": "64:11",
+  "surah": 64,
+  "start": 11,
+  "end": 11,
+  "hook": "No disaster strikes except by permission of Allah.",
+  "priority": 1,
+  "theme": "sabr"
+ },
+ {
+  "id": "95:1-8",
+  "surah": 95,
+  "start": 1,
+  "end": 8,
+  "hook": "We have certainly created man in the best of stature.",
+  "priority": 2,
+  "theme": "purpose"
+ },
+ {
+  "id": "101:1-11",
+  "surah": 101,
+  "start": 1,
+  "end": 11,
+  "hook": "The Striking Calamity. What is the Striking Calamity?",
+  "priority": 2,
+  "theme": "akhirah",
+  "need": 7
+ },
+ {
+  "id": "102:1-8",
+  "surah": 102,
+  "start": 1,
+  "end": 8,
+  "hook": "Competition in worldly increase diverts you until you visit the graveyards.",
+  "priority": 1,
+  "theme": "dunya"
+ },
+ {
+  "id": "109:1-6",
+  "surah": 109,
+  "start": 1,
+  "end": 6,
+  "hook": "For you is your religion, and for me is my religion.",
+  "priority": 2,
+  "theme": "tawheed"
+ },
+ {
+  "id": "85:14-16",
+  "surah": 85,
+  "start": 14,
+  "end": 16,
+  "hook": "And He is the Forgiving, the Affectionate.",
+  "priority": 2,
+  "theme": "mercy"
  }
 ]

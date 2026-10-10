@@ -1,0 +1,237 @@
+[
+ {
+  "id": "18:1-10",
+  "surah": 18,
+  "start": 1,
+  "end": 10,
+  "hook": "The first ten verses of Surah Al-Kahf.",
+  "priority": 1,
+  "theme": "kahf",
+  "long": true
+ },
+ {
+  "id": "67:1-11",
+  "surah": 67,
+  "start": 1,
+  "end": 11,
+  "hook": "Blessed is He in whose hand is the dominion.",
+  "priority": 1,
+  "theme": "mulk",
+  "long": true
+ },
+ {
+  "id": "55:1-25",
+  "surah": 55,
+  "start": 1,
+  "end": 25,
+  "hook": "So which of the favors of your Lord would you deny?",
+  "priority": 1,
+  "theme": "rahman",
+  "long": true
+ },
+ {
+  "id": "36:1-21",
+  "surah": 36,
+  "start": 1,
+  "end": 21,
+  "hook": "Ya-Sin. By the wise Quran.",
+  "priority": 1,
+  "theme": "yasin",
+  "long": true
+ },
+ {
+  "id": "2:284-286",
+  "surah": 2,
+  "start": 284,
+  "end": 286,
+  "hook": "The closing verses of Surah Al-Baqarah.",
+  "priority": 1,
+  "theme": "dua",
+  "long": true,
+  "need": 286
+ },
+ {
+  "id": "2:255-257",
+  "surah": 2,
+  "start": 255,
+  "end": 257,
+  "hook": "Ayat al-Kursi and the verses after it.",
+  "priority": 1,
+  "theme": "protection",
+  "long": true,
+  "need": 257
+ },
+ {
+  "id": "59:18-24",
+  "surah": 59,
+  "start": 18,
+  "end": 24,
+  "hook": "The closing verses of Surah Al-Hashr.",
+  "priority": 1,
+  "theme": "names",
+  "long": true,
+  "need": 24
+ },
+ {
+  "id": "25:63-77",
+  "surah": 25,
+  "start": 63,
+  "end": 77,
+  "hook": "The servants of the Most Merciful.",
+  "priority": 2,
+  "theme": "character",
+  "long": true
+ },
+ {
+  "id": "3:190-194",
+  "surah": 3,
+  "start": 190,
+  "end": 194,
+  "hook": "In the creation of the heavens and the earth are signs.",
+  "priority": 2,
+  "theme": "reflection",
+  "long": true,
+  "need": 194
+ },
+ {
+  "id": "73:1-19",
+  "surah": 73,
+  "start": 1,
+  "end": 19,
+  "hook": "O you who wraps himself, arise to pray the night.",
+  "priority": 2,
+  "theme": "qiyam",
+  "long": true
+ },
+ {
+  "id": "78:1-16",
+  "surah": 78,
+  "start": 1,
+  "end": 16,
+  "hook": "About what are they asking one another?",
+  "priority": 2,
+  "theme": "akhirah",
+  "long": true
+ },
+ {
+  "id": "81:1-29",
+  "surah": 81,
+  "start": 1,
+  "end": 29,
+  "hook": "The full Surah At-Takwir.",
+  "priority": 2,
+  "theme": "akhirah",
+  "long": true,
+  "need": 29
+ },
+ {
+  "id": "82:1-19",
+  "surah": 82,
+  "start": 1,
+  "end": 19,
+  "hook": "The full Surah Al-Infitar.",
+  "priority": 2,
+  "theme": "akhirah",
+  "long": true,
+  "need": 19
+ },
+ {
+  "id": "84:1-25",
+  "surah": 84,
+  "start": 1,
+  "end": 25,
+  "hook": "The full Surah Al-Inshiqaq.",
+  "priority": 2,
+  "theme": "akhirah",
+  "long": true,
+  "need": 25
+ },
+ {
+  "id": "85:1-22",
+  "surah": 85,
+  "start": 1,
+  "end": 22,
+  "hook": "The full Surah Al-Buruj.",
+  "priority": 2,
+  "theme": "mercy",
+  "long": true,
+  "need": 22
+ },
+ {
+  "id": "86:1-17",
+  "surah": 86,
+  "start": 1,
+  "end": 17,
+  "hook": "The full Surah At-Tariq.",
+  "priority": 2,
+  "theme": "reflection",
+  "long": true,
+  "need": 17
+ },
+ {
+  "id": "87:1-19",
+  "surah": 87,
+  "start": 1,
+  "end": 19,
+  "hook": "The full Surah Al-A'la.",
+  "priority": 1,
+  "theme": "tasbih",
+  "long": true,
+  "need": 19
+ },
+ {
+  "id": "88:1-26",
+  "surah": 88,
+  "start": 1,
+  "end": 26,
+  "hook": "The full Surah Al-Ghashiyah.",
+  "priority": 1,
+  "theme": "akhirah",
+  "long": true,
+  "need": 26
+ },
+ {
+  "id": "89:1-30",
+  "surah": 89,
+  "start": 1,
+  "end": 30,
+  "hook": "The full Surah Al-Fajr.",
+  "priority": 2,
+  "theme": "reminder",
+  "long": true,
+  "need": 30
+ },
+ {
+  "id": "90:1-20",
+  "surah": 90,
+  "start": 1,
+  "end": 20,
+  "hook": "The full Surah Al-Balad.",
+  "priority": 2,
+  "theme": "purpose",
+  "long": true,
+  "need": 20
+ },
+ {
+  "id": "91:1-15",
+  "surah": 91,
+  "start": 1,
+  "end": 15,
+  "hook": "The full Surah Ash-Shams.",
+  "priority": 2,
+  "theme": "reflection",
+  "long": true,
+  "need": 15
+ },
+ {
+  "id": "92:1-21",
+  "surah": 92,
+  "start": 1,
+  "end": 21,
+  "hook": "The full Surah Al-Layl.",
+  "priority": 2,
+  "theme": "reminder",
+  "long": true,
+  "need": 21
+ }
+]

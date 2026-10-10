@@ -66,7 +66,7 @@ def main() -> int:
         print(f"  {e['date']} {e['slot']} {e['ref']} {e['reciter']} -> {sorted(e['posts'])}", flush=True)
     if args.dry_run or not todo:
         return 0
-    by_id = {p["id"]: p for p in planner.passages()}
+    by_id = planner.by_id()
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     made, errors, picked = [], 0, {}
