@@ -1,7 +1,9 @@
-"""Learn from what performs: post stats from Buffer -> gentle weights for the next picks.
+"""Learn from what performs: post stats -> gentle weights for the next picks.
 
 Each daily run (scripts/daily.py) calls update():
-  1. fetch the stats of posts sent in the last few weeks from Buffer into state/metrics.json
+  1. fetch the stats of posts sent in the last few weeks into state/metrics.json: from Buffer when the
+     key has insights:read (paid plans), and for YouTube straight from YouTube when YOUTUBE_API_KEY is set
+     (free; Buffer still gives each post's link with posts:read)
   2. score every video against a typical post of the same age on the same platform
      (0 = typical, +0.7 = about twice the views, -0.7 = about half)
   3. turn the scores into weights per passage theme, reciter and footage mood, pulled
@@ -9,7 +11,7 @@ Each daily run (scripts/daily.py) calls update():
      nothing is ever dropped: state/stats_weights.json (read by planner.py and footage.py)
   4. write a short readable summary to state/stats.md
 
-Everything here is best effort: if Buffer is unreachable the old weights stay in place.
+Everything here is best effort: if Buffer or YouTube is unreachable the old weights stay in place.
 """
 from __future__ import annotations
 
@@ -19,7 +21,8 @@ import math
 from collections import defaultdict
 from statistics import median
 
-from common import CATALOG, STATE, load_json, save_json
+import youtube
+from common import CATALOG, STATE, config, load_json, save_json
 
 METRICS = STATE / "metrics.json"
 WEIGHTS = STATE / "stats_weights.json"
@@ -40,6 +43,9 @@ POSTS_QUERY = """query($first: Int, $after: String, $input: PostsInput!) {
     pageInfo { hasNextPage endCursor }
   }
 }"""
+# Without insights:read (Buffer Free) asking for metrics fails, so ask only for the link
+POSTS_QUERY_LITE = POSTS_QUERY.replace(" metricsUpdatedAt metrics { type value }", "")
+MATCH_HOURS = 3       # a YouTube upload this close to a post's send time is that post
 
 
 def _now() -> dt.datetime:
@@ -66,15 +72,23 @@ def fetch_sent(chans: dict, since: dt.datetime, gql=None) -> dict[str, dict]:
         if ch.get("organization"):
             by_org[ch["organization"]].append(ch["id"])
     out: dict[str, dict] = {}
+    query = POSTS_QUERY
     for org, ids in by_org.items():
         after = None
         for _ in range(20):  # 20 pages x 50 posts is far more than a few weeks of posts
-            data = gql(POSTS_QUERY, {"first": 50, "after": after, "input": {
+            variables = {"first": 50, "after": after, "input": {
                 "organizationId": org,
                 "filter": {"channelIds": ids, "status": ["sent"],
                            "dueAt": {"start": since.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
                                      "end": _now().strftime("%Y-%m-%dT%H:%M:%S.000Z")}},
-                "sort": [{"field": "dueAt", "direction": "desc"}]}})["posts"]
+                "sort": [{"field": "dueAt", "direction": "desc"}]}}
+            try:
+                data = gql(query, variables)["posts"]
+            except Exception:
+                if query is POSTS_QUERY_LITE:
+                    raise
+                query = POSTS_QUERY_LITE  # no insights:read: links only
+                data = gql(query, variables)["posts"]
             for e in data.get("edges") or []:
                 n = e["node"]
                 out[n["id"]] = n
@@ -124,13 +138,60 @@ def collect(history: list[dict], chans: dict, gql=None) -> dict:
                 "platform": platform, "due": due.isoformat(), "date": h.get("date"), "slot": h.get("slot"),
                 "passage": h.get("passage"), "theme": themes.get(h.get("passage"), ""), "reciter": h.get("reciter"),
                 "mood": h.get("footage_theme", ""), "duration": h.get("duration"), "link": n.get("externalLink"),
+                "video": store.get(pid, {}).get("video"),
                 "fetched": now.isoformat(timespec="seconds"), "m": m,
             }
+    if youtube.key():
+        try:
+            _youtube_numbers(store, [pid for pid, (platform, _, _) in wanted.items() if platform == "youtube"])
+        except youtube.YouTubeError as e:
+            print(f"stats: YouTube numbers skipped this run ({e})", flush=True)
     # forget posts that dropped out of the window long ago
     cutoff = now - dt.timedelta(days=60)
     store = {k: v for k, v in store.items() if (_when(v.get("due")) or now) > cutoff}
     save_json(METRICS, store)
     return store
+
+
+def _youtube_numbers(store: dict, pids: list[str]) -> None:
+    """Views, likes and comments of our YouTube posts, straight from YouTube (free API key)."""
+    rows = {pid: store[pid] for pid in pids if pid in store and not store[pid].get("missing")}
+    if not rows:
+        return
+    vid = {pid: r.get("video") or youtube.video_id(r.get("link")) for pid, r in rows.items()}
+    unmatched = [pid for pid, v in vid.items() if not v]
+    channel = (config().get("youtube_channel") or "").strip()
+    if unmatched and channel:
+        # Buffer gave no link: find the upload published closest to the post's send time
+        try:
+            ups = youtube.uploads(channel)
+        except Exception as e:
+            print(f"stats: could not list the YouTube channel's uploads ({str(e)[:200]})", flush=True)
+            ups = []
+        taken = {v for v in vid.values() if v}
+        for pid in sorted(unmatched, key=lambda p: rows[p]["due"]):
+            due = _when(rows[pid]["due"])
+            near = [(abs((when - due).total_seconds()), v) for v, when in ups if v not in taken]
+            near = [x for x in near if x[0] <= MATCH_HOURS * 3600]
+            if near:
+                vid[pid] = min(near)[1]
+                taken.add(vid[pid])
+    nums = youtube.stats([v for v in vid.values() if v])
+    for pid, v in vid.items():
+        n = nums.get(v or "")
+        if not n:
+            continue
+        m = {"views": n["views"]}
+        if n["likes"] is not None:
+            m["likes"] = n["likes"]
+        if n["comments"] is not None:
+            m["comments"] = n["comments"]
+        store[pid] = {**store[pid], "video": v, "link": f"https://youtube.com/shorts/{v}", "m": m, "source": "youtube"}
+    missing = [pid for pid, v in vid.items() if not v]
+    if missing:
+        print(f"stats: {len(missing)} YouTube post(s) without a link from Buffer"
+              + ("" if channel else ' - set "youtube_channel" in config.json (e.g. "@yourhandle") to find them'),
+              flush=True)
 
 
 # ------------------------------------------------------------------ score --

@@ -35,6 +35,17 @@ def main() -> int:
     except Exception as e:
         report("Buffer API key", False, str(e)[:200])
 
+    # YouTube Data API (optional: own YouTube stats + what is popular)
+    import youtube
+    if youtube.key():
+        try:
+            youtube.get("videos", part="id", id="jNQXAC9IVRw")
+            report("YouTube API key", True)
+        except Exception as e:
+            report("YouTube API key", False, str(e)[:200])
+    else:
+        print("[--] YouTube API key (optional) - not set: no YouTube stats or trends. See README.")
+
     # Footage library
     try:
         lib = json.loads((ROOT / "catalog" / "footage.json").read_text(encoding="utf-8"))
