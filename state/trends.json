@@ -1,0 +1,527 @@
+{
+ "updated": "2026-10-10T14:33:19+00:00",
+ "videos": 217,
+ "weights": {
+  "surah": {
+   "1": 1.4,
+   "2": 1.164,
+   "67": 1.076,
+   "36": 1.066,
+   "12": 1.052,
+   "18": 1.088,
+   "55": 1.1,
+   "56": 1.059,
+   "113": 1.098,
+   "48": 1.05,
+   "33": 1.116,
+   "112": 1.103,
+   "19": 1.06,
+   "108": 1.097,
+   "94": 1.07,
+   "102": 1.046,
+   "64": 1.06,
+   "97": 1.049,
+   "101": 1.046,
+   "23": 1.047,
+   "95": 1.04,
+   "35": 1.274,
+   "46": 1.274,
+   "5": 1.027,
+   "76": 1.027,
+   "15": 1.027,
+   "50": 1.04,
+   "20": 1.033,
+   "105": 1.03,
+   "6": 1.027,
+   "24": 1.018,
+   "109": 1.031,
+   "62": 1.011,
+   "80": 1.096,
+   "3": 1.025,
+   "103": 1.07,
+   "110": 1.029,
+   "111": 1.029,
+   "57": 1.032,
+   "88": 1.029,
+   "85": 1.028,
+   "114": 1.031
+  },
+  "reciter": {
+   "saad-alghamdi": 1.183,
+   "nasser-alqatami": 1.184,
+   "ahmed-alajmi": 1.122,
+   "yasser-aldosari": 1.298,
+   "mishary-alafasy": 1.222,
+   "khalid-aljalil": 1.122,
+   "abdulbasit-mujawwad": 1.219,
+   "maher-almuaiqly": 1.204,
+   "minshawi": 1.125,
+   "abdulbasit-murattal": 1.219,
+   "fares-abbad": 1.4,
+   "abdulrahman-alsudais": 1.209,
+   "wadee-alyamani": 1.121,
+   "mahmoud-alhusary": 1.026
+  }
+ },
+ "views": {
+  "surah": {
+   "1": 51152650,
+   "2": 8553954,
+   "67": 1868923,
+   "36": 1377240,
+   "12": 879504,
+   "18": 2468580,
+   "55": 3203252,
+   "56": 1114986,
+   "113": 3099327,
+   "48": 808845,
+   "33": 4290455,
+   "112": 3407830,
+   "19": 1143151,
+   "108": 3030074,
+   "94": 1557781,
+   "102": 670101,
+   "64": 1169848,
+   "97": 771215,
+   "101": 680770,
+   "23": 709547,
+   "95": 511008,
+   "35": 23993475,
+   "46": 23993475,
+   "5": 238109,
+   "76": 238109,
+   "15": 238109,
+   "50": 507166,
+   "20": 338124,
+   "105": 287252,
+   "6": 235847,
+   "24": 101695,
+   "109": 312516,
+   "62": 38940,
+   "80": 2936517,
+   "3": 196753,
+   "103": 1560269,
+   "110": 266622,
+   "111": 266622,
+   "57": 329380,
+   "88": 269056,
+   "85": 250830,
+   "114": 300696
+  },
+  "reciter": {
+   "saad-alghamdi": 914217,
+   "nasser-alqatami": 919432,
+   "ahmed-alajmi": 408160,
+   "yasser-aldosari": 2425963,
+   "mishary-alafasy": 1349382,
+   "khalid-aljalil": 408160,
+   "abdulbasit-mujawwad": 1307314,
+   "maher-almuaiqly": 1137663,
+   "minshawi": 426835,
+   "abdulbasit-murattal": 1307314,
+   "fares-abbad": 4367908,
+   "abdulrahman-alsudais": 1196409,
+   "wadee-alyamani": 402436,
+   "mahmoud-alhusary": 18675
+  }
+ },
+ "counts": {
+  "surah": {
+   "1": 34,
+   "2": 20,
+   "67": 8,
+   "36": 4,
+   "12": 3,
+   "18": 11,
+   "55": 12,
+   "56": 4,
+   "113": 6,
+   "48": 1,
+   "33": 5,
+   "112": 9,
+   "19": 4,
+   "108": 4,
+   "94": 4,
+   "102": 2,
+   "64": 1,
+   "97": 3,
+   "101": 3,
+   "23": 2,
+   "95": 2,
+   "35": 24,
+   "46": 24,
+   "5": 2,
+   "76": 2,
+   "15": 2,
+   "50": 3,
+   "20": 1,
+   "105": 1,
+   "6": 1,
+   "24": 2,
+   "109": 2,
+   "62": 1,
+   "80": 1,
+   "3": 1,
+   "103": 2,
+   "110": 1,
+   "111": 1,
+   "57": 1,
+   "88": 1,
+   "85": 1,
+   "114": 1
+  },
+  "reciter": {
+   "saad-alghamdi": 6,
+   "nasser-alqatami": 4,
+   "ahmed-alajmi": 1,
+   "yasser-aldosari": 9,
+   "mishary-alafasy": 5,
+   "khalid-aljalil": 1,
+   "abdulbasit-mujawwad": 4,
+   "maher-almuaiqly": 5,
+   "minshawi": 2,
+   "abdulbasit-murattal": 4,
+   "fares-abbad": 7,
+   "abdulrahman-alsudais": 3,
+   "wadee-alyamani": 2,
+   "mahmoud-alhusary": 1
+  }
+ },
+ "top": [
+  {
+   "id": "8Z9NB2C2JCo",
+   "title": "Surah AL-FATIHAH 📖🌱🤲| Quran Recitation-Egzon Ibrahimi | سورةالفاتحة #quranrecitation #alfatihah",
+   "channel": "Ayvoura Islame",
+   "views": 13323092,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
+  },
+  {
+   "id": "eC4LfEVxvKg",
+   "title": "بث مباشر || قناة القرآن الكريم Makkah Live",
+   "channel": "قناة القران الكريم",
+   "views": 7815478,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "ofcaNpJxsWs",
+   "title": "Surah AL Fatiha  📖🌱| Quran Recitation-Egzon Ibrahimi| lehenga✨ #quranrecitation #alfatihah",
+   "channel": "Bingo Wonder Tales",
+   "views": 6068131,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
+  },
+  {
+   "id": "0Euw6yCcLHA",
+   "title": "Duniya ki sab se pyari awaaz 🥰 #azan #islamicvideos #islamicstutus #shortsfeed #quran #shorts",
+   "channel": "Facts scar 2.0",
+   "views": 5921748,
+   "reciters": [],
+   "surahs": [
+    35,
+    46
+   ]
+  },
+  {
+   "id": "fORK5stTT4s",
+   "title": "تغليف المصحف #اختراع #drawing  #art #shorts #craft #ideas #fwp #recycling",
+   "channel": "اختراع",
+   "views": 5076450,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "7uwbK_bWXzg",
+   "title": "How to Respond to Salam While Praying? 🤲❌🌙 #shorts #islam #muslim #salah #foryou",
+   "channel": "Humaira Khan",
+   "views": 4895682,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "qU_Vrek2DZY",
+   "title": "استمع وأنصت وأرح قلبك 💚",
+   "channel": "كتاب اللّٰه ",
+   "views": 4489761,
+   "reciters": [
+    "abdulbasit-mujawwad",
+    "abdulbasit-murattal",
+    "ahmed-alajmi",
+    "fares-abbad",
+    "khalid-aljalil",
+    "maher-almuaiqly",
+    "minshawi",
+    "mishary-alafasy",
+    "nasser-alqatami",
+    "saad-alghamdi",
+    "yasser-aldosari"
+   ],
+   "surahs": [
+    2,
+    12,
+    18,
+    36,
+    55,
+    56,
+    67
+   ]
+  },
+  {
+   "id": "ZkilizO_r3Y",
+   "title": "अम्मी को सुनाई पूरी सूरह फ़ातिहा ❤️📖 | Islamic Kids Video #shorts #islamicvideo",
+   "channel": "AkhtarStory",
+   "views": 4024312,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
+  },
+  {
+   "id": "6PPj2vm1Kw4",
+   "title": "Duniya ki sab se pyari awaaz 🥰 #azan #islamicvideos #islamicstutus #shortsfeed #quran #azmaE48",
+   "channel": "Gala fact Joshi ",
+   "views": 3152040,
+   "reciters": [],
+   "surahs": [
+    35,
+    46
+   ]
+  },
+  {
+   "id": "sF96gWZm8p0",
+   "title": "Duniya ki sabse pyari awaaz🥰#shorts #shortfeed #quran #islamicvideo#trend #viralshort#trendingshorts",
+   "channel": "alsoccog",
+   "views": 2970176,
+   "reciters": [],
+   "surahs": [
+    35,
+    46
+   ]
+  },
+  {
+   "id": "ZASYE6FQGlc",
+   "title": "nikli bhut ka sajis duniya 700 ki subse payar awaz#azan#quran#viralshorts#islamic#india#trending",
+   "channel": "Baban aaviya shorts",
+   "views": 2954915,
+   "reciters": [],
+   "surahs": [
+    35,
+    46
+   ]
+  },
+  {
+   "id": "1CT1jRy251Q",
+   "title": "مفاجأة في سورة عبس.. ما هو طعام الإنسان وما هو طعام الحيوان؟ 🤔 #نظام_الطيبات #ضياء_العوضي #دايت",
+   "channel": "M : Ahmed Elsawy",
+   "views": 2936517,
+   "reciters": [],
+   "surahs": [
+    80
+   ]
+  },
+  {
+   "id": "bG4hqzIn9-Y",
+   "title": "Quran Sharif📖#QuranSharif#Quran #QuranRecitation#Islam#Allah#IslamicVideo #IslamicReminder#HolyQuran",
+   "channel": "mohon Skills🔫",
+   "views": 2904292,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "cciwpZ0f9ZA",
+   "title": "Surah Al-Fatihah ❤️ #QuranRecitation #IslamicShorts #Quran #Tilawat",
+   "channel": "Amon Islamic Shorts",
+   "views": 2862826,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
+  },
+  {
+   "id": "JHnr1S5KchY",
+   "title": "Duniya ki sab se pyari awaaz🥰#azan #islamicvideo #islamicstutu #shortsfeed #quran #short",
+   "channel": "Nonstop Explain ",
+   "views": 2794507,
+   "reciters": [],
+   "surahs": [
+    35,
+    46
+   ]
+  },
+  {
+   "id": "huY5DQGD_Hw",
+   "title": "Duniya ki sab se pyari awaaz 🥰 #azan #islamicvideos #islamicstutus #shortsfeed #quran #shorts #azma",
+   "channel": "Jatin Facts 111k",
+   "views": 2767087,
+   "reciters": [],
+   "surahs": [
+    35,
+    46
+   ]
+  },
+  {
+   "id": "CISAlg89LQ4",
+   "title": "Duniya Ki Sabse Pyari Awaj🥰 #azan #islamicvideos #islamicstutus #shortsfeed #quran #shorts #azma",
+   "channel": "Ramsagar 07",
+   "views": 2748613,
+   "reciters": [],
+   "surahs": [
+    35,
+    46
+   ]
+  },
+  {
+   "id": "w6EGhiPzxPo",
+   "title": "Gagap Saat Bicara, Tapi Lancar Saat Membaca Al-Qur’an",
+   "channel": "Kisah Epic",
+   "views": 2709499,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "MJqr8XXxeAM",
+   "title": "Surah AL Fatiha  📖🌱| Quran Recitation-Egzon Ibrahimi| Hats✨ #quranrecitation #alfatihah",
+   "channel": "Bingo Wonder Tales",
+   "views": 2620751,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
+  },
+  {
+   "id": "jgDohyxvfbg",
+   "title": "Quran Ki Tilawat #shorts #quran #tilawatequran #islamicshorts",
+   "channel": "Faizan Reza Reacts",
+   "views": 2598146,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "pzVOgJX4piU",
+   "title": "احترم القرآن الكريم أكتب الحمدلله💕🩹#قرآن #اكسبلور#لايك#quran#ترند#shorts#ترند#ترند1#shorts#fypシ",
+   "channel": "جِــنَــانُ الــخُــلْــد⚜️",
+   "views": 2557783,
+   "reciters": [
+    "abdulbasit-mujawwad",
+    "abdulbasit-murattal",
+    "maher-almuaiqly",
+    "mishary-alafasy",
+    "nasser-alqatami",
+    "saad-alghamdi",
+    "wadee-alyamani",
+    "yasser-aldosari"
+   ],
+   "surahs": [
+    2,
+    3,
+    5,
+    12,
+    15,
+    18,
+    19,
+    36,
+    50,
+    55,
+    56,
+    67,
+    76
+   ]
+  },
+  {
+   "id": "kDIGz8g6K1g",
+   "title": "#الله #قارئ #مصحف #دويتو #اكسبلور",
+   "channel": "Mp 40 ff",
+   "views": 2488681,
+   "reciters": [
+    "fares-abbad"
+   ],
+   "surahs": [
+    2,
+    18,
+    36,
+    55,
+    67
+   ]
+  },
+  {
+   "id": "pi8u25vhFiU",
+   "title": "Al-Quran sudah menegtahui dari ribaun tahun yg lalu🙏🏻#shorts ",
+   "channel": "Rizky Aulia",
+   "views": 2467925,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "--gJBwD9uSY",
+   "title": "Surah Falaq | A Powerful Surah for Protection 🤲 | Beautiful Quran Recitation #Shorts",
+   "channel": "Aayat Se Amal",
+   "views": 2420479,
+   "reciters": [],
+   "surahs": [
+    113
+   ]
+  },
+  {
+   "id": "M1ewq3Wi2GI",
+   "title": "تلاوة خاشعة تهز القلوب وتحيي💔",
+   "channel": "SOUT UL QURAN",
+   "views": 2412127,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "oiU9WMDfrtc",
+   "title": "Duniya ki sab se pyari awaaz?🥰#quran #shorts #viralvideo #trendingshorts #viral #islamic",
+   "channel": "RJ  Vanu",
+   "views": 2384303,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "XiEysZ_-QmI",
+   "title": "Duniya ki sab se pyari awaaz 🥰 #azan #islamicvideos #islamicstutus #shortsfeed #quran #shorts #azma",
+   "channel": "crazy fact 0.9",
+   "views": 2314190,
+   "reciters": [],
+   "surahs": [
+    35,
+    46
+   ]
+  },
+  {
+   "id": "cQ3miK7pUd8",
+   "title": "Duniya ki sab se pyari awaaz 🥰#azan #islamicvideo #islamicstutu #shortsfeed #quran #short",
+   "channel": "Plot Twist",
+   "views": 2303073,
+   "reciters": [],
+   "surahs": [
+    35,
+    46
+   ]
+  },
+  {
+   "id": "sAVOWuIoXQs",
+   "title": "@bnkimasti  Duniya 🇮🇳🔥700 ki subse payar awaz#azan#quran#viralshorts#islamic#india#trending#reels🤔😱",
+   "channel": "Factu Riya",
+   "views": 2297134,
+   "reciters": [],
+   "surahs": [
+    35,
+    46
+   ]
+  },
+  {
+   "id": "Gtc-iO7Sxzw",
+   "title": "মাত্র সাড়ে ৩ বছর বয়সে পুরো কোরআন মুখস্থ! 😱 মাশাআল্লাহ #youtubeshorts #duet #islamicshorts #islam",
+   "channel": "Duet Salim",
+   "views": 2291171,
+   "reciters": [],
+   "surahs": []
+  }
+ ]
+}

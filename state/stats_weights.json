@@ -1,0 +1,36 @@
+{
+ "theme": {
+  "mulk": 1.014,
+  "reflection": 0.895,
+  "nasr": 1.057,
+  "dua": 0.994,
+  "dhikr": 1.038,
+  "mercy": 0.96,
+  "jannah": 1.023,
+  "maryam": 1.036,
+  "tawakkul": 0.985
+ },
+ "reciter": {
+  "maher-almuaiqly": 1.014,
+  "saad-alghamdi": 0.895,
+  "yasser-aldosari": 1.057,
+  "fares-abbad": 0.994,
+  "abdullah-almousa": 1.038,
+  "minshawi": 0.96,
+  "abdulbasit-murattal": 0.979,
+  "nasser-alqatami": 1.052,
+  "abdullah-aljuhany": 1.036,
+  "ahmed-alajmi": 0.985
+ },
+ "mood": {
+  "fog": 1.014,
+  "water": 0.953,
+  "lake": 1.057,
+  "desert": 0.994,
+  "forest": 1.038,
+  "ocean": 0.96,
+  "autumn": 0.979,
+  "blossom": 1.036,
+  "mountains": 0.985
+ }
+}
