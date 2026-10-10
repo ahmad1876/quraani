@@ -1,6 +1,6 @@
 # Quraani: automatic Quran recitation shorts
 
-Every day this repo makes up to four 9:16 videos (up to 45 s), plus one longer video (up to 3 min) every Friday, and schedules them through Buffer's free plan: Instagram Reels (3 a day), YouTube Shorts (3 a day) and TikTok (up to 4 a day).
+Every day this repo makes three 9:16 videos (up to 45 s) and schedules them through Buffer's free plan: Instagram Reels (3 a day: 08:15, 13:15, 19:45), YouTube Shorts (2 a day: 16:15, 19:45) and TikTok (2 a day: 12:15, 20:45). On Fridays a longer video (up to 3 min) takes the place of the 13:15 / 16:15 / 20:45 short.
 
 Each video is:
 - a popular passage (`catalog/passages.json`, 118 passages; the Friday video comes from `catalog/long_passages.json`, 22 longer passages and full short surahs) recited by a well-known reciter (`catalog/reciters.json`, 28 reciters). Clips always start and end on whole ayahs.
@@ -36,7 +36,7 @@ Total cost: R0. GitHub Actions, GitHub Pages, Buffer Free (3 channels, 10 queued
 
 ## Changing things
 
-`config.json`: posting times (`slots`, Africa/Johannesburg time), how many days ahead to schedule, `handle` (e.g. `@calmquraan.daily`) printed small on the videos, `english` (true/false) for the translation line, `hook_title` (true/false) for the opening title, `learn_from_stats` (true/false) for the stats step, `learn_from_trends` (true/false) for the weekly YouTube trends step, `youtube_channel` (optional, e.g. `@yourhandle`) to find our YouTube videos when Buffer gives no link, the `L` slot (`"long": true`, `"weekdays": [4]` = Fridays, Monday is 0) for the longer video, and `platform_plan` to pause a platform or limit it to some slots from a date on (used to warm up TikTok: paused, then 1, 2 and 4 posts a day).
+`config.json`: posting times (`slots`, Africa/Johannesburg time), how many days ahead to schedule, `handle` (e.g. `@calmquraan.daily`) printed small on the videos, `english` (true/false) for the translation line, `hook_title` (true/false) for the opening title, `learn_from_stats` (true/false) for the stats step, `learn_from_trends` (true/false) for the weekly YouTube trends step, `youtube_channel` (optional, e.g. `@yourhandle`) to find our YouTube videos when Buffer gives no link, the `L` slot (`"long": true`, `"weekdays": [4]` = Fridays, Monday is 0, `"replaces": "B"` = posts in place of slot B that day) for the longer video, and `platform_plan` to pause a platform or limit it to some slots from a date on (used to warm up TikTok: paused, then 1, then 2 posts a day).
 
 After a style change, Actions > Quraani daily > Run workflow > `rerender` redoes the videos that are already scheduled, under the same links. `new-footage` does the same with fresh clips from the library (useful after adding footage).
 
