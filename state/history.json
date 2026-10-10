@@ -564,5 +564,85 @@
     "due": "2026-10-10T19:45:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-11",
+  "slot": "A",
+  "made": "2026-10-10T09:14:55+02:00",
+  "passage": "41:30-32",
+  "ref": "41:30",
+  "reciter": "mishary-alafasy",
+  "duration": 31.44,
+  "clips": [
+   "pexels:37235509",
+   "pexels:39552215",
+   "pexels:8062894"
+  ],
+  "footage_theme": "fog",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-11_A_41-30-32_mishary-alafasy.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ac9e6a4f91f772d458512d1",
+    "due": "2026-10-11T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ac9e6a4c4de2d2b121b8450",
+    "due": "2026-10-11T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-11",
+  "slot": "B",
+  "made": "2026-10-10T09:14:55+02:00",
+  "passage": "55:46-55",
+  "ref": "55:46-52",
+  "reciter": "hani-alrifai",
+  "duration": 38.04,
+  "clips": [
+   "pexels:19797643",
+   "pexels:39831279",
+   "pexels:11858037"
+  ],
+  "footage_theme": "sunset",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-11_B_55-46-55_hani-alrifai.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ac9e6a5f91f772d4585131c",
+    "due": "2026-10-11T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ac9e6a6c4de2d2b121b848e",
+    "due": "2026-10-11T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ac9e6a6f91f772d4585134e",
+    "due": "2026-10-11T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-11",
+  "slot": "C",
+  "made": "2026-10-10T09:14:55+02:00",
+  "passage": "112:1-4",
+  "ref": "112:1-4",
+  "reciter": "mansour-alsalimi",
+  "duration": 12.78,
+  "clips": [
+   "pexels:36082411"
+  ],
+  "footage_theme": "canyon",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-11_C_112-1-4_mansour-alsalimi.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ac9e6a7bba9419ccbf32097",
+    "due": "2026-10-11T06:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ac9e6a7ed92ed8fa5bdf7b2",
+    "due": "2026-10-11T19:45:00.000Z"
+   }
+  }
  }
 ]
