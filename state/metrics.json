@@ -654,5 +654,28 @@
   "video": null,
   "fetched": "2026-10-10T14:33:14+00:00",
   "m": {}
+ },
+ "6ac8972a987e694c3c473b58": {
+  "platform": "instagram",
+  "due": "2026-10-10T17:45:00+00:00",
+  "date": "2026-10-10",
+  "slot": "A",
+  "passage": "6:59",
+  "theme": "tawheed",
+  "reciter": "fares-abbad",
+  "mood": "storm",
+  "duration": 26.88,
+  "link": "https://www.instagram.com/reel/DeUpoaVET28/",
+  "video": null,
+  "fetched": "2026-10-10T17:51:29+00:00",
+  "m": {}
+ },
+ "6ac8972af07e682de6a9b63f": {
+  "platform": "youtube",
+  "due": "2026-10-10T17:45:00+00:00",
+  "date": "2026-10-10",
+  "slot": "A",
+  "fetched": "2026-10-10T17:51:29+00:00",
+  "missing": 1
  }
 }
