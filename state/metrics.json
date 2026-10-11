@@ -677,5 +677,43 @@
   "slot": "A",
   "fetched": "2026-10-10T17:51:29+00:00",
   "missing": 1
+ },
+ "6ac8972bf07e682de6a9b66a": {
+  "platform": "tiktok",
+  "due": "2026-10-10T18:45:00+00:00",
+  "date": "2026-10-10",
+  "slot": "B",
+  "passage": "19:93-96",
+  "theme": "hope",
+  "reciter": "haitham-aldukhain",
+  "mood": "desert",
+  "duration": 32.67,
+  "link": "https://tiktok.com/@calmquraan.daily/video/7695112124472773909",
+  "video": null,
+  "fetched": "2026-10-11T07:11:18+00:00",
+  "m": {}
+ },
+ "6ac8972d7d9f9f33012bf3b8": {
+  "platform": "youtube",
+  "due": "2026-10-10T19:45:00+00:00",
+  "date": "2026-10-10",
+  "slot": "C",
+  "fetched": "2026-10-11T07:11:18+00:00",
+  "missing": 1
+ },
+ "6ac9e6a7bba9419ccbf32097": {
+  "platform": "instagram",
+  "due": "2026-10-11T06:15:00+00:00",
+  "date": "2026-10-11",
+  "slot": "C",
+  "passage": "112:1-4",
+  "theme": "tawheed",
+  "reciter": "mansour-alsalimi",
+  "mood": "canyon",
+  "duration": 12.78,
+  "link": "https://www.instagram.com/reel/DeV_dNuDu5c/",
+  "video": null,
+  "fetched": "2026-10-11T07:11:18+00:00",
+  "m": {}
  }
 }

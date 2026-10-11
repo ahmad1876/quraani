@@ -648,5 +648,84 @@
     "due": "2026-10-11T10:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-12",
+  "slot": "A",
+  "made": "2026-10-11T09:11:18+02:00",
+  "passage": "29:69",
+  "ref": "29:69",
+  "reciter": "fares-abbad",
+  "duration": 12.24,
+  "clips": [
+   "pexels:33813924"
+  ],
+  "footage_theme": "golden",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-12_A_29-69_fares-abbad.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6acb37b6ed92ed8fa5f53924",
+    "due": "2026-10-12T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6acb37b7f91f772d45bce61c",
+    "due": "2026-10-12T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-12",
+  "slot": "B",
+  "made": "2026-10-11T09:11:18+02:00",
+  "passage": "21:87-88",
+  "ref": "21:87-88",
+  "reciter": "abdullah-aljuhany",
+  "duration": 28.34,
+  "clips": [
+   "pexels:28780239",
+   "pexels:39752936"
+  ],
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-12_B_21-87-88_abdullah-aljuhany.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6acb37b7b07d37ac979b2cc2",
+    "due": "2026-10-12T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6acb37b8f91f772d45bce680",
+    "due": "2026-10-12T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6acb37b9f91f772d45bce6b8",
+    "due": "2026-10-12T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-12",
+  "slot": "C",
+  "made": "2026-10-11T09:11:18+02:00",
+  "passage": "26:78-89",
+  "ref": "26:78-86",
+  "reciter": "saud-alshuraim",
+  "duration": 42.17,
+  "clips": [
+   "pexels:35059420",
+   "pexels:29549013",
+   "pexels:30976907"
+  ],
+  "footage_theme": "snow",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-12_C_26-78-89_saud-alshuraim.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6acb37b9f91f772d45bce6e4",
+    "due": "2026-10-12T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6acb37baf91f772d45bce710",
+    "due": "2026-10-12T06:15:00.000Z"
+   }
+  }
  }
 ]
