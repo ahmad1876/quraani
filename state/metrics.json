@@ -11,7 +11,7 @@
   "duration": 27.64,
   "link": "https://www.instagram.com/reel/DeFM3J2DkVx/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac22885814d657011eddaf8": {
@@ -26,9 +26,9 @@
   "duration": 27.64,
   "link": "https://youtube.com/shorts/5fzZVxgidgc",
   "video": "5fzZVxgidgc",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 929,
+   "views": 932,
    "likes": 110,
    "comments": 0
   },
@@ -46,7 +46,7 @@
   "duration": 36.14,
   "link": "https://www.tiktok.com/@calmquraan.daily/video/7692885480672693556?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac2288611a7340ba021a7aa": {
@@ -61,9 +61,9 @@
   "duration": 36.14,
   "link": "https://youtube.com/shorts/E6z9OpusaOM",
   "video": "E6z9OpusaOM",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 487,
+   "views": 489,
    "likes": 62,
    "comments": 0
   },
@@ -81,7 +81,7 @@
   "duration": 20.34,
   "link": "https://www.tiktok.com/@calmquraan.daily/video/7693047935017225493?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac222668dc991c73c7385d6": {
@@ -96,7 +96,7 @@
   "duration": 20.34,
   "link": "https://www.instagram.com/reel/DeHxyDYiAuD/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac22886365aeab50bdc5bd4": {
@@ -111,9 +111,9 @@
   "duration": 20.34,
   "link": "https://youtube.com/shorts/ys5yUu7nX24",
   "video": "ys5yUu7nX24",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 1069,
+   "views": 1070,
    "likes": 166,
    "comments": 6
   },
@@ -124,8 +124,8 @@
   "due": "2026-10-05T18:45:00+00:00",
   "date": "2026-10-05",
   "slot": "B",
-  "fetched": "2026-10-10T14:33:14+00:00",
-  "missing": 1
+  "fetched": "2026-10-11T18:04:25+00:00",
+  "missing": 2
  },
  "6ac228877d53b827e005ab96": {
   "platform": "youtube",
@@ -139,9 +139,9 @@
   "duration": 24.1,
   "link": "https://youtube.com/shorts/b1joZAokaa4",
   "video": "b1joZAokaa4",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 777,
+   "views": 780,
    "likes": 125,
    "comments": 1
   },
@@ -152,8 +152,8 @@
   "due": "2026-10-06T05:15:00+00:00",
   "date": "2026-10-06",
   "slot": "A",
-  "fetched": "2026-10-10T14:33:14+00:00",
-  "missing": 1
+  "fetched": "2026-10-11T18:04:25+00:00",
+  "missing": 2
  },
  "6ac22267ad7fd83bc51a3813": {
   "platform": "instagram",
@@ -167,7 +167,7 @@
   "duration": 33.7,
   "link": "https://www.instagram.com/reel/DeKWdguAP3y/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac228877d53b827e005abbf": {
@@ -182,9 +182,9 @@
   "duration": 33.7,
   "link": "https://youtube.com/shorts/XpxVVurfvfU",
   "video": "XpxVVurfvfU",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 1003,
+   "views": 1008,
    "likes": 140,
    "comments": 2
   },
@@ -195,8 +195,8 @@
   "due": "2026-10-06T18:45:00+00:00",
   "date": "2026-10-06",
   "slot": "B",
-  "fetched": "2026-10-10T14:33:14+00:00",
-  "missing": 1
+  "fetched": "2026-10-11T18:04:25+00:00",
+  "missing": 2
  },
  "6ac2288811a7340ba021a7fc": {
   "platform": "youtube",
@@ -210,7 +210,7 @@
   "duration": 40.88,
   "link": "https://youtube.com/shorts/PBbd7MTdt0Y",
   "video": "PBbd7MTdt0Y",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
    "views": 664,
    "likes": 101,
@@ -230,7 +230,7 @@
   "duration": 40.88,
   "link": "https://www.instagram.com/reel/DeJp1_NCDb5/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac27ee62dd93d8b00f60b54": {
@@ -238,24 +238,24 @@
   "due": "2026-10-05T10:15:00+00:00",
   "date": "2026-10-05",
   "slot": "C",
-  "fetched": "2026-10-10T14:33:14+00:00",
-  "missing": 1
+  "fetched": "2026-10-11T18:04:25+00:00",
+  "missing": 2
  },
  "6ac27ee763761da98b532c51": {
   "platform": "tiktok",
   "due": "2026-10-05T14:45:00+00:00",
   "date": "2026-10-05",
   "slot": "D",
-  "fetched": "2026-10-10T14:33:14+00:00",
-  "missing": 1
+  "fetched": "2026-10-11T18:04:25+00:00",
+  "missing": 2
  },
  "6ac34beed467abe8cfdbdde5": {
   "platform": "tiktok",
   "due": "2026-10-06T10:15:00+00:00",
   "date": "2026-10-06",
   "slot": "C",
-  "fetched": "2026-10-10T14:33:14+00:00",
-  "missing": 1
+  "fetched": "2026-10-11T18:04:25+00:00",
+  "missing": 2
  },
  "6ac387b532f9ebfdb1cdbbcf": {
   "platform": "instagram",
@@ -269,7 +269,7 @@
   "duration": 14.37,
   "link": "https://www.instagram.com/reel/DeJHfExjLJy/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac34befca1380ada84bc044": {
@@ -277,8 +277,8 @@
   "due": "2026-10-06T14:45:00+00:00",
   "date": "2026-10-06",
   "slot": "D",
-  "fetched": "2026-10-10T14:33:14+00:00",
-  "missing": 1
+  "fetched": "2026-10-11T18:04:25+00:00",
+  "missing": 2
  },
  "6ac4a57d1438456395abb642": {
   "platform": "instagram",
@@ -292,7 +292,7 @@
   "duration": 37.44,
   "link": "https://www.instagram.com/reel/DeM7QalEgTZ/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac4a57d1438456395abb66b": {
@@ -307,10 +307,10 @@
   "duration": 37.44,
   "link": "https://youtube.com/shorts/Q8ujRQ9mXKw",
   "video": "Q8ujRQ9mXKw",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 720,
-   "likes": 116,
+   "views": 737,
+   "likes": 120,
    "comments": 1
   },
   "source": "youtube"
@@ -327,7 +327,7 @@
   "duration": 34.33,
   "link": "https://www.instagram.com/reel/DeMOn1zCCm7/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac4a57e1438456395abb6a8": {
@@ -342,10 +342,10 @@
   "duration": 34.33,
   "link": "https://youtube.com/shorts/pMvjM1F4-wY",
   "video": "pMvjM1F4-wY",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 1047,
-   "likes": 159,
+   "views": 1066,
+   "likes": 161,
    "comments": 4
   },
   "source": "youtube"
@@ -362,7 +362,7 @@
   "duration": 12.04,
   "link": "https://www.instagram.com/reel/DeLsS0MCMZn/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac5f24f36c2a7788dd3d4d2": {
@@ -377,7 +377,7 @@
   "duration": 36.1,
   "link": "https://www.instagram.com/reel/DePgER1lY8n/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac5f24fc22c37a573bd60b0": {
@@ -392,10 +392,10 @@
   "duration": 36.1,
   "link": "https://youtube.com/shorts/PJH8foLcKgA",
   "video": "PJH8foLcKgA",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 1021,
-   "likes": 128,
+   "views": 1166,
+   "likes": 149,
    "comments": 1
   },
   "source": "youtube"
@@ -410,9 +410,9 @@
   "reciter": "ahmed-alajmi",
   "mood": "mountains",
   "duration": 21.53,
-  "link": "https://tiktok.com/@calmquraan.daily/video/7694369936394718472",
+  "link": "https://www.tiktok.com/@calmquraan.daily/video/7694369936394718472?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac5f250203d24e39e126708": {
@@ -427,7 +427,7 @@
   "duration": 21.53,
   "link": "https://www.instagram.com/reel/DeOzgvdlVCs/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac5f25036c2a7788dd3d500": {
@@ -442,9 +442,9 @@
   "duration": 21.53,
   "link": "https://youtube.com/shorts/1lKMXwQqZyc",
   "video": "1lKMXwQqZyc",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 719,
+   "views": 739,
    "likes": 133,
    "comments": 1
   },
@@ -462,7 +462,7 @@
   "duration": 32.88,
   "link": "https://www.instagram.com/reel/DeORFB8FOE2/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac7920182db5af660c4260a": {
@@ -477,10 +477,10 @@
   "duration": 32.88,
   "link": "https://youtube.com/shorts/T4Hr_KnFQaE",
   "video": "T4Hr_KnFQaE",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 1167,
-   "likes": 120,
+   "views": 1194,
+   "likes": 132,
    "comments": 2
   },
   "source": "youtube"
@@ -497,7 +497,7 @@
   "duration": 42.1,
   "link": "https://www.instagram.com/reel/DeSE15tglML/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac74614448f2e0d85da0471": {
@@ -512,10 +512,10 @@
   "duration": 42.1,
   "link": "https://youtube.com/shorts/nPcLqEEC-h0",
   "video": "nPcLqEEC-h0",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 205,
-   "likes": 33,
+   "views": 329,
+   "likes": 55,
    "comments": 0
   },
   "source": "youtube"
@@ -530,9 +530,9 @@
   "reciter": "yasser-aldosari",
   "mood": "glacier",
   "duration": 42.47,
-  "link": "https://tiktok.com/@calmquraan.daily/video/7694741068729830664",
+  "link": "https://www.tiktok.com/@calmquraan.daily/video/7694741068729830664?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac74615448f2e0d85da04ba": {
@@ -547,7 +547,7 @@
   "duration": 42.47,
   "link": "https://www.instagram.com/reel/DeRYQvJDgCy/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac74616c9ee621485c4f402": {
@@ -562,11 +562,11 @@
   "duration": 42.47,
   "link": "https://youtube.com/shorts/rwzeALaPUyM",
   "video": "rwzeALaPUyM",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 1014,
-   "likes": 118,
-   "comments": 2
+   "views": 1186,
+   "likes": 143,
+   "comments": 3
   },
   "source": "youtube"
  },
@@ -582,7 +582,7 @@
   "duration": 11.7,
   "link": "https://www.instagram.com/reel/DeQ139ziDbp/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac79203d1ababbf88af3f43": {
@@ -597,10 +597,10 @@
   "duration": 11.7,
   "link": "https://youtube.com/shorts/dSl3hBwA2Z8",
   "video": "dSl3hBwA2Z8",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 96,
-   "likes": 9,
+   "views": 382,
+   "likes": 78,
    "comments": 0
   },
   "source": "youtube"
@@ -617,7 +617,7 @@
   "duration": 32.67,
   "link": "https://www.instagram.com/reel/DeT9DWeFFQN/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac8972cf07e682de6a9b693": {
@@ -632,11 +632,11 @@
   "duration": 32.67,
   "link": "https://youtube.com/shorts/TT2Rk7ms2Rw",
   "video": "TT2Rk7ms2Rw",
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {
-   "views": 4,
-   "likes": 0,
-   "comments": 0
+   "views": 1057,
+   "likes": 166,
+   "comments": 2
   },
   "source": "youtube"
  },
@@ -652,7 +652,7 @@
   "duration": 30.4,
   "link": "https://www.instagram.com/reel/DeTatduACQI/",
   "video": null,
-  "fetched": "2026-10-10T14:33:14+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac8972a987e694c3c473b58": {
@@ -667,7 +667,7 @@
   "duration": 26.88,
   "link": "https://www.instagram.com/reel/DeUpoaVET28/",
   "video": null,
-  "fetched": "2026-10-10T17:51:29+00:00",
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  },
  "6ac8972af07e682de6a9b63f": {
@@ -675,8 +675,8 @@
   "due": "2026-10-10T17:45:00+00:00",
   "date": "2026-10-10",
   "slot": "A",
-  "fetched": "2026-10-10T17:51:29+00:00",
-  "missing": 1
+  "fetched": "2026-10-11T18:04:25+00:00",
+  "missing": 2
  },
  "6ac8972bf07e682de6a9b66a": {
   "platform": "tiktok",
@@ -714,6 +714,91 @@
   "link": "https://www.instagram.com/reel/DeV_dNuDu5c/",
   "video": null,
   "fetched": "2026-10-11T07:11:18+00:00",
+  "m": {}
+ },
+ "6ac9e6a4f91f772d458512d1": {
+  "platform": "instagram",
+  "due": "2026-10-11T17:45:00+00:00",
+  "date": "2026-10-11",
+  "slot": "A",
+  "passage": "41:30-32",
+  "theme": "jannah",
+  "reciter": "mishary-alafasy",
+  "mood": "fog",
+  "duration": 31.44,
+  "link": "https://www.instagram.com/reel/DeXOgGBAKKr/",
+  "video": null,
+  "fetched": "2026-10-11T18:04:25+00:00",
+  "m": {}
+ },
+ "6ac9e6a4c4de2d2b121b8450": {
+  "platform": "youtube",
+  "due": "2026-10-11T17:45:00+00:00",
+  "date": "2026-10-11",
+  "slot": "A",
+  "passage": "41:30-32",
+  "theme": "jannah",
+  "reciter": "mishary-alafasy",
+  "mood": "fog",
+  "duration": 31.44,
+  "link": "https://youtube.com/shorts/0rEMM2eW4qw",
+  "video": "0rEMM2eW4qw",
+  "fetched": "2026-10-11T18:04:25+00:00",
+  "m": {
+   "views": 3,
+   "likes": 0,
+   "comments": 0
+  },
+  "source": "youtube"
+ },
+ "6ac9e6a6c4de2d2b121b848e": {
+  "platform": "instagram",
+  "due": "2026-10-11T11:15:00+00:00",
+  "date": "2026-10-11",
+  "slot": "B",
+  "passage": "55:46-55",
+  "theme": "jannah",
+  "reciter": "hani-alrifai",
+  "mood": "sunset",
+  "duration": 38.04,
+  "link": "https://www.instagram.com/reel/DeWhyxkm-37/",
+  "video": null,
+  "fetched": "2026-10-11T18:04:25+00:00",
+  "m": {}
+ },
+ "6ac9e6a6f91f772d4585134e": {
+  "platform": "youtube",
+  "due": "2026-10-11T14:15:00+00:00",
+  "date": "2026-10-11",
+  "slot": "B",
+  "passage": "55:46-55",
+  "theme": "jannah",
+  "reciter": "hani-alrifai",
+  "mood": "sunset",
+  "duration": 38.04,
+  "link": "https://youtube.com/shorts/aQQ7MpuyHWg",
+  "video": "aQQ7MpuyHWg",
+  "fetched": "2026-10-11T18:04:25+00:00",
+  "m": {
+   "views": 348,
+   "likes": 36,
+   "comments": 0
+  },
+  "source": "youtube"
+ },
+ "6aca7b21ed92ed8fa5d8eefd": {
+  "platform": "tiktok",
+  "due": "2026-10-11T10:15:00+00:00",
+  "date": "2026-10-11",
+  "slot": "C",
+  "passage": "112:1-4",
+  "theme": "tawheed",
+  "reciter": "mansour-alsalimi",
+  "mood": "canyon",
+  "duration": 12.78,
+  "link": "https://www.tiktok.com/@calmquraan.daily/video/7695351780846128404?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+  "video": null,
+  "fetched": "2026-10-11T18:04:25+00:00",
   "m": {}
  }
 }
