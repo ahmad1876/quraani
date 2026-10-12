@@ -688,9 +688,9 @@
   "reciter": "haitham-aldukhain",
   "mood": "desert",
   "duration": 32.67,
-  "link": "https://tiktok.com/@calmquraan.daily/video/7695112124472773909",
+  "link": "https://www.tiktok.com/@calmquraan.daily/video/7695112124472773909?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "video": null,
-  "fetched": "2026-10-11T07:11:18+00:00",
+  "fetched": "2026-10-12T07:20:56+00:00",
   "m": {}
  },
  "6ac8972d7d9f9f33012bf3b8": {
@@ -698,8 +698,8 @@
   "due": "2026-10-10T19:45:00+00:00",
   "date": "2026-10-10",
   "slot": "C",
-  "fetched": "2026-10-11T07:11:18+00:00",
-  "missing": 1
+  "fetched": "2026-10-12T07:20:56+00:00",
+  "missing": 2
  },
  "6ac9e6a7bba9419ccbf32097": {
   "platform": "instagram",
@@ -713,7 +713,7 @@
   "duration": 12.78,
   "link": "https://www.instagram.com/reel/DeV_dNuDu5c/",
   "video": null,
-  "fetched": "2026-10-11T07:11:18+00:00",
+  "fetched": "2026-10-12T07:20:56+00:00",
   "m": {}
  },
  "6ac9e6a4f91f772d458512d1": {
@@ -799,6 +799,44 @@
   "link": "https://www.tiktok.com/@calmquraan.daily/video/7695351780846128404?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "video": null,
   "fetched": "2026-10-11T18:04:25+00:00",
+  "m": {}
+ },
+ "6ac9e6a5f91f772d4585131c": {
+  "platform": "tiktok",
+  "due": "2026-10-11T18:45:00+00:00",
+  "date": "2026-10-11",
+  "slot": "B",
+  "passage": "55:46-55",
+  "theme": "jannah",
+  "reciter": "hani-alrifai",
+  "mood": "sunset",
+  "duration": 38.04,
+  "link": "https://tiktok.com/@calmquraan.daily/video/7695483202672069906",
+  "video": null,
+  "fetched": "2026-10-12T07:20:56+00:00",
+  "m": {}
+ },
+ "6ac9e6a7ed92ed8fa5bdf7b2": {
+  "platform": "youtube",
+  "due": "2026-10-11T19:45:00+00:00",
+  "date": "2026-10-11",
+  "slot": "C",
+  "fetched": "2026-10-12T07:20:56+00:00",
+  "missing": 1
+ },
+ "6acb37baf91f772d45bce710": {
+  "platform": "instagram",
+  "due": "2026-10-12T06:15:00+00:00",
+  "date": "2026-10-12",
+  "slot": "C",
+  "passage": "26:78-89",
+  "theme": "tawakkul",
+  "reciter": "saud-alshuraim",
+  "mood": "snow",
+  "duration": 42.17,
+  "link": "https://www.instagram.com/reel/DeYkQyzEh8Q/",
+  "video": null,
+  "fetched": "2026-10-12T07:20:56+00:00",
   "m": {}
  }
 }
