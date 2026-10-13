@@ -809,5 +809,86 @@
     "due": "2026-10-13T06:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-14",
+  "slot": "A",
+  "made": "2026-10-13T09:42:16+02:00",
+  "passage": "17:23-24",
+  "ref": "17:23",
+  "reciter": "mansour-alsalimi",
+  "duration": 34.1,
+  "clips": [
+   "pexels:20118891",
+   "pexels:30070780",
+   "pexels:3703531"
+  ],
+  "footage_theme": "tropic",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-14_A_17-23-24_mansour-alsalimi.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6acde208ac8c42d649c3b2c9",
+    "due": "2026-10-14T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6acde2084aba7ee8072c8474",
+    "due": "2026-10-14T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-14",
+  "slot": "B",
+  "made": "2026-10-13T09:42:16+02:00",
+  "passage": "51:56-58",
+  "ref": "51:56-58",
+  "reciter": "maher-almuaiqly",
+  "duration": 33.5,
+  "clips": [
+   "pexels:29393113",
+   "pexels:32911411",
+   "pexels:12279774"
+  ],
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-14_B_51-56-58_maher-almuaiqly.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6acde209b5135c0918301404",
+    "due": "2026-10-14T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6acde2090a03d2ecced31d0f",
+    "due": "2026-10-14T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6acde20a09249fcd4f68e6f3",
+    "due": "2026-10-14T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-14",
+  "slot": "C",
+  "made": "2026-10-13T09:42:16+02:00",
+  "passage": "2:45-46",
+  "ref": "2:45-46",
+  "reciter": "fares-abbad",
+  "duration": 23.43,
+  "clips": [
+   "pexels:36024624",
+   "pexels:30762716"
+  ],
+  "footage_theme": "forest",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-14_C_2-45-46_fares-abbad.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6acde20b4aba7ee8072c8543",
+    "due": "2026-10-14T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6acde20bb5135c091830145f",
+    "due": "2026-10-14T06:15:00.000Z"
+   }
+  }
  }
 ]
