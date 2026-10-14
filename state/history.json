@@ -890,5 +890,87 @@
     "due": "2026-10-14T06:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-15",
+  "slot": "A",
+  "made": "2026-10-14T08:08:35+02:00",
+  "passage": "55:1-13",
+  "ref": "55:1-8",
+  "reciter": "saad-alghamdi",
+  "duration": 38.8,
+  "clips": [
+   "pexels:39321129",
+   "pexels:19098826",
+   "pexels:39916402"
+  ],
+  "footage_theme": "golden",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-15_A_55-1-13_saad-alghamdi.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6acf1e1f1f3f10bcb7b50a45",
+    "due": "2026-10-15T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6acf1e1f0ab87a16c8e642e4",
+    "due": "2026-10-15T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-15",
+  "slot": "B",
+  "made": "2026-10-14T08:08:35+02:00",
+  "passage": "3:133-136",
+  "ref": "3:133-135",
+  "reciter": "abdullah-aljuhany",
+  "duration": 39.77,
+  "clips": [
+   "pexels:30025721",
+   "pexels:31071158",
+   "pexels:28213255"
+  ],
+  "footage_theme": "coast",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-15_B_3-133-136_abdullah-aljuhany.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6acf1e200ab87a16c8e6432e",
+    "due": "2026-10-15T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6acf1e210ab87a16c8e644a6",
+    "due": "2026-10-15T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6acf1e21f847f2ad9ec60438",
+    "due": "2026-10-15T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-15",
+  "slot": "C",
+  "made": "2026-10-14T08:08:35+02:00",
+  "passage": "18:107-110",
+  "ref": "18:107-109",
+  "reciter": "abdullah-almousa",
+  "duration": 37.97,
+  "clips": [
+   "pexels:30070780",
+   "pexels:3703531",
+   "pexels:28615730"
+  ],
+  "footage_theme": "tropic",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-15_C_18-107-110_abdullah-almousa.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6acf1e220d20fd152781cffb",
+    "due": "2026-10-15T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6acf1e22f847f2ad9ec6046c",
+    "due": "2026-10-15T06:15:00.000Z"
+   }
+  }
  }
 ]
