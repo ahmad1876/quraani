@@ -1056,5 +1056,82 @@
     "due": "2026-10-16T14:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-17",
+  "slot": "A",
+  "made": "2026-10-16T07:50:55+02:00",
+  "passage": "16:97",
+  "ref": "16:97",
+  "reciter": "haitham-aldukhain",
+  "duration": 23.3,
+  "clips": [
+   "mixkit:4149",
+   "pexels:36259626"
+  ],
+  "footage_theme": "desert",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-17_A_16-97_haitham-aldukhain.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ad1bc1de991a49db3cd61ba",
+    "due": "2026-10-17T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ad1bc1ee991a49db3cd6218",
+    "due": "2026-10-17T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-17",
+  "slot": "B",
+  "made": "2026-10-16T07:50:55+02:00",
+  "passage": "85:14-16",
+  "ref": "85:14-16",
+  "reciter": "mansour-alsalimi",
+  "duration": 12.64,
+  "clips": [
+   "pexels:28870584"
+  ],
+  "footage_theme": "hills",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-17_B_85-14-16_mansour-alsalimi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ad1bc1ea82f34dbe14a4c3e",
+    "due": "2026-10-17T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ad1bc1fa82f34dbe14a4c69",
+    "due": "2026-10-17T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ad1bc1fa82f34dbe14a4c93",
+    "due": "2026-10-17T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-17",
+  "slot": "C",
+  "made": "2026-10-16T07:50:55+02:00",
+  "passage": "11:6",
+  "ref": "11:6",
+  "reciter": "idris-abkar",
+  "duration": 18.08,
+  "clips": [
+   "pexels:39174177"
+  ],
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-17_C_11-6_idris-abkar.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ad1bc204ed7d375a448b82b",
+    "due": "2026-10-17T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6ad1bc20e991a49db3cd6261",
+    "due": "2026-10-17T06:15:00.000Z"
+   }
+  }
  }
 ]

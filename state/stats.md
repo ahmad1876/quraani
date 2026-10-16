@@ -1,4 +1,4 @@
-# Quraani stats (updated 2026-10-15 19:46 SA time)
+# Quraani stats (updated 2026-10-16 07:50 SA time)
 
 Score = views (and a little likes) compared with a typical post of the same age on the same platform. 0 is typical, +0.7 is about twice the views, -0.7 about half. Posts count once they are 2 days old.
 
