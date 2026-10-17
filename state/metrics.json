@@ -690,7 +690,7 @@
   "duration": 32.67,
   "link": "https://www.tiktok.com/@calmquraan.daily/video/7695112124472773909?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "video": null,
-  "fetched": "2026-10-16T05:50:55+00:00",
+  "fetched": "2026-10-17T05:35:54+00:00",
   "m": {}
  },
  "6ac8972d7d9f9f33012bf3b8": {
@@ -713,7 +713,7 @@
   "duration": 12.78,
   "link": "https://www.instagram.com/reel/DeV_dNuDu5c/",
   "video": null,
-  "fetched": "2026-10-16T05:50:55+00:00",
+  "fetched": "2026-10-17T05:35:54+00:00",
   "m": {}
  },
  "6ac9e6a4f91f772d458512d1": {
@@ -813,7 +813,7 @@
   "duration": 38.04,
   "link": "https://www.tiktok.com/@calmquraan.daily/video/7695483202672069906?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "video": null,
-  "fetched": "2026-10-16T05:50:55+00:00",
+  "fetched": "2026-10-17T05:35:54+00:00",
   "m": {}
  },
  "6ac9e6a7ed92ed8fa5bdf7b2": {
@@ -836,7 +836,7 @@
   "duration": 42.17,
   "link": "https://www.instagram.com/reel/DeYkQyzEh8Q/",
   "video": null,
-  "fetched": "2026-10-16T05:50:55+00:00",
+  "fetched": "2026-10-17T05:35:54+00:00",
   "m": {}
  },
  "6acb37b6ed92ed8fa5f53924": {
@@ -951,7 +951,7 @@
   "duration": 31.73,
   "link": "https://www.instagram.com/reel/DebJKAKATiu/",
   "video": null,
-  "fetched": "2026-10-16T05:50:55+00:00",
+  "fetched": "2026-10-17T05:35:54+00:00",
   "m": {}
  },
  "6acc8b4ba2941ce8176558f8": {
@@ -1166,7 +1166,7 @@
   "duration": 33.5,
   "link": "https://www.tiktok.com/@calmquraan.daily/video/7696596541502410005?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "video": null,
-  "fetched": "2026-10-16T05:50:55+00:00",
+  "fetched": "2026-10-17T05:35:54+00:00",
   "m": {}
  },
  "6acf1e1f1f3f10bcb7b50a45": {
@@ -1281,7 +1281,7 @@
   "duration": 39.77,
   "link": "https://tiktok.com/@calmquraan.daily/video/7696967581479013652",
   "video": null,
-  "fetched": "2026-10-16T05:50:55+00:00",
+  "fetched": "2026-10-17T05:35:54+00:00",
   "m": {}
  },
  "6ad06c4ff702624d49ef9f1b": {
@@ -1342,6 +1342,56 @@
   "link": "https://www.youtube.com/shorts/CEbrT7cEm8g",
   "video": null,
   "fetched": "2026-10-16T17:23:58+00:00",
+  "m": {}
+ },
+ "6ad06c4e8886414c963b1f54": {
+  "platform": "instagram",
+  "due": "2026-10-16T17:45:00+00:00",
+  "date": "2026-10-16",
+  "slot": "A",
+  "passage": "36:1-12",
+  "theme": "yasin",
+  "reciter": "abdulrahman-alsudais",
+  "mood": "storm",
+  "duration": 35.5,
+  "link": "https://www.instagram.com/reel/DekGaSMD6kj/",
+  "video": null,
+  "fetched": "2026-10-17T05:35:54+00:00",
+  "m": {}
+ },
+ "6ad06c4ebaaf8bed1cfead8f": {
+  "platform": "youtube",
+  "due": "2026-10-16T17:45:00+00:00",
+  "date": "2026-10-16",
+  "slot": "A",
+  "passage": "36:1-12",
+  "theme": "yasin",
+  "reciter": "abdulrahman-alsudais",
+  "mood": "storm",
+  "duration": 35.5,
+  "link": "https://youtube.com/shorts/cUwD8TIGSgk",
+  "video": "cUwD8TIGSgk",
+  "fetched": "2026-10-17T05:35:54+00:00",
+  "m": {
+   "views": 1134,
+   "likes": 140,
+   "comments": 2
+  },
+  "source": "youtube"
+ },
+ "6ad06c508886414c963b2048": {
+  "platform": "tiktok",
+  "due": "2026-10-16T18:45:00+00:00",
+  "date": "2026-10-16",
+  "slot": "L",
+  "passage": "long:87:1-19",
+  "theme": "tasbih",
+  "reciter": "bandar-baleela",
+  "mood": "glacier",
+  "duration": 103.43,
+  "link": "https://tiktok.com/@calmquraan.daily/video/7697338643849022738",
+  "video": null,
+  "fetched": "2026-10-17T05:35:54+00:00",
   "m": {}
  }
 }

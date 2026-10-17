@@ -1133,5 +1133,87 @@
     "due": "2026-10-17T06:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-18",
+  "slot": "A",
+  "made": "2026-10-17T07:35:54+02:00",
+  "passage": "2:216",
+  "ref": "2:216",
+  "reciter": "maher-almuaiqly",
+  "duration": 33.18,
+  "clips": [
+   "pexels:29285421",
+   "pexels:32719391",
+   "pexels:31359190"
+  ],
+  "footage_theme": "ocean",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-18_A_2-216_maher-almuaiqly.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ad30a4452adf2bfae78c8e5",
+    "due": "2026-10-18T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ad30a44c34368e4b0ab5ebf",
+    "due": "2026-10-18T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-18",
+  "slot": "B",
+  "made": "2026-10-17T07:35:54+02:00",
+  "passage": "23:115-118",
+  "ref": "23:115-118",
+  "reciter": "saud-alshuraim",
+  "duration": 34.53,
+  "clips": [
+   "pexels:39336191",
+   "pexels:39542717",
+   "pexels:33638650"
+  ],
+  "footage_theme": "storm",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-18_B_23-115-118_saud-alshuraim.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ad30a451694d771d51fcf16",
+    "due": "2026-10-18T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ad30a451c7e49ea4c3bfd58",
+    "due": "2026-10-18T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ad30a461c7e49ea4c3bfda4",
+    "due": "2026-10-18T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-18",
+  "slot": "C",
+  "made": "2026-10-17T07:35:54+02:00",
+  "passage": "109:1-6",
+  "ref": "109:1-6",
+  "reciter": "abdullah-almousa",
+  "duration": 34.53,
+  "clips": [
+   "pexels:35143740",
+   "pexels:29663021",
+   "pexels:19680297"
+  ],
+  "footage_theme": "lake",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-18_C_109-1-6_abdullah-almousa.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ad30a461694d771d51fcf55",
+    "due": "2026-10-18T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6ad30a47c34368e4b0ab609f",
+    "due": "2026-10-18T06:15:00.000Z"
+   }
+  }
  }
 ]
