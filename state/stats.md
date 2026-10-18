@@ -1,4 +1,4 @@
-# Quraani stats (updated 2026-10-17 18:24 SA time)
+# Quraani stats (updated 2026-10-18 07:52 SA time)
 
 Score = views (and a little likes) compared with a typical post of the same age on the same platform. 0 is typical, +0.7 is about twice the views, -0.7 about half. Posts count once they are 2 days old.
 
@@ -6,7 +6,7 @@ Score = views (and a little likes) compared with a typical post of the same age 
 
 | Platform | Posts with stats | Counted | Median views | Total views | Total likes |
 |---|---|---|---|---|---|
-| YouTube | 27 | 25 | 1047 | 27806 | 4028 |
+| YouTube | 28 | 25 | 1032 | 28366 | 4136 |
 
 ## Passage themes
 
