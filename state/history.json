@@ -1293,5 +1293,86 @@
     "due": "2026-10-19T06:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-20",
+  "slot": "A",
+  "made": "2026-10-19T08:11:58+02:00",
+  "passage": "19:2-6",
+  "ref": "19:2-4",
+  "reciter": "abdulrahman-alossi",
+  "duration": 35.04,
+  "clips": [
+   "pexels:20118891",
+   "pexels:30070780",
+   "pexels:28615730"
+  ],
+  "footage_theme": "tropic",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-20_A_19-2-6_abdulrahman-alossi.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ad5b5c3ee362c3569437255",
+    "due": "2026-10-20T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ad5b5c3e4ecf041eaa4fb71",
+    "due": "2026-10-20T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-20",
+  "slot": "B",
+  "made": "2026-10-19T08:11:58+02:00",
+  "passage": "82:6-12",
+  "ref": "82:6-12",
+  "reciter": "saud-alshuraim",
+  "duration": 26.04,
+  "clips": [
+   "pexels:35630519",
+   "pexels:36915013"
+  ],
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-20_B_82-6-12_saud-alshuraim.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ad5b5c4aa3b6d94b203959a",
+    "due": "2026-10-20T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ad5b5c438c1835cd43ec627",
+    "due": "2026-10-20T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ad5b5c5ee362c35694372bd",
+    "due": "2026-10-20T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-20",
+  "slot": "C",
+  "made": "2026-10-19T08:11:58+02:00",
+  "passage": "81:1-14",
+  "ref": "81:1-14",
+  "reciter": "khalid-aljalil",
+  "duration": 43.27,
+  "clips": [
+   "mixkit:4283",
+   "pexels:35587187",
+   "pexels:29493733"
+  ],
+  "footage_theme": "snow",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-20_C_81-1-14_khalid-aljalil.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ad5b5c673ec34d7ae607395",
+    "due": "2026-10-20T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6ad5b5c673ec34d7ae6073eb",
+    "due": "2026-10-20T06:15:00.000Z"
+   }
+  }
  }
 ]
