@@ -13,6 +13,25 @@ W, H, FPS = 1080, 1920, 30
 XF = 0.8  # crossfade between background clips
 HOOK_END = 3.2   # the hook title is on screen until here (s), then the header takes its place
 HOOK_FADE = 0.5
+PROMPT_IN, PROMPT_OUT = 0.6, 6.5  # the comment prompt fades in and out at these times (s)
+WORD_LEAD = 0.04  # a word turns gold just before the reciter starts it
+WORD_HOLD = 0.6   # a pause shorter than this keeps the word gold until the next one starts
+
+
+def word_windows(unit: dict, first: bool, last: bool) -> list[tuple[dict, float, float]]:
+    """(word, start, end) for the follow-along highlight inside one phrase, clear of its fades."""
+    words = unit.get("words") or []
+    d = unit["end"] - unit["start"]
+    lo = unit["start"] + (0.0 if first else min(0.28, d / 4))
+    hi = unit["end"] - (0.6 if last else min(0.22, d / 4) + 0.02)
+    out = []
+    for j, w in enumerate(words):
+        nxt = words[j + 1]["start"] - WORD_LEAD if j + 1 < len(words) else None
+        end = nxt if nxt is not None and nxt - w["end"] < WORD_HOLD else w["end"] + 0.2
+        s, e = max(lo, w["start"] - WORD_LEAD), min(hi, end)
+        if e - s >= 0.08:
+            out.append((w, s, e))
+    return out
 
 
 def grade_png() -> Path:
@@ -160,6 +179,15 @@ def build(clips: list[dict], audio_wav: Path, ov: dict, out_mp4: Path, duration:
         fl.append(f"[{cur}][{idx}:v]overlay={hdr['x']}:{hdr['y']}:eof_action=repeat[h0]")
     cur = "h0"
     idx += 1
+    pr = ov.get("prompt")
+    p_out = min(PROMPT_OUT, duration - 0.8)
+    if pr and p_out - PROMPT_IN > 2.0:
+        args += ["-loop", "1", "-framerate", str(FPS), "-t", f"{p_out:.3f}", "-i", pr["png"]]
+        fl.append(f"[{idx}:v]format=rgba,fade=t=in:st={PROMPT_IN:.2f}:d=0.35:alpha=1,"
+                  f"fade=t=out:st={p_out - 0.4:.3f}:d=0.4:alpha=1[pm]")
+        fl.append(f"[{cur}][pm]overlay={pr['x']}:{pr['y']}:eof_action=pass[p0]")
+        cur = "p0"
+        idx += 1
     if ov.get("handle"):
         hl = ov["handle"]
         args += ["-i", hl["png"]]
@@ -184,6 +212,13 @@ def build(clips: list[dict], audio_wav: Path, ov: dict, out_mp4: Path, duration:
         fl.append(f"[{cur}][u{k}]overlay={u['x']}:{u['y']}:eof_action=pass[o{k}]")
         cur = f"o{k}"
         idx += 1
+        # follow-along: each word in gold while it is recited
+        for j, (w, ws, we) in enumerate(word_windows(u, k == 0, is_last)):
+            args += ["-loop", "1", "-framerate", str(FPS), "-t", f"{we - ws:.3f}", "-i", w["png"]]
+            fl.append(f"[{idx}:v]format=rgba,setpts=PTS-STARTPTS+{ws:.3f}/TB[w{k}_{j}]")
+            fl.append(f"[{cur}][w{k}_{j}]overlay={w['x']}:{w['y']}:eof_action=pass[ow{k}_{j}]")
+            cur = f"ow{k}_{j}"
+            idx += 1
     fl.append(f"[{cur}]trim=duration={duration:.3f},setpts=PTS-STARTPTS,format=yuv420p[vout]")
     args += ["-i", str(audio_wav)]
     aidx = idx

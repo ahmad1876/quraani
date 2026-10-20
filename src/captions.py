@@ -17,6 +17,29 @@ THEME_TAGS = {
     "salawat": "salawat", "qadr": "laylatulqadr", "tasbih": "tasbih", "nasr": "surahnasr",
 }
 
+# A short request for a comment, matched to the passage's theme: (on screen, Arabic under it, caption line).
+# Comments are the weakest number on every account, and asking for a short dhikr is the norm for Quran Shorts.
+PROMPT_AMEEN = ("Write: Ameen", "اكتب: آمين", "Write Ameen in the comments.")
+PROMPT_SUBHAN = ("Write: SubhanAllah", "اكتب: سبحان الله", "Write SubhanAllah in the comments.")
+PROMPT_HAMD = ("Write: Alhamdulillah", "اكتب: الحمد لله", "Write Alhamdulillah in the comments.")
+PROMPT_ISTIGHFAR = ("Write: Astaghfirullah", "اكتب: أستغفر الله", "Write Astaghfirullah in the comments.")
+PROMPT_SALAWAT = ("Send salawat on the Prophet", "اكتب: اللهم صل على محمد", "Send salawat on the Prophet in the comments.")
+PROMPT_DEFAULT = ("Write something you'll be rewarded for", "اكتب شيئًا تؤجر عليه",
+                  "Write something you'll be rewarded for in the comments.")
+PROMPTS = {
+    **dict.fromkeys(["dua", "parents", "marriage", "qiyam", "fatiha"], PROMPT_AMEEN),  # Ameen after Al-Fatihah
+    **dict.fromkeys(["dhikr", "tasbih", "names", "tawheed", "ikhlas", "reflection"], PROMPT_SUBHAN),
+    **dict.fromkeys(["shukr", "rahman", "hope", "jannah", "mercy", "peace", "healing", "rizq", "nasr"], PROMPT_HAMD),
+    **dict.fromkeys(["tawbah", "istighfar", "akhirah", "reminder", "dunya", "grief"], PROMPT_ISTIGHFAR),
+    "salawat": PROMPT_SALAWAT,
+}
+
+
+def prompt(theme: str) -> tuple[str, str, str]:
+    """(English on screen, Arabic on screen, caption line) asking for a comment."""
+    return PROMPTS.get(theme or "", PROMPT_DEFAULT)
+
+
 BASE_TIKTOK = ["quran", "quranrecitation", "islam"]
 BASE_IG = ["quran", "quranrecitation", "islam", "muslim", "allah", "quranverses", "islamicreminders", "tilawah"]
 ARABIC_TAGS = ["قرآن", "تلاوة"]
@@ -64,9 +87,12 @@ def follow_line(platform: str, handle: str = "") -> str:
     return f"Follow {h} for a calm ayah every day." if h else "Follow for a calm ayah every day."
 
 
-def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True, handle: str = "") -> str:
+def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True, handle: str = "",
+          ask: bool = True) -> str:
+    """ask: add the line asking for a comment (config "comment_prompt")."""
     ref = meta["ref"]
     follow = follow_line(platform, handle)
+    ask_line = prompt(meta.get("theme", ""))[2] if ask else ""
     surah = plain(meta["surah_en"])
     hook = plain(meta.get("hook") or "")
     tr = _short(meta.get("translation", ""), 420 if platform in ("instagram", "youtube") else 300).replace('"', "'")
@@ -90,17 +116,20 @@ def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True, hand
     footage = ("Footage: " + " / ".join(names)) if credit and names else ""
     if platform == "instagram":
         lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref}", f"Recited by {plain(meta['reciter_en'])}", "",
+                 *([ask_line] if ask_line else []),
                  "Save this and share it with someone who needs to hear it today.", follow, ""]
         if footage:
             lines += [footage, ""]
         lines.append(" ".join(tags))
     elif platform == "youtube":
-        lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} - {plain(meta['reciter_en'])}", "", follow, ""]
+        lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} - {plain(meta['reciter_en'])}", "",
+                 *([ask_line] if ask_line else []), follow, ""]
         if footage:
             lines += [footage, ""]
         lines.append(" ".join(["#shorts"] + tags[:6]))
     else:  # tiktok
-        lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} | {plain(meta['reciter_en'])}", "", follow]
+        lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} | {plain(meta['reciter_en'])}", "",
+                 *([ask_line] if ask_line else []), follow]
         if footage:
             lines += [footage]
         lines.append(" ".join(tags[:7]))

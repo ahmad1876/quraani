@@ -16,6 +16,7 @@ TEXT_MAX_H = 660         # Arabic + English together; kept compact so the scener
 TEXT_LEFT, TEXT_WIDTH = 90, 900
 AR_MAX, AR_MIN = 74, 42  # Arabic size range (px)
 EN_MAX, EN_MIN = 40, 30  # English size range (px)
+PROMPT_TOP = 1262        # the comment prompt: below the text block, above the handle
 
 PAGE = """<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{{font-family:'AQ';src:url('{fonts}/AmiriQuran-Regular.ttf')}}
@@ -30,6 +31,13 @@ body{{width:{W}px;height:{H}px;position:relative;overflow:hidden}}
 #en{{direction:ltr;font-family:'AM';color:rgba(255,255,255,.9);line-height:1.32;margin:14px auto 0;max-width:820px;
   letter-spacing:.2px;text-shadow:0 0 14px rgba(0,0,0,.85),0 0 4px rgba(0,0,0,.7),0 1px 3px rgba(0,0,0,.95)}}
 #en:empty{{display:none}}
+#ar.hl .w,#ar.hl .m{{color:transparent;text-shadow:none}}
+#ar.hl .w.on{{color:#FFD978;text-shadow:0 0 22px rgba(255,190,80,.5),0 0 8px rgba(0,0,0,.55),0 2px 5px rgba(0,0,0,.8)}}
+#prompt{{position:absolute;left:0;width:{W}px;top:{PT}px;text-align:center;padding:10px 0 14px;display:none}}
+#prompt .pe{{font-family:'AMB';font-size:40px;line-height:1.25;color:#F2E2BC;
+  text-shadow:0 0 18px rgba(0,0,0,.8),0 0 6px rgba(0,0,0,.6),0 2px 5px rgba(0,0,0,.85)}}
+#prompt .pa{{direction:rtl;font-family:'AM';font-size:40px;line-height:1.4;color:#fff;
+  text-shadow:0 0 18px rgba(0,0,0,.8),0 0 6px rgba(0,0,0,.6),0 2px 5px rgba(0,0,0,.85)}}
 #hdr{{position:absolute;left:190px;width:700px;top:280px;text-align:center;direction:rtl;padding:16px 0 20px}}
 #hdr .s{{font-family:'AMB';font-size:54px;line-height:1.35;color:#F2E2BC;
   text-shadow:0 0 20px rgba(0,0,0,.7),0 0 6px rgba(0,0,0,.5),0 2px 6px rgba(0,0,0,.7)}}
@@ -53,6 +61,7 @@ body{{width:{W}px;height:{H}px;position:relative;overflow:hidden}}
 <div id="hdr"><div class="s">{surah}</div><div class="orn"><i></i><b></b><i></i></div><div class="r">{reciter}</div><div class="re">{reciter_en}</div></div>
 <div id="hook"><div class="t"></div><div class="orn"><i></i><b></b><i></i></div></div>
 <div id="ayah"><div id="ar"></div><div id="en"></div></div><div id="handle">{handle}</div>
+<div id="prompt"><div class="pe"></div><div class="pa"></div></div>
 </body></html>"""
 
 # Hook title: largest size (px) at which the line fits in two lines (three for long lines),
@@ -82,7 +91,7 @@ def hook_title(text: str) -> str:
 # Largest sizes (Arabic first, English follows at about half) that fit the box; English keeps to 4 lines.
 FIT_JS = """([ar, en, arMax, arMin, enMax, enMin]) => {
   const box = document.getElementById('ayah'), a = document.getElementById('ar'), e = document.getElementById('en');
-  a.textContent = ar; e.textContent = en || '';
+  a.innerHTML = ar; e.textContent = en || '';
   const enLines = () => e.textContent ? Math.round(e.offsetHeight / parseFloat(getComputedStyle(e).lineHeight)) : 0;
   let s = arMax;
   for (;;) {
@@ -97,30 +106,72 @@ FIT_JS = """([ar, en, arMax, arMin, enMax, enMin]) => {
 
 PLACE_JS = """([ar, en, s, es]) => {
   const box = document.getElementById('ayah'), a = document.getElementById('ar'), e = document.getElementById('en');
-  a.textContent = ar; e.textContent = en || '';
+  a.innerHTML = ar; e.textContent = en || '';
   a.style.fontSize = s + 'px'; e.style.fontSize = es + 'px';
   box.style.top = Math.round(%d - box.offsetHeight / 2) + 'px';
   return box.offsetHeight;
 }""" % TEXT_CENTER_Y
 
 
+# Follow-along: only word i in gold, everything else invisible, same layout; returns its box on the page.
+HL_JS = """([i]) => {
+  const a = document.getElementById('ar'), ws = a.querySelectorAll('.w');
+  a.classList.add('hl');
+  document.getElementById('en').style.visibility = 'hidden';
+  document.getElementById('ayah').style.background = 'none';
+  ws.forEach((w, k) => w.classList.toggle('on', k === i));
+  const r = ws[i].getBoundingClientRect();
+  return [r.left, r.top, r.width, r.height];
+}"""
+HL_OFF_JS = """() => {
+  const a = document.getElementById('ar');
+  a.classList.remove('hl');
+  a.querySelectorAll('.w.on').forEach(w => w.classList.remove('on'));
+  document.getElementById('en').style.visibility = '';
+  document.getElementById('ayah').style.background = '';
+}"""
+PROMPT_JS = """([en, ar]) => {
+  const p = document.getElementById('prompt');
+  p.querySelector('.pe').textContent = en; p.querySelector('.pa').textContent = ar;
+  p.style.display = 'block';
+}"""
+
+
+def phrase_html(u: dict) -> str:
+    """The Arabic phrase as one span per word (the ayah marker after it, outside the span)."""
+    toks = u.get("tokens")
+    if not toks:
+        return html.escape(u["text"])
+    parts = []
+    for t in toks:
+        piece = f'<span class="w">{html.escape(t["text"])}</span>'
+        if t.get("mark"):
+            piece += f'\u00a0<span class="m">{html.escape(t["mark"])}</span>'
+        parts.append(piece)
+    return " ".join(parts)
+
+
 def render(units: list[dict], surah_ar: str, reciter_ar: str, out_dir: Path, handle: str = "",
-           english: bool = True, backdrop: float = 0.34, hook: str = "", reciter_en: str = "") -> dict:
+           english: bool = True, backdrop: float = 0.34, hook: str = "", reciter_en: str = "",
+           prompt: tuple[str, str] | None = None, follow_along: bool = False) -> dict:
     """Writes header.png (+handle.png, +hook.png) and unit_XX.png. Returns positions for compositing.
 
     backdrop: darkness of the soft shade behind the text (higher on bright, busy footage).
     hook: short title shown in place of the header for the first seconds (empty = no title).
-    reciter_en: the reciter's name in English under the Arabic one (people search for reciters by name)."""
+    reciter_en: the reciter's name in English under the Arabic one (people search for reciters by name).
+    prompt: (English, Arabic) request for a comment, shown at the start (None = no prompt).
+    follow_along: also render each word in gold, for units that know when each word is recited."""
     from playwright.sync_api import sync_playwright
 
     out_dir = Path(out_dir).resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
     page_html = PAGE.format(fonts=FONTS.as_uri(), W=W, H=H, L=TEXT_LEFT, TW=TEXT_WIDTH,
                             surah=html.escape(surah_ar), reciter=html.escape(reciter_ar), reciter_en=html.escape(reciter_en),
-                            handle=html.escape(handle), B1=f"{backdrop:.2f}", B2=f"{backdrop * 0.65:.2f}")
+                            handle=html.escape(handle), B1=f"{backdrop:.2f}", B2=f"{backdrop * 0.65:.2f}",
+                            PT=PROMPT_TOP)
     page_file = out_dir / "overlay.html"
     page_file.write_text(page_html, encoding="utf-8")
-    result = {"units": [], "header": None, "handle": None, "hook": None}
+    result = {"units": [], "header": None, "handle": None, "hook": None, "prompt": None}
     with sync_playwright() as p:
         browser = p.chromium.launch(args=["--font-render-hinting=none"])
         page = browser.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
@@ -137,6 +188,13 @@ def render(units: list[dict], surah_ar: str, reciter_ar: str, out_dir: Path, han
             bb = hl.bounding_box()
             hl.screenshot(path=str(out_dir / "handle.png"), omit_background=True)
             result["handle"] = {"png": str(out_dir / "handle.png"), "x": int(bb["x"]), "y": int(bb["y"])}
+        if prompt:
+            page.evaluate(PROMPT_JS, list(prompt))
+            pr = page.locator("#prompt")
+            bb = pr.bounding_box()
+            pr.screenshot(path=str(out_dir / "prompt.png"), omit_background=True)
+            result["prompt"] = {"png": str(out_dir / "prompt.png"), "x": int(bb["x"]), "y": int(bb["y"])}
+            page.evaluate("document.getElementById('prompt').style.display='none'")
         title = hook_title(hook)
         if title:
             page.evaluate(HOOK_JS, [title, 66, 46])  # measures against the header, so before hiding it
@@ -148,7 +206,7 @@ def render(units: list[dict], surah_ar: str, reciter_ar: str, out_dir: Path, han
             result["hook"] = {"png": str(out_dir / "hook.png"), "x": int(bb["x"]), "y": int(bb["y"])}
             page.evaluate("document.getElementById('hook').style.display='none'")
         page.evaluate("document.getElementById('hdr').style.display='none';document.getElementById('handle').style.display='none'")
-        texts = [(u["text"], u.get("en", "") if english else "") for u in units]
+        texts = [(phrase_html(u), u.get("en", "") if english else "") for u in units]
         # each phrase fits on its own, but sizes stay within a narrow band per video
         fits = [page.evaluate(FIT_JS, [ar, en, AR_MAX, AR_MIN, EN_MAX, EN_MIN]) for ar, en in texts]
         floor_ar = min(f[0] for f in fits)
@@ -162,7 +220,20 @@ def render(units: list[dict], surah_ar: str, reciter_ar: str, out_dir: Path, han
             bb = el.bounding_box()
             png = out_dir / f"unit_{i:02d}.png"
             el.screenshot(path=str(png), omit_background=True)
-            result["units"].append({"png": str(png), "x": int(bb["x"]), "y": int(bb["y"]),
-                                    "start": u["start"], "end": u["end"], "size": s})
+            entry = {"png": str(png), "x": int(bb["x"]), "y": int(bb["y"]),
+                     "start": u["start"], "end": u["end"], "size": s, "words": []}
+            times = u.get("times")
+            if follow_along and times and len(times) == len(u.get("tokens") or []):
+                for j, (w0, w1) in enumerate(times):
+                    x, y, w, h = page.evaluate(HL_JS, [j])
+                    # room for the marks above and below the letters and for the glow
+                    x0, y0 = max(0, int(x - 0.25 * s)), max(0, int(y - 0.45 * s))
+                    x1, y1 = min(W, int(x + w + 0.25 * s) + 1), min(H, int(y + h + 0.45 * s) + 1)
+                    wpng = out_dir / f"unit_{i:02d}_w{j:02d}.png"
+                    page.screenshot(path=str(wpng), omit_background=True,
+                                    clip={"x": x0, "y": y0, "width": x1 - x0, "height": y1 - y0})
+                    entry["words"].append({"png": str(wpng), "x": x0, "y": y0, "start": w0, "end": w1})
+                page.evaluate(HL_OFF_JS)
+            result["units"].append(entry)
         browser.close()
     return result

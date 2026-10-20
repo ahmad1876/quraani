@@ -6,6 +6,7 @@ import shutil
 from pathlib import Path
 
 import audio
+import captions
 import compose
 import english as english_text
 import footage
@@ -52,11 +53,23 @@ def plan_span(passage: dict, reciter_key: str):
                                   passage.get("need", 0))
 
 
+def hook_text(passage: dict, style: str = "verse") -> str:
+    """The opening line: the verse's own words ("verse") or a line that speaks to the viewer ("you")."""
+    if style == "you" and passage.get("hook_you"):
+        return passage["hook_you"]
+    return passage.get("hook", "")
+
+
 def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list | None = None,
                handle: str = "", seed: int = 0, work: Path | None = None, preset: str = "medium",
                local_footage: str | None = None, english: bool = True, clip_ids: list[str] | None = None,
-               hook_title: bool = True) -> dict:
+               hook_title: bool = True, hook_style: str = "verse", comment_prompt: bool = False,
+               follow_along: bool = False) -> dict:
+    """hook_style: which opening line to show ("verse" or "you", see hook_text).
+    comment_prompt: ask for a short comment at the start (captions.prompt, by theme).
+    follow_along: each Arabic word turns gold while it is recited (reciters with word timings)."""
     history = history or []
+    hook_style = hook_style if hook_style == "you" and passage.get("hook_you") else "verse"
     rec = recitation.reciters()[reciter_key]
     ch = passage["surah"]
     t, span = plan_span(passage, reciter_key)
@@ -105,9 +118,12 @@ def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list 
     # 4) text overlays + final render
     chap = quran.chapter(ch)
     backdrop = compose.text_shade([c["path"] for c in clips])
+    ask = captions.prompt(passage.get("theme", ""))[:2] if comment_prompt else None
     ov = overlay.render(units, "سورة " + chap["name_ar"], rec["name_ar"], work / "ov", handle=handle,
-                        english=english, backdrop=backdrop, hook=passage.get("hook", "") if hook_title else "",
-                        reciter_en=re.sub(r"\s*\(.*?\)", "", rec["name_en"]) if english else "")
+                        english=english, backdrop=backdrop,
+                        hook=hook_text(passage, hook_style) if hook_title else "",
+                        reciter_en=re.sub(r"\s*\(.*?\)", "", rec["name_en"]) if english else "",
+                        prompt=ask, follow_along=follow_along)
     compose.build(clips, final_wav, ov, out_mp4, dur, seed=seed, preset=preset, small=bool(passage.get("long")))
     shutil.rmtree(work, ignore_errors=True)
 
@@ -130,7 +146,9 @@ def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list 
         "footage_theme": clips[0].get("theme", "") if clips else "",
         "credits": sorted({c["credit"] for c in clips if c.get("credit")}),
         "sources": sorted({c["source"] for c in clips if c.get("source") in ("pexels", "mixkit")}),
-        "hook": passage.get("hook", ""),
+        "hook": hook_text(passage, hook_style),
+        "hook_style": hook_style,
+        "follow_along": bool(follow_along and any(u.get("words") for u in ov["units"])),
         "theme": passage.get("theme", ""),
         "translation": join_translation([quran.verse(f"{ch}:{k}")["translation"] for k in range(a, b + 1)]),
     }

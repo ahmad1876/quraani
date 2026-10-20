@@ -1,4 +1,4 @@
-"""Render one video locally:  python scripts/make_one.py 39:53-54 yasser-aldosari [out.mp4]"""
+"""Render one video locally:  python scripts/make_one.py 39:53-54 yasser-aldosari [out.mp4] [verse|you]"""
 import json
 import sys
 from pathlib import Path
@@ -18,8 +18,10 @@ def main():
         s, r = pid.split(":")
         a, b = (r.split("-") + [r])[:2]
         p = {"id": pid, "surah": int(s), "start": int(a), "end": int(b), "hook": "", "theme": ""}
-    meta = make.make_video(p, reciter, out, handle=config().get("handle", ""), seed=7,
-                           preset=config().get("x264_preset", "medium"))
+    cfg = config()
+    meta = make.make_video(p, reciter, out, handle=cfg.get("handle", ""), seed=7,
+                           preset=cfg.get("x264_preset", "medium"), hook_style=sys.argv[4] if len(sys.argv) > 4 else "verse",
+                           comment_prompt=cfg.get("comment_prompt", True), follow_along=cfg.get("follow_along", True))
     print(json.dumps(meta, ensure_ascii=False, indent=1))
 
 
