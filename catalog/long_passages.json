@@ -7,7 +7,9 @@
   "hook": "The first ten verses of Surah Al-Kahf.",
   "priority": 1,
   "theme": "kahf",
-  "long": true
+  "long": true,
+  "hook_you": "The ten verses that protect from the Dajjal.",
+  "need": 10
  },
  {
   "id": "67:1-11",
@@ -17,7 +19,8 @@
   "hook": "Blessed is He in whose hand is the dominion.",
   "priority": 1,
   "theme": "mulk",
-  "long": true
+  "long": true,
+  "hook_you": "Look up. Can you find a single flaw?"
  },
  {
   "id": "55:1-25",
@@ -27,7 +30,8 @@
   "hook": "So which of the favors of your Lord would you deny?",
   "priority": 1,
   "theme": "rahman",
-  "long": true
+  "long": true,
+  "hook_you": "How many of His favors will you deny?"
  },
  {
   "id": "36:1-21",
@@ -37,7 +41,8 @@
   "hook": "Ya-Sin. By the wise Quran.",
   "priority": 1,
   "theme": "yasin",
-  "long": true
+  "long": true,
+  "hook_you": "Give a few minutes to Surah Ya-Sin."
  },
  {
   "id": "2:284-286",
@@ -48,7 +53,8 @@
   "priority": 1,
   "theme": "dua",
   "long": true,
-  "need": 286
+  "need": 286,
+  "hook_you": "The two verses that are enough for your night."
  },
  {
   "id": "2:255-257",
@@ -59,7 +65,8 @@
   "priority": 1,
   "theme": "protection",
   "long": true,
-  "need": 257
+  "need": 257,
+  "hook_you": "Recite this before you sleep tonight."
  },
  {
   "id": "59:18-24",
@@ -70,7 +77,8 @@
   "priority": 1,
   "theme": "names",
   "long": true,
-  "need": 24
+  "need": 24,
+  "hook_you": "What have you sent ahead for tomorrow?"
  },
  {
   "id": "25:63-77",
@@ -80,7 +88,8 @@
   "hook": "The servants of the Most Merciful.",
   "priority": 2,
   "theme": "character",
-  "long": true
+  "long": true,
+  "hook_you": "Are you one of the servants of the Most Merciful?"
  },
  {
   "id": "3:190-194",
@@ -91,7 +100,8 @@
   "priority": 2,
   "theme": "reflection",
   "long": true,
-  "need": 194
+  "need": 194,
+  "hook_you": "Ever looked at the night sky and wondered?"
  },
  {
   "id": "73:1-19",
@@ -101,7 +111,8 @@
   "hook": "O you who wraps himself, arise to pray the night.",
   "priority": 2,
   "theme": "qiyam",
-  "long": true
+  "long": true,
+  "hook_you": "Who's awake tonight? This is for you."
  },
  {
   "id": "78:1-16",
@@ -111,7 +122,8 @@
   "hook": "About what are they asking one another?",
   "priority": 2,
   "theme": "akhirah",
-  "long": true
+  "long": true,
+  "hook_you": "Look around you: did He not make all this?"
  },
  {
   "id": "81:1-29",
@@ -122,7 +134,8 @@
   "priority": 2,
   "theme": "akhirah",
   "long": true,
-  "need": 29
+  "need": 29,
+  "hook_you": "Imagine the day the sun goes dark."
  },
  {
   "id": "82:1-19",
@@ -133,7 +146,8 @@
   "priority": 2,
   "theme": "akhirah",
   "long": true,
-  "need": 19
+  "need": 19,
+  "hook_you": "What has deceived you about your Lord?"
  },
  {
   "id": "84:1-25",
@@ -144,7 +158,8 @@
   "priority": 2,
   "theme": "akhirah",
   "long": true,
-  "need": 25
+  "need": 25,
+  "hook_you": "You're working hard. You will meet your Lord."
  },
  {
   "id": "85:1-22",
@@ -155,7 +170,8 @@
   "priority": 2,
   "theme": "mercy",
   "long": true,
-  "need": 22
+  "need": 22,
+  "hook_you": "When people hurt you for your faith, listen."
  },
  {
   "id": "86:1-17",
@@ -166,7 +182,8 @@
   "priority": 2,
   "theme": "reflection",
   "long": true,
-  "need": 17
+  "need": 17,
+  "hook_you": "Every soul has a guardian over it. Even yours."
  },
  {
   "id": "87:1-19",
@@ -177,7 +194,8 @@
   "priority": 1,
   "theme": "tasbih",
   "long": true,
-  "need": 19
+  "need": 19,
+  "hook_you": "Say it with me: Subhana Rabbiyal A'la."
  },
  {
   "id": "88:1-26",
@@ -188,7 +206,8 @@
   "priority": 1,
   "theme": "akhirah",
   "long": true,
-  "need": 26
+  "need": 26,
+  "hook_you": "Has the news of the Overwhelming reached you?"
  },
  {
   "id": "89:1-30",
@@ -199,7 +218,8 @@
   "priority": 2,
   "theme": "reminder",
   "long": true,
-  "need": 30
+  "need": 30,
+  "hook_you": "The words every soul hopes to hear at the end."
  },
  {
   "id": "90:1-20",
@@ -210,7 +230,8 @@
   "priority": 2,
   "theme": "purpose",
   "long": true,
-  "need": 20
+  "need": 20,
+  "hook_you": "Will you take the steep path?"
  },
  {
   "id": "91:1-15",
@@ -221,7 +242,8 @@
   "priority": 2,
   "theme": "reflection",
   "long": true,
-  "need": 15
+  "need": 15,
+  "hook_you": "Your soul: will you purify it or bury it?"
  },
  {
   "id": "92:1-21",
@@ -232,6 +254,7 @@
   "priority": 2,
   "theme": "reminder",
   "long": true,
-  "need": 21
+  "need": 21,
+  "hook_you": "Give, and He will make things easy for you."
  }
 ]

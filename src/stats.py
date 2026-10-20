@@ -141,6 +141,9 @@ def collect(history: list[dict], chans: dict, gql=None) -> dict:
                 "passage": h.get("passage"), "theme": themes.get(h.get("passage"), ""), "reciter": h.get("reciter"),
                 "mood": h.get("footage_theme", ""), "duration": h.get("duration"), "link": n.get("externalLink"),
                 "video": store.get(pid, {}).get("video"),
+                # opening line test and follow-along text (only videos made since they exist record them)
+                "hook_style": h.get("hook_style"), "follow_along": h.get("follow_along"),
+                "remake_of": h.get("remake_of"),
                 "fetched": now.isoformat(timespec="seconds"), "m": m,
             }
     if youtube.key():
@@ -246,6 +249,24 @@ def scores(store: dict, now: dt.datetime | None = None) -> dict[str, dict]:
     return out
 
 
+# what the weights are learned for, and the metrics field each one reads
+FACTORS = {"theme": "theme", "reciter": "reciter", "mood": "mood", "hook": "hook_style"}
+
+
+def video_scores(store: dict | None = None) -> list[dict]:
+    """One score per video (its platforms averaged), best first: [{date, slot, passage, reciter, score, posts}]."""
+    store = store if store is not None else (load_json(METRICS, {}) or {})
+    per: dict[tuple, list[float]] = defaultdict(list)
+    info = {}
+    for r in scores(store).values():
+        key = (r.get("date"), r.get("slot"), r.get("passage"))
+        per[key].append(r["score"])
+        info[key] = r
+    out = [{"date": k[0], "slot": k[1], "passage": k[2], "reciter": info[k].get("reciter"),
+            "score": sum(v) / len(v), "posts": len(v)} for k, v in per.items()]
+    return sorted(out, key=lambda x: -x["score"])
+
+
 def factor_table(post_scores: dict) -> dict[str, dict[str, dict]]:
     """{factor: {value: {'n', 'mean', 'shrunk', 'weight'}}} with one score per video (platforms averaged)."""
     per_video: dict[tuple, list[float]] = defaultdict(list)
@@ -258,9 +279,9 @@ def factor_table(post_scores: dict) -> dict[str, dict[str, dict]]:
     for key, ss in per_video.items():
         s = sum(ss) / len(ss)
         r = info[key]
-        for factor in ("theme", "reciter", "mood"):
-            if r.get(factor):
-                acc[factor][r[factor]].append(s)
+        for factor, field in FACTORS.items():
+            if r.get(field):
+                acc[factor][r[field]].append(s)
     table: dict[str, dict[str, dict]] = {}
     for factor, vals in acc.items():
         table[factor] = {}
@@ -273,13 +294,13 @@ def factor_table(post_scores: dict) -> dict[str, dict[str, dict]]:
 
 # ---------------------------------------------------------------- weights --
 def weights() -> dict[str, dict[str, float]]:
-    """{'theme': {...}, 'reciter': {...}, 'mood': {...}} -> weight (missing = 1.0). Never raises."""
+    """{'theme': {...}, 'reciter': {...}, 'mood': {...}, 'hook': {...}} -> weight (missing = 1.0). Never raises."""
     try:
         data = load_json(WEIGHTS, {}) or {}
         return {k: {v: min(max(float(x), W_MIN), W_MAX) for v, x in (data.get(k) or {}).items()}
-                for k in ("theme", "reciter", "mood")}
+                for k in FACTORS}
     except Exception:
-        return {"theme": {}, "reciter": {}, "mood": {}}
+        return {k: {} for k in FACTORS}
 
 
 def weight(kind: str, value: str, table: dict | None = None) -> float:
@@ -309,15 +330,17 @@ def report(post_scores: dict, table: dict, store: dict, now: dt.datetime | None 
         counted = sum(1 for r in post_scores.values() if r["platform"] == platform)
         lines.append(f"| {PLATFORM_NAMES[platform]} | {len(rows)} | {counted} | {median(vs):.0f} | {sum(vs):.0f} | "
                      f"{sum(_likes(r['m']) for r in rows):.0f} |")
-    names = {"theme": "Passage themes", "reciter": "Reciters", "mood": "Footage moods"}
-    for factor in ("theme", "reciter", "mood"):
+    names = {"theme": "Passage themes", "reciter": "Reciters", "mood": "Footage moods",
+             "hook": "Opening line test (since it started)"}
+    labels = {"hook": {"verse": "the verse's own words", "you": "a line that speaks to the viewer"}}
+    for factor in ("hook", "theme", "reciter", "mood"):
         vals = table.get(factor) or {}
         if not vals:
             continue
         ranked = sorted(vals.items(), key=lambda kv: -kv[1]["shrunk"])
         lines += ["", f"## {names[factor]}", "", "| | Videos | Score | Weight now |", "|---|---|---|---|"]
         for v, d in ranked:
-            lines.append(f"| {v} | {d['n']} | {_fmt(d['mean'])} | {d['weight']:.2f} |")
+            lines.append(f"| {labels.get(factor, {}).get(v, v)} | {d['n']} | {_fmt(d['mean'])} | {d['weight']:.2f} |")
     # posting times, per platform (report only)
     times: dict[tuple[str, str], list[float]] = defaultdict(list)
     for r in post_scores.values():

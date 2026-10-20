@@ -83,7 +83,10 @@ def main() -> int:
             meta = make.make_video(by_id[e["passage"]], e["reciter"], out_dir / name, history=others,
                                    handle=cfg.get("handle", ""), seed=seed, preset=cfg.get("x264_preset", "medium"),
                                    english=cfg.get("english", True), clip_ids=clip_ids,
-                                   hook_title=cfg.get("hook_title", True))
+                                   hook_title=cfg.get("hook_title", True),
+                                   hook_style=e.get("hook_style", "verse"),  # same opening line as its captions
+                                   comment_prompt=cfg.get("comment_prompt", True),
+                                   follow_along=cfg.get("follow_along", True))
             if meta["ref"] != e["ref"]:
                 print(f"  {name}: ayahs changed ({e['ref']} -> {meta['ref']}), keeping the old video", flush=True)
                 (out_dir / name).unlink(missing_ok=True)

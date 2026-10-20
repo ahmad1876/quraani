@@ -82,7 +82,7 @@ def due_utc(day: dt.date, when: str, tz) -> dt.datetime:
 def post_one(platform: str, ch: dict, due: dt.datetime, meta: dict, rec: dict, url: str, cfg: dict) -> dict:
     """Schedule one video on one Buffer channel. Returns the history record for that post."""
     text = captions.build(meta, platform, rec["tag"], credit=cfg.get("credit_footage", True),
-                          handle=cfg.get("handle", ""))
+                          handle=cfg.get("handle", ""), ask=cfg.get("comment_prompt", True))
     post = buffer_api.schedule_video(
         ch, text, url, due.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
         youtube_title=captions.youtube_title(meta) if platform == "youtube" else "")
@@ -99,7 +99,7 @@ def caption_meta(entry: dict) -> dict:
     return {
         "passage": entry["passage"], "ref": entry["ref"], "surah": ch,
         "surah_en": quran.chapter(ch)["name_en"], "reciter": entry["reciter"], "reciter_en": rec["name_en"],
-        "hook": passage.get("hook", ""), "theme": passage.get("theme", ""),
+        "hook": make.hook_text(passage, entry.get("hook_style", "verse")), "theme": passage.get("theme", ""),
         "translation": make.join_translation([quran.verse(f"{ch}:{k}")["translation"] for k in range(a, b + 1)]),
         "sources": sorted({c.split(":")[0] for c in entry.get("clips", []) if c.split(":")[0] in ("pexels", "mixkit")}),
     }
@@ -193,19 +193,31 @@ def main() -> int:
     # the weekly long slot picks from the long list; the rest from the daily shorts
     longs = [x for x in slots if x[1].get("long")]
     slots = [x for x in slots if not x[1].get("long")] + longs
-    picks = planner.choose(len(slots) - len(longs), history, rng)
+    n_short = len(slots) - len(longs)
+    # at most once a week, the first short slot remakes a clear winner with another top voice
+    remake = planner.remake_pick(history, rng, cfg) if n_short else None
+    picks = [(remake[0], remake[1])] if remake else []
+    if remake:
+        print(f"Remaking the winner of {remake[2]} ({remake[0]['id']}) with {remake[1]}", flush=True)
+    # the remake counts as already taken: its passage, reciter and surah are not picked again in this run
+    taken = ([{"passage": planner.passage_key(remake[0]), "reciter": remake[1], "date": slots[0][0].isoformat()}]
+             if remake else [])
+    picks += planner.choose(n_short - len(picks), history + taken, rng, cfg=cfg,
+                            exclude={t["passage"] for t in taken})
+    remakes = [remake[2] if remake and i == 0 else None for i in range(len(picks))]
     if longs:
-        long_picks = planner.choose(len(longs), history, rng, long=True)
-        if len(picks) < len(slots) - len(longs):  # keep each pick next to its own kind of slot
+        long_picks = planner.choose(len(longs), history, rng, long=True, cfg=cfg)
+        if len(picks) < n_short:  # keep each pick next to its own kind of slot
             slots = slots[:len(picks)] + longs
         picks += long_picks
+        remakes += [None] * len(long_picks)
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     errors = 0
 
     # 1) render everything first
     made = []
-    for (day, slot), (passage, rk) in zip(slots, picks):
+    for (day, slot), (passage, rk), again in zip(slots, picks, remakes):
         rec = recitation.reciters()[rk]
         name = f"{day.isoformat()}_{slot['id']}_{passage['id'].replace(':', '-')}_{rk}.mp4"
         out = out_dir / name
@@ -213,13 +225,17 @@ def main() -> int:
         try:
             meta = make.make_video(passage, rk, out, history=history, handle=cfg.get("handle", ""),
                                    seed=rng.randint(0, 10 ** 6), preset=cfg.get("x264_preset", "medium"),
-                                   english=cfg.get("english", True), hook_title=cfg.get("hook_title", True))
+                                   english=cfg.get("english", True), hook_title=cfg.get("hook_title", True),
+                                   hook_style=planner.hook_style(rng, cfg),
+                                   comment_prompt=cfg.get("comment_prompt", True),
+                                   follow_along=cfg.get("follow_along", True))
         except Exception:
             traceback.print_exc()
             errors += 1
             continue
-        print(f"   rendered {meta['ref']} ({meta['duration']}s, {Path(out).stat().st_size / 1e6:.1f} MB)", flush=True)
-        made.append((day, slot, rec, meta, out))
+        print(f"   rendered {meta['ref']} ({meta['duration']}s, {Path(out).stat().st_size / 1e6:.1f} MB, "
+              f"opening line: {meta['hook_style']}, follow-along: {meta['follow_along']})", flush=True)
+        made.append((day, slot, rec, meta, out, again))
         # rotation memory so the next video in this run avoids the same clips/themes
         history.append({"passage": meta["passage"], "reciter": rk, "clips": meta["clips"],
                         "footage_theme": meta.get("footage_theme", ""), "_tmp": True})
@@ -235,11 +251,14 @@ def main() -> int:
     print("\nPublished:", *urls.values(), sep="\n  ", flush=True)
 
     # 3) schedule on Buffer
-    for day, slot, rec, meta, out in made:
+    for day, slot, rec, meta, out, again in made:
         url = urls[out.name]
         entry = {"date": day.isoformat(), "slot": slot["id"], "made": now.isoformat(timespec="seconds"),
-                 **{k: meta[k] for k in ("passage", "ref", "reciter", "duration", "clips")},
+                 **{k: meta[k] for k in ("passage", "ref", "reciter", "duration", "clips", "hook_style",
+                                         "follow_along")},
                  "footage_theme": meta.get("footage_theme", ""), "url": url, "posts": {}}
+        if again:
+            entry["remake_of"] = again
         for platform in PLATFORMS:
             when, ch = slot.get(platform), chans.get(platform)
             if not when or not ch:

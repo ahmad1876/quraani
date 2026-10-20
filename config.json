@@ -76,5 +76,24 @@
    }
   ]
  },
- "learn_from_trends": true
+ "learn_from_trends": true,
+ "comment_prompt": true,
+ "follow_along": true,
+ "hook_test": true,
+ "focus_reciters": {
+  "top": 8,
+  "share": 0.7
+ },
+ "weekly_surahs": [
+  1,
+  55,
+  36,
+  67,
+  2
+ ],
+ "remake": {
+  "every_days": 7,
+  "min_score": 0.7,
+  "min_age_days": 7
+ }
 }

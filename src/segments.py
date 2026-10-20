@@ -121,7 +121,11 @@ def _len_cost(L: float, ideal: float) -> float:
 
 def build_units(ch: int, a: int, b: int, t: dict, env: np.ndarray, raw0: float,
                 cut0: float, cut1: float, total: float | None = None) -> list[dict]:
-    """Return [{text, start, end, ayah}] with times relative to the clip start."""
+    """Return [{text, start, end, ayah, tokens, times}] with times relative to the clip start.
+
+    tokens: the phrase word by word, [{"text", "mark"}] (mark = the ayah marker after the ayah's last word);
+    times: when each word is recited, [(start, end)] relative to the clip start, or None when the
+    reciter only has ayah-level timing (used for the follow-along highlight)."""
     units = []
     for k in range(a, b + 1):
         v = quran.verse(f"{ch}:{k}")
@@ -150,10 +154,14 @@ def build_units(ch: int, a: int, b: int, t: dict, env: np.ndarray, raw0: float,
             share.append(acc)
         for gi, g in enumerate(groups):
             text = " ".join(words[i]["text"] for i in g)
+            # a word and its pause mark stay together on one line
+            tokens = [{"text": words[i]["text"].replace(" ", "\u00a0"), "mark": ""} for i in g]
             if gi == len(groups) - 1:
                 text += "\u00a0" + quran.ayah_marker(k)
+                tokens[-1]["mark"] = quran.ayah_marker(k)
+            times = [(wt[i][0] - cut0, wt[i][1] - cut0) for i in g] if wt else None
             units.append({"text": text, "abs_start": max(starts[gi], a0 if gi == 0 else starts[gi]), "ayah": k,
-                          "f1": share[g[-1]] / max(1, acc)})
+                          "f1": share[g[-1]] / max(1, acc), "tokens": tokens, "times": times})
     # convert to clip-relative display windows
     dur = total if total else cut1 - cut0
     for i, u in enumerate(units):
@@ -168,6 +176,9 @@ def build_units(ch: int, a: int, b: int, t: dict, env: np.ndarray, raw0: float,
             merged[-1]["text"] += " " + u["text"]
             merged[-1]["end"] = u["end"]
             merged[-1]["f1"] = u["f1"]
+            merged[-1]["tokens"] = merged[-1]["tokens"] + u["tokens"]
+            both = merged[-1]["times"] is not None and u["times"] is not None
+            merged[-1]["times"] = merged[-1]["times"] + u["times"] if both else None
         else:
             merged.append(dict(u))
     return merged

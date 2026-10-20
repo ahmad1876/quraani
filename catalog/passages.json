@@ -6,7 +6,8 @@
   "end": 7,
   "hook": "The prayer we repeat in every rak'ah.",
   "priority": 1,
-  "theme": "fatiha"
+  "theme": "fatiha",
+  "hook_you": "Do you feel what you say in every prayer?"
  },
  {
   "id": "2:255",
@@ -15,7 +16,8 @@
   "end": 255,
   "hook": "Ayat al-Kursi, the greatest verse in the Quran.",
   "priority": 1,
-  "theme": "protection"
+  "theme": "protection",
+  "hook_you": "Recite this before you sleep tonight."
  },
  {
   "id": "2:285-286",
@@ -24,7 +26,8 @@
   "end": 286,
   "hook": "The closing verses of Surah Al-Baqarah.",
   "priority": 1,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "Say it with the believers: we hear and we obey."
  },
  {
   "id": "2:286",
@@ -33,7 +36,8 @@
   "end": 286,
   "hook": "Allah does not burden a soul beyond what it can bear.",
   "priority": 1,
-  "theme": "hope"
+  "theme": "hope",
+  "hook_you": "Feel like it's more than you can carry?"
  },
  {
   "id": "2:186",
@@ -42,7 +46,8 @@
   "end": 186,
   "hook": "When My servants ask about Me, I am near.",
   "priority": 1,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "Wondering if Allah hears your dua?"
  },
  {
   "id": "2:152-153",
@@ -51,7 +56,8 @@
   "end": 153,
   "hook": "Remember Me, and I will remember you.",
   "priority": 2,
-  "theme": "dhikr"
+  "theme": "dhikr",
+  "hook_you": "Want Allah to remember you?"
  },
  {
   "id": "2:155-157",
@@ -61,7 +67,8 @@
   "hook": "Give good news to the patient.",
   "priority": 1,
   "theme": "sabr",
-  "need": 155
+  "need": 155,
+  "hook_you": "Going through a loss right now?"
  },
  {
   "id": "2:201",
@@ -70,7 +77,8 @@
   "end": 201,
   "hook": "Our Lord, give us good in this world and good in the Hereafter.",
   "priority": 2,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "The dua that asks for the best of both worlds."
  },
  {
   "id": "2:216",
@@ -79,7 +87,8 @@
   "end": 216,
   "hook": "You may dislike something that is good for you.",
   "priority": 1,
-  "theme": "trust"
+  "theme": "trust",
+  "hook_you": "Upset that something didn't go your way?"
  },
  {
   "id": "2:45-46",
@@ -88,7 +97,8 @@
   "end": 46,
   "hook": "Seek help through patience and prayer.",
   "priority": 2,
-  "theme": "sabr"
+  "theme": "sabr",
+  "hook_you": "Overwhelmed? This is where to turn."
  },
  {
   "id": "2:1-5",
@@ -98,7 +108,8 @@
   "hook": "This is the Book about which there is no doubt.",
   "priority": 2,
   "theme": "guidance",
-  "need": 2
+  "need": 2,
+  "hook_you": "Looking for guidance you can trust?"
  },
  {
   "id": "3:8-9",
@@ -107,7 +118,8 @@
   "end": 9,
   "hook": "Our Lord, do not let our hearts deviate after You have guided us.",
   "priority": 2,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "Afraid of losing your faith? Ask Him this."
  },
  {
   "id": "3:26-27",
@@ -116,7 +128,8 @@
   "end": 27,
   "hook": "You give sovereignty to whom You will.",
   "priority": 2,
-  "theme": "tawheed"
+  "theme": "tawheed",
+  "hook_you": "Everything you hope for is in His hand."
  },
  {
   "id": "3:133-136",
@@ -125,7 +138,8 @@
   "end": 136,
   "hook": "Hasten to forgiveness and a Garden as wide as the heavens and the earth.",
   "priority": 2,
-  "theme": "jannah"
+  "theme": "jannah",
+  "hook_you": "Forgiveness is waiting. Will you hurry to it?"
  },
  {
   "id": "3:139",
@@ -134,7 +148,8 @@
   "end": 139,
   "hook": "Do not weaken and do not grieve.",
   "priority": 2,
-  "theme": "hope"
+  "theme": "hope",
+  "hook_you": "Feeling weak and sad today?"
  },
  {
   "id": "3:160",
@@ -143,7 +158,8 @@
   "end": 160,
   "hook": "If Allah helps you, no one can overcome you.",
   "priority": 2,
-  "theme": "trust"
+  "theme": "trust",
+  "hook_you": "Feel like everyone is against you?"
  },
  {
   "id": "3:173-174",
@@ -153,7 +169,8 @@
   "hook": "Allah is sufficient for us, and He is the best Disposer of affairs.",
   "priority": 2,
   "theme": "tawakkul",
-  "need": 173
+  "need": 173,
+  "hook_you": "Scared of what people are planning?"
  },
  {
   "id": "3:185",
@@ -162,7 +179,8 @@
   "end": 185,
   "hook": "Every soul will taste death.",
   "priority": 1,
-  "theme": "akhirah"
+  "theme": "akhirah",
+  "hook_you": "Everything you're chasing will end. Then what?"
  },
  {
   "id": "3:190-194",
@@ -171,7 +189,8 @@
   "end": 194,
   "hook": "In the creation of the heavens and the earth are signs.",
   "priority": 1,
-  "theme": "reflection"
+  "theme": "reflection",
+  "hook_you": "Ever looked at the night sky and wondered?"
  },
  {
   "id": "6:59",
@@ -180,7 +199,8 @@
   "end": 59,
   "hook": "With Him are the keys of the unseen.",
   "priority": 2,
-  "theme": "tawheed"
+  "theme": "tawheed",
+  "hook_you": "Not a single leaf falls without Him knowing."
  },
  {
   "id": "6:162-163",
@@ -189,7 +209,8 @@
   "end": 163,
   "hook": "My prayer, my sacrifice, my living and my dying are for Allah.",
   "priority": 2,
-  "theme": "ikhlas"
+  "theme": "ikhlas",
+  "hook_you": "Who are you really living for?"
  },
  {
   "id": "7:23",
@@ -198,7 +219,8 @@
   "end": 23,
   "hook": "The prayer of Adam: Our Lord, we have wronged ourselves.",
   "priority": 2,
-  "theme": "tawbah"
+  "theme": "tawbah",
+  "hook_you": "Feel you've wronged yourself? Say this."
  },
  {
   "id": "9:40",
@@ -207,7 +229,8 @@
   "end": 40,
   "hook": "Do not grieve, Allah is with us.",
   "priority": 1,
-  "theme": "hope"
+  "theme": "hope",
+  "hook_you": "Feeling alone in a hard moment?"
  },
  {
   "id": "9:128-129",
@@ -216,7 +239,8 @@
   "end": 129,
   "hook": "Allah is sufficient for me. There is no god but Him.",
   "priority": 2,
-  "theme": "tawakkul"
+  "theme": "tawakkul",
+  "hook_you": "Do you know how much he cared about you?"
  },
  {
   "id": "10:57-58",
@@ -225,7 +249,8 @@
   "end": 58,
   "hook": "A healing for what is in the hearts.",
   "priority": 2,
-  "theme": "healing"
+  "theme": "healing",
+  "hook_you": "Is your heart hurting? There is healing."
  },
  {
   "id": "11:6",
@@ -234,7 +259,8 @@
   "end": 6,
   "hook": "There is no creature on earth except that Allah provides for it.",
   "priority": 2,
-  "theme": "rizq"
+  "theme": "rizq",
+  "hook_you": "Worried about your provision?"
  },
  {
   "id": "12:86-87",
@@ -244,7 +270,8 @@
   "hook": "I only complain of my grief and sorrow to Allah.",
   "priority": 1,
   "theme": "grief",
-  "need": 86
+  "need": 86,
+  "hook_you": "Carrying a sadness no one sees?"
  },
  {
   "id": "12:101",
@@ -253,7 +280,8 @@
   "end": 101,
   "hook": "Let me die a Muslim and join me with the righteous.",
   "priority": 2,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "Ask for the best ending with this dua."
  },
  {
   "id": "13:28-29",
@@ -262,7 +290,8 @@
   "end": 29,
   "hook": "In the remembrance of Allah do hearts find rest.",
   "priority": 1,
-  "theme": "peace"
+  "theme": "peace",
+  "hook_you": "Looking for peace in your heart?"
  },
  {
   "id": "14:7",
@@ -271,7 +300,8 @@
   "end": 7,
   "hook": "If you are grateful, I will surely give you more.",
   "priority": 1,
-  "theme": "shukr"
+  "theme": "shukr",
+  "hook_you": "Want more blessings in your life?"
  },
  {
   "id": "14:24-25",
@@ -280,7 +310,8 @@
   "end": 25,
   "hook": "A good word is like a good tree.",
   "priority": 3,
-  "theme": "reflection"
+  "theme": "reflection",
+  "hook_you": "Your words can be like this tree."
  },
  {
   "id": "14:40-41",
@@ -290,7 +321,8 @@
   "hook": "My Lord, make me establish prayer, and my descendants too.",
   "priority": 2,
   "theme": "dua",
-  "need": 40
+  "need": 40,
+  "hook_you": "A dua for you, your parents and your children."
  },
  {
   "id": "15:97-99",
@@ -300,7 +332,8 @@
   "hook": "Worship your Lord until certainty comes to you.",
   "priority": 3,
   "theme": "sabr",
-  "need": 99
+  "need": 99,
+  "hook_you": "Hurt by what people say about you?"
  },
  {
   "id": "16:18",
@@ -309,7 +342,8 @@
   "end": 18,
   "hook": "If you tried to count the favours of Allah, you could never count them.",
   "priority": 2,
-  "theme": "shukr"
+  "theme": "shukr",
+  "hook_you": "Try counting your blessings today."
  },
  {
   "id": "16:97",
@@ -318,7 +352,8 @@
   "end": 97,
   "hook": "Whoever does good as a believer, We will give them a good life.",
   "priority": 2,
-  "theme": "hope"
+  "theme": "hope",
+  "hook_you": "Want a good life? Here is the promise."
  },
  {
   "id": "17:23-24",
@@ -327,7 +362,8 @@
   "end": 24,
   "hook": "Your Lord has decreed that you worship none but Him, and be good to your parents.",
   "priority": 1,
-  "theme": "parents"
+  "theme": "parents",
+  "hook_you": "Are your parents still with you?"
  },
  {
   "id": "17:82",
@@ -336,7 +372,8 @@
   "end": 82,
   "hook": "We send down in the Quran healing and mercy for the believers.",
   "priority": 2,
-  "theme": "healing"
+  "theme": "healing",
+  "hook_you": "The Quran is healing. Let it in."
  },
  {
   "id": "18:1-5",
@@ -345,7 +382,8 @@
   "end": 5,
   "hook": "The opening of Surah Al-Kahf.",
   "priority": 1,
-  "theme": "kahf"
+  "theme": "kahf",
+  "hook_you": "The surah many read every Friday."
  },
  {
   "id": "18:10",
@@ -354,7 +392,8 @@
   "end": 10,
   "hook": "Our Lord, grant us mercy from Yourself.",
   "priority": 2,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "Feeling lost? Make the dua of the youths in the cave."
  },
  {
   "id": "18:46",
@@ -363,7 +402,8 @@
   "end": 46,
   "hook": "Wealth and children are the adornment of this world.",
   "priority": 2,
-  "theme": "dunya"
+  "theme": "dunya",
+  "hook_you": "What will you really leave behind?"
  },
  {
   "id": "18:107-110",
@@ -372,7 +412,8 @@
   "end": 110,
   "hook": "The closing verses of Surah Al-Kahf.",
   "priority": 1,
-  "theme": "kahf"
+  "theme": "kahf",
+  "hook_you": "Imagine a home you'd never want to leave."
  },
  {
   "id": "19:2-6",
@@ -381,7 +422,8 @@
   "end": 6,
   "hook": "Zakariyya called upon his Lord in secret.",
   "priority": 1,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "Make your dua in secret, like Zakariyya did."
  },
  {
   "id": "19:16-21",
@@ -390,7 +432,8 @@
   "end": 21,
   "hook": "The story of Maryam.",
   "priority": 1,
-  "theme": "maryam"
+  "theme": "maryam",
+  "hook_you": "The moment an angel came to Maryam."
  },
  {
   "id": "19:23-26",
@@ -399,7 +442,8 @@
   "end": 26,
   "hook": "Maryam beneath the palm tree.",
   "priority": 2,
-  "theme": "maryam"
+  "theme": "maryam",
+  "hook_you": "In her hardest moment, help came from below."
  },
  {
   "id": "19:93-96",
@@ -408,7 +452,8 @@
   "end": 96,
   "hook": "Everyone in the heavens and the earth will come to the Most Merciful as a servant.",
   "priority": 2,
-  "theme": "hope"
+  "theme": "hope",
+  "hook_you": "Everyone, without exception, comes to Him as a servant."
  },
  {
   "id": "20:1-8",
@@ -418,7 +463,8 @@
   "hook": "We did not send down the Quran to you to cause you distress.",
   "priority": 1,
   "theme": "taha",
-  "need": 2
+  "need": 2,
+  "hook_you": "Feeling stressed? The Quran wasn't sent to burden you."
  },
  {
   "id": "20:25-28",
@@ -427,7 +473,8 @@
   "end": 28,
   "hook": "My Lord, expand my chest and ease my task for me.",
   "priority": 1,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "Nervous about something today? Say this."
  },
  {
   "id": "20:45-46",
@@ -437,7 +484,8 @@
   "hook": "Do not fear. I am with you both, I hear and I see.",
   "priority": 2,
   "theme": "trust",
-  "need": 46
+  "need": 46,
+  "hook_you": "Afraid? Hear what Allah told Musa."
  },
  {
   "id": "20:114",
@@ -446,7 +494,8 @@
   "end": 114,
   "hook": "My Lord, increase me in knowledge.",
   "priority": 2,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "Studying or learning? Say this dua."
  },
  {
   "id": "20:124-126",
@@ -455,7 +504,8 @@
   "end": 126,
   "hook": "Whoever turns away from My remembrance will have a hard life.",
   "priority": 1,
-  "theme": "reminder"
+  "theme": "reminder",
+  "hook_you": "What happens when you turn away from His remembrance."
  },
  {
   "id": "21:83-84",
@@ -464,7 +514,8 @@
   "end": 84,
   "hook": "The prayer of Ayyub: harm has touched me, and You are the Most Merciful.",
   "priority": 1,
-  "theme": "sabr"
+  "theme": "sabr",
+  "hook_you": "In pain? Pray like Ayyub prayed."
  },
  {
   "id": "21:87-88",
@@ -474,7 +525,8 @@
   "hook": "The prayer of Yunus from the darkness.",
   "priority": 1,
   "theme": "dua",
-  "need": 87
+  "need": 87,
+  "hook_you": "Trapped in darkness? Say what Yunus said."
  },
  {
   "id": "21:89-90",
@@ -483,7 +535,8 @@
   "end": 90,
   "hook": "My Lord, do not leave me alone.",
   "priority": 2,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "Feeling alone? Make this dua."
  },
  {
   "id": "23:1-11",
@@ -492,7 +545,8 @@
   "end": 11,
   "hook": "Successful indeed are the believers.",
   "priority": 2,
-  "theme": "salah"
+  "theme": "salah",
+  "hook_you": "What do the truly successful have in common?"
  },
  {
   "id": "23:115-118",
@@ -501,7 +555,8 @@
   "end": 118,
   "hook": "Did you think We created you without purpose?",
   "priority": 1,
-  "theme": "reminder"
+  "theme": "reminder",
+  "hook_you": "Ever wondered why you were created?"
  },
  {
   "id": "24:35",
@@ -510,7 +565,8 @@
   "end": 35,
   "hook": "Allah is the Light of the heavens and the earth.",
   "priority": 2,
-  "theme": "tawheed"
+  "theme": "tawheed",
+  "hook_you": "Looking for light in your life?"
  },
  {
   "id": "25:63-70",
@@ -519,7 +575,8 @@
   "end": 70,
   "hook": "The servants of the Most Merciful walk upon the earth humbly.",
   "priority": 1,
-  "theme": "character"
+  "theme": "character",
+  "hook_you": "Are you one of the servants of the Most Merciful?"
  },
  {
   "id": "25:74",
@@ -528,7 +585,8 @@
   "end": 74,
   "hook": "Our Lord, grant us spouses and children who are the comfort of our eyes.",
   "priority": 2,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "A dua for your spouse and children."
  },
  {
   "id": "26:78-89",
@@ -538,7 +596,8 @@
   "hook": "He feeds me and gives me drink, and when I am ill He heals me.",
   "priority": 1,
   "theme": "tawakkul",
-  "need": 80
+  "need": 80,
+  "hook_you": "When you're ill, remember who heals."
  },
  {
   "id": "27:62",
@@ -547,7 +606,8 @@
   "end": 62,
   "hook": "Who answers the distressed when they call upon Him?",
   "priority": 1,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "Desperate? He answers the one who calls."
  },
  {
   "id": "28:24",
@@ -556,7 +616,8 @@
   "end": 24,
   "hook": "My Lord, I am in need of whatever good You send down to me.",
   "priority": 2,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "Need something good in your life? Ask like Musa."
  },
  {
   "id": "29:57-58",
@@ -565,7 +626,8 @@
   "end": 58,
   "hook": "Every soul will taste death, then to Us you will be returned.",
   "priority": 1,
-  "theme": "akhirah"
+  "theme": "akhirah",
+  "hook_you": "Every soul will taste death. Are you ready?"
  },
  {
   "id": "29:69",
@@ -574,7 +636,8 @@
   "end": 69,
   "hook": "Those who strive for Us, We will surely guide them to Our ways.",
   "priority": 2,
-  "theme": "guidance"
+  "theme": "guidance",
+  "hook_you": "Struggling to stay on the right path?"
  },
  {
   "id": "30:21",
@@ -583,7 +646,8 @@
   "end": 21,
   "hook": "He placed between you love and mercy.",
   "priority": 2,
-  "theme": "marriage"
+  "theme": "marriage",
+  "hook_you": "The love in your marriage is a sign from Allah."
  },
  {
   "id": "31:16-19",
@@ -592,7 +656,8 @@
   "end": 19,
   "hook": "Luqman's advice to his son.",
   "priority": 2,
-  "theme": "character"
+  "theme": "character",
+  "hook_you": "A father's advice to his son, from the Quran."
  },
  {
   "id": "33:41-44",
@@ -601,7 +666,8 @@
   "end": 44,
   "hook": "Remember Allah with much remembrance.",
   "priority": 2,
-  "theme": "dhikr"
+  "theme": "dhikr",
+  "hook_you": "Want light in your heart? Remember Him."
  },
  {
   "id": "33:56",
@@ -610,7 +676,8 @@
   "end": 56,
   "hook": "Send blessings upon the Prophet.",
   "priority": 2,
-  "theme": "salawat"
+  "theme": "salawat",
+  "hook_you": "Allah and His angels send blessings on him. Will you?"
  },
  {
   "id": "36:1-12",
@@ -619,7 +686,8 @@
   "end": 12,
   "hook": "The opening of Surah Yasin.",
   "priority": 1,
-  "theme": "yasin"
+  "theme": "yasin",
+  "hook_you": "Pause for a moment with Surah Ya-Sin."
  },
  {
   "id": "36:55-58",
@@ -628,7 +696,8 @@
   "end": 58,
   "hook": "The people of Paradise, busy in joy.",
   "priority": 2,
-  "theme": "jannah"
+  "theme": "jannah",
+  "hook_you": "Imagine the joy waiting in Paradise."
  },
  {
   "id": "36:77-83",
@@ -637,7 +706,8 @@
   "end": 83,
   "hook": "The closing verses of Surah Yasin.",
   "priority": 1,
-  "theme": "yasin"
+  "theme": "yasin",
+  "hook_you": "Ever wondered how He brings the bones back to life?"
  },
  {
   "id": "39:10",
@@ -646,7 +716,8 @@
   "end": 10,
   "hook": "The patient will be given their reward without measure.",
   "priority": 2,
-  "theme": "sabr"
+  "theme": "sabr",
+  "hook_you": "Your patience is not going unnoticed."
  },
  {
   "id": "39:53-54",
@@ -655,7 +726,8 @@
   "end": 54,
   "hook": "Do not despair of the mercy of Allah.",
   "priority": 1,
-  "theme": "mercy"
+  "theme": "mercy",
+  "hook_you": "Think you've sinned too much to be forgiven?"
  },
  {
   "id": "39:73-75",
@@ -664,7 +736,8 @@
   "end": 75,
   "hook": "Those who feared their Lord will be led to Paradise in groups.",
   "priority": 1,
-  "theme": "jannah"
+  "theme": "jannah",
+  "hook_you": "Imagine the gates of Paradise opening for you."
  },
  {
   "id": "40:44",
@@ -673,7 +746,8 @@
   "end": 44,
   "hook": "I entrust my affair to Allah.",
   "priority": 2,
-  "theme": "tawakkul"
+  "theme": "tawakkul",
+  "hook_you": "Can't control the outcome? Hand it to Allah."
  },
  {
   "id": "40:60",
@@ -682,7 +756,8 @@
   "end": 60,
   "hook": "Call upon Me, I will respond to you.",
   "priority": 1,
-  "theme": "dua"
+  "theme": "dua",
+  "hook_you": "Allah is asking you to call on Him."
  },
  {
   "id": "41:30-32",
@@ -691,7 +766,8 @@
   "end": 32,
   "hook": "Do not fear and do not grieve, receive good news of Paradise.",
   "priority": 2,
-  "theme": "jannah"
+  "theme": "jannah",
+  "hook_you": "What the angels will say to the steadfast."
  },
  {
   "id": "50:16-22",
@@ -700,7 +776,8 @@
   "end": 22,
   "hook": "We are closer to him than his jugular vein.",
   "priority": 1,
-  "theme": "reminder"
+  "theme": "reminder",
+  "hook_you": "He is closer to you than you think."
  },
  {
   "id": "51:56-58",
@@ -709,7 +786,8 @@
   "end": 58,
   "hook": "I did not create jinn and mankind except to worship Me.",
   "priority": 2,
-  "theme": "purpose"
+  "theme": "purpose",
+  "hook_you": "Ever asked yourself why you exist?"
  },
  {
   "id": "55:1-13",
@@ -718,7 +796,8 @@
   "end": 13,
   "hook": "The Most Merciful taught the Quran.",
   "priority": 1,
-  "theme": "rahman"
+  "theme": "rahman",
+  "hook_you": "Look at what the Most Merciful gave you."
  },
  {
   "id": "55:26-28",
@@ -728,7 +807,8 @@
   "hook": "Everyone on earth will perish, and the Face of your Lord remains.",
   "priority": 2,
   "theme": "akhirah",
-  "need": 27
+  "need": 27,
+  "hook_you": "Everything you see will perish, except Him."
  },
  {
   "id": "55:46-55",
@@ -737,7 +817,8 @@
   "end": 55,
   "hook": "For whoever fears standing before his Lord are two gardens.",
   "priority": 1,
-  "theme": "jannah"
+  "theme": "jannah",
+  "hook_you": "Fear standing before Him? Two gardens await."
  },
  {
   "id": "56:1-12",
@@ -746,7 +827,8 @@
   "end": 12,
   "hook": "When the inevitable event occurs.",
   "priority": 2,
-  "theme": "akhirah"
+  "theme": "akhirah",
+  "hook_you": "When that Day comes, nothing will be the same."
  },
  {
   "id": "56:83-96",
@@ -755,7 +837,8 @@
   "end": 96,
   "hook": "When the soul reaches the throat.",
   "priority": 2,
-  "theme": "akhirah"
+  "theme": "akhirah",
+  "hook_you": "One day the soul reaches the throat. Then what?"
  },
  {
   "id": "57:16",
@@ -764,7 +847,8 @@
   "end": 16,
   "hook": "Has the time not come for the hearts of the believers to be humbled?",
   "priority": 1,
-  "theme": "reminder"
+  "theme": "reminder",
+  "hook_you": "Has the time not come for your heart?"
  },
  {
   "id": "59:21-24",
@@ -773,7 +857,8 @@
   "end": 24,
   "hook": "If We had sent down this Quran upon a mountain.",
   "priority": 1,
-  "theme": "names"
+  "theme": "names",
+  "hook_you": "If this Quran came down on a mountain..."
  },
  {
   "id": "59:22-24",
@@ -782,7 +867,8 @@
   "end": 24,
   "hook": "He is Allah, other than whom there is no god.",
   "priority": 1,
-  "theme": "names"
+  "theme": "names",
+  "hook_you": "Get to know Allah through His names."
  },
  {
   "id": "65:3",
@@ -791,7 +877,8 @@
   "end": 3,
   "hook": "Whoever relies upon Allah, He is sufficient for him.",
   "priority": 1,
-  "theme": "tawakkul"
+  "theme": "tawakkul",
+  "hook_you": "Worried about tomorrow? Rely on Him."
  },
  {
   "id": "67:1-5",
@@ -800,7 +887,8 @@
   "end": 5,
   "hook": "Blessed is He in whose hand is the dominion.",
   "priority": 1,
-  "theme": "mulk"
+  "theme": "mulk",
+  "hook_you": "Why did Allah create life and death?"
  },
  {
   "id": "71:10-12",
@@ -809,7 +897,8 @@
   "end": 12,
   "hook": "Ask forgiveness of your Lord, He is ever Forgiving.",
   "priority": 1,
-  "theme": "istighfar"
+  "theme": "istighfar",
+  "hook_you": "Seeking forgiveness brings more than you think."
  },
  {
   "id": "73:1-9",
@@ -819,7 +908,8 @@
   "hook": "Stand in prayer by night.",
   "priority": 2,
   "theme": "qiyam",
-  "need": 2
+  "need": 2,
+  "hook_you": "Who's awake tonight? This is for you."
  },
  {
   "id": "75:26-30",
@@ -828,7 +918,8 @@
   "end": 30,
   "hook": "When the soul reaches the collarbones.",
   "priority": 2,
-  "theme": "akhirah"
+  "theme": "akhirah",
+  "hook_you": "Think about the moment the soul leaves the body."
  },
  {
   "id": "76:7-12",
@@ -837,7 +928,8 @@
   "end": 12,
   "hook": "They fulfil their vows and fear a Day whose evil will be widespread.",
   "priority": 2,
-  "theme": "jannah"
+  "theme": "jannah",
+  "hook_you": "Give for Allah alone, expecting no thanks."
  },
  {
   "id": "78:31-40",
@@ -846,7 +938,8 @@
   "end": 40,
   "hook": "For the righteous is success.",
   "priority": 1,
-  "theme": "jannah"
+  "theme": "jannah",
+  "hook_you": "What awaits those who were mindful of Allah?"
  },
  {
   "id": "79:37-41",
@@ -856,7 +949,8 @@
   "hook": "Whoever feared standing before his Lord, Paradise is their refuge.",
   "priority": 2,
   "theme": "jannah",
-  "need": 41
+  "need": 41,
+  "hook_you": "Two paths. Which one are you on?"
  },
  {
   "id": "80:33-42",
@@ -866,7 +960,8 @@
   "hook": "The Day a man will flee from his brother.",
   "priority": 1,
   "theme": "akhirah",
-  "need": 34
+  "need": 34,
+  "hook_you": "The Day you'll run from your own family."
  },
  {
   "id": "81:1-14",
@@ -875,7 +970,8 @@
   "end": 14,
   "hook": "When the sun is wrapped up.",
   "priority": 1,
-  "theme": "akhirah"
+  "theme": "akhirah",
+  "hook_you": "Imagine the day the sun goes dark."
  },
  {
   "id": "82:6-12",
@@ -884,7 +980,8 @@
   "end": 12,
   "hook": "O mankind, what has deceived you about your Lord, the Most Generous?",
   "priority": 2,
-  "theme": "reminder"
+  "theme": "reminder",
+  "hook_you": "What has deceived you about your Lord?"
  },
  {
   "id": "87:1-9",
@@ -893,7 +990,8 @@
   "end": 9,
   "hook": "Glorify the name of your Lord, the Most High.",
   "priority": 2,
-  "theme": "tasbih"
+  "theme": "tasbih",
+  "hook_you": "Say it with me: Subhana Rabbiyal A'la."
  },
  {
   "id": "88:8-16",
@@ -902,7 +1000,8 @@
   "end": 16,
   "hook": "Faces that Day will be joyful.",
   "priority": 2,
-  "theme": "jannah"
+  "theme": "jannah",
+  "hook_you": "Imagine your effort finally being rewarded."
  },
  {
   "id": "89:27-30",
@@ -911,7 +1010,8 @@
   "end": 30,
   "hook": "O reassured soul, return to your Lord, well-pleased and pleasing.",
   "priority": 1,
-  "theme": "jannah"
+  "theme": "jannah",
+  "hook_you": "The words every soul hopes to hear."
  },
  {
   "id": "89:21-30",
@@ -920,7 +1020,8 @@
   "end": 30,
   "hook": "No! When the earth is pounded to dust.",
   "priority": 2,
-  "theme": "akhirah"
+  "theme": "akhirah",
+  "hook_you": "That Day, man will remember. Will it be too late?"
  },
  {
   "id": "93:1-11",
@@ -930,7 +1031,8 @@
   "hook": "Your Lord has not forsaken you.",
   "priority": 1,
   "theme": "hope",
-  "need": 3
+  "need": 3,
+  "hook_you": "Feel like Allah has forgotten you?"
  },
  {
   "id": "94:1-8",
@@ -940,7 +1042,8 @@
   "hook": "With hardship comes ease.",
   "priority": 1,
   "theme": "hope",
-  "need": 6
+  "need": 6,
+  "hook_you": "Going through something hard? Listen."
  },
  {
   "id": "97:1-5",
@@ -950,7 +1053,8 @@
   "hook": "The Night of Decree is better than a thousand months.",
   "priority": 2,
   "theme": "qadr",
-  "need": 3
+  "need": 3,
+  "hook_you": "Imagine one night better than a thousand months."
  },
  {
   "id": "103:1-3",
@@ -960,7 +1064,8 @@
   "hook": "By time, mankind is in loss.",
   "priority": 2,
   "theme": "reminder",
-  "need": 2
+  "need": 2,
+  "hook_you": "Are you losing without knowing it?"
  },
  {
   "id": "110:1-3",
@@ -969,7 +1074,8 @@
   "end": 3,
   "hook": "When the victory of Allah comes.",
   "priority": 3,
-  "theme": "nasr"
+  "theme": "nasr",
+  "hook_you": "When help comes, what should you do?"
  },
  {
   "id": "112:1-4",
@@ -978,7 +1084,8 @@
   "end": 4,
   "hook": "Say: He is Allah, the One.",
   "priority": 1,
-  "theme": "tawheed"
+  "theme": "tawheed",
+  "hook_you": "A third of the Quran in four short lines."
  },
  {
   "id": "113:1-5",
@@ -987,7 +1094,8 @@
   "end": 5,
   "hook": "Say: I seek refuge in the Lord of daybreak.",
   "priority": 1,
-  "theme": "protection"
+  "theme": "protection",
+  "hook_you": "Protect yourself from envy and harm."
  },
  {
   "id": "114:1-6",
@@ -996,7 +1104,8 @@
   "end": 6,
   "hook": "Say: I seek refuge in the Lord of mankind.",
   "priority": 1,
-  "theme": "protection"
+  "theme": "protection",
+  "hook_you": "Hearing whispers in your heart? Seek refuge."
  },
  {
   "id": "108:1-3",
@@ -1005,7 +1114,8 @@
   "end": 3,
   "hook": "Indeed, We have granted you al-Kawthar.",
   "priority": 1,
-  "theme": "shukr"
+  "theme": "shukr",
+  "hook_you": "Do you know the shortest surah of the Quran?"
  },
  {
   "id": "67:12-15",
@@ -1014,7 +1124,8 @@
   "end": 15,
   "hook": "Those who fear their Lord unseen will have forgiveness and great reward.",
   "priority": 1,
-  "theme": "mulk"
+  "theme": "mulk",
+  "hook_you": "Do you fear Allah even when no one sees you?"
  },
  {
   "id": "67:19",
@@ -1023,7 +1134,8 @@
   "end": 19,
   "hook": "None holds them aloft except the Most Merciful.",
   "priority": 2,
-  "theme": "reflection"
+  "theme": "reflection",
+  "hook_you": "Who keeps the birds up in the sky?"
  },
  {
   "id": "64:11",
@@ -1032,7 +1144,8 @@
   "end": 11,
   "hook": "No disaster strikes except by permission of Allah.",
   "priority": 1,
-  "theme": "sabr"
+  "theme": "sabr",
+  "hook_you": "Something bad happened? Read this."
  },
  {
   "id": "95:1-8",
@@ -1041,7 +1154,8 @@
   "end": 8,
   "hook": "We have certainly created man in the best of stature.",
   "priority": 2,
-  "theme": "purpose"
+  "theme": "purpose",
+  "hook_you": "You were created in the best form."
  },
  {
   "id": "101:1-11",
@@ -1051,7 +1165,8 @@
   "hook": "The Striking Calamity. What is the Striking Calamity?",
   "priority": 2,
   "theme": "akhirah",
-  "need": 7
+  "need": 7,
+  "hook_you": "What will make your scales heavy?"
  },
  {
   "id": "102:1-8",
@@ -1060,7 +1175,8 @@
   "end": 8,
   "hook": "Competition in worldly increase diverts you until you visit the graveyards.",
   "priority": 1,
-  "theme": "dunya"
+  "theme": "dunya",
+  "hook_you": "Chasing more and more? Until when?"
  },
  {
   "id": "109:1-6",
@@ -1069,7 +1185,8 @@
   "end": 6,
   "hook": "For you is your religion, and for me is my religion.",
   "priority": 2,
-  "theme": "tawheed"
+  "theme": "tawheed",
+  "hook_you": "Stand firm in your faith with these words."
  },
  {
   "id": "85:14-16",
@@ -1078,6 +1195,7 @@
   "end": 16,
   "hook": "And He is the Forgiving, the Affectionate.",
   "priority": 2,
-  "theme": "mercy"
+  "theme": "mercy",
+  "hook_you": "Need to hear that Allah is loving and forgiving?"
  }
 ]
