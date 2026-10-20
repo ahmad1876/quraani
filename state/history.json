@@ -1454,5 +1454,61 @@
     "due": "2026-10-21T06:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-20",
+  "slot": "E",
+  "made": "2026-10-20T19:58:30+02:00",
+  "passage": "67:1-5",
+  "ref": "67:1-3",
+  "reciter": "idris-abkar",
+  "duration": 38.98,
+  "clips": [
+   "pexels:38546572",
+   "pexels:33638649",
+   "pexels:33638650"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "storm",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-20_E_67-1-5_idris-abkar.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ad7acc8dbe8f4b851e5231f",
+    "due": "2026-10-20T19:00:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-21",
+  "slot": "E",
+  "made": "2026-10-20T19:58:30+02:00",
+  "passage": "25:63-70",
+  "ref": "25:63-65",
+  "reciter": "maher-almuaiqly",
+  "duration": 40.78,
+  "clips": [
+   "pexels:27104653",
+   "pexels:33348578",
+   "pexels:30209746"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "mountains",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-21_E_25-63-70_maher-almuaiqly.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ad7acc904c3c5310c480ceb",
+    "due": "2026-10-21T04:00:00.000Z"
+   },
+   "instagram": {
+    "id": "6ad7accadbe8f4b851e5234b",
+    "due": "2026-10-21T19:00:00.000Z"
+   },
+   "youtube": {
+    "id": "6ad7acca9e6745d6456b627b",
+    "due": "2026-10-21T04:00:00.000Z"
+   }
+  }
  }
 ]
