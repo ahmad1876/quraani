@@ -1,4 +1,4 @@
-# Quraani stats (updated 2026-10-21 20:02 SA time)
+# Quraani stats (updated 2026-10-22 08:06 SA time)
 
 Score = views (and a little likes) compared with a typical post of the same age on the same platform. 0 is typical, +0.7 is about twice the views, -0.7 about half. Posts count once they are 2 days old.
 
@@ -6,7 +6,7 @@ Score = views (and a little likes) compared with a typical post of the same age 
 
 | Platform | Posts with stats | Counted | Median views | Total views | Total likes |
 |---|---|---|---|---|---|
-| YouTube | 37 | 32 | 1028 | 37979 | 5853 |
+| YouTube | 38 | 32 | 1022 | 38527 | 5931 |
 
 ## Passage themes
 
@@ -22,7 +22,7 @@ Score = views (and a little likes) compared with a typical post of the same age 
 | maryam | 1 | +0.12 | 1.02 |
 | nasr | 1 | +0.04 | 1.01 |
 | guidance | 1 | +0.04 | 1.01 |
-| trust | 1 | +0.01 | 1.00 |
+| trust | 1 | +0.02 | 1.00 |
 | mercy | 2 | +0.00 | 1.00 |
 | dhikr | 1 | -0.05 | 0.99 |
 | hope | 3 | -0.03 | 0.99 |
@@ -37,12 +37,12 @@ Score = views (and a little likes) compared with a typical post of the same age 
 
 | | Videos | Score | Weight now |
 |---|---|---|---|
-| haitham-aldukhain | 2 | +0.32 | 1.11 |
+| haitham-aldukhain | 2 | +0.33 | 1.11 |
 | abdullah-aljuhany | 3 | +0.25 | 1.11 |
 | abdulrahman-alsudais | 1 | +0.43 | 1.09 |
 | yasser-aldosari | 2 | +0.20 | 1.07 |
 | mansour-alsalimi | 3 | +0.16 | 1.06 |
-| saud-alshuraim | 1 | +0.27 | 1.06 |
+| saud-alshuraim | 1 | +0.27 | 1.05 |
 | mishary-alafasy | 1 | +0.16 | 1.03 |
 | abdulbasit-mujawwad | 1 | +0.15 | 1.03 |
 | maher-almuaiqly | 3 | +0.03 | 1.01 |
@@ -96,7 +96,7 @@ Score = views (and a little likes) compared with a typical post of the same age 
 | YouTube | 2026-10-15 | 55:1-13 | saad-alghamdi | golden | 2558 | +0.75 |
 | YouTube | 2026-10-15 | 3:133-136 | abdullah-aljuhany | coast | 1795 | +0.56 |
 | YouTube | 2026-10-10 | 19:93-96 | haitham-aldukhain | desert | 1645 | +0.53 |
-| YouTube | 2026-10-16 | 36:1-12 | abdulrahman-alsudais | storm | 1621 | +0.43 |
+| YouTube | 2026-10-16 | 36:1-12 | abdulrahman-alsudais | storm | 1622 | +0.43 |
 | YouTube | 2026-10-17 | 85:14-16 | mansour-alsalimi | hills | 1368 | +0.42 |
 | YouTube | 2026-10-09 | 3:139 | abdulrahman-alossi | sunrise | 471 | -0.74 |
 | YouTube | 2026-10-04 | 3:190-194 | saad-alghamdi | water | 491 | -0.80 |

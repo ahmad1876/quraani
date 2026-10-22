@@ -1629,5 +1629,150 @@
     "due": "2026-10-22T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-23",
+  "slot": "A",
+  "made": "2026-10-22T08:06:55+02:00",
+  "passage": "55:1-13",
+  "ref": "55:1-9",
+  "reciter": "yasser-aldosari",
+  "duration": 41.83,
+  "clips": [
+   "pexels:30575359",
+   "pexels:39126332",
+   "pexels:30054113"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "night",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-23_A_55-1-13_yasser-aldosari.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ad9aa5f282deeeeb2d0a695",
+    "due": "2026-10-23T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ad9aa607dadc432f74163cd",
+    "due": "2026-10-23T17:45:00.000Z"
+   }
+  },
+  "remake_of": "2026-10-15_A"
+ },
+ {
+  "date": "2026-10-23",
+  "slot": "B",
+  "made": "2026-10-22T08:06:55+02:00",
+  "passage": "3:8-9",
+  "ref": "3:8-9",
+  "reciter": "ahmed-alajmi",
+  "duration": 33.13,
+  "clips": [
+   "pexels:26840109",
+   "pexels:38968068",
+   "pexels:30474698"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "ocean",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-23_B_3-8-9_ahmed-alajmi.mp4",
+  "posts": {
+   "youtube": {
+    "id": "6ad9aa61deacf5d253321408",
+    "due": "2026-10-23T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-23",
+  "slot": "C",
+  "made": "2026-10-22T08:06:55+02:00",
+  "passage": "87:1-9",
+  "ref": "87:1-9",
+  "reciter": "mansour-alsalimi",
+  "duration": 42.8,
+  "clips": [
+   "pexels:29493735",
+   "pexels:29493732",
+   "pexels:36230533"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "snow",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-23_C_87-1-9_mansour-alsalimi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ad9aa61282deeeeb2d0a758",
+    "due": "2026-10-23T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6ad9aa62ecaa6cda042dc05b",
+    "due": "2026-10-23T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-23",
+  "slot": "E",
+  "made": "2026-10-22T08:06:55+02:00",
+  "passage": "36:77-83",
+  "ref": "36:77-79",
+  "reciter": "fares-abbad",
+  "duration": 33.87,
+  "clips": [
+   "pexels:3059046",
+   "pexels:27515274",
+   "pexels:29336494"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "canyon",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-23_E_36-77-83_fares-abbad.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ad9aa63deacf5d25332150f",
+    "due": "2026-10-23T04:00:00.000Z"
+   },
+   "instagram": {
+    "id": "6ad9aa64deacf5d253321552",
+    "due": "2026-10-23T19:00:00.000Z"
+   },
+   "youtube": {
+    "id": "6ad9aa641093844846e3d658",
+    "due": "2026-10-23T04:00:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-23",
+  "slot": "L",
+  "made": "2026-10-22T08:06:55+02:00",
+  "passage": "long:67:1-11",
+  "ref": "67:1-11",
+  "reciter": "ahmed-alajmi",
+  "duration": 141.53,
+  "clips": [
+   "pexels:36945413",
+   "pexels:32915889",
+   "pexels:37380644",
+   "pexels:12039644",
+   "pexels:8610455",
+   "pexels:31661617",
+   "pexels:6291878"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "blossom",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-23_L_67-1-11_ahmed-alajmi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ad9aa66282deeeeb2d0a8b0",
+    "due": "2026-10-23T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ad9aa66deacf5d253321658",
+    "due": "2026-10-23T11:15:00.000Z"
+   }
+  }
  }
 ]
