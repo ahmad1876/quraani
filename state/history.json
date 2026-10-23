@@ -1774,5 +1774,121 @@
     "due": "2026-10-23T11:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-24",
+  "slot": "A",
+  "made": "2026-10-23T08:02:14+02:00",
+  "passage": "20:1-8",
+  "ref": "20:1-8",
+  "reciter": "abdulrahman-alsudais",
+  "duration": 41.23,
+  "clips": [
+   "pexels:28615718",
+   "pexels:3703531",
+   "pexels:20118891"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "tropic",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-24_A_20-1-8_abdulrahman-alsudais.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6adafa4c9ef33e7811bf3586",
+    "due": "2026-10-24T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6adafa4dcc1b7cdc08d3ee63",
+    "due": "2026-10-24T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-24",
+  "slot": "B",
+  "made": "2026-10-23T08:02:14+02:00",
+  "passage": "102:1-8",
+  "ref": "102:1-6",
+  "reciter": "maher-almuaiqly",
+  "duration": 37.88,
+  "clips": [
+   "pexels:35052258",
+   "pexels:38262011",
+   "pexels:29846173"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "mountains",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-24_B_102-1-8_maher-almuaiqly.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6adafa4ecc1b7cdc08d3ee9b",
+    "due": "2026-10-24T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6adafa4e8d2197cb2a1baf6f",
+    "due": "2026-10-24T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6adafa4e1dc335d347f96ec0",
+    "due": "2026-10-24T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-24",
+  "slot": "C",
+  "made": "2026-10-23T08:02:14+02:00",
+  "passage": "36:55-58",
+  "ref": "36:55-58",
+  "reciter": "saud-alshuraim",
+  "duration": 21.57,
+  "clips": [
+   "pexels:18500172",
+   "pexels:39435019"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "ocean",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-24_C_36-55-58_saud-alshuraim.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6adafa4fd447d56a647dbd75",
+    "due": "2026-10-24T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6adafa4f8d2197cb2a1bb393",
+    "due": "2026-10-24T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-24",
+  "slot": "E",
+  "made": "2026-10-23T08:02:14+02:00",
+  "passage": "93:1-11",
+  "ref": "93:1-10",
+  "reciter": "idris-abkar",
+  "duration": 44.33,
+  "clips": [
+   "pexels:5895563",
+   "pexels:15686447",
+   "pexels:28332560",
+   "pexels:39481766"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "sunrise",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-24_E_93-1-11_idris-abkar.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6adafa50cc1b7cdc08d3ef29",
+    "due": "2026-10-24T04:00:00.000Z"
+   },
+   "youtube": {
+    "id": "6adafa519ef33e7811bf3b46",
+    "due": "2026-10-24T04:00:00.000Z"
+   }
+  }
  }
 ]
