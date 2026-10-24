@@ -1890,5 +1890,119 @@
     "due": "2026-10-24T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-25",
+  "slot": "A",
+  "made": "2026-10-24T07:51:08+02:00",
+  "passage": "39:73-75",
+  "ref": "39:73",
+  "reciter": "khalid-aljalil",
+  "duration": 31.67,
+  "clips": [
+   "mixkit:4149",
+   "pexels:12902301",
+   "pexels:36259626"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "desert",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-25_A_39-73-75_khalid-aljalil.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6adc48893d5b27036b6c4be1",
+    "due": "2026-10-25T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6adc488a0b5343d07069e881",
+    "due": "2026-10-25T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-25",
+  "slot": "B",
+  "made": "2026-10-24T07:51:08+02:00",
+  "passage": "3:185",
+  "ref": "3:185",
+  "reciter": "ahmad-alnufais",
+  "duration": 40.9,
+  "clips": [
+   "pexels:20118891",
+   "pexels:3703531",
+   "pexels:28615730"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "tropic",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-25_B_3-185_ahmad-alnufais.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6adc488b6887a2efc19f9f94",
+    "due": "2026-10-25T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6adc488be4be8a4d86428c6a",
+    "due": "2026-10-25T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6adc488c6887a2efc19f9fd6",
+    "due": "2026-10-25T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-25",
+  "slot": "C",
+  "made": "2026-10-24T07:51:08+02:00",
+  "passage": "20:45-46",
+  "ref": "20:45-46",
+  "reciter": "mansour-alsalimi",
+  "duration": 23.5,
+  "clips": [
+   "mixkit:51689",
+   "pexels:26524715"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "mountains",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-25_C_20-45-46_mansour-alsalimi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6adc488c0b5343d07069e8f6",
+    "due": "2026-10-25T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6adc488d8b3d437ddca319c9",
+    "due": "2026-10-25T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-25",
+  "slot": "E",
+  "made": "2026-10-24T07:51:08+02:00",
+  "passage": "108:1-3",
+  "ref": "108:1-3",
+  "reciter": "bandar-baleela",
+  "duration": 20.2,
+  "clips": [
+   "pexels:16829181",
+   "pexels:9245420"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "night",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-25_E_108-1-3_bandar-baleela.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6adc488de4be8a4d86428cba",
+    "due": "2026-10-25T04:00:00.000Z"
+   },
+   "youtube": {
+    "id": "6adc488ee4be8a4d86428ce5",
+    "due": "2026-10-25T04:00:00.000Z"
+   }
+  }
  }
 ]
