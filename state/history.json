@@ -2004,5 +2004,119 @@
     "due": "2026-10-25T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-26",
+  "slot": "A",
+  "made": "2026-10-25T08:06:06+02:00",
+  "passage": "89:21-30",
+  "ref": "89:21-26",
+  "reciter": "abdulrahman-alsudais",
+  "duration": 41.44,
+  "clips": [
+   "pexels:28578792",
+   "pexels:37806182",
+   "pexels:35022864"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "golden",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-26_A_89-21-30_abdulrahman-alsudais.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6add9db43d5b27036bbbd426",
+    "due": "2026-10-26T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6add9db46887a2efc1ef3ee2",
+    "due": "2026-10-26T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-26",
+  "slot": "B",
+  "made": "2026-10-25T08:06:06+02:00",
+  "passage": "79:37-41",
+  "ref": "79:37-41",
+  "reciter": "wadee-alyamani",
+  "duration": 31.63,
+  "clips": [
+   "pexels:31117953",
+   "pexels:34802046",
+   "pexels:28874103"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "coast",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-26_B_79-37-41_wadee-alyamani.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6add9db56887a2efc1ef3f0f",
+    "due": "2026-10-26T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6add9db6bd33ce99c35a57e0",
+    "due": "2026-10-26T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6add9db7bd33ce99c35a5842",
+    "due": "2026-10-26T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-26",
+  "slot": "C",
+  "made": "2026-10-25T08:06:06+02:00",
+  "passage": "39:10",
+  "ref": "39:10",
+  "reciter": "nasser-alqatami",
+  "duration": 21.94,
+  "clips": [
+   "pexels:39271879",
+   "pexels:31002853"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "water",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-26_C_39-10_nasser-alqatami.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6add9db73d5b27036bbbd4b4",
+    "due": "2026-10-26T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6add9db86887a2efc1ef4068",
+    "due": "2026-10-26T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-26",
+  "slot": "E",
+  "made": "2026-10-25T08:06:06+02:00",
+  "passage": "2:152-153",
+  "ref": "2:152-153",
+  "reciter": "yasser-aldosari",
+  "duration": 24.04,
+  "clips": [
+   "pexels:38542573",
+   "pexels:37685753"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "fog",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-26_E_2-152-153_yasser-aldosari.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6add9db8bd33ce99c35a5883",
+    "due": "2026-10-26T04:00:00.000Z"
+   },
+   "youtube": {
+    "id": "6add9db83d5b27036bbbd4e9",
+    "due": "2026-10-26T04:00:00.000Z"
+   }
+  }
  }
 ]
