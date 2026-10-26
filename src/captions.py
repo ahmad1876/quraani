@@ -81,6 +81,8 @@ def follow_line(platform: str, handle: str = "") -> str:
     """One short call to follow, in each platform's own words."""
     if platform == "youtube":
         return "Subscribe for a calm ayah every day."
+    if platform == "facebook":
+        return "Follow the Page for a calm ayah every day."
     h = handle.strip()
     if h and not h.startswith("@"):
         h = "@" + h
@@ -121,6 +123,13 @@ def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True, hand
         if footage:
             lines += [footage, ""]
         lines.append(" ".join(tags))
+    elif platform == "facebook":
+        lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} - {plain(meta['reciter_en'])}", "",
+                 *([ask_line] if ask_line else []),
+                 "Share it with someone who needs to hear it today.", follow, ""]
+        if footage:
+            lines += [footage, ""]
+        lines.append(" ".join(tags[:6]))
     elif platform == "youtube":
         lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} - {plain(meta['reciter_en'])}", "",
                  *([ask_line] if ask_line else []), follow, ""]

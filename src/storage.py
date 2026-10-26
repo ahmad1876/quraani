@@ -19,6 +19,8 @@ from pathlib import Path
 
 INDEX = """<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">
 <title>media</title><p>Media for scheduled posts.</p>"""
+# no search engines, but Facebook must be able to fetch the videos it is asked to post
+ROBOTS = "User-agent: facebookexternalhit\nAllow: /\n\nUser-agent: *\nDisallow: /\n"
 
 
 def backend() -> str:
@@ -66,7 +68,7 @@ def publish_pages(files: list[str], keep: set[str]) -> dict[str, str]:
         shutil.copy2(f, vdir / Path(f).name)
     (work / ".nojekyll").write_text("", encoding="utf-8")
     (work / "index.html").write_text(INDEX, encoding="utf-8")
-    (work / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
+    (work / "robots.txt").write_text(ROBOTS, encoding="utf-8")
     _git("config", "user.name", "quraani-bot", cwd=work)
     _git("config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com", cwd=work)
     _git("checkout", "--quiet", "--orphan", "publish", cwd=work)
@@ -135,7 +137,7 @@ def publish_pages_files_only(files: list[str]) -> None:
         shutil.copy2(f, work / "v" / Path(f).name)
     (work / ".nojekyll").write_text("", encoding="utf-8")
     (work / "index.html").write_text(INDEX, encoding="utf-8")
-    (work / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
+    (work / "robots.txt").write_text(ROBOTS, encoding="utf-8")
     (work / "v" / "check.txt").write_text("ok", encoding="utf-8")
     _git("config", "user.name", "quraani-bot", cwd=work)
     _git("config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com", cwd=work)
