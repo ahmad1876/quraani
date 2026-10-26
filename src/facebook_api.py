@@ -59,10 +59,23 @@ def _call(method: str, url: str, params: dict | None = None, headers: dict | Non
 
 
 def page() -> dict:
-    """The Page the token belongs to: {'id', 'name', 'service': 'facebook'}."""
+    """The Page the token belongs to: {'id', 'name', 'service': 'facebook'}.
+
+    Refuses a personal (user) token: it looks valid but cannot publish to the Page. Only Pages have a
+    category, so asking for it tells the two apart."""
     if not token():
         raise FacebookError("FACEBOOK_PAGE_TOKEN is not set: add it under repo Settings > Secrets and variables > Actions")
-    d = _call("GET", f"{API}/me", {"fields": "id,name", "access_token": token()})
+    try:
+        d = _call("GET", f"{API}/me", {"fields": "id,name,category", "access_token": token()})
+    except FacebookError as e:
+        if "(User)" in str(e) or "nonexisting field (category)" in str(e):
+            who = _call("GET", f"{API}/me", {"fields": "id,name", "access_token": token()})
+            raise FacebookError(
+                f"FACEBOOK_PAGE_TOKEN is the personal token of {who.get('name', 'your account')} "
+                f"({who.get('id')}), not the Page's token. Get the Page token with this personal token in the "
+                "Graph API Explorer: me/accounts, or <page id>?fields=name,access_token (README, Facebook setup, "
+                "step 8), and save that one instead") from None
+        raise
     return {"id": d["id"], "name": d.get("name", ""), "service": "facebook"}
 
 
