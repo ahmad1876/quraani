@@ -39,7 +39,25 @@ jobs:
           cache: pip
 
       - name: Install ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu-core > /dev/null
+        # normally about a minute; a stuck package mirror once hung this for 30+ minutes,
+        # so each attempt has a time limit and the step tries up to 3 times
+        timeout-minutes: 20
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          sudo rm -f /var/lib/man-db/auto-update  # skip the slow manual-page rebuild after installing
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+          for i in 1 2 3; do
+            if sudo -E timeout 180 apt-get $APT update -qq &&
+               sudo -E timeout 300 apt-get $APT install -y -qq ffmpeg fonts-dejavu-core > /dev/null; then
+              ffmpeg -version | head -1
+              exit 0
+            fi
+            echo "ffmpeg install attempt $i did not finish, trying again"
+            sudo -E dpkg --configure -a || true  # finish anything the time limit interrupted
+            sleep 10
+          done
+          exit 1
 
       - uses: actions/cache@v5
         with:
@@ -53,9 +71,16 @@ jobs:
           restore-keys: quraani-${{ runner.os }}-
 
       - name: Install Python packages
+        timeout-minutes: 15
+        env:
+          DEBIAN_FRONTEND: noninteractive
         run: |
           pip install -q -r requirements.txt
-          python -m playwright install --with-deps chromium > /dev/null
+          python -m playwright install chromium > /dev/null
+          # the browser's system libraries come from Ubuntu's packages too; the runner image already has
+          # them (it ships Chrome), so a stuck package server must not hold the job here
+          timeout 300 python -m playwright install-deps chromium > /dev/null ||
+            echo "Browser system libraries step did not finish in time: carrying on with the runner's own"
 
       - name: Check setup
         if: ${{ github.event.inputs.mode == 'check' }}
