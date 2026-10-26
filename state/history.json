@@ -2118,5 +2118,119 @@
     "due": "2026-10-26T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-27",
+  "slot": "A",
+  "made": "2026-10-26T08:11:00+02:00",
+  "passage": "57:16",
+  "ref": "57:16",
+  "reciter": "abdulrahman-alsudais",
+  "duration": 29.6,
+  "clips": [
+   "pexels:36124126",
+   "pexels:38957094"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "night",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-27_A_57-16_abdulrahman-alsudais.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6adef097d62a2f4f00438cac",
+    "due": "2026-10-27T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6adef097ebc709901afbe32c",
+    "due": "2026-10-27T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-27",
+  "slot": "B",
+  "made": "2026-10-26T08:11:00+02:00",
+  "passage": "40:44",
+  "ref": "40:44",
+  "reciter": "abdulbasit-murattal",
+  "duration": 19.34,
+  "clips": [
+   "pexels:28615718",
+   "pexels:28615730"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "tropic",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-27_B_40-44_abdulbasit-murattal.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6adef09845efd376cccc283e",
+    "due": "2026-10-27T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6adef09945efd376cccc2875",
+    "due": "2026-10-27T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6adef099ebc709901afbe368",
+    "due": "2026-10-27T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-27",
+  "slot": "C",
+  "made": "2026-10-26T08:11:00+02:00",
+  "passage": "56:1-12",
+  "ref": "56:1-12",
+  "reciter": "saud-alshuraim",
+  "duration": 42.78,
+  "clips": [
+   "pexels:17060699",
+   "pexels:27797322",
+   "pexels:28903958"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "glacier",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-27_C_56-1-12_saud-alshuraim.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6adef09a45efd376cccc28b4",
+    "due": "2026-10-27T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6adef09a2a10026cd9a922d6",
+    "due": "2026-10-27T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-27",
+  "slot": "E",
+  "made": "2026-10-26T08:11:00+02:00",
+  "passage": "10:57-58",
+  "ref": "10:57-58",
+  "reciter": "maher-almuaiqly",
+  "duration": 38.07,
+  "clips": [
+   "pexels:37704436",
+   "pexels:16754843",
+   "pexels:34699000"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "water",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-27_E_10-57-58_maher-almuaiqly.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6adef09bd62a2f4f00438d5d",
+    "due": "2026-10-27T04:00:00.000Z"
+   },
+   "youtube": {
+    "id": "6adef09cc5d33e7e5d035776",
+    "due": "2026-10-27T04:00:00.000Z"
+   }
+  }
  }
 ]
