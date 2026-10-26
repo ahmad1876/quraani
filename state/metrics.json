@@ -3225,5 +3225,64 @@
    "comments": 0
   },
   "source": "youtube"
+ },
+ "6add9db43d5b27036bbbd426": {
+  "platform": "instagram",
+  "due": "2026-10-26T17:45:00+00:00",
+  "date": "2026-10-26",
+  "slot": "A",
+  "passage": "89:21-30",
+  "theme": "akhirah",
+  "reciter": "abdulrahman-alsudais",
+  "mood": "golden",
+  "duration": 41.44,
+  "link": "https://www.instagram.com/reel/De92XbsAloU/",
+  "video": null,
+  "hook_style": "you",
+  "follow_along": true,
+  "remake_of": null,
+  "fetched": "2026-10-26T19:17:35+00:00",
+  "m": {}
+ },
+ "6add9db46887a2efc1ef3ee2": {
+  "platform": "youtube",
+  "due": "2026-10-26T17:45:00+00:00",
+  "date": "2026-10-26",
+  "slot": "A",
+  "passage": "89:21-30",
+  "theme": "akhirah",
+  "reciter": "abdulrahman-alsudais",
+  "mood": "golden",
+  "duration": 41.44,
+  "link": "https://youtube.com/shorts/JfzlesWVHQ0",
+  "video": "JfzlesWVHQ0",
+  "hook_style": "you",
+  "follow_along": true,
+  "remake_of": null,
+  "fetched": "2026-10-26T19:17:35+00:00",
+  "m": {
+   "views": 40,
+   "likes": 7,
+   "comments": 0
+  },
+  "source": "youtube"
+ },
+ "6add9db56887a2efc1ef3f0f": {
+  "platform": "tiktok",
+  "due": "2026-10-26T18:45:00+00:00",
+  "date": "2026-10-26",
+  "slot": "B",
+  "passage": "79:37-41",
+  "theme": "jannah",
+  "reciter": "wadee-alyamani",
+  "mood": "coast",
+  "duration": 31.63,
+  "link": "https://tiktok.com/@calmquraan.daily/video/7701049530619284737",
+  "video": null,
+  "hook_style": "you",
+  "follow_along": false,
+  "remake_of": null,
+  "fetched": "2026-10-26T19:17:35+00:00",
+  "m": {}
  }
 }
