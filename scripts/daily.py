@@ -1,4 +1,4 @@
-"""Daily job: keep the next few days of TikTok / Instagram / YouTube Shorts posts scheduled.
+"""Daily job: keep the next few days of TikTok / Instagram / YouTube Shorts / Facebook Reels posts scheduled.
 
 Run by GitHub Actions once a day. Safe to re-run: filled slots are skipped.
   python scripts/daily.py             # render, publish to GitHub Pages, schedule on Buffer
@@ -19,6 +19,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import buffer_api  # noqa: E402
 import captions  # noqa: E402
+import facebook_api  # noqa: E402
 import make  # noqa: E402
 import planner  # noqa: E402
 import quran  # noqa: E402
@@ -28,7 +29,7 @@ import storage  # noqa: E402
 import trends  # noqa: E402
 from common import STATE, config, load_json, save_json  # noqa: E402
 
-PLATFORMS = ("tiktok", "instagram", "youtube")
+PLATFORMS = ("tiktok", "instagram", "youtube", "facebook")  # facebook: posted directly, not through Buffer
 
 
 def platform_on(cfg: dict, platform: str, slot_id: str, day: dt.date) -> bool:
@@ -80,9 +81,13 @@ def due_utc(day: dt.date, when: str, tz) -> dt.datetime:
 
 
 def post_one(platform: str, ch: dict, due: dt.datetime, meta: dict, rec: dict, url: str, cfg: dict) -> dict:
-    """Schedule one video on one Buffer channel. Returns the history record for that post."""
+    """Schedule one video on one channel (Buffer, or the Facebook Page directly). Returns the history record."""
+    if platform == "facebook" and float(meta.get("duration") or 0) > facebook_api.MAX_SEC:
+        raise ValueError(f"longer than the {facebook_api.MAX_SEC} s Facebook allows for a Reel")
     text = captions.build(meta, platform, rec["tag"], credit=cfg.get("credit_footage", True),
                           handle=cfg.get("handle", ""), ask=cfg.get("comment_prompt", True))
+    if platform == "facebook":
+        return facebook_api.schedule_reel(ch, text, url, due)
     post = buffer_api.schedule_video(
         ch, text, url, due.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
         youtube_title=captions.youtube_title(meta) if platform == "youtube" else "")
@@ -97,7 +102,7 @@ def caption_meta(entry: dict) -> dict:
     passage = planner.by_id().get(entry["passage"], {})
     rec = recitation.reciters()[entry["reciter"]]
     return {
-        "passage": entry["passage"], "ref": entry["ref"], "surah": ch,
+        "passage": entry["passage"], "ref": entry["ref"], "surah": ch, "duration": entry.get("duration"),
         "surah_en": quran.chapter(ch)["name_en"], "reciter": entry["reciter"], "reciter_en": rec["name_en"],
         "hook": make.hook_text(passage, entry.get("hook_style", "verse")), "theme": passage.get("theme", ""),
         "translation": make.join_translation([quran.verse(f"{ch}:{k}")["translation"] for k in range(a, b + 1)]),
@@ -163,6 +168,12 @@ def main() -> int:
         if not chans:
             print("No Buffer channels connected - nothing to schedule.")
             return 1
+        if facebook_api.token():  # the Facebook Page is posted to directly (Buffer Free has 3 channels)
+            try:
+                chans["facebook"] = facebook_api.page()
+                print("Facebook Page:", chans["facebook"]["name"], flush=True)
+            except Exception as e:
+                print(f"WARNING: Facebook skipped this run ({e})", flush=True)
         added = backfill(cfg, history, chans, tz)
         if added:
             save_json(STATE / "history.json", history[-2000:])

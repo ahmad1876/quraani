@@ -46,6 +46,18 @@ def main() -> int:
     else:
         print("[--] YouTube API key (optional) - not set: no YouTube stats or trends. See README.")
 
+    # Facebook Page (optional: Reels posted directly, see README)
+    import facebook_api
+    if facebook_api.token():
+        try:
+            pg = facebook_api.page()
+            report("Facebook Page", True, f"{pg['name']} ({pg['id']}) - make sure the Meta app is Live, "
+                                          "or the Reels are only visible to you")
+        except Exception as e:
+            report("Facebook Page", False, str(e)[:300])
+    else:
+        print("[--] Facebook Page (optional) - FACEBOOK_PAGE_TOKEN not set: no Facebook Reels. See README.")
+
     # Footage library
     try:
         lib = json.loads((ROOT / "catalog" / "footage.json").read_text(encoding="utf-8"))

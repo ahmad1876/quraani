@@ -35,7 +35,8 @@ MIN_AGE_H = 44        # posts younger than this don't count toward the weights y
 PRIOR = 3.0           # shrinkage: a factor needs a few posts before it moves far from 1.0
 STRENGTH = 0.8        # weight = exp(STRENGTH * score)
 W_MIN, W_MAX = 0.6, 1.8
-PLATFORM_NAMES = {"youtube": "YouTube", "instagram": "Instagram", "tiktok": "TikTok"}
+PLATFORM_NAMES = {"youtube": "YouTube", "instagram": "Instagram", "tiktok": "TikTok", "facebook": "Facebook"}
+BUFFER_PLATFORMS = ("youtube", "instagram", "tiktok")  # Facebook posts go out directly, not through Buffer
 
 POSTS_QUERY = """query($first: Int, $after: String, $input: PostsInput!) {
   posts(first: $first, after: $after, input: $input) {
@@ -115,6 +116,8 @@ def collect(history: list[dict], chans: dict, gql=None) -> dict:
     for h in history:
         for platform, p in (h.get("posts") or {}).items():
             due = _when(p.get("due"))
+            if platform not in BUFFER_PLATFORMS:
+                continue
             if not p.get("id") or not due or due > now or due < now - dt.timedelta(days=WINDOW_DAYS):
                 continue
             old = store.get(p["id"], {})

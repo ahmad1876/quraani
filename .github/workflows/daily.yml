@@ -28,6 +28,7 @@ jobs:
       QURAANI_SECRETS: ${{ secrets.QURAANI_SECRETS }}
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v5
