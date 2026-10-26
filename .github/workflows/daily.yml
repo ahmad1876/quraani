@@ -39,23 +39,34 @@ jobs:
           cache: pip
 
       - name: Install ffmpeg
-        # normally about a minute; a stuck package mirror once hung this for 30+ minutes,
-        # so each attempt has a time limit and the step tries up to 3 times
-        timeout-minutes: 20
+        # normally about a minute. On 2026-10-26 package downloads from the runners' usual Ubuntu
+        # mirror stalled (the package lists came through), so every phase has a time limit and each
+        # retry uses another official mirror (packages are signed, so any mirror is safe)
+        timeout-minutes: 25
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
           sudo rm -f /var/lib/man-db/auto-update  # skip the slow manual-page rebuild after installing
-          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
-          for i in 1 2 3; do
-            if sudo -E timeout 180 apt-get $APT update -qq &&
-               sudo -E timeout 300 apt-get $APT install -y -qq ffmpeg fonts-dejavu-core > /dev/null; then
+          APT="-o Acquire::Retries=2 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20"
+          PKGS="ffmpeg fonts-dejavu-core"
+          current=http://azure.archive.ubuntu.com/ubuntu
+          for mirror in "$current" http://archive.ubuntu.com/ubuntu http://mirrors.edge.kernel.org/ubuntu; do
+            if [ "$mirror" != "$current" ]; then
+              echo "Switching to the Ubuntu mirror $mirror"
+              sudo sed -i "s#$current#$mirror#g" /etc/apt/sources.list /etc/apt/sources.list.d/*.sources 2>/dev/null || true
+              current=$mirror
+            fi
+            if ! sudo -E timeout 120 apt-get $APT update -qq; then
+              echo "Package lists from $mirror did not come through in time"
+            elif ! sudo -E timeout 240 apt-get $APT install -y -q --download-only $PKGS > /tmp/apt-get.log 2>&1; then
+              echo "Package downloads from $mirror did not finish in time:"; tail -3 /tmp/apt-get.log
+            elif ! sudo -E timeout 180 apt-get $APT install -y -qq $PKGS > /tmp/apt-install.log 2>&1; then
+              echo "Installing the downloaded packages did not finish in time:"; tail -5 /tmp/apt-install.log
+            else
               ffmpeg -version | head -1
               exit 0
             fi
-            echo "ffmpeg install attempt $i did not finish, trying again"
-            sudo -E dpkg --configure -a || true  # finish anything the time limit interrupted
-            sleep 10
+            sudo -E dpkg --configure -a || true  # finish anything a time limit interrupted
           done
           exit 1
 
