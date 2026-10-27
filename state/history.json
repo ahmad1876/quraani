@@ -2248,5 +2248,130 @@
     "due": "2026-10-27T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-28",
+  "slot": "A",
+  "made": "2026-10-27T08:15:59+02:00",
+  "passage": "67:1-5",
+  "ref": "67:1-2",
+  "reciter": "ahmad-alnufais",
+  "duration": 27.97,
+  "clips": [
+   "pexels:35355229",
+   "pexels:19722431"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "snow",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-28_A_67-1-5_ahmad-alnufais.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ae0429445abed2fb7be082c",
+    "due": "2026-10-28T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae04294565470de1c6678b9",
+    "due": "2026-10-28T17:45:00.000Z"
+   },
+   "facebook": {
+    "id": "1457144436363649",
+    "due": "2026-10-28T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-28",
+  "slot": "B",
+  "made": "2026-10-27T08:15:59+02:00",
+  "passage": "2:255",
+  "ref": "2:255",
+  "reciter": "abdulrahman-alsudais",
+  "duration": 38.3,
+  "clips": [
+   "pexels:36738428",
+   "pexels:35678651",
+   "pexels:39201728"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "sunset",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-28_B_2-255_abdulrahman-alsudais.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae042b49fe568d6c878003f",
+    "due": "2026-10-28T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae042b445abed2fb7be1beb",
+    "due": "2026-10-28T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae042b5565470de1c668250",
+    "due": "2026-10-28T14:15:00.000Z"
+   },
+   "facebook": {
+    "id": "922108060833377",
+    "due": "2026-10-28T11:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-28",
+  "slot": "C",
+  "made": "2026-10-27T08:15:59+02:00",
+  "passage": "12:86-87",
+  "ref": "12:86-87",
+  "reciter": "yasser-aldosari",
+  "duration": 37.63,
+  "clips": [
+   "pexels:12279763",
+   "pexels:32194310",
+   "pexels:10410026"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-28_C_12-86-87_yasser-aldosari.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae042d43e883895e59bacda",
+    "due": "2026-10-28T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae042d5565470de1c669126",
+    "due": "2026-10-28T06:15:00.000Z"
+   },
+   "facebook": {
+    "id": "27943722531971463",
+    "due": "2026-10-28T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-28",
+  "slot": "E",
+  "made": "2026-10-27T08:15:59+02:00",
+  "passage": "40:60",
+  "ref": "40:60",
+  "reciter": "fares-abbad",
+  "duration": 14.23,
+  "clips": [
+   "pexels:34571105"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "autumn",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-28_E_40-60_fares-abbad.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae042f19fe568d6c8781121",
+    "due": "2026-10-28T04:00:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae042f2565470de1c669856",
+    "due": "2026-10-28T04:00:00.000Z"
+   }
+  }
  }
 ]
