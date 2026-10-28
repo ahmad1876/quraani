@@ -2373,5 +2373,130 @@
     "due": "2026-10-28T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-29",
+  "slot": "A",
+  "made": "2026-10-28T08:51:01+02:00",
+  "passage": "9:40",
+  "ref": "9:40",
+  "reciter": "minshawi",
+  "duration": 39.5,
+  "clips": [
+   "pexels:31600323",
+   "pexels:10105079",
+   "pexels:19181145"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "water",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-29_A_9-40_minshawi.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ae19ccff94c111d6ebea179",
+    "due": "2026-10-29T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae19cd052154ef99751c138",
+    "due": "2026-10-29T17:45:00.000Z"
+   },
+   "facebook": {
+    "id": "1533675195485349",
+    "due": "2026-10-29T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-29",
+  "slot": "B",
+  "made": "2026-10-28T08:51:01+02:00",
+  "passage": "17:82",
+  "ref": "17:82",
+  "reciter": "abdulbasit-mujawwad",
+  "duration": 27.18,
+  "clips": [
+   "pexels:39425593",
+   "pexels:39831279"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "sunset",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-29_B_17-82_abdulbasit-mujawwad.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae19cfaf2db54e878c83462",
+    "due": "2026-10-29T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae19cfaf2db54e878c8348e",
+    "due": "2026-10-29T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae19cfae673d1e58950fb53",
+    "due": "2026-10-29T14:15:00.000Z"
+   },
+   "facebook": {
+    "id": "2576659042835653",
+    "due": "2026-10-29T11:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-29",
+  "slot": "C",
+  "made": "2026-10-28T08:51:01+02:00",
+  "passage": "65:3",
+  "ref": "65:3",
+  "reciter": "abdulrahman-alossi",
+  "duration": 18.67,
+  "clips": [
+   "pexels:39552214"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-29_C_65-3_abdulrahman-alossi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae19d22f94c111d6ebeba37",
+    "due": "2026-10-29T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae19d2252154ef99751d948",
+    "due": "2026-10-29T06:15:00.000Z"
+   },
+   "facebook": {
+    "id": "1330144785804113",
+    "due": "2026-10-29T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-29",
+  "slot": "E",
+  "made": "2026-10-28T08:51:01+02:00",
+  "passage": "18:1-5",
+  "ref": "18:1-4",
+  "reciter": "ahmad-alnufais",
+  "duration": 41.03,
+  "clips": [
+   "pexels:3703531",
+   "pexels:20118891",
+   "pexels:28615718"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "tropic",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-29_E_18-1-5_ahmad-alnufais.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae19d41e673d1e589510a6f",
+    "due": "2026-10-29T04:00:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae19d411b676814df9b8f55",
+    "due": "2026-10-29T04:00:00.000Z"
+   }
+  }
  }
 ]
