@@ -2498,5 +2498,135 @@
     "due": "2026-10-29T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-30",
+  "slot": "A",
+  "made": "2026-10-29T09:02:35+02:00",
+  "passage": "1:1-7",
+  "ref": "1:1-7",
+  "reciter": "bandar-baleela",
+  "duration": 36.24,
+  "clips": [
+   "pexels:35118765",
+   "pexels:34515943",
+   "pexels:29393168"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "fog",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-30_A_1-1-7_bandar-baleela.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ae2f1229c8338621352c870",
+    "due": "2026-10-30T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae2f12335657f219b31da57",
+    "due": "2026-10-30T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-30",
+  "slot": "B",
+  "made": "2026-10-29T09:02:35+02:00",
+  "passage": "18:46",
+  "ref": "18:46",
+  "reciter": "yasser-aldosari",
+  "duration": 18.2,
+  "clips": [
+   "pexels:30021340"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "autumn",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-30_B_18-46_yasser-aldosari.mp4",
+  "posts": {
+   "youtube": {
+    "id": "6ae2f12335657f219b31dadb",
+    "due": "2026-10-30T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-30",
+  "slot": "C",
+  "made": "2026-10-29T09:02:35+02:00",
+  "passage": "55:26-28",
+  "ref": "55:26-28",
+  "reciter": "khalid-aljalil",
+  "duration": 17.43,
+  "clips": [
+   "pexels:35230515"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "coast",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-30_C_55-26-28_khalid-aljalil.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae2f1249c8338621352c8ed",
+    "due": "2026-10-30T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae2f1248d517922b2367a47",
+    "due": "2026-10-30T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-30",
+  "slot": "E",
+  "made": "2026-10-29T09:02:35+02:00",
+  "passage": "97:1-5",
+  "ref": "97:1-4",
+  "reciter": "raad-alkurdi",
+  "duration": 40.07,
+  "clips": [
+   "pexels:18209686",
+   "pexels:33813928",
+   "pexels:17416258"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "golden",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-30_E_97-1-5_raad-alkurdi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae2f1252467e67f12852449",
+    "due": "2026-10-30T04:00:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-30",
+  "slot": "L",
+  "made": "2026-10-29T09:02:35+02:00",
+  "passage": "long:90:1-20",
+  "ref": "90:1-20",
+  "reciter": "abdulbasit-murattal",
+  "duration": 109.43,
+  "clips": [
+   "pexels:36166627",
+   "pexels:39392679",
+   "pexels:32486345",
+   "pexels:37591340",
+   "pexels:39633159"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "mountains",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-30_L_90-1-20_abdulbasit-murattal.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae2f1262467e67f128524d0",
+    "due": "2026-10-30T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae2f1278d517922b2367afe",
+    "due": "2026-10-30T11:15:00.000Z"
+   }
+  }
  }
 ]
