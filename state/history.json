@@ -2628,5 +2628,113 @@
     "due": "2026-10-30T11:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-10-31",
+  "slot": "A",
+  "made": "2026-10-30T09:05:28+02:00",
+  "passage": "13:28-29",
+  "ref": "13:28-29",
+  "reciter": "fares-abbad",
+  "duration": 23.18,
+  "clips": [
+   "pexels:12219143",
+   "pexels:31443906"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "blossom",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-31_A_13-28-29_fares-abbad.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ae4433b56e01b976390e6c2",
+    "due": "2026-10-31T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae4433b2782e7f331d9cc10",
+    "due": "2026-10-31T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-31",
+  "slot": "B",
+  "made": "2026-10-30T09:05:28+02:00",
+  "passage": "3:173-174",
+  "ref": "3:173",
+  "reciter": "ahmad-alnufais",
+  "duration": 26.08,
+  "clips": [
+   "pexels:39922345",
+   "pexels:35575505"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "lake",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-31_B_3-173-174_ahmad-alnufais.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae4433c6385db216a2dacb4",
+    "due": "2026-10-31T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae4433c4b8768bfb2e5ad63",
+    "due": "2026-10-31T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae4433cba1ca51fd3fe841c",
+    "due": "2026-10-31T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-31",
+  "slot": "C",
+  "made": "2026-10-30T09:05:28+02:00",
+  "passage": "67:12-15",
+  "ref": "67:12-15",
+  "reciter": "yasser-aldosari",
+  "duration": 41.57,
+  "clips": [
+   "pexels:4605077",
+   "pexels:35809255",
+   "pexels:28948611"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "glacier",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-31_C_67-12-15_yasser-aldosari.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae4433d6385db216a2dacf6",
+    "due": "2026-10-31T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae4433d2782e7f331d9cc91",
+    "due": "2026-10-31T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-10-31",
+  "slot": "E",
+  "made": "2026-10-30T09:05:28+02:00",
+  "passage": "18:10",
+  "ref": "18:10",
+  "reciter": "maher-almuaiqly",
+  "duration": 18.33,
+  "clips": [
+   "pexels:34588136"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "autumn",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-10-31_E_18-10_maher-almuaiqly.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae4433e4b8768bfb2e5ae16",
+    "due": "2026-10-31T04:00:00.000Z"
+   }
+  }
  }
 ]
