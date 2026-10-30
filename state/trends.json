@@ -1,68 +1,62 @@
 {
- "updated": "2026-10-24T05:51:26+00:00",
+ "updated": "2026-10-30T18:36:45+00:00",
  "version": 3,
- "videos": 216,
+ "videos": 218,
  "weights": {
   "surah": {
    "1": 1.4,
-   "112": 1.106,
-   "2": 1.164,
-   "108": 1.043,
-   "94": 1.042,
-   "55": 1.068,
-   "114": 1.039,
-   "50": 1.028,
-   "113": 1.028,
-   "14": 1.032,
-   "109": 1.037,
-   "95": 1.067,
-   "76": 1.049,
-   "17": 1.062,
-   "20": 1.049,
-   "33": 1.022,
-   "59": 1.024,
-   "36": 1.029,
+   "2": 1.125,
+   "87": 1.02,
+   "108": 1.034,
+   "112": 1.028,
+   "95": 1.047,
+   "109": 1.022,
+   "114": 1.014,
+   "85": 1.013,
+   "55": 1.013,
+   "7": 1.047,
+   "23": 1.053,
+   "33": 1.044,
+   "24": 1.027,
+   "36": 1.028,
    "48": 1.002,
-   "24": 1.026,
-   "88": 1.021,
-   "6": 1.022,
-   "51": 1.013,
-   "23": 1.054,
-   "90": 1.002,
-   "19": 1.044,
-   "103": 1.033,
-   "110": 1.031,
-   "21": 1.026
+   "63": 1.001,
+   "88": 1.014,
+   "18": 1.012,
+   "51": 1.009,
+   "86": 1.011,
+   "93": 1.036,
+   "76": 1.046
   },
   "reciter": {
    "yasser-aldosari": 1.4,
-   "mishary-alafasy": 1.078,
-   "abdulrahman-alsudais": 1.244,
-   "maher-almuaiqly": 1.165,
-   "raad-alkurdi": 1.096,
-   "abdulrahman-alossi": 1.021,
-   "mansour-alsalimi": 1.052,
-   "abdulbasit-murattal": 1.138,
-   "abdulbasit-mujawwad": 1.138,
-   "minshawi": 1.089,
-   "saad-alghamdi": 1.05,
-   "nasser-alqatami": 1.031,
-   "idris-abkar": 1.025,
-   "ahmed-alajmi": 1.149,
-   "fares-abbad": 1.155,
-   "abdullah-aljuhany": 1.07,
-   "ahmad-alnufais": 1.121,
-   "haitham-aldukhain": 1.015,
-   "bandar-baleela": 1.057,
-   "saud-alshuraim": 1.075,
-   "khalid-aljalil": 1.063,
-   "wadee-alyamani": 1.002,
-   "abu-bakr-alshatri": 1.028,
-   "hani-alrifai": 1.014,
-   "khalifa-altunaiji": 1.012,
-   "mahmoud-alhusary": 1.14,
-   "salah-albudair": 1.021,
-   "abdullah-almousa": 1.017
+   "mishary-alafasy": 1.102,
+   "abdulrahman-alsudais": 1.227,
+   "maher-almuaiqly": 1.175,
+   "raad-alkurdi": 1.003,
+   "abdulrahman-alossi": 1.027,
+   "mansour-alsalimi": 1.064,
+   "abdulbasit-murattal": 1.161,
+   "abdulbasit-mujawwad": 1.161,
+   "minshawi": 1.071,
+   "saad-alghamdi": 1.034,
+   "nasser-alqatami": 1.262,
+   "idris-abkar": 1.027,
+   "ahmed-alajmi": 1.15,
+   "fares-abbad": 1.18,
+   "abdullah-aljuhany": 1.163,
+   "ahmad-alnufais": 1.157,
+   "haitham-aldukhain": 1.018,
+   "bandar-baleela": 1.084,
+   "saud-alshuraim": 1.086,
+   "khalid-aljalil": 1.076,
+   "wadee-alyamani": 1.012,
+   "abu-bakr-alshatri": 1.027,
+   "hani-alrifai": 1.045,
+   "khalifa-altunaiji": 1.015,
+   "mahmoud-alhusary": 1.166,
+   "salah-albudair": 1.025,
+   "abdullah-almousa": 1.021
   }
  },
  "leaderboard": {
@@ -71,14 +65,14 @@
     "yasser-aldosari"
    ],
    "name": "Yasser Al-Dosari",
-   "videos": 22,
-   "channels": 15,
-   "top10": 7216335,
+   "videos": 23,
+   "channels": 18,
+   "top10": 5738298,
    "best": {
-    "id": "SQNUU-sc74o",
-    "views": 2607631,
-    "channel": "Hi With Sahan",
-    "title": "Surah Al-Mu'minun|Yaser Al Dosari|P-3 #shorts #القرآن_الكريم #راحة_نفسية #القارئ #ياسر_الدوسري😥😭🥺😱"
+    "id": "F0KnI82npq0",
+    "views": 1334361,
+    "channel": "ETZ SHUVO",
+    "title": "ياسر الدوسري | تلاوة خاشعة تريح القلب وتطمئن الروح 🤍🥹 | Quran Recitation"
    }
   },
   "misharyalafasy": {
@@ -86,12 +80,12 @@
     "mishary-alafasy"
    ],
    "name": "Mishary Rashid Alafasy",
-   "videos": 9,
-   "channels": 6,
-   "top10": 273756,
+   "videos": 7,
+   "channels": 7,
+   "top10": 369583,
    "best": {
     "id": "AuqiUyNjkzM",
-    "views": 109512,
+    "views": 227566,
     "channel": " Anuwar Nasir Islamic Media",
     "title": "Surah Al-Fatiha — Mishary Rashid Alafasy📖 Inside the Holy Quran Factory 🕋  #Shorts"
    }
@@ -101,14 +95,14 @@
     "abdulrahman-alsudais"
    ],
    "name": "Abdul Rahman Al-Sudais",
-   "videos": 19,
-   "channels": 10,
-   "top10": 2685263,
+   "videos": 21,
+   "channels": 11,
+   "top10": 1842811,
    "best": {
-    "id": "GjL_f8FnXZw",
-    "views": 998423,
-    "channel": "PECINTA ULAMA ",
-    "title": "Suara Musik Bikin Imam Sudais Menangis di Depan Ka'bah"
+    "id": "H1LKhHWSWVw",
+    "views": 506935,
+    "channel": "منهاج المتقين",
+    "title": "#sudais #الحرمين الشريفين #عبدالرحمن السديس | Quran Recitations"
    }
   },
   "mahermuaiqly": {
@@ -116,12 +110,12 @@
     "maher-almuaiqly"
    ],
    "name": "Maher Al-Muaiqly",
-   "videos": 16,
-   "channels": 6,
-   "top10": 1225902,
+   "videos": 14,
+   "channels": 8,
+   "top10": 1092108,
    "best": {
     "id": "WPjTwV0fD48",
-    "views": 255309,
+    "views": 258503,
     "channel": "𝐌.𝐀𝐑𝐊𝐀𝐍𝐈",
     "title": "سورة الغاشية من البداية | بصوت الشيخ ماهر المعيقلي | Quran Shorts"
    }
@@ -133,12 +127,12 @@
    "name": "Raad Muhammad Al-Kurdi",
    "videos": 1,
    "channels": 1,
-   "top10": 415660,
+   "top10": 294,
    "best": {
-    "id": "UBJfWeVCFHg",
-    "views": 415660,
-    "channel": "Quran Dawah Bangla",
-    "title": "Surah At-Taghabun (11) Recitation by Sheikh Raad Al Kurdi"
+    "id": "mPBWahs1YCg",
+    "views": 294,
+    "channel": "{ سفينة الايات }",
+    "title": "سورة التكوير كاملة بصوت القارئ رعد الكردي Surah At-Takwir - Raad Al Kurdi"
    }
   },
   "abdulrahmanalossi": {
@@ -147,11 +141,11 @@
    ],
    "name": "Abdulrahman Al-Ossi",
    "videos": 13,
-   "channels": 11,
-   "top10": 19029,
+   "channels": 10,
+   "top10": 26621,
    "best": {
     "id": "mgmuZkDNx6g",
-    "views": 12331,
+    "views": 12829,
     "channel": "Muhammad Junaid 939",
     "title": "New Latest Beautiful Quran Recitation by Abdul Rahman Al Ossi Surah #shorts"
    }
@@ -161,14 +155,14 @@
     "mansour-alsalimi"
    ],
    "name": "Mansour Al-Salimi",
-   "videos": 19,
-   "channels": 14,
-   "top10": 121100,
+   "videos": 20,
+   "channels": 13,
+   "top10": 147191,
    "best": {
-    "id": "FXb5kDsDKZY",
-    "views": 42941,
-    "channel": "تلاوات منصور السالمي",
-    "title": "ولقد نعلم انك يضيق صدرك || منصور السالمي #اكسبلور #منصور_السالمي #المصحف"
+    "id": "_fH2oZgiqBQ",
+    "views": 49062,
+    "channel": "Al Furqan Productions",
+    "title": "From Your Creation to Your Provision | Mansour Al Salmi"
    }
   },
   "abdulbasit": {
@@ -177,14 +171,14 @@
     "abdulbasit-mujawwad"
    ],
    "name": "Abdul Basit Abdul Samad",
-   "videos": 13,
-   "channels": 9,
-   "top10": 860507,
+   "videos": 12,
+   "channels": 7,
+   "top10": 923917,
    "best": {
-    "id": "ASRpvoLZoTU",
-    "views": 150756,
-    "channel": "MyQuran | القرآن الكريم",
-    "title": "صوت ملائكي كأنه الشيخ عبد الباسط يزلزل القلوب"
+    "id": "rgUMj7dGeeg",
+    "views": 134881,
+    "channel": "Holy Quran Reader",
+    "title": "سورة البقرة  - عبد الباسط عبد الصمد القران الكريم مباشر 🧡 Surat Al-Baqarah Quran Recitation"
    }
   },
   "minshawi": {
@@ -193,13 +187,13 @@
    ],
    "name": "Muhammad Siddiq Al-Minshawi",
    "videos": 23,
-   "channels": 10,
-   "top10": 355193,
+   "channels": 15,
+   "top10": 180345,
    "best": {
-    "id": "VaVU1Fn3hGg",
-    "views": 63930,
-    "channel": "Islamic Shorts",
-    "title": "Corruption Has Appeared in Land and Sea | Surah Ar-Rum 41 | Environmental Awareness"
+    "id": "6ZCbReOZFaE",
+    "views": 36457,
+    "channel": "التراث القراني لال المنشاوي",
+    "title": "هتفطس من الضحك مع الشيخ محمود صديق المنشاوي عملت عليه المفتي في ماليزي"
    }
   },
   "saadalghamdi": {
@@ -209,12 +203,12 @@
    "name": "Saad Al-Ghamdi",
    "videos": 2,
    "channels": 2,
-   "top10": 113683,
+   "top10": 41959,
    "best": {
-    "id": "Si39h7hOp0s",
-    "views": 113006,
-    "channel": "𝐌.𝐀𝐑𝐊𝐀𝐍𝐈",
-    "title": "سورة النور | اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ | بصوت الشيخ سعد الغامدي 🤍"
+    "id": "XDt2-huUEoQ",
+    "views": 41235,
+    "channel": "نوادر التلاوات القرآنية",
+    "title": "الشيخ سعد الغامدي - سورة الكهف (النسخة الأصلية) | Sheikh Saad Al Ghamdi - Surat Al-Kahf"
    }
   },
   "nasseralqatami": {
@@ -223,13 +217,13 @@
    ],
    "name": "Nasser Al-Qatami",
    "videos": 21,
-   "channels": 17,
-   "top10": 44684,
+   "channels": 19,
+   "top10": 2463296,
    "best": {
-    "id": "IfsNDFGPrLg",
-    "views": 19564,
-    "channel": "Zikr AE | QURAN IN SHORTS",
-    "title": "Who Should You Give Your Money To First? Quran Recitation by Nasser Al Qatami #quranshorts #اكسبلور"
+    "id": "XQ0uXNY7nD4",
+    "views": 2405669,
+    "channel": "Rehab al Quran - رحاب القرآن",
+    "title": "كيف كانت قراءة النبي عليه الصلاة والسلام ❤️ الشيخ ناصر القطامي"
    }
   },
   "idrisabkar": {
@@ -237,14 +231,14 @@
     "idris-abkar"
    ],
    "name": "Idris Abkar",
-   "videos": 22,
-   "channels": 20,
-   "top10": 28063,
+   "videos": 17,
+   "channels": 15,
+   "top10": 25858,
    "best": {
-    "id": "JdiOIJa3_nM",
-    "views": 4083,
-    "channel": "QK1",
-    "title": "﴿ربنا ولا تحملنا ما لا طاقة لنا به﴾ | تلاوة خاشعة للشيخ إدريس أبكر ~ Idris Abkar 🤍"
+    "id": "7O84Kro8Zpg",
+    "views": 8078,
+    "channel": "Quran - إدريس أبكر",
+    "title": "سورة البقرة بصوت الشيخ ادريس ابكر #ادريس_أبكر #اكسبلور #تيك_توك #المصحف #حالات_واتس"
    }
   },
   "ahmedalajmi": {
@@ -252,14 +246,14 @@
     "ahmed-alajmi"
    ],
    "name": "Ahmed Al-Ajmi",
-   "videos": 24,
-   "channels": 9,
-   "top10": 996340,
+   "videos": 25,
+   "channels": 12,
+   "top10": 811548,
    "best": {
-    "id": "MdCFjukAuOc",
-    "views": 183472,
-    "channel": "​أحمد | Quran",
-    "title": "اترك أثرًا طيبً ✍️🤍 || القارئ أحمد العجمي"
+    "id": "V-VOBQbAeUU",
+    "views": 132284,
+    "channel": "NourVerse",
+    "title": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ 🤍 | سورة العلق | Sourate Al-‘Alaq (96) | أحمد العجمي"
    }
   },
   "faresabbad": {
@@ -268,11 +262,11 @@
    ],
    "name": "Fares Abbad",
    "videos": 25,
-   "channels": 10,
-   "top10": 1084790,
+   "channels": 13,
+   "top10": 1157087,
    "best": {
     "id": "LWBwnWLFoFw",
-    "views": 153067,
+    "views": 182502,
     "channel": "يَــعَــقُــوْبَّ ᥫᩣ",
     "title": "أكتب شئ تؤجر عليه 🪐🤎 || القارئ فارس عباد"
    }
@@ -282,12 +276,12 @@
     "abdullah-aljuhany"
    ],
    "name": "Abdullah Al-Juhany",
-   "videos": 16,
-   "channels": 13,
-   "top10": 218714,
+   "videos": 17,
+   "channels": 15,
+   "top10": 950797,
    "best": {
     "id": "6WzrI5CKKcc",
-    "views": 147722,
+    "views": 650418,
     "channel": "ইসলামের পথে এসো 86",
     "title": "Surah At-Taghabun 11 🇸🇦 Sheikh Abdullah Al-Juhany | Beautiful Recitation with Bangla Translation 📖"
    }
@@ -297,12 +291,12 @@
     "ahmad-alnufais"
    ],
    "name": "Ahmad Al-Nufais",
-   "videos": 23,
-   "channels": 14,
-   "top10": 657858,
+   "videos": 24,
+   "channels": 15,
+   "top10": 881797,
    "best": {
     "id": "hMHreFGWRmc",
-    "views": 190577,
+    "views": 198480,
     "channel": "SHAKUR",
     "title": "الشيخ أحمد النفيس & القارئ عثمان الحداد 💙"
    }
@@ -312,12 +306,12 @@
     "haitham-aldukhain"
    ],
    "name": "Haitham Al-Dukhain",
-   "videos": 22,
-   "channels": 6,
-   "top10": 9978,
+   "videos": 23,
+   "channels": 7,
+   "top10": 11142,
    "best": {
     "id": "TT2Rk7ms2Rw",
-    "views": 1645,
+    "views": 1649,
     "channel": "Calm Quraan",
     "title": "Everyone in the heavens and the earth will come to the Most Merciful as a"
    }
@@ -327,12 +321,12 @@
     "bandar-baleela"
    ],
    "name": "Bandar Baleela",
-   "videos": 17,
-   "channels": 12,
-   "top10": 146059,
+   "videos": 20,
+   "channels": 13,
+   "top10": 251720,
    "best": {
     "id": "RTy0CKLnT9c",
-    "views": 91362,
+    "views": 92009,
     "channel": "URumrah",
     "title": "Surah At-Tariq with English and Urdu Subtitles I Listen Quran Recitation by Sheikh Bandar Baleela"
    }
@@ -342,12 +336,12 @@
     "saud-alshuraim"
    ],
    "name": "Saud Al-Shuraim",
-   "videos": 13,
+   "videos": 11,
    "channels": 8,
-   "top10": 252625,
+   "top10": 263962,
    "best": {
     "id": "yjAz3hTJINs",
-    "views": 89729,
+    "views": 93154,
     "channel": "M I T Mazahiri ",
     "title": "Shaikh Saud Bin Ibrahim Al-Shuraim Imam &Khatib Masjid E Haram #mitmazahiri #viral #trending#quran"
    }
@@ -357,12 +351,12 @@
     "khalid-aljalil"
    ],
    "name": "Khalid Al-Jalil",
-   "videos": 20,
-   "channels": 16,
-   "top10": 179979,
+   "videos": 22,
+   "channels": 17,
+   "top10": 209174,
    "best": {
     "id": "qdhcXxytVBg",
-    "views": 136817,
+    "views": 139079,
     "channel": "جواهر التقوى ",
     "title": "{وَقَالَ فِرعَون ذَرُونِي أَقْتُلْ مُوسَىٰ وَلْيَدْعُ رَبَّهُ}  (الشيخ خالد الجليل من سورة غافر)"
    }
@@ -372,14 +366,14 @@
     "wadee-alyamani"
    ],
    "name": "Wadee Al-Yamani",
-   "videos": 3,
-   "channels": 3,
-   "top10": 142,
+   "videos": 9,
+   "channels": 5,
+   "top10": 5349,
    "best": {
-    "id": "3nb_U73B3Q4",
-    "views": 59,
-    "channel": "AR F",
-    "title": "Surah At-Takathur (1-8) | Beautiful Quran Recitation by Wadee Hammadi Al Yamani | سورة التكاثر"
+    "id": "INeIAPCWM6c",
+    "views": 1531,
+    "channel": "سبحان الله",
+    "title": "سورة الرحمن | صفحة 1 | الشيخ وديع اليمني"
    }
   },
   "abubakralshatri": {
@@ -387,14 +381,14 @@
     "abu-bakr-alshatri"
    ],
    "name": "Abu Bakr Al-Shatri",
-   "videos": 20,
-   "channels": 13,
-   "top10": 34295,
+   "videos": 23,
+   "channels": 17,
+   "top10": 26224,
    "best": {
-    "id": "0p2KxarXPws",
-    "views": 9327,
-    "channel": "QariQaria",
-    "title": "سورة الصافات مكررة | Surah As-Saffat"
+    "id": "7_8r1GGDSao",
+    "views": 7672,
+    "channel": "دار البلاغ Daralbalagh",
+    "title": "نوادر من تلاوات الشيخ: شيخ أبو بكر الشاطري"
    }
   },
   "hanirifai": {
@@ -402,14 +396,14 @@
     "hani-alrifai"
    ],
    "name": "Hani Ar-Rifai",
-   "videos": 25,
+   "videos": 24,
    "channels": 18,
-   "top10": 9049,
+   "top10": 72395,
    "best": {
-    "id": "Zht3iSCcZaQ",
-    "views": 1144,
-    "channel": "تلاوة خاشعة بصوت جميل",
-    "title": "هاني الرفاعي fa = الآية 39 من سورة فُصِّلَت"
+    "id": "H84kDNVqTOs",
+    "views": 50835,
+    "channel": "ইসলামের পথে এসো 86",
+    "title": "Surah Al-Fajr 24–25 | 🇸🇦 Hani Ar-Rifai | Heart Touching Quran Recitation with Bangla Translation ❤️📖"
    }
   },
   "khalifaaltunaiji": {
@@ -418,13 +412,13 @@
    ],
    "name": "Khalifa Al-Tunaiji",
    "videos": 24,
-   "channels": 13,
-   "top10": 6128,
+   "channels": 16,
+   "top10": 8584,
    "best": {
-    "id": "amDbJ7ieh70",
-    "views": 1297,
-    "channel": "Syed Salman",
-    "title": "@SyedSyedAyaan-d5w Surah الناس - An-NasKhalifa Al Tunaiji"
+    "id": "KNRRDnNlQFQ",
+    "views": 1040,
+    "channel": "AyahSoul",
+    "title": "Surah At-Tawbah | Ayah 128–129 | Khalifa Al-Tunaiji | خليفة الطنيجي"
    }
   },
   "husary": {
@@ -432,12 +426,12 @@
     "mahmoud-alhusary"
    ],
    "name": "Mahmoud Khalil Al-Husary",
-   "videos": 20,
+   "videos": 22,
    "channels": 3,
-   "top10": 881535,
+   "top10": 985340,
    "best": {
     "id": "rxseaWP9_b4",
-    "views": 246468,
+    "views": 260054,
     "channel": "قلبي لكم",
     "title": "الشيخ محمود خليل الحصري أول من سجل المصحف المرتل في التاريخ."
    }
@@ -448,11 +442,11 @@
    ],
    "name": "Salah Al-Budair",
    "videos": 15,
-   "channels": 14,
-   "top10": 20677,
+   "channels": 10,
+   "top10": 22812,
    "best": {
     "id": "9knammFpVtI",
-    "views": 10023,
+    "views": 13731,
     "channel": "Divine Glide",
     "title": "Sheikh Salah Budair Voice of Madina?🤔"
    }
@@ -462,12 +456,12 @@
     "abdullah-almousa"
    ],
    "name": "Abdullah Al-Mousa",
-   "videos": 20,
-   "channels": 17,
-   "top10": 12846,
+   "videos": 19,
+   "channels": 16,
+   "top10": 15220,
    "best": {
     "id": "XsTW3K_RsEs",
-    "views": 2028,
+    "views": 2241,
     "channel": "نور على نور",
     "title": "تلاوة نادرة وخاشعة بصوت الشيخ عبد الله الموسى | تجلي المعنى وسكينة القلوب"
    }
@@ -475,124 +469,134 @@
  },
  "views": {
   "surah": {
-   "1": 73513669,
-   "112": 5209901,
-   "2": 12320888,
-   "108": 835682,
-   "94": 829874,
-   "55": 2125533,
-   "114": 700789,
-   "50": 348774,
-   "113": 364970,
-   "14": 461651,
-   "109": 619698,
-   "95": 2078414,
-   "76": 1115458,
-   "17": 1739547,
-   "20": 1108180,
-   "33": 223876,
-   "59": 269907,
-   "36": 387698,
-   "48": 2474,
-   "24": 308276,
-   "88": 197887,
-   "6": 232018,
-   "51": 77022,
-   "23": 1323330,
-   "90": 1605,
-   "19": 879916,
-   "103": 515427,
-   "110": 443001,
-   "21": 318960
+   "1": 159244652,
+   "2": 15452455,
+   "87": 405955,
+   "108": 1176436,
+   "112": 772962,
+   "95": 2218622,
+   "109": 467989,
+   "114": 208372,
+   "85": 171929,
+   "55": 180207,
+   "7": 2159162,
+   "23": 2832621,
+   "33": 1892134,
+   "24": 702572,
+   "36": 797479,
+   "48": 2476,
+   "63": 368,
+   "88": 205130,
+   "18": 139748,
+   "51": 78803,
+   "86": 110653,
+   "93": 1275697,
+   "76": 2070864
   },
   "reciter": {
-   "yasser-aldosari": 4717152,
-   "fares-abbad": 2085821,
-   "mishary-alafasy": 1739547,
-   "maher-almuaiqly": 720362,
-   "minshawi": 97884,
-   "saad-alghamdi": 527566,
-   "abdulbasit-murattal": 970,
-   "abdulbasit-mujawwad": 970
+   "yasser-aldosari": 4167350,
+   "fares-abbad": 3208247,
+   "ahmad-alnufais": 4310734,
+   "saad-alghamdi": 702572,
+   "maher-almuaiqly": 878695,
+   "minshawi": 681442
   }
  },
  "counts": {
   "surah": {
-   "1": 35,
-   "112": 7,
-   "2": 15,
-   "108": 1,
-   "94": 1,
-   "55": 4,
-   "114": 2,
-   "50": 1,
-   "113": 1,
-   "14": 2,
+   "1": 51,
+   "2": 21,
+   "87": 1,
+   "108": 2,
+   "112": 3,
+   "95": 2,
    "109": 2,
-   "95": 3,
-   "76": 2,
-   "17": 1,
-   "20": 1,
-   "33": 1,
-   "59": 1,
-   "36": 2,
+   "114": 1,
+   "85": 1,
+   "55": 1,
+   "7": 1,
+   "23": 3,
+   "33": 2,
+   "24": 3,
+   "36": 4,
    "48": 1,
-   "24": 2,
+   "63": 1,
    "88": 1,
-   "6": 2,
+   "18": 1,
    "51": 1,
-   "23": 1,
-   "90": 1,
-   "19": 1,
-   "103": 1,
-   "110": 1,
-   "21": 1
+   "86": 1,
+   "93": 1,
+   "76": 2
   },
   "reciter": {
-   "yasser-aldosari": 6,
+   "yasser-aldosari": 5,
    "fares-abbad": 4,
-   "mishary-alafasy": 1,
-   "maher-almuaiqly": 4,
-   "minshawi": 2,
+   "ahmad-alnufais": 1,
    "saad-alghamdi": 3,
-   "abdulbasit-murattal": 1,
-   "abdulbasit-mujawwad": 1
+   "maher-almuaiqly": 5,
+   "minshawi": 5
   }
  },
  "top": [
   {
-   "id": "DUehEXDof4c",
-   "title": "Prayer for Guidance 🤲🔥 #quranshorts #تلاوة_القرآن  #quran #foryou  #shorts #viral#yt#fypシ",
-   "channel": "DeenDunia",
-   "views": 11622088,
+   "id": "DJai0Bvgdk4",
+   "title": "Surah AL-FATIHAH 🙏🍁☪️ | Quran Recitation-Egzon Ibrahimi | سورۃ فاتحہ",
+   "channel": "Ahmad Malik",
+   "views": 39010808,
    "reciters": [],
    "surahs": [
     1
    ]
   },
   {
-   "id": "eM9Lz4KUZ8U",
-   "title": "Mustafa Mustafa Naat | The Golden monster truck | Islamic Reminder #viral #shorts #islam #muslim",
-   "channel": "IslamicWave",
-   "views": 9954559,
+   "id": "5hlr2jZnMa4",
+   "title": "Duniya ki sab se pyari awaaz?🥰#quran #shortfeed #viralvideo #trendingshorts #quran #viral part 2",
+   "channel": "Santoshi Facts",
+   "views": 14351591,
    "reciters": [],
    "surahs": []
   },
   {
-   "id": "EHv1jpyYEVg",
-   "title": "Kindness in the rain ☔❤️ #quranshorts #surahalfatiha #quran #shortfeed #shorts",
-   "channel": "Swichzer YT",
-   "views": 9736530,
+   "id": "0ZigRY1UjkQ",
+   "title": "Surah AL-FATIHAHE 📖🤲🍁 سورة الفاتحة - Egzon Ibrahimi #quranrecitation سورة الفاتحة #alfatihah#",
+   "channel": "ISLAMIC STORY ",
+   "views": 11036741,
    "reciters": [],
    "surahs": [
     1
    ]
   },
   {
-   "id": "Xd8dir5CGsE",
-   "title": "Duniya ki sab se pyari awaaz 🥰 #azan #islamicvideos #islamicstutus #shortsfeed #quran #shorts #azma",
-   "channel": "crazy fact 0.9",
-   "views": 6674853,
+   "id": "4MKkLMpxiXY",
+   "title": "Mustafa Mustafa Naat | The Golden deer story | Islamic Reminder #viral #shorts #islam #muslim",
+   "channel": "IslamicWave",
+   "views": 9835969,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "5VJrqfmnFxk",
+   "title": "Mustafa Mustafa Naat | The Golden Lamborghini | Islamic Reminder #viral #shorts #islam #muslim",
+   "channel": "IslamicWave",
+   "views": 8404099,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "udCXzRlp8zM",
+   "title": "Surah AL-FATIHAH 🙏📖🍁 | Quran Recitation-Egzon Ibrah | سورة الفاتحة#viral#shortfeed#youtubevideo#news",
+   "channel": "King of yt short ",
+   "views": 7678412,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
+  },
+  {
+   "id": "kz_BFuaoBKI",
+   "title": "تلاوة خاشعة تلامس أعماق القلوب🌻",
+   "channel": "SOUT UL QURAN",
+   "views": 7287093,
    "reciters": [],
    "surahs": []
   },
@@ -600,229 +604,213 @@
    "id": "fIidXg4DtPg",
    "title": "قصة في سورة | قصة الأبرص والأقرع والأعمى📜✨",
    "channel": "Radwan Zakaria - رضوان زكريا",
-   "views": 5728157,
+   "views": 7075188,
    "reciters": [],
    "surahs": []
-  },
-  {
-   "id": "oCjolcLqgkM",
-   "title": "Surah AL-FATIHAH 📖🤲🌿 | Quran Recitation–Egzon Ibrahimi | سورة الفاتحة#quranrecitation #alfatihah",
-   "channel": "DREAMVERSE 100K",
-   "views": 5413713,
-   "reciters": [],
-   "surahs": [
-    1
-   ]
-  },
-  {
-   "id": "-REcIvCuG1w",
-   "title": "Duniya ki sab se pyari awaaz🥰#azan #islamicvideo #islamicstutu #shortsfeed #quran #short",
-   "channel": "Movie Decoded",
-   "views": 5255756,
-   "reciters": [],
-   "surahs": []
-  },
-  {
-   "id": "kz_BFuaoBKI",
-   "title": "تلاوة خاشعة تلامس أعماق القلوب🌻",
-   "channel": "SOUT UL QURAN",
-   "views": 5097117,
-   "reciters": [],
-   "surahs": []
-  },
-  {
-   "id": "fRCAGNyd2tw",
-   "title": "#trending",
-   "channel": "shortexplain",
-   "views": 4631398,
-   "reciters": [],
-   "surahs": []
-  },
-  {
-   "id": "TFO2kObubEU",
-   "title": "Surah Al-Fatiha✨💞 Prayer for Guidance #quranshorts​ #surahalfatiha​ #quran​ #shortfeed​ #shorts​",
-   "channel": "Z&D Islamic Hidayat ",
-   "views": 4150782,
-   "reciters": [],
-   "surahs": [
-    1
-   ]
-  },
-  {
-   "id": "ZkilizO_r3Y",
-   "title": "अम्मी को सुनाई पूरी सूरह फ़ातिहा ❤️📖 | Islamic Kids Video #shorts #islamicvideo",
-   "channel": "AkhtarStory",
-   "views": 4040638,
-   "reciters": [],
-   "surahs": [
-    1
-   ]
   },
   {
    "id": "STxGd9H4U8I",
    "title": "تلاوة خاشعة تأسر القلوب🌻",
    "channel": "SOUT UL QURAN",
-   "views": 4035069,
+   "views": 6219605,
    "reciters": [],
    "surahs": []
   },
   {
-   "id": "KvlIUSBmt50",
-   "title": "ya munzilal Quran 😨😭| shukran ya rabbi 🤲🏻💔#shorts #islam #islamicvideo #ytshorts #vfx #islamicstatus",
-   "channel": "ubaid islamic vfx ",
-   "views": 3962869,
+   "id": "wTGmyUE9-RA",
+   "title": "Surah AL-FATIHAH 🙏🍁☪️ | Quran Recitation-Egzon Ibrahimi | سورۃ فاتحہ",
+   "channel": "Ahmad Malik",
+   "views": 5882498,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
+  },
+  {
+   "id": "TFO2kObubEU",
+   "title": "Surah Al-Fatiha✨💞 Prayer for Guidance #quranshorts​ #surahalfatiha​ #quran​ #shortfeed​ #shorts​",
+   "channel": "Z&D Islamic Hidayat ",
+   "views": 5703415,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
+  },
+  {
+   "id": "y2WyfSerYzQ",
+   "title": "Surah AL-FATIHAH 🙏📖🌿 | Quran Recitation–Egzon Ibrahimi | سورة الفاتحة#quranrecitation  #alfatihah",
+   "channel": "Ali Musa",
+   "views": 5595252,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
+  },
+  {
+   "id": "xej3mg9I5W0",
+   "title": "Surah Al-Fatihah 🌾✨ Quran Recitation -Egzon ibarhimi سورةالفاتحة#SurahAlFatihah#QuranRecitation‎‎",
+   "channel": "Meta AI Channels",
+   "views": 5441580,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
+  },
+  {
+   "id": "pogUa5eTDMM",
+   "title": "@bnkimasti  Duniya 🇮🇳🔥700 ki subse payar awaz#azan#quran#viralshorts#islamic#india#trending#reels",
+   "channel": "Mufactu1m",
+   "views": 5234764,
    "reciters": [],
    "surahs": []
+  },
+  {
+   "id": "JwwlUmDFnug",
+   "title": "Surah AL-FATIHAH 📖🌱🤲| Quran Recitation-Egzon Ibrahimi | سورةالفاتحة #quranrecitation #alfatihah",
+   "channel": "AKHIRATER DAK",
+   "views": 5002973,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
   },
   {
    "id": "yp7ecN3Nf2A",
    "title": "قرأ سورة الضحي بنفس واحد .. معجزه 😨",
    "channel": "ســيب أثر",
-   "views": 3847827,
+   "views": 4967542,
    "reciters": [],
    "surahs": []
   },
   {
-   "id": "vXy-_b76oFg",
-   "title": "SURAH Alfatiha🤲🌿 | Beautiful recitation-Egzoni Ibrahimi | سورۃ الفاتحہ | #quranrecitation#alfatihah",
-   "channel": "AI EDITS",
-   "views": 3533431,
+   "id": "x3Fmu-A8Yz8",
+   "title": "Duniya ki sab se pyari awaaz🥰#azan #islamicvideo #islamicstutu #shortsfeed #quran #short",
+   "channel": "Movie Decoded",
+   "views": 4619635,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "jcyQhyXsuhg",
+   "title": "كيفية نطق الكلمة {أَعُوذُ} #shorts",
+   "channel": "Quran Tajweed Academy",
+   "views": 4310734,
+   "reciters": [
+    "ahmad-alnufais"
+   ],
+   "surahs": []
+  },
+  {
+   "id": "s9f5tyXHJ4g",
+   "title": "Surah AL-FATIHAH 🙏📖🍁 | Quran Recitation- Ibrahimi | سورة الفاتحة#shortsfeed #youtub #news#trending",
+   "channel": "King of yt short ",
+   "views": 4104280,
    "reciters": [],
    "surahs": [
     1
    ]
   },
   {
-   "id": "NJUvx3mizVg",
-   "title": "Surah Al-Fatiha✨💞 Prayer for Guidance #quranshorts  #surahalfatiha  #quran #shortfeed  #shorts",
-   "channel": "GoGo PoCo TV",
-   "views": 3356306,
+   "id": "V0p_dCfkd5k",
+   "title": "Golden Sofa VS Pink Sofa #shorts #quran #allah #islamicreminder #ai #islamicmotivation",
+   "channel": "Hijabi Fairy Tales ",
+   "views": 4006616,
    "reciters": [],
    "surahs": [
     1
    ]
   },
   {
-   "id": "2NQwFpjmjNc",
-   "title": "🕋Surah AL-FATIHAHE|Resin Artwork Made by Grandma#diy#fatiha#shorts#surahefatih #quran #surahefatiha",
-   "channel": "Vireel Ai Official",
-   "views": 3224242,
+   "id": "OTI_9dX-yZI",
+   "title": "Duniya ki sabse pyari awaaz 🥰 #azan​ #islamicvideos​ #islamicstutus​ #quran​  #shortsfeed​ #shorts​‎",
+   "channel": "Raja x stories ",
+   "views": 3968053,
    "reciters": [],
    "surahs": []
+  },
+  {
+   "id": "zPmVw4ezFlw",
+   "title": "Surah AL-FATIHAH 🙏🍁☪️ | Quran Recitation-Egzon Ibrahimi | سورۃ فاتحہ",
+   "channel": "Ahmad Malik",
+   "views": 3920193,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
+  },
+  {
+   "id": "pKfpq7jfkmY",
+   "title": "Surah AL-FATIHAH📖🤲🍁 | Quran Recitation-Egzon Ibrahimi | سورة الفاتحة #quranrecitation #alfatihah",
+   "channel": "Sana Ismail",
+   "views": 3864984,
+   "reciters": [],
+   "surahs": [
+    1
+   ]
   },
   {
    "id": "GJX_2cq5GiY",
    "title": "Surah AL-FATIHAH 🙏📖🍁 | Quran Recitation-Egzon Ibrahimi | سورة الفاتحة#beautiful #shorts #news #trend",
    "channel": "King of yt short ",
-   "views": 3165023,
+   "views": 3820186,
    "reciters": [],
    "surahs": [
     1
    ]
   },
   {
-   "id": "sSB0W84KeVE",
-   "title": "এক বছর পর হারানো টাকা ফিরে পেলো কুরআনের ভিতর। #shorts #ytshorts #islamicvideo #quran",
-   "channel": "Rashidul Khandakar",
-   "views": 3076518,
+   "id": "nHvoltjM5Ds",
+   "title": "Mustafa Mustafa ✨ One Name. Endless Peace",
+   "channel": "Islamic spark",
+   "views": 3702756,
    "reciters": [],
    "surahs": []
   },
   {
-   "id": "h1CDHPGMqnE",
-   "title": "Surah AL-FATIHAHE 📖🤲🍁 سورة الفاتحة - Egzon Ibrahimi #quranrecitation سورة الفاتحة #alfatihah#",
-   "channel": "ISLAMIC STORY ",
-   "views": 3064081,
+   "id": "zhGOWNPUmmU",
+   "title": "Surah Al-Fatiha✨💞 Prayer for Guidance #quranshorts  #surahalfatiha  #quran #shortfeed  #shorts",
+   "channel": "GoGo PoCo TV",
+   "views": 3551009,
    "reciters": [],
    "surahs": [
     1
    ]
-  },
-  {
-   "id": "tRihMXQ-WKM",
-   "title": "Awalnya Cuma Candid… Setelah Dengar Tilawahnya, Malah Nggak Bisa Berhenti 😍📖",
-   "channel": "Majelis Rindu Ilmu | Sonoélmu",
-   "views": 3042154,
-   "reciters": [],
-   "surahs": []
-  },
-  {
-   "id": "pi8u25vhFiU",
-   "title": "Al-Quran sudah menegtahui dari ribaun tahun yg lalu🙏🏻#shorts ",
-   "channel": "Rizky Aulia",
-   "views": 2952749,
-   "reciters": [],
-   "surahs": []
-  },
-  {
-   "id": "FihckmsyfhU",
-   "title": "भलाई का फल🌙🇯🇴🕋💔👍#muhammadﷺ​ #allah​ #duet​ ❤🤔👍💔#youtubeshorts​ #trending​ 🇯🇴🌙🕋🤲🏾💔#islamicpost​",
-   "channel": "HusenSamaVlogs",
-   "views": 2879737,
-   "reciters": [],
-   "surahs": []
   },
   {
    "id": "wVzT826xiF0",
    "title": "سورة البقرة 😱😬‼️.   #قران_كريم #قرآن #قصص #تاريخ #رعب",
    "channel": "Ali Q",
-   "views": 2833439,
+   "views": 3399943,
    "reciters": [],
    "surahs": [
     2
    ]
   },
   {
-   "id": "4hHeRhXr0vM",
-   "title": "Common Prayer Mistakes.. ❌🌸☪️ #shorts #islam #muslim #salah #foryou",
-   "channel": "Shadik Khan",
-   "views": 2790167,
-   "reciters": [],
-   "surahs": []
-  },
-  {
-   "id": "8toMS0TL0R4",
-   "title": "Muhammed sallallahu#quran recitation#quran tilawat#trendingshorts",
-   "channel": "RUC STUDIO",
-   "views": 2765032,
-   "reciters": [],
-   "surahs": [
-    112
-   ]
-  },
-  {
-   "id": "m0l-pWRvqzA",
-   "title": "Duniya ki sab se pyari❤️awaaz#azan#islamicvideos #islamicstutus#quran#shorts#azma",
-   "channel": "50 aor 50",
-   "views": 2659471,
-   "reciters": [],
-   "surahs": []
-  },
-  {
-   "id": "GLKxW4hdPbQ",
-   "title": "He Saved the Quran Before the Flood Destroyed His Home 🥹❤️ #shortsvideo",
-   "channel": "Hope Home",
-   "views": 2627637,
-   "reciters": [],
-   "surahs": []
-  },
-  {
-   "id": "ng1ONln-YwQ",
-   "title": "Common Prayer Mistakes.. ❌🌸☪️ #shorts #muslim #islam #salah #foryou",
-   "channel": "Humaira Khan",
-   "views": 2566808,
-   "reciters": [],
-   "surahs": []
-  },
-  {
-   "id": "GKG46XG5_LY",
-   "title": "She give her helmet ⛑️❤️ #quranshorts #surahalfatiha #quran #shortfeed #shorts",
-   "channel": "Swichzer YT",
-   "views": 2545310,
+   "id": "T1wSeFGzY98",
+   "title": "Surah AL-FATIHAH 🙏📖🌿 | Quran Recitation–Egzon Ibrahimi | سورة الفاتحة#quranrecitation  #alfatihah",
+   "channel": "NatureMystic",
+   "views": 3379010,
    "reciters": [],
    "surahs": [
     1
    ]
+  },
+  {
+   "id": "e3jJaffwtHU",
+   "title": "tenge tenge 😅😅 World 🇮🇳🔥700 subscribers #azan #quran #viralshorts #islamic #india 14",
+   "channel": "rohanbhaigoud",
+   "views": 3215510,
+   "reciters": [],
+   "surahs": []
+  },
+  {
+   "id": "nuhaCa5ZEl4",
+   "title": "🔴 Makkah Live | مكة مباشر | الحرم المكي مباشر | قناة القران الكريم السعودية مباشر | مكه المكرمه",
+   "channel": "Noor & Peace",
+   "views": 3169264,
+   "reciters": [],
+   "surahs": []
   }
  ]
 }
