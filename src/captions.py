@@ -19,13 +19,13 @@ THEME_TAGS = {
 
 # A short request for a comment, matched to the passage's theme: (on screen, Arabic under it, caption line).
 # Comments are the weakest number on every account, and asking for a short dhikr is the norm for Quran Shorts.
-PROMPT_AMEEN = ("Write: Ameen", "اكتب: آمين", "Write Ameen in the comments.")
-PROMPT_SUBHAN = ("Write: SubhanAllah", "اكتب: سبحان الله", "Write SubhanAllah in the comments.")
-PROMPT_HAMD = ("Write: Alhamdulillah", "اكتب: الحمد لله", "Write Alhamdulillah in the comments.")
-PROMPT_ISTIGHFAR = ("Write: Astaghfirullah", "اكتب: أستغفر الله", "Write Astaghfirullah in the comments.")
-PROMPT_SALAWAT = ("Send salawat on the Prophet", "اكتب: اللهم صل على محمد", "Send salawat on the Prophet in the comments.")
+PROMPT_AMEEN = ("Write: Ameen", "اكتب: آمين", "Comment Ameen below.")
+PROMPT_SUBHAN = ("Write: SubhanAllah", "اكتب: سبحان الله", "Comment SubhanAllah below.")
+PROMPT_HAMD = ("Write: Alhamdulillah", "اكتب: الحمد لله", "Comment Alhamdulillah below.")
+PROMPT_ISTIGHFAR = ("Write: Astaghfirullah", "اكتب: أستغفر الله", "Comment Astaghfirullah below.")
+PROMPT_SALAWAT = ("Send salawat on the Prophet", "اكتب: اللهم صل على محمد", "Comment your salawat on the Prophet below.")
 PROMPT_DEFAULT = ("Write something you'll be rewarded for", "اكتب شيئًا تؤجر عليه",
-                  "Write something you'll be rewarded for in the comments.")
+                  "Comment something you'll be rewarded for.")
 PROMPTS = {
     **dict.fromkeys(["dua", "parents", "marriage", "qiyam", "fatiha"], PROMPT_AMEEN),  # Ameen after Al-Fatihah
     **dict.fromkeys(["dhikr", "tasbih", "names", "tawheed", "ikhlas", "reflection"], PROMPT_SUBHAN),
@@ -55,6 +55,13 @@ def plain(text: str) -> str:
     text = unicodedata.normalize("NFKD", text)
     text = "".join(c for c in text if not unicodedata.combining(c))
     return re.sub(r"[ \t]+", " ", text).strip()
+
+
+def unbracket(text: str) -> str:
+    """The translation without the translator's [i.e. ...] notes and brackets, as on screen."""
+    text = re.sub(r"\[\s*i\.e\.[^\]]*\]", "", text)
+    text = re.sub(r"\(\s*i\.e\.[^)]*\)", "", text).replace("[", "").replace("]", "")
+    return re.sub(r"\s+([,.;:!?])", r"\1", re.sub(r"\s+", " ", text)).strip()
 
 
 def surah_tag(name_en: str) -> str:
@@ -97,7 +104,7 @@ def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True, hand
     ask_line = prompt(meta.get("theme", ""))[2] if ask else ""
     surah = plain(meta["surah_en"])
     hook = plain(meta.get("hook") or "")
-    tr = _short(meta.get("translation", ""), 420 if platform in ("instagram", "youtube") else 300).replace('"', "'")
+    tr = _short(unbracket(meta.get("translation", "")), 420 if platform in ("instagram", "youtube") else 300).replace('"', "'")
     if tr and not tr.endswith("..."):  # a verse cut mid-sentence ends with a dash or comma in the translation
         tr = re.sub(r"[\s,;:-]+$", "", tr)
         if tr and tr[-1] not in ".!?')]":
@@ -110,19 +117,22 @@ def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True, hand
         tags_extra.append(theme)
     seen, tags = set(), []
     base = BASE_IG if platform == "instagram" else BASE_TIKTOK
-    for t in base + tags_extra + (ARABIC_TAGS if platform == "instagram" else ARABIC_TAGS[:1]):
+    pool = base + tags_extra + (ARABIC_TAGS if platform == "instagram" else ARABIC_TAGS[:1])
+    if platform == "instagram":  # Instagram counts 5 hashtags at most: the ones people search, most specific first
+        pool = ["quran", "quranrecitation"] + tags_extra
+    for t in pool:
         if t and t not in seen:
             seen.add(t)
             tags.append("#" + t)
     names = [{"pexels": "Pexels", "mixkit": "Mixkit"}[s] for s in meta.get("sources", [])]
     footage = ("Footage: " + " / ".join(names)) if credit and names else ""
     if platform == "instagram":
-        lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref}", f"Recited by {plain(meta['reciter_en'])}", "",
-                 *([ask_line] if ask_line else []),
-                 "Save this and share it with someone who needs to hear it today.", follow, ""]
+        # one request only (the comment prompt when it is on), and the words people search for
+        lines = [hook, "", f'"{tr}"', f"Quran recitation: Surah {surah} {ref}", f"Recited by {plain(meta['reciter_en'])}",
+                 "", ask_line or "Save this and share it with someone who needs to hear it today.", follow, ""]
         if footage:
             lines += [footage, ""]
-        lines.append(" ".join(tags))
+        lines.append(" ".join(tags[:5]))
     elif platform == "facebook":
         lines = [hook, "", f'"{tr}"', f"Surah {surah} {ref} - {plain(meta['reciter_en'])}", "",
                  *([ask_line] if ask_line else []),
