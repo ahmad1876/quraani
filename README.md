@@ -52,3 +52,15 @@ Total cost: R0. GitHub Actions, GitHub Pages, Buffer Free (3 channels, 10 queued
 After a style change, Actions > Quraani daily > Run workflow > `rerender` redoes the videos that are already scheduled, under the same links. `new-footage` does the same with fresh clips from the library (useful after adding footage).
 
 Run locally: `pip install -r requirements.txt && python -m playwright install chromium`, then `python scripts/batch.py 5 out/batch` renders five videos with their captions.
+
+## Instagram agent skills (for Claude)
+
+`.claude/skills/ig-*` holds the 13 skills from [instagram-agent-skill](https://github.com/Jakeschincariol/instagram-agent-skill)
+(MIT, copied at d03c56b; licence in `.claude/skills/INSTAGRAM-AGENT-LICENSE`). They load automatically in any Claude Code
+session opened on this repo. They write; nothing is posted without you. They read `.claude/instagram/voice.md`
+(Calm Quraan's voice and off-limits rules) and write their notes (`plan.md`, `swipe.md`, `log.md`) next to it.
+
+Useful here: `/ig-caption` (caption lint; the daily captions already pass it: 5 hashtags, one ask, "Quran recitation"
+in the text), `/ig-profile` (score and rewrite the bio), `/ig-viral` (what Quran reels are working, by outlier multiple),
+`/ig-audit` (post-mortem on our posts), `/ig-plan`, `/ig-reply` and `/ig-comment` (replies and comments). `/ig-reel`'s
+hook score rewards numbers and stakes, so do not use it to rewrite verse lines.
