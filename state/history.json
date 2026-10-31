@@ -2736,5 +2736,116 @@
     "due": "2026-10-31T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-01",
+  "slot": "A",
+  "made": "2026-10-31T08:59:21+02:00",
+  "passage": "36:55-58",
+  "ref": "36:55-58",
+  "reciter": "raad-alkurdi",
+  "duration": 25.57,
+  "clips": [
+   "pexels:35059420",
+   "pexels:30976907"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "snow",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-01_A_36-55-58_raad-alkurdi.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ae59372ceb491e585e10f81",
+    "due": "2026-11-01T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae59373ceb491e585e10fbd",
+    "due": "2026-11-01T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-01",
+  "slot": "B",
+  "made": "2026-10-31T08:59:21+02:00",
+  "passage": "29:57-58",
+  "ref": "29:57-58",
+  "reciter": "nasser-alqatami",
+  "duration": 43.0,
+  "clips": [
+   "pexels:38786834",
+   "pexels:39820716",
+   "pexels:17257507"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "lake",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-01_B_29-57-58_nasser-alqatami.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae59373406ab8a018a39a6b",
+    "due": "2026-11-01T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae59374b84259308bc19f64",
+    "due": "2026-11-01T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae59374406ab8a018a39ab6",
+    "due": "2026-11-01T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-01",
+  "slot": "C",
+  "made": "2026-10-31T08:59:21+02:00",
+  "passage": "20:25-28",
+  "ref": "20:25-28",
+  "reciter": "abdulbasit-mujawwad",
+  "duration": 34.4,
+  "clips": [
+   "pexels:31442548",
+   "pexels:12219155",
+   "pexels:12095270"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "blossom",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-01_C_20-25-28_abdulbasit-mujawwad.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae59375b84259308bc19fb5",
+    "due": "2026-11-01T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae59375a1145743498eee61",
+    "due": "2026-11-01T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-01",
+  "slot": "E",
+  "made": "2026-10-31T08:59:21+02:00",
+  "passage": "19:16-21",
+  "ref": "19:16-20",
+  "reciter": "abdulrahman-alsudais",
+  "duration": 43.38,
+  "clips": [
+   "pexels:39528014",
+   "pexels:5345336",
+   "pexels:33536363"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "water",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-01_E_19-16-21_abdulrahman-alsudais.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae59375406ab8a018a39b1d",
+    "due": "2026-11-01T04:00:00.000Z"
+   }
+  }
  }
 ]
