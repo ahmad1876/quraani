@@ -2847,5 +2847,114 @@
     "due": "2026-11-01T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-02",
+  "slot": "A",
+  "made": "2026-11-01T09:30:41+02:00",
+  "passage": "30:21",
+  "ref": "30:21",
+  "reciter": "yasser-aldosari",
+  "duration": 25.23,
+  "clips": [
+   "pexels:39173405",
+   "pexels:12114126"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-02_A_30-21_yasser-aldosari.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ae6ebf9cf3a3112f3e61a22",
+    "due": "2026-11-02T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae6ebf9ab019b9087486062",
+    "due": "2026-11-02T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-02",
+  "slot": "B",
+  "made": "2026-11-01T09:30:41+02:00",
+  "passage": "78:31-40",
+  "ref": "78:31-37",
+  "reciter": "abdullah-aljuhany",
+  "duration": 33.28,
+  "clips": [
+   "pexels:37617124",
+   "pexels:37675266",
+   "pexels:36600222"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "lake",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-02_B_78-31-40_abdullah-aljuhany.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae6ebfa37c1acd2a0f18cb6",
+    "due": "2026-11-02T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae6ebfa21c807e9d5a86de0",
+    "due": "2026-11-02T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae6ebfb21c807e9d5a86e19",
+    "due": "2026-11-02T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-02",
+  "slot": "C",
+  "made": "2026-11-01T09:30:41+02:00",
+  "passage": "25:74",
+  "ref": "25:74",
+  "reciter": "abdulbasit-murattal",
+  "duration": 15.5,
+  "clips": [
+   "pexels:39916402"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "golden",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-02_C_25-74_abdulbasit-murattal.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae6ebfbab019b90874860d5",
+    "due": "2026-11-02T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae6ebfc37c1acd2a0f18d26",
+    "due": "2026-11-02T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-02",
+  "slot": "E",
+  "made": "2026-11-01T09:30:41+02:00",
+  "passage": "114:1-6",
+  "ref": "114:1-5",
+  "reciter": "maher-almuaiqly",
+  "duration": 37.58,
+  "clips": [
+   "pexels:26732070",
+   "pexels:4605077",
+   "pexels:7127974"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "glacier",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-02_E_114-1-6_maher-almuaiqly.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae6ebfcab019b9087486120",
+    "due": "2026-11-02T04:00:00.000Z"
+   }
+  }
  }
 ]
