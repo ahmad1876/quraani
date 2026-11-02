@@ -2956,5 +2956,113 @@
     "due": "2026-11-02T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "A",
+  "made": "2026-11-02T09:40:35+02:00",
+  "passage": "95:1-8",
+  "ref": "95:1-7",
+  "reciter": "nasser-alqatami",
+  "duration": 39.43,
+  "clips": [
+   "pexels:17929836",
+   "pexels:26184244",
+   "pexels:39481766"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "sunrise",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-03_A_95-1-8_nasser-alqatami.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ae83fbcc60bdbcc33e16210",
+    "due": "2026-11-03T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae83fbc759fc887b6d628b1",
+    "due": "2026-11-03T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "B",
+  "made": "2026-11-02T09:40:35+02:00",
+  "passage": "14:40-41",
+  "ref": "14:40-41",
+  "reciter": "saud-alshuraim",
+  "duration": 16.37,
+  "clips": [
+   "pexels:10455135"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "snow",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-03_B_14-40-41_saud-alshuraim.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae83fbd76279ec7eb9d1d1d",
+    "due": "2026-11-03T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae83fbd759fc887b6d62908",
+    "due": "2026-11-03T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae83fbe7817c41d1a4ecf77",
+    "due": "2026-11-03T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "C",
+  "made": "2026-11-02T09:40:35+02:00",
+  "passage": "94:1-8",
+  "ref": "94:1-8",
+  "reciter": "abdulrahman-alsudais",
+  "duration": 22.93,
+  "clips": [
+   "pexels:35297804",
+   "pexels:5873317"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "autumn",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-03_C_94-1-8_abdulrahman-alsudais.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae83fbf76279ec7eb9d1d99",
+    "due": "2026-11-03T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae83fbf64604db31449b854",
+    "due": "2026-11-03T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "E",
+  "made": "2026-11-02T09:40:35+02:00",
+  "passage": "71:10-12",
+  "ref": "71:10-11",
+  "reciter": "abdulbasit-mujawwad",
+  "duration": 26.0,
+  "clips": [
+   "pexels:34650830",
+   "pexels:29336490"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "canyon",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-03_E_71-10-12_abdulbasit-mujawwad.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae83fc076279ec7eb9d1e0c",
+    "due": "2026-11-03T04:00:00.000Z"
+   }
+  }
  }
 ]
