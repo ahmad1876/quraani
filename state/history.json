@@ -3064,5 +3064,113 @@
     "due": "2026-11-03T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-04",
+  "slot": "A",
+  "made": "2026-11-03T00:18:53+02:00",
+  "passage": "21:89-90",
+  "ref": "21:89",
+  "reciter": "maher-almuaiqly",
+  "duration": 17.47,
+  "clips": [
+   "pexels:28483365"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "coast",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-04_A_21-89-90_maher-almuaiqly.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6ae90d83100497f1625a396f",
+    "due": "2026-11-04T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae90d84100497f1625a39a3",
+    "due": "2026-11-04T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-04",
+  "slot": "B",
+  "made": "2026-11-03T00:18:53+02:00",
+  "passage": "50:16-22",
+  "ref": "50:16-20",
+  "reciter": "fares-abbad",
+  "duration": 43.53,
+  "clips": [
+   "pexels:4605077",
+   "pexels:35809255",
+   "pexels:28948611"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "glacier",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-04_B_50-16-22_fares-abbad.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae90d85c0a8cf2c65b60787",
+    "due": "2026-11-04T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae90d86100497f1625a3a05",
+    "due": "2026-11-04T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6ae90d8668613b68af8b1d19",
+    "due": "2026-11-04T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-04",
+  "slot": "C",
+  "made": "2026-11-03T00:18:53+02:00",
+  "passage": "27:62",
+  "ref": "27:62",
+  "reciter": "abdulbasit-murattal",
+  "duration": 26.74,
+  "clips": [
+   "pexels:29308777",
+   "pexels:11187863"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "autumn",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-04_C_27-62_abdulbasit-murattal.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae90d8790c1e19b034b0ecf",
+    "due": "2026-11-04T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6ae90d8868613b68af8b1e33",
+    "due": "2026-11-04T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-04",
+  "slot": "E",
+  "made": "2026-11-03T00:18:53+02:00",
+  "passage": "89:27-30",
+  "ref": "89:27-30",
+  "reciter": "bandar-baleela",
+  "duration": 21.2,
+  "clips": [
+   "pexels:15086976",
+   "pexels:39367069"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "forest",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-04_E_89-27-30_bandar-baleela.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6ae90d89100497f1625a3ad9",
+    "due": "2026-11-04T04:00:00.000Z"
+   }
+  }
  }
 ]
