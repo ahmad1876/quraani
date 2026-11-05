@@ -3281,5 +3281,136 @@
     "due": "2026-11-05T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-06",
+  "slot": "A",
+  "made": "2026-11-05T09:54:41+02:00",
+  "passage": "14:7",
+  "ref": "14:7",
+  "reciter": "maher-almuaiqly",
+  "duration": 20.13,
+  "clips": [
+   "pexels:39174177",
+   "pexels:38032170"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-06_A_14-7_maher-almuaiqly.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6aec37f2660b2991f161c036",
+    "due": "2026-11-06T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6aec37f275052a1eb82db373",
+    "due": "2026-11-06T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-06",
+  "slot": "B",
+  "made": "2026-11-05T09:54:41+02:00",
+  "passage": "33:41-44",
+  "ref": "33:41-42",
+  "reciter": "abdulbasit-mujawwad",
+  "duration": 29.68,
+  "clips": [
+   "pexels:38542182",
+   "pexels:27694678"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "fog",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-06_B_33-41-44_abdulbasit-mujawwad.mp4",
+  "posts": {
+   "youtube": {
+    "id": "6aec37f375052a1eb82db46c",
+    "due": "2026-11-06T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-06",
+  "slot": "C",
+  "made": "2026-11-05T09:54:41+02:00",
+  "passage": "75:26-30",
+  "ref": "75:26-30",
+  "reciter": "minshawi",
+  "duration": 26.14,
+  "clips": [
+   "pexels:17416256",
+   "pexels:36738427"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "sunset",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-06_C_75-26-30_minshawi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6aec37f480f7fd0537ff17c6",
+    "due": "2026-11-06T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6aec37f53ddb81d221169129",
+    "due": "2026-11-06T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-06",
+  "slot": "E",
+  "made": "2026-11-05T09:54:41+02:00",
+  "passage": "6:59",
+  "ref": "6:59",
+  "reciter": "nasser-alqatami",
+  "duration": 36.78,
+  "clips": [
+   "pexels:27692774",
+   "mixkit:44373",
+   "pexels:32719391"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "ocean",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-06_E_6-59_nasser-alqatami.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6aec37f6e22643a9879f191a",
+    "due": "2026-11-06T04:00:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-06",
+  "slot": "L",
+  "made": "2026-11-05T09:54:41+02:00",
+  "passage": "long:2:255-257",
+  "ref": "2:255-257",
+  "reciter": "nasser-alqatami",
+  "duration": 100.63,
+  "clips": [
+   "pexels:15086974",
+   "pexels:36024624",
+   "pexels:28903401",
+   "pexels:29064708",
+   "pexels:29792651"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "forest",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-06_L_2-255-257_nasser-alqatami.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6aec37f7660b2991f161cc66",
+    "due": "2026-11-06T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6aec37f980f7fd0537ff2027",
+    "due": "2026-11-06T11:15:00.000Z"
+   }
+  }
  }
 ]
