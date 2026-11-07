@@ -3523,5 +3523,118 @@
     "due": "2026-11-07T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "A",
+  "made": "2026-11-07T20:01:56+02:00",
+  "passage": "2:255",
+  "ref": "2:255",
+  "reciter": "abdullah-aljuhany",
+  "duration": 41.77,
+  "clips": [
+   "pexels:33813924",
+   "pexels:39321129",
+   "pexels:32191728"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "golden",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-08_A_2-255_abdullah-aljuhany.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6aef696cd6bbae6fa1a27e3d",
+    "due": "2026-11-08T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6aef696d004e4879a770f5d0",
+    "due": "2026-11-08T17:45:00.000Z"
+   }
+  },
+  "remake_of": "2026-10-28_B"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "B",
+  "made": "2026-11-07T20:01:56+02:00",
+  "passage": "55:1-13",
+  "ref": "55:1-6",
+  "reciter": "mahmoud-alhusary",
+  "duration": 35.07,
+  "clips": [
+   "pexels:34260073",
+   "pexels:35400197",
+   "mixkit:2213"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "water",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-08_B_55-1-13_mahmoud-alhusary.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6aef696dd6bbae6fa1a27e8d",
+    "due": "2026-11-08T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6aef696e562f2e6de9728115",
+    "due": "2026-11-08T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6aef696e004e4879a770f63a",
+    "due": "2026-11-08T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "C",
+  "made": "2026-11-07T20:01:56+02:00",
+  "passage": "36:1-12",
+  "ref": "36:1-7",
+  "reciter": "abdulbasit-murattal",
+  "duration": 38.1,
+  "clips": [
+   "pexels:32043628",
+   "pexels:39347396",
+   "pexels:35143740"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "lake",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-08_C_36-1-12_abdulbasit-murattal.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6aef696f51492b796ef1c26f",
+    "due": "2026-11-08T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6aef696f229bf05daf678881",
+    "due": "2026-11-08T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "E",
+  "made": "2026-11-07T20:01:56+02:00",
+  "passage": "76:7-12",
+  "ref": "76:7-10",
+  "reciter": "bandar-baleela",
+  "duration": 43.44,
+  "clips": [
+   "pexels:27975701",
+   "pexels:27977624",
+   "pexels:39552215"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "fog",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-08_E_76-7-12_bandar-baleela.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6aef6970d6bbae6fa1a27f10",
+    "due": "2026-11-08T04:00:00.000Z"
+   }
+  }
  }
 ]
