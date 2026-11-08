@@ -3636,5 +3636,117 @@
     "due": "2026-11-08T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-09",
+  "slot": "A",
+  "made": "2026-11-08T09:18:00+02:00",
+  "passage": "67:1-5",
+  "ref": "67:1-3",
+  "reciter": "mishary-alafasy",
+  "duration": 44.04,
+  "clips": [
+   "pexels:26840109",
+   "pexels:36159020",
+   "pexels:31359190",
+   "pexels:38968068"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "ocean",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-09_A_67-1-5_mishary-alafasy.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6af0242351492b796e23440d",
+    "due": "2026-11-09T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6af02424229bf05daf98b642",
+    "due": "2026-11-09T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-09",
+  "slot": "B",
+  "made": "2026-11-08T09:18:00+02:00",
+  "passage": "19:2-6",
+  "ref": "19:2-6",
+  "reciter": "abdullah-aljuhany",
+  "duration": 42.2,
+  "clips": [
+   "pexels:29493735",
+   "pexels:36230533",
+   "pexels:29493733"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "snow",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-09_B_19-2-6_abdullah-aljuhany.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af024259214322f683b2652",
+    "due": "2026-11-09T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6af024269214322f683b2683",
+    "due": "2026-11-09T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6af024269214322f683b26bb",
+    "due": "2026-11-09T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-09",
+  "slot": "C",
+  "made": "2026-11-08T09:18:00+02:00",
+  "passage": "103:1-3",
+  "ref": "103:1-3",
+  "reciter": "maher-almuaiqly",
+  "duration": 21.64,
+  "clips": [
+   "pexels:8832087",
+   "pexels:29069196"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "water",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-09_C_103-1-3_maher-almuaiqly.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af02427562f2e6de9a39431",
+    "due": "2026-11-09T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6af02427004e4879a7a10e16",
+    "due": "2026-11-09T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-09",
+  "slot": "E",
+  "made": "2026-11-08T09:18:00+02:00",
+  "passage": "3:190-194",
+  "ref": "3:190-191",
+  "reciter": "khalid-aljalil",
+  "duration": 34.04,
+  "clips": [
+   "pexels:30070780",
+   "pexels:28615730",
+   "pexels:20118891"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "tropic",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-09_E_3-190-194_khalid-aljalil.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af02428d6bbae6fa1d3bcf6",
+    "due": "2026-11-09T04:00:00.000Z"
+   }
+  }
  }
 ]

@@ -1,9 +1,4 @@
 {
- "2026-10-08": {
-  "A": "19:16-19|abdullah-aljuhany",
-  "B": "3:173|ahmed-alajmi",
-  "C": "29:57-58|saad-alghamdi"
- },
  "2026-10-09": {
   "A": "21:89-90|raad-alkurdi",
   "B": "23:1-7|yasser-aldosari",
@@ -181,5 +176,11 @@
   "B": "55:1-6|mahmoud-alhusary",
   "C": "36:1-7|abdulbasit-murattal",
   "E": "76:7-10|bandar-baleela"
+ },
+ "2026-11-09": {
+  "A": "67:1-3|mishary-alafasy",
+  "B": "19:2-6|abdullah-aljuhany",
+  "C": "103:1-3|maher-almuaiqly",
+  "E": "3:190-191|khalid-aljalil"
  }
 }
