@@ -3748,5 +3748,112 @@
     "due": "2026-11-09T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-10",
+  "slot": "A",
+  "made": "2026-11-09T09:56:41+02:00",
+  "passage": "64:11",
+  "ref": "64:11",
+  "reciter": "yasser-aldosari",
+  "duration": 18.64,
+  "clips": [
+   "pexels:35092789"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "sunset",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-10_A_64-11_yasser-aldosari.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6af17daacac9d7525f7a3c4e",
+    "due": "2026-11-10T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6af17daae29b1359f0dbc6c0",
+    "due": "2026-11-10T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-10",
+  "slot": "B",
+  "made": "2026-11-09T09:56:41+02:00",
+  "passage": "2:186",
+  "ref": "2:186",
+  "reciter": "abdulrahman-alsudais",
+  "duration": 26.43,
+  "clips": [
+   "pexels:39336191",
+   "pexels:34177427"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "storm",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-10_B_2-186_abdulrahman-alsudais.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af17daccac9d7525f7a3f9e",
+    "due": "2026-11-10T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6af17dad796ccae266937a6d",
+    "due": "2026-11-10T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6af17dad796ccae266937ac3",
+    "due": "2026-11-10T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-10",
+  "slot": "C",
+  "made": "2026-11-09T09:56:41+02:00",
+  "passage": "3:139",
+  "ref": "3:139",
+  "reciter": "nasser-alqatami",
+  "duration": 22.27,
+  "clips": [
+   "pexels:19098826",
+   "pexels:37806182"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "golden",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-10_C_3-139_nasser-alqatami.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af17dae7522f65ac0cc3681",
+    "due": "2026-11-10T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6af17daf7522f65ac0cc3720",
+    "due": "2026-11-10T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-10",
+  "slot": "E",
+  "made": "2026-11-09T09:56:41+02:00",
+  "passage": "2:1-5",
+  "ref": "2:1-3",
+  "reciter": "mishary-alafasy",
+  "duration": 28.37,
+  "clips": [
+   "pexels:32099665",
+   "pexels:10931206"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "forest",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-10_E_2-1-5_mishary-alafasy.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af17dafe29b1359f0dbcce0",
+    "due": "2026-11-10T04:00:00.000Z"
+   }
+  }
  }
 ]
