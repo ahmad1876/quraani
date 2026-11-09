@@ -1,4 +1,4 @@
-# Quraani stats (updated 2026-11-09 09:56 SA time)
+# Quraani stats (updated 2026-11-10 00:59 SA time)
 
 Score = views (and a little likes) compared with a typical post of the same age on the same platform. 0 is typical, +0.7 is about twice the views, -0.7 about half. Posts count once they are 2 days old.
 
@@ -6,124 +6,124 @@ Score = views (and a little likes) compared with a typical post of the same age 
 
 | Platform | Posts with stats | Counted | Median views | Total views | Total likes |
 |---|---|---|---|---|---|
-| YouTube | 80 | 76 | 1012 | 73537 | 9211 |
+| YouTube | 82 | 78 | 994 | 74622 | 9311 |
 
 ## Opening line test (since it started)
 
 | | Videos | Score | Weight now |
 |---|---|---|---|
-| a line that speaks to the viewer | 22 | +0.10 | 1.07 |
-| the verse's own words | 18 | -0.07 | 0.95 |
+| a line that speaks to the viewer | 22 | +0.01 | 1.00 |
+| the verse's own words | 20 | -0.06 | 0.96 |
 
 ## Passage themes
 
 | | Videos | Score | Weight now |
 |---|---|---|---|
-| reminder | 6 | +0.46 | 1.28 |
-| marriage | 1 | +1.03 | 1.23 |
-| purpose | 2 | +0.59 | 1.21 |
-| rahman | 2 | +0.55 | 1.19 |
-| fatiha | 2 | +0.42 | 1.15 |
-| protection | 2 | +0.39 | 1.13 |
-| peace | 1 | +0.61 | 1.13 |
-| yasin | 2 | +0.33 | 1.11 |
-| akhirah | 6 | +0.17 | 1.09 |
-| healing | 2 | +0.28 | 1.09 |
-| jannah | 8 | +0.14 | 1.09 |
-| parents | 1 | +0.28 | 1.06 |
-| salah | 1 | +0.27 | 1.05 |
-| dhikr | 3 | +0.13 | 1.05 |
-| trust | 1 | +0.18 | 1.04 |
-| tawheed | 1 | +0.10 | 1.02 |
-| guidance | 1 | +0.01 | 1.00 |
-| maryam | 1 | -0.01 | 1.00 |
-| dua | 8 | -0.01 | 0.99 |
-| mercy | 2 | -0.02 | 0.99 |
-| taha | 1 | -0.09 | 0.98 |
-| tawakkul | 3 | -0.05 | 0.98 |
-| nasr | 1 | -0.15 | 0.97 |
+| fatiha | 3 | +0.76 | 1.35 |
+| reminder | 6 | +0.43 | 1.25 |
+| rahman | 2 | +0.56 | 1.20 |
+| marriage | 1 | +0.87 | 1.19 |
+| purpose | 2 | +0.51 | 1.18 |
+| protection | 2 | +0.36 | 1.12 |
+| yasin | 2 | +0.34 | 1.11 |
+| peace | 1 | +0.49 | 1.10 |
+| jannah | 8 | +0.15 | 1.09 |
+| akhirah | 6 | +0.15 | 1.08 |
+| salah | 1 | +0.34 | 1.07 |
+| parents | 1 | +0.32 | 1.07 |
+| healing | 2 | +0.20 | 1.07 |
+| trust | 1 | +0.20 | 1.04 |
+| dua | 9 | +0.03 | 1.02 |
+| tawheed | 1 | +0.09 | 1.02 |
+| dhikr | 3 | +0.04 | 1.01 |
+| maryam | 1 | +0.07 | 1.01 |
+| guidance | 1 | +0.07 | 1.01 |
+| mercy | 2 | +0.03 | 1.01 |
+| nasr | 1 | -0.07 | 0.99 |
+| taha | 1 | -0.12 | 0.98 |
+| tawakkul | 3 | -0.09 | 0.96 |
 | sabr | 2 | -0.13 | 0.96 |
-| mulk | 2 | -0.21 | 0.94 |
-| character | 1 | -0.56 | 0.89 |
-| kahf | 1 | -0.89 | 0.84 |
-| reflection | 1 | -1.01 | 0.82 |
-| hope | 6 | -0.48 | 0.77 |
-| shukr | 3 | -0.82 | 0.72 |
-| dunya | 2 | -1.94 | 0.60 |
+| mulk | 2 | -0.20 | 0.94 |
+| character | 1 | -0.56 | 0.90 |
+| reflection | 1 | -0.92 | 0.83 |
+| kahf | 1 | -0.97 | 0.82 |
+| hope | 6 | -0.52 | 0.76 |
+| shukr | 3 | -1.04 | 0.66 |
+| dunya | 2 | -2.01 | 0.60 |
 
 ## Reciters
 
 | | Videos | Score | Weight now |
 |---|---|---|---|
-| nasser-alqatami | 3 | +0.49 | 1.22 |
-| fares-abbad | 8 | +0.27 | 1.17 |
-| abdulrahman-alsudais | 6 | +0.29 | 1.17 |
-| abdulbasit-mujawwad | 3 | +0.32 | 1.14 |
-| bandar-baleela | 2 | +0.39 | 1.13 |
-| mansour-alsalimi | 3 | +0.30 | 1.13 |
-| haitham-aldukhain | 2 | +0.35 | 1.12 |
-| abdullah-aljuhany | 3 | +0.22 | 1.09 |
-| wadee-alyamani | 1 | +0.31 | 1.06 |
-| idris-abkar | 1 | +0.28 | 1.06 |
-| saad-alghamdi | 5 | +0.05 | 1.02 |
-| mishary-alafasy | 1 | +0.11 | 1.02 |
-| maher-almuaiqly | 8 | +0.01 | 1.01 |
-| khalid-aljalil | 1 | -0.00 | 1.00 |
-| hani-alrifai | 1 | -0.05 | 0.99 |
-| ahmad-alnufais | 4 | -0.07 | 0.97 |
-| abdullah-almousa | 1 | -0.22 | 0.96 |
-| minshawi | 3 | -0.16 | 0.94 |
-| raad-alkurdi | 2 | -0.22 | 0.93 |
-| ahmed-alajmi | 2 | -0.26 | 0.92 |
-| abdulbasit-murattal | 2 | -0.43 | 0.87 |
-| abdulrahman-alossi | 2 | -0.51 | 0.85 |
-| saud-alshuraim | 4 | -0.47 | 0.81 |
-| yasser-aldosari | 8 | -0.59 | 0.71 |
+| mishary-alafasy | 2 | +0.85 | 1.31 |
+| nasser-alqatami | 3 | +0.40 | 1.18 |
+| abdulrahman-alsudais | 6 | +0.26 | 1.15 |
+| fares-abbad | 8 | +0.23 | 1.14 |
+| mansour-alsalimi | 3 | +0.33 | 1.14 |
+| haitham-aldukhain | 2 | +0.39 | 1.13 |
+| abdullah-aljuhany | 3 | +0.28 | 1.12 |
+| bandar-baleela | 2 | +0.32 | 1.11 |
+| abdulbasit-mujawwad | 3 | +0.20 | 1.08 |
+| wadee-alyamani | 1 | +0.26 | 1.05 |
+| idris-abkar | 1 | +0.25 | 1.05 |
+| saad-alghamdi | 5 | +0.09 | 1.05 |
+| hani-alrifai | 1 | +0.01 | 1.00 |
+| khalid-aljalil | 1 | -0.04 | 0.99 |
+| abdulbasit-murattal | 3 | -0.04 | 0.98 |
+| abdullah-almousa | 1 | -0.14 | 0.97 |
+| maher-almuaiqly | 8 | -0.05 | 0.97 |
+| minshawi | 3 | -0.15 | 0.94 |
+| ahmad-alnufais | 4 | -0.15 | 0.93 |
+| ahmed-alajmi | 2 | -0.23 | 0.93 |
+| raad-alkurdi | 2 | -0.26 | 0.92 |
+| abdulrahman-alossi | 2 | -0.48 | 0.86 |
+| saud-alshuraim | 4 | -0.58 | 0.77 |
+| yasser-aldosari | 8 | -0.65 | 0.69 |
 
 ## Footage moods
 
 | | Videos | Score | Weight now |
 |---|---|---|---|
-| coast | 3 | +0.59 | 1.27 |
-| snow | 3 | +0.53 | 1.24 |
-| cloudsea | 6 | +0.31 | 1.18 |
-| glacier | 4 | +0.36 | 1.18 |
-| lake | 3 | +0.39 | 1.17 |
-| golden | 3 | +0.38 | 1.17 |
-| storm | 2 | +0.47 | 1.16 |
-| sunset | 4 | +0.30 | 1.15 |
-| night | 4 | +0.28 | 1.14 |
-| fog | 7 | +0.22 | 1.13 |
-| hills | 1 | +0.55 | 1.12 |
-| blossom | 3 | +0.16 | 1.07 |
-| sunrise | 4 | +0.12 | 1.06 |
-| canyon | 1 | +0.13 | 1.03 |
-| forest | 1 | -0.22 | 0.96 |
-| ocean | 3 | -0.17 | 0.93 |
+| lake | 4 | +0.63 | 1.34 |
+| coast | 3 | +0.51 | 1.23 |
+| storm | 2 | +0.50 | 1.17 |
+| golden | 3 | +0.40 | 1.17 |
+| snow | 3 | +0.39 | 1.17 |
+| glacier | 4 | +0.33 | 1.16 |
+| cloudsea | 6 | +0.25 | 1.14 |
+| sunset | 4 | +0.29 | 1.14 |
+| night | 4 | +0.27 | 1.13 |
+| hills | 1 | +0.58 | 1.12 |
+| sunrise | 5 | +0.21 | 1.11 |
+| fog | 7 | +0.17 | 1.10 |
+| blossom | 3 | +0.14 | 1.06 |
+| canyon | 1 | +0.12 | 1.02 |
+| forest | 1 | -0.14 | 0.97 |
+| ocean | 3 | -0.15 | 0.94 |
 | water | 5 | -0.17 | 0.92 |
-| tropic | 6 | -0.21 | 0.89 |
-| desert | 6 | -0.73 | 0.68 |
-| mountains | 4 | -1.09 | 0.61 |
-| autumn | 3 | -1.28 | 0.60 |
+| tropic | 6 | -0.24 | 0.88 |
+| desert | 6 | -0.75 | 0.67 |
+| autumn | 3 | -1.31 | 0.60 |
+| mountains | 4 | -1.15 | 0.60 |
 
 ## Posting times (SA time)
 
 | Platform | Time | Posts | Score |
 |---|---|---|---|
-| YouTube | 06:00 | 9 | -0.05 |
-| YouTube | 16:15 | 32 | -0.04 |
-| YouTube | 19:45 | 33 | +0.08 |
-| YouTube | 21:45 | 2 | -0.43 |
+| YouTube | 06:00 | 9 | -0.09 |
+| YouTube | 16:15 | 33 | -0.05 |
+| YouTube | 19:45 | 34 | +0.09 |
+| YouTube | 21:45 | 2 | -0.35 |
 
 ## Best and weakest posts
 
 | Platform | Date | Passage | Reciter | Mood | Views | Score |
 |---|---|---|---|---|---|---|
-| YouTube | 2026-11-04 | 50:16-22 | fares-abbad | glacier | 1480 | +1.37 |
-| YouTube | 2026-11-02 | 30:21 | yasser-aldosari | cloudsea | 1271 | +1.03 |
-| YouTube | 2026-11-03 | 95:1-8 | nasser-alqatami | sunrise | 1062 | +0.91 |
-| YouTube | 2026-11-03 | 14:40-41 | saud-alshuraim | snow | 1079 | +0.89 |
-| YouTube | 2026-11-04 | 21:89-90 | maher-almuaiqly | coast | 871 | +0.85 |
-| YouTube | 2026-11-05 | 16:18 | yasser-aldosari | mountains | 12 | -2.93 |
-| YouTube | 2026-10-30 | 18:46 | yasser-aldosari | autumn | 14 | -3.43 |
-| YouTube | 2026-11-05 | 2:286 | saud-alshuraim | desert | 7 | -3.44 |
+| YouTube | 2026-11-07 | 1:1-7 | mishary-alafasy | lake | 1236 | +1.54 |
+| YouTube | 2026-11-04 | 50:16-22 | fares-abbad | glacier | 1479 | +1.13 |
+| YouTube | 2026-11-02 | 30:21 | yasser-aldosari | cloudsea | 1299 | +0.87 |
+| YouTube | 2026-10-15 | 55:1-13 | saad-alghamdi | golden | 2574 | +0.85 |
+| YouTube | 2026-11-07 | 20:114 | abdulbasit-murattal | sunrise | 453 | +0.71 |
+| YouTube | 2026-11-05 | 16:18 | yasser-aldosari | mountains | 12 | -3.21 |
+| YouTube | 2026-10-30 | 18:46 | yasser-aldosari | autumn | 14 | -3.53 |
+| YouTube | 2026-11-05 | 2:286 | saud-alshuraim | desert | 7 | -3.73 |
