@@ -3855,5 +3855,116 @@
     "due": "2026-11-10T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-11",
+  "slot": "A",
+  "made": "2026-11-10T10:24:29+02:00",
+  "passage": "59:22-24",
+  "ref": "59:22",
+  "reciter": "abdulbasit-mujawwad",
+  "duration": 31.57,
+  "clips": [
+   "pexels:5895563",
+   "pexels:28332560",
+   "pexels:15686447"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "sunrise",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-11_A_59-22-24_abdulbasit-mujawwad.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6af2d606ce343d8a01839082",
+    "due": "2026-11-11T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6af2d60707c5e29b2ea4a3e1",
+    "due": "2026-11-11T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-11",
+  "slot": "B",
+  "made": "2026-11-10T10:24:29+02:00",
+  "passage": "23:115-118",
+  "ref": "23:115-117",
+  "reciter": "abdulrahman-alossi",
+  "duration": 42.77,
+  "clips": [
+   "pexels:18500172",
+   "pexels:34148219",
+   "pexels:6734777"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "ocean",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-11_B_23-115-118_abdulrahman-alossi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af2d608ce343d8a018390f3",
+    "due": "2026-11-11T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6af2d6092224e5e62371e5fb",
+    "due": "2026-11-11T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6af2d60a2224e5e62371e943",
+    "due": "2026-11-11T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-11",
+  "slot": "C",
+  "made": "2026-11-10T10:24:29+02:00",
+  "passage": "3:26-27",
+  "ref": "3:26",
+  "reciter": "mansour-alsalimi",
+  "duration": 43.4,
+  "clips": [
+   "pexels:38475576",
+   "pexels:39481801",
+   "pexels:38976719"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "water",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-11_C_3-26-27_mansour-alsalimi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af2d60bce343d8a0183969b",
+    "due": "2026-11-11T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6af2d60c69951ef15d57d653",
+    "due": "2026-11-11T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-11",
+  "slot": "E",
+  "made": "2026-11-10T10:24:29+02:00",
+  "passage": "41:30-32",
+  "ref": "41:30",
+  "reciter": "abu-bakr-alshatri",
+  "duration": 29.58,
+  "clips": [
+   "pexels:35867202",
+   "pexels:29621368"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "lake",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-11_E_41-30-32_abu-bakr-alshatri.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af2d60e1586e43ae33d4d32",
+    "due": "2026-11-11T04:00:00.000Z"
+   }
+  }
  }
 ]
