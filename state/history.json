@@ -4074,5 +4074,138 @@
     "due": "2026-11-12T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-13",
+  "slot": "A",
+  "made": "2026-11-12T10:19:10+02:00",
+  "passage": "18:107-110",
+  "ref": "18:107-109",
+  "reciter": "abdullah-aljuhany",
+  "duration": 27.67,
+  "clips": [
+   "pexels:32911411",
+   "pexels:28780239"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-13_A_18-107-110_abdullah-aljuhany.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6af578e9016d3b89d8b32445",
+    "due": "2026-11-13T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6af578e9df70eccdaac13851",
+    "due": "2026-11-13T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-13",
+  "slot": "B",
+  "made": "2026-11-12T10:19:10+02:00",
+  "passage": "16:97",
+  "ref": "16:97",
+  "reciter": "maher-almuaiqly",
+  "duration": 28.64,
+  "clips": [
+   "pexels:38326500",
+   "pexels:28172611"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "lake",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-13_B_16-97_maher-almuaiqly.mp4",
+  "posts": {
+   "youtube": {
+    "id": "6af578ea15999d2da11f7be7",
+    "due": "2026-11-13T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-13",
+  "slot": "C",
+  "made": "2026-11-12T10:19:10+02:00",
+  "passage": "2:155-157",
+  "ref": "2:155",
+  "reciter": "mansour-alsalimi",
+  "duration": 25.34,
+  "clips": [
+   "pexels:31600323",
+   "pexels:38111235"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "water",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-13_C_2-155-157_mansour-alsalimi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af578eb25c368b6720b407a",
+    "due": "2026-11-13T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6af578eb97798e85b9f22ddb",
+    "due": "2026-11-13T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-13",
+  "slot": "E",
+  "made": "2026-11-12T10:19:10+02:00",
+  "passage": "21:83-84",
+  "ref": "21:83-84",
+  "reciter": "raad-alkurdi",
+  "duration": 34.8,
+  "clips": [
+   "pexels:36945413",
+   "pexels:37380644",
+   "pexels:30260147"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "blossom",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-13_E_21-83-84_raad-alkurdi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af578ec016d3b89d8b3249b",
+    "due": "2026-11-13T04:00:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-13",
+  "slot": "L",
+  "made": "2026-11-12T10:19:10+02:00",
+  "passage": "long:2:284-286",
+  "ref": "2:284-286",
+  "reciter": "maher-almuaiqly",
+  "duration": 131.73,
+  "clips": [
+   "pexels:17060699",
+   "pexels:26732070",
+   "pexels:28903958",
+   "pexels:27797322",
+   "pexels:16265186",
+   "pexels:28948611",
+   "pexels:35809255"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "glacier",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-13_L_2-284-286_maher-almuaiqly.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af578ed25c368b6720b4180",
+    "due": "2026-11-13T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6af578ed016d3b89d8b324cf",
+    "due": "2026-11-13T11:15:00.000Z"
+   }
+  }
  }
 ]

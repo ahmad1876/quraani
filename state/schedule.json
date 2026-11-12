@@ -1,9 +1,4 @@
 {
- "2026-10-12": {
-  "A": "29:69|fares-abbad",
-  "B": "21:87-88|abdullah-aljuhany",
-  "C": "26:78-86|saud-alshuraim"
- },
  "2026-10-13": {
   "A": "20:124-125|abdulbasit-mujawwad",
   "B": "80:33-39|minshawi",
@@ -185,5 +180,12 @@
   "B": "2:216|khalid-aljalil",
   "C": "67:19|saad-alghamdi",
   "E": "2:201|abdulrahman-alsudais"
+ },
+ "2026-11-13": {
+  "A": "18:107-109|abdullah-aljuhany",
+  "B": "16:97|maher-almuaiqly",
+  "C": "2:155|mansour-alsalimi",
+  "E": "21:83-84|raad-alkurdi",
+  "L": "2:284-286|maher-almuaiqly"
  }
 }
