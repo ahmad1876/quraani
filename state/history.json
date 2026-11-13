@@ -4207,5 +4207,111 @@
     "due": "2026-11-13T11:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-14",
+  "slot": "A",
+  "made": "2026-11-13T09:55:13+02:00",
+  "passage": "6:162-163",
+  "ref": "6:162-163",
+  "reciter": "abdullah-aljuhany",
+  "duration": 18.08,
+  "clips": [
+   "pexels:11968144"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "desert",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-14_A_6-162-163_abdullah-aljuhany.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6af6c365da25c4db3ea309cf",
+    "due": "2026-11-14T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6af6c365e1d8eff610ac5bf8",
+    "due": "2026-11-14T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-14",
+  "slot": "B",
+  "made": "2026-11-13T09:55:13+02:00",
+  "passage": "3:133-136",
+  "ref": "3:133-134",
+  "reciter": "mishary-alafasy",
+  "duration": 41.53,
+  "clips": [
+   "pexels:29517838",
+   "pexels:27515274",
+   "pexels:34305661"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "canyon",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-14_B_3-133-136_mishary-alafasy.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af6c3665ec1c9d5be6acd03",
+    "due": "2026-11-14T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6af6c367fb90ccefdd293a3b",
+    "due": "2026-11-14T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6af6c3675ec1c9d5be6acd64",
+    "due": "2026-11-14T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-14",
+  "slot": "C",
+  "made": "2026-11-13T09:55:13+02:00",
+  "passage": "2:45-46",
+  "ref": "2:45-46",
+  "reciter": "abdulrahman-alsudais",
+  "duration": 18.13,
+  "clips": [
+   "pexels:8745485"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "lake",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-14_C_2-45-46_abdulrahman-alsudais.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af6c368ba218f32638888a0",
+    "due": "2026-11-14T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6af6c3685ec1c9d5be6acd94",
+    "due": "2026-11-14T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-14",
+  "slot": "E",
+  "made": "2026-11-13T09:55:13+02:00",
+  "passage": "85:14-16",
+  "ref": "85:14-16",
+  "reciter": "saad-alghamdi",
+  "duration": 12.74,
+  "clips": [
+   "pexels:31443906"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "blossom",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-14_E_85-14-16_saad-alghamdi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af6c369e1d8eff610ac5cce",
+    "due": "2026-11-14T04:00:00.000Z"
+   }
+  }
  }
 ]
