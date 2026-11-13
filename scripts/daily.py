@@ -174,6 +174,8 @@ def main() -> int:
                 print("Facebook Page:", chans["facebook"]["name"], flush=True)
             except Exception as e:
                 print(f"WARNING: Facebook skipped this run ({e})", flush=True)
+                # shown on the run's summary page on GitHub, so a broken token does not go unnoticed
+                print(f"::warning title=Facebook is not posting::{' '.join(str(e).split())[:300]}", flush=True)
         added = backfill(cfg, history, chans, tz)
         if added:
             save_json(STATE / "history.json", history[-2000:])
