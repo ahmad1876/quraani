@@ -4313,5 +4313,117 @@
     "due": "2026-11-14T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-15",
+  "slot": "A",
+  "made": "2026-11-14T09:36:34+02:00",
+  "passage": "1:1-7",
+  "ref": "1:1-7",
+  "reciter": "raad-alkurdi",
+  "duration": 38.2,
+  "clips": [
+   "pexels:11368979",
+   "pexels:35022864",
+   "pexels:28874226"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "golden",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-15_A_1-1-7_raad-alkurdi.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6af810a04b28296eb141617c",
+    "due": "2026-11-15T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6af810a14b28296eb14161ab",
+    "due": "2026-11-15T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-15",
+  "slot": "B",
+  "made": "2026-11-14T09:36:34+02:00",
+  "passage": "80:33-42",
+  "ref": "80:33-37",
+  "reciter": "maher-almuaiqly",
+  "duration": 40.63,
+  "clips": [
+   "pexels:16754843",
+   "pexels:39271879",
+   "pexels:10105079"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "water",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-15_B_80-33-42_maher-almuaiqly.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af810a2bb36d00909f629e4",
+    "due": "2026-11-15T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6af810a2d8bd2962e4148a4e",
+    "due": "2026-11-15T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6af810a3d16af15d4dfd8180",
+    "due": "2026-11-15T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-15",
+  "slot": "C",
+  "made": "2026-11-14T09:36:34+02:00",
+  "passage": "82:6-12",
+  "ref": "82:6-12",
+  "reciter": "yasser-aldosari",
+  "duration": 43.08,
+  "clips": [
+   "pexels:33638648",
+   "pexels:20414184",
+   "pexels:12460328"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "footage_theme": "storm",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-15_C_82-6-12_yasser-aldosari.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af810a3bb36d00909f62a40",
+    "due": "2026-11-15T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6af810a44b28296eb1416271",
+    "due": "2026-11-15T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-15",
+  "slot": "E",
+  "made": "2026-11-14T09:36:34+02:00",
+  "passage": "93:1-11",
+  "ref": "93:1-10",
+  "reciter": "fares-abbad",
+  "duration": 40.37,
+  "clips": [
+   "pexels:39526815",
+   "pexels:12279775",
+   "pexels:35482888"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-15_E_93-1-11_fares-abbad.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af810a44b28296eb14162a2",
+    "due": "2026-11-15T04:00:00.000Z"
+   }
+  }
  }
 ]
