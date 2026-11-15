@@ -4425,5 +4425,118 @@
     "due": "2026-11-15T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-16",
+  "slot": "A",
+  "made": "2026-11-15T09:50:18+02:00",
+  "passage": "1:1-7",
+  "ref": "1:1-7",
+  "reciter": "minshawi",
+  "duration": 44.1,
+  "clips": [
+   "pexels:37950993",
+   "pexels:28870584",
+   "pexels:38542575",
+   "pexels:36651561"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "hills",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-16_A_1-1-7_minshawi.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6af96578b9a106584c94dd01",
+    "due": "2026-11-16T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6af96578e5a113497ad34749",
+    "due": "2026-11-16T17:45:00.000Z"
+   }
+  },
+  "remake_of": "2026-11-07_A"
+ },
+ {
+  "date": "2026-11-16",
+  "slot": "B",
+  "made": "2026-11-15T09:50:18+02:00",
+  "passage": "55:46-55",
+  "ref": "55:46-50",
+  "reciter": "mishary-alafasy",
+  "duration": 38.87,
+  "clips": [
+   "pexels:35575505",
+   "pexels:17257507",
+   "pexels:29663021"
+  ],
+  "hook_style": "verse",
+  "follow_along": true,
+  "footage_theme": "lake",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-16_B_55-46-55_mishary-alafasy.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af96579c5b364e062405082",
+    "due": "2026-11-16T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6af96579918fe79d2eccbf2b",
+    "due": "2026-11-16T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6af9657ae5a113497ad3479f",
+    "due": "2026-11-16T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-16",
+  "slot": "C",
+  "made": "2026-11-15T09:50:18+02:00",
+  "passage": "81:1-14",
+  "ref": "81:1-13",
+  "reciter": "saad-alghamdi",
+  "duration": 39.84,
+  "clips": [
+   "pexels:39350738",
+   "pexels:24801119",
+   "pexels:36906465"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "sunset",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-16_C_81-1-14_saad-alghamdi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af9657a76c23bf1c766e3f8",
+    "due": "2026-11-16T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6af9657be5a113497ad347dc",
+    "due": "2026-11-16T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-16",
+  "slot": "E",
+  "made": "2026-11-15T09:50:18+02:00",
+  "passage": "59:21-24",
+  "ref": "59:21",
+  "reciter": "raad-alkurdi",
+  "duration": 30.58,
+  "clips": [
+   "pexels:26732070",
+   "pexels:17060699"
+  ],
+  "hook_style": "verse",
+  "follow_along": false,
+  "footage_theme": "glacier",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-16_E_59-21-24_raad-alkurdi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6af9657cc5b364e0624050fc",
+    "due": "2026-11-16T04:00:00.000Z"
+   }
+  }
  }
 ]
