@@ -14,7 +14,7 @@ import overlay
 import quran
 import recitation
 import segments
-from common import ffprobe_duration
+from common import config, ffprobe_duration
 
 MAX_SEC = 44.6   # hard ceiling is 45 s
 MIN_SEC = 9.0
@@ -43,7 +43,10 @@ def join_translation(parts: list[str]) -> str:
 
 def limits(passage: dict) -> tuple[float, float]:
     """(longest, shortest) video length in seconds for this passage."""
-    return (LONG_MAX_SEC, LONG_MIN_SEC) if passage.get("long") else (MAX_SEC, MIN_SEC)
+    if passage.get("long"):
+        return LONG_MAX_SEC, LONG_MIN_SEC
+    # config "min_seconds": very short videos did worst (under 20 s: 706 views against 1,053 for 32 s and over)
+    return MAX_SEC, max(MIN_SEC, float(config().get("min_seconds", MIN_SEC)))
 
 
 def plan_span(passage: dict, reciter_key: str):
@@ -64,12 +67,15 @@ def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list 
                handle: str = "", seed: int = 0, work: Path | None = None, preset: str = "medium",
                local_footage: str | None = None, english: bool = True, clip_ids: list[str] | None = None,
                hook_title: bool = True, hook_style: str = "verse", comment_prompt: bool = False,
-               follow_along: bool = False) -> dict:
+               follow_along: bool = False, lang: str = "") -> dict:
     """hook_style: which opening line to show ("verse" or "you", see hook_text).
     comment_prompt: ask for a short comment at the start (captions.prompt, by theme).
-    follow_along: each Arabic word turns gold while it is recited (reciters with word timings)."""
+    follow_along: each Arabic word turns gold while it is recited (reciters with word timings).
+    lang: "ar" makes the Arabic-only version: no English line, Arabic opening line and names."""
     history = history or []
     hook_style = hook_style if hook_style == "you" and passage.get("hook_you") else "verse"
+    arabic = lang == "ar"
+    english = english and not arabic
     rec = recitation.reciters()[reciter_key]
     ch = passage["surah"]
     t, span = plan_span(passage, reciter_key)
@@ -121,7 +127,8 @@ def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list 
     ask = captions.prompt(passage.get("theme", ""))[:2] if comment_prompt else None
     ov = overlay.render(units, "سورة " + chap["name_ar"], rec["name_ar"], work / "ov", handle=handle,
                         english=english, backdrop=backdrop,
-                        hook=hook_text(passage, hook_style) if hook_title else "",
+                        hook=(captions.arabic_hook(passage.get("theme", "")) if arabic
+                              else hook_text(passage, hook_style)) if hook_title else "",
                         reciter_en=re.sub(r"\s*\(.*?\)", "", rec["name_en"]) if english else "",
                         prompt=ask, follow_along=follow_along)
     compose.build(clips, final_wav, ov, out_mp4, dur, seed=seed, preset=preset, small=bool(passage.get("long")))
@@ -147,7 +154,9 @@ def make_video(passage: dict, reciter_key: str, out_mp4: Path, *, history: list 
         "credits": sorted({c["credit"] for c in clips if c.get("credit")}),
         "sources": sorted({c["source"] for c in clips if c.get("source") in ("pexels", "mixkit")}),
         "hook": hook_text(passage, hook_style),
-        "hook_style": hook_style,
+        "hook_style": "arabic" if arabic else hook_style,
+        "lang": "ar" if arabic else "",
+        "arabic": " ".join(quran.verse(f"{ch}:{k}")["text"] for k in range(a, b + 1)),
         "follow_along": bool(follow_along and any(u.get("words") for u in ov["units"])),
         "theme": passage.get("theme", ""),
         "translation": join_translation([quran.verse(f"{ch}:{k}")["translation"] for k in range(a, b + 1)]),

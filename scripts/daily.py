@@ -105,6 +105,8 @@ def caption_meta(entry: dict) -> dict:
         "passage": entry["passage"], "ref": entry["ref"], "surah": ch, "duration": entry.get("duration"),
         "surah_en": quran.chapter(ch)["name_en"], "reciter": entry["reciter"], "reciter_en": rec["name_en"],
         "hook": make.hook_text(passage, entry.get("hook_style", "verse")), "theme": passage.get("theme", ""),
+        "lang": "ar" if entry.get("variant") == "arabic" else "", "surah_ar": quran.chapter(ch)["name_ar"],
+        "reciter_ar": rec["name_ar"], "arabic": " ".join(quran.verse(f"{ch}:{k}")["text"] for k in range(a, b + 1)),
         "translation": make.join_translation([quran.verse(f"{ch}:{k}")["translation"] for k in range(a, b + 1)]),
         "sources": sorted({c.split(":")[0] for c in entry.get("clips", []) if c.split(":")[0] in ("pexels", "mixkit")}),
     }
@@ -174,6 +176,8 @@ def main() -> int:
                 print("Facebook Page:", chans["facebook"]["name"], flush=True)
             except Exception as e:
                 print(f"WARNING: Facebook skipped this run ({e})", flush=True)
+                # shown on the run's summary page on GitHub, so a broken token does not go unnoticed
+                print(f"::warning title=Facebook is not posting::{' '.join(str(e).split())[:300]}", flush=True)
         added = backfill(cfg, history, chans, tz)
         if added:
             save_json(STATE / "history.json", history[-2000:])
@@ -205,30 +209,43 @@ def main() -> int:
     longs = [x for x in slots if x[1].get("long")]
     slots = [x for x in slots if not x[1].get("long")] + longs
     n_short = len(slots) - len(longs)
-    # at most once a week, the first short slot remakes a clear winner with another top voice
-    remake = planner.remake_pick(history, rng, cfg) if n_short else None
-    picks = [(remake[0], remake[1])] if remake else []
+    # each short slot is picked on its own, so a test slot (config "tests") can have its own rules:
+    # "live" takes a reciter recorded in the mosque, "arabic" makes the Arabic-only version
+    variants = [planner.variant(cfg, s["id"], d) for d, s in slots[:n_short]]
+    # at most once a week, the first standard slot remakes a clear winner with another top voice
+    remake = planner.remake_pick(history, rng, cfg) if "" in variants else None
+    remake_at = variants.index("") if remake else -1
     if remake:
         print(f"Remaking the winner of {remake[2]} ({remake[0]['id']}) with {remake[1]}", flush=True)
-    # the remake counts as already taken: its passage, reciter and surah are not picked again in this run
-    taken = ([{"passage": planner.passage_key(remake[0]), "reciter": remake[1], "date": slots[0][0].isoformat()}]
-             if remake else [])
-    picks += planner.choose(n_short - len(picks), history + taken, rng, cfg=cfg,
-                            exclude={t["passage"] for t in taken})
-    remakes = [remake[2] if remake and i == 0 else None for i in range(len(picks))]
+    picks, remakes, kinds, taken = [], [], [], []
+    for i, (day, slot) in enumerate(slots[:n_short]):
+        if i == remake_at:
+            pick = (remake[0], remake[1])
+        else:
+            got = planner.choose(1, history + taken, rng, cfg=cfg, exclude={t["passage"] for t in taken}, today=day,
+                                 only_reciters=planner.live_keys() if variants[i] == "live" else None)
+            if not got:
+                break
+            pick = got[0]
+        picks.append(pick)
+        remakes.append(remake[2] if i == remake_at else None)
+        kinds.append(variants[i])
+        # counts as already taken: its passage, reciter and surah are not picked again in this run
+        taken.append({"passage": planner.passage_key(pick[0]), "reciter": pick[1], "date": day.isoformat()})
     if longs:
         long_picks = planner.choose(len(longs), history, rng, long=True, cfg=cfg)
         if len(picks) < n_short:  # keep each pick next to its own kind of slot
             slots = slots[:len(picks)] + longs
         picks += long_picks
         remakes += [None] * len(long_picks)
+        kinds += [""] * len(long_picks)
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     errors = 0
 
     # 1) render everything first
     made = []
-    for (day, slot), (passage, rk), again in zip(slots, picks, remakes):
+    for (day, slot), (passage, rk), again, kind in zip(slots, picks, remakes, kinds):
         rec = recitation.reciters()[rk]
         name = f"{day.isoformat()}_{slot['id']}_{passage['id'].replace(':', '-')}_{rk}.mp4"
         out = out_dir / name
@@ -238,14 +255,17 @@ def main() -> int:
                                    seed=rng.randint(0, 10 ** 6), preset=cfg.get("x264_preset", "medium"),
                                    english=cfg.get("english", True), hook_title=cfg.get("hook_title", True),
                                    hook_style=planner.hook_style(rng, cfg),
-                                   comment_prompt=cfg.get("comment_prompt", True),
-                                   follow_along=cfg.get("follow_along", True))
+                                   comment_prompt=cfg.get("comment_prompt_on_screen", False),
+                                   follow_along=cfg.get("follow_along", True),
+                                   lang="ar" if kind == "arabic" else "")
+            meta["variant"] = kind or "standard"
         except Exception:
             traceback.print_exc()
             errors += 1
             continue
         print(f"   rendered {meta['ref']} ({meta['duration']}s, {Path(out).stat().st_size / 1e6:.1f} MB, "
-              f"opening line: {meta['hook_style']}, follow-along: {meta['follow_along']})", flush=True)
+              f"opening line: {meta['hook_style']}, follow-along: {meta['follow_along']}, "
+              f"kind: {meta['variant']})", flush=True)
         made.append((day, slot, rec, meta, out, again))
         # rotation memory so the next video in this run avoids the same clips/themes
         history.append({"passage": meta["passage"], "reciter": rk, "clips": meta["clips"],
@@ -266,7 +286,7 @@ def main() -> int:
         url = urls[out.name]
         entry = {"date": day.isoformat(), "slot": slot["id"], "made": now.isoformat(timespec="seconds"),
                  **{k: meta[k] for k in ("passage", "ref", "reciter", "duration", "clips", "hook_style",
-                                         "follow_along")},
+                                         "follow_along", "variant")},
                  "footage_theme": meta.get("footage_theme", ""), "url": url, "posts": {}}
         if again:
             entry["remake_of"] = again

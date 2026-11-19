@@ -81,10 +81,29 @@ def due_weekly(history: list[dict], cfg: dict | None = None, today: dt.date | No
     return sorted(due, key=lambda su: last.get(su, ""))
 
 
+def live_keys() -> set[str]:
+    """Reciters whose recordings were made in the mosque during prayer ("live": true in reciters.json)."""
+    return {k for k, r in recitation.reciters().items() if r.get("live")}
+
+
+def variant(cfg: dict, slot_id: str, day: dt.date) -> str:
+    """Which test a slot runs on a day (config "tests"): "live", "arabic" or "" for the standard video.
+    Each test has a slot and runs on even or odd days, so the other days stay as the comparison."""
+    for name, t in (cfg.get("tests") or {}).items():
+        if t.get("off") or t.get("slot") != slot_id:
+            continue
+        even = day.toordinal() % 2 == 0
+        if t.get("days", "all") == "all" or (t["days"] == "even") == even:
+            return name
+    return ""
+
+
 def hook_style(rng: random.Random, cfg: dict | None = None) -> str:
     """"you" (a line that speaks to the viewer) or "verse" (the verse's words): half and half at first,
     then leaning toward whichever does better, never below 1 in 4."""
     cfg = cfg if cfg is not None else config()
+    if cfg.get("hook_style") in ("you", "verse"):  # the test is over: one style for every video
+        return cfg["hook_style"]
     if not cfg.get("hook_test", True):
         return "verse"
     w = stats.weights().get("hook", {})
@@ -135,9 +154,11 @@ def remake_pick(history: list[dict], rng: random.Random, cfg: dict | None = None
 
 def choose(n: int, history: list[dict], rng: random.Random | None = None,
            passage_gap: int = 80, reciter_gap: int = 3, long: bool = False, cfg: dict | None = None,
-           exclude: set[str] | frozenset = frozenset(), today: dt.date | None = None) -> list[tuple[dict, str]]:
+           exclude: set[str] | frozenset = frozenset(), today: dt.date | None = None,
+           only_reciters: set[str] | None = None) -> list[tuple[dict, str]]:
     """Return n (passage, reciter_key) pairs that fit the length limit (long: from the weekly long list).
-    exclude: passage keys already taken (e.g. by a remake in the same run)."""
+    exclude: passage keys already taken (e.g. by a remake in the same run).
+    only_reciters: pick the reciter from these keys only (e.g. the live recordings test)."""
     rng = rng or random.Random()
     cfg = cfg if cfg is not None else config()
     recs = recitation.reciters()
@@ -174,6 +195,8 @@ def choose(n: int, history: list[dict], rng: random.Random | None = None,
         ranked = _weighted_order(list(recs), r_weight, rng)
         top_first = rng.random() < share  # the top voices get first try on most videos
         ranked = sorted(ranked, key=lambda k: (k in focus) != top_first)
+        if only_reciters is not None:
+            ranked = [k for k in ranked if k in only_reciters]
         for rk in ranked:
             if rk in taken_r or (passage_key(p), rk) in used_pairs:
                 continue

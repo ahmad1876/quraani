@@ -105,8 +105,11 @@ def is_live(url: str) -> bool:
         return False
 
 
-def wait_live(url: str, timeout: int = 900) -> None:
+def wait_live(url: str, timeout: int = 1800) -> None:
+    """Wait until GitHub Pages serves the file. A Pages build is sometimes dropped or stuck in the queue
+    (two runs failed on it in November 2026), so a new build is requested every 5 minutes."""
     t0 = time.time()
+    asked = t0
     while time.time() - t0 < timeout:
         try:
             req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "quraani"})
@@ -115,6 +118,10 @@ def wait_live(url: str, timeout: int = 900) -> None:
                     return
         except Exception:
             pass
+        if time.time() - asked > 300:
+            print(f"   still waiting for GitHub Pages ({int(time.time() - t0)}s): asking for a new build", flush=True)
+            _request_build()
+            asked = time.time()
         time.sleep(15)
     raise RuntimeError(f"{url} is not live after {timeout}s - is GitHub Pages enabled (Settings > Pages > "
                        f"Deploy from a branch > gh-pages)?")

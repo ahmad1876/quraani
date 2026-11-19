@@ -39,17 +39,34 @@ jobs:
           cache: pip
 
       - name: Install ffmpeg
-        # normally about a minute. On 2026-10-26 package downloads from the runners' usual Ubuntu
-        # mirror stalled (the package lists came through), so every phase has a time limit and each
-        # retry uses another official mirror (packages are signed, so any mirror is safe)
+        # First choice: the static ffmpeg 8.1 build that BtbN publishes on GitHub. It is one download
+        # from GitHub's own servers and takes seconds. Ubuntu's package mirrors stalled on 2026-10-26
+        # and again on 18 and 19 November, failing 3 runs in a row. The Ubuntu packages stay as the
+        # fallback: every phase has a time limit and each retry uses another official mirror
+        # (packages are signed, so any mirror is safe)
         timeout-minutes: 25
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
+          FF="https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n8.1-latest-linux64-gpl-8.1.tar.xz"
+          mkdir -p "$RUNNER_TEMP/ffmpeg"
+          if timeout 180 curl -fsSL --retry 3 "$FF" | tar -xJ -C "$RUNNER_TEMP/ffmpeg" --strip-components=1 &&
+             "$RUNNER_TEMP/ffmpeg/bin/ffmpeg" -hide_banner -encoders 2>/dev/null | grep -q libx264 &&
+             "$RUNNER_TEMP/ffmpeg/bin/ffprobe" -version > /dev/null; then
+            echo "$RUNNER_TEMP/ffmpeg/bin" >> "$GITHUB_PATH"
+            "$RUNNER_TEMP/ffmpeg/bin/ffmpeg" -version | head -1
+            fc-list | grep -qi "DejaVu Sans" ||
+              timeout 240 sudo -E apt-get install -y -qq fonts-dejavu-core > /dev/null ||
+              echo "DejaVu fonts missing: the small reciter line falls back to the default sans-serif font"
+            exit 0
+          fi
+          echo "The static ffmpeg build did not work: installing Ubuntu's ffmpeg package instead"
           sudo rm -f /var/lib/man-db/auto-update  # skip the slow manual-page rebuild after installing
           APT="-o Acquire::Retries=2 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20"
           PKGS="ffmpeg fonts-dejavu-core"
-          current=http://azure.archive.ubuntu.com/ubuntu
+          # the runner's own mirror (it was azure.archive, it is now an ec2 mirror)
+          current=$(grep -rhoE "https?://[^ ]+/ubuntu/?" /etc/apt/sources.list /etc/apt/sources.list.d/ 2>/dev/null | grep -v security | head -1)
+          current=${current%/}
           for mirror in "$current" http://archive.ubuntu.com/ubuntu http://mirrors.edge.kernel.org/ubuntu; do
             if [ "$mirror" != "$current" ]; then
               echo "Switching to the Ubuntu mirror $mirror"
