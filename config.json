@@ -80,7 +80,7 @@
  "learn_from_trends": true,
  "comment_prompt": true,
  "follow_along": true,
- "hook_test": true,
+ "hook_test": false,
  "focus_reciters": {
   "top": 8,
   "share": 0.7
@@ -96,5 +96,18 @@
   "every_days": 7,
   "min_score": 0.7,
   "min_age_days": 7
+ },
+ "hook_style": "you",
+ "comment_prompt_on_screen": false,
+ "min_seconds": 25,
+ "tests": {
+  "live": {
+   "slot": "A",
+   "days": "even"
+  },
+  "arabic": {
+   "slot": "B",
+   "days": "odd"
+  }
  }
 }

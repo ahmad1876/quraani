@@ -147,7 +147,8 @@
    "type": "mp3q",
    "read": 12,
    "folder": "https://server6.mp3quran.net/abkr/"
-  }
+  },
+  "live": true
  },
  {
   "key": "ahmed-alajmi",
@@ -183,7 +184,8 @@
    "type": "mp3q",
    "read": 62,
    "folder": "https://server13.mp3quran.net/jhn/"
-  }
+  },
+  "live": true
  },
  {
   "key": "ahmad-alnufais",
@@ -242,7 +244,8 @@
    "type": "mp3q",
    "read": 20,
    "folder": "https://server10.mp3quran.net/jleel/"
-  }
+  },
+  "live": true
  },
  {
   "key": "wadee-alyamani",
@@ -310,7 +313,8 @@
    "type": "mp3q",
    "read": 43,
    "folder": "https://server6.mp3quran.net/s_bud/"
-  }
+  },
+  "live": true
  },
  {
   "key": "abdullah-almousa",

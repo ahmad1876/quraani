@@ -21,7 +21,7 @@ def main():
     cfg = config()
     meta = make.make_video(p, reciter, out, handle=cfg.get("handle", ""), seed=7,
                            preset=cfg.get("x264_preset", "medium"), hook_style=sys.argv[4] if len(sys.argv) > 4 else "verse",
-                           comment_prompt=cfg.get("comment_prompt", True), follow_along=cfg.get("follow_along", True))
+                           comment_prompt=cfg.get("comment_prompt_on_screen", False), follow_along=cfg.get("follow_along", True))
     print(json.dumps(meta, ensure_ascii=False, indent=1))
 
 

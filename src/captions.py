@@ -84,6 +84,40 @@ def _short(text: str, limit: int) -> str:
     return cut.rstrip(",;") + " ..."
 
 
+# Arabic-only videos: a short opening line by theme. General on purpose, and in our own words:
+# never a quotation from another verse, which would read as part of the passage
+ARABIC_HOOKS = {
+    **dict.fromkeys(["dua", "parents", "marriage", "qiyam"], "دعاء من القرآن الكريم"),
+    **dict.fromkeys(["sabr", "grief"], "بشرى للصابرين"),
+    **dict.fromkeys(["hope", "mercy", "peace", "healing"], "آيات تطمئن القلب"),
+    **dict.fromkeys(["jannah"], "وصف الجنة في القرآن"),
+    **dict.fromkeys(["akhirah", "reminder", "dunya"], "تذكرة ليوم الحساب"),
+    **dict.fromkeys(["tawakkul", "trust", "rizq"], "توكل على الله"),
+    **dict.fromkeys(["tawheed", "names", "ikhlas", "tasbih", "dhikr"], "سبحان الله وبحمده"),
+    **dict.fromkeys(["tawbah", "istighfar"], "باب التوبة مفتوح"),
+    **dict.fromkeys(["shukr", "rahman", "reflection"], "تأمل نعم الله عليك"),
+}
+ARABIC_HOOK_DEFAULT = "أنصت بقلبك"
+
+
+def arabic_hook(theme: str) -> str:
+    return ARABIC_HOOKS.get(theme or "", ARABIC_HOOK_DEFAULT)
+
+
+def build_arabic(meta: dict, platform: str, reciter_tag: str, ask: bool = True) -> str:
+    """Caption for the Arabic-only version: the verses themselves, the surah and the reciter in Arabic."""
+    text = meta.get("arabic", "")
+    if len(text) > 600:
+        text = text[:600].rsplit(" ", 1)[0] + " ..."
+    lines = [arabic_hook(meta.get("theme", "")), "", f"﴿{text}﴾" if text else "",
+             f"سورة {meta.get('surah_ar', '')} ({meta['ref']})", f"تلاوة القارئ {meta.get('reciter_ar', '')}", ""]
+    if ask:
+        lines += [prompt(meta.get("theme", ""))[1], ""]
+    tags = ["قرآن", "تلاوة", "القرآن_الكريم", reciter_hashtag(meta, reciter_tag), "quran"]
+    lines.append(" ".join((["#shorts"] if platform == "youtube" else []) + ["#" + t for t in tags]))
+    return "\n".join(lines).strip()
+
+
 def follow_line(platform: str, handle: str = "") -> str:
     """One short call to follow, in each platform's own words."""
     if platform == "youtube":
@@ -99,6 +133,8 @@ def follow_line(platform: str, handle: str = "") -> str:
 def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True, handle: str = "",
           ask: bool = True) -> str:
     """ask: add the line asking for a comment (config "comment_prompt")."""
+    if meta.get("lang") == "ar":
+        return build_arabic(meta, platform, reciter_tag, ask=ask)
     ref = meta["ref"]
     follow = follow_line(platform, handle)
     ask_line = prompt(meta.get("theme", ""))[2] if ask else ""
@@ -157,6 +193,13 @@ def build(meta: dict, platform: str, reciter_tag: str, credit: bool = True, hand
 
 def youtube_title(meta: dict) -> str:
     """YouTube allows 100 characters: drop the reciter before cutting anything else."""
+    if meta.get("lang") == "ar":
+        surah_ar = f"سورة {meta.get('surah_ar', '')}"
+        for title in (f"{arabic_hook(meta.get('theme', ''))} | {surah_ar} | {meta.get('reciter_ar', '')}",
+                      f"{surah_ar} | {meta.get('reciter_ar', '')}"):
+            if len(title) <= 100:
+                return title
+        return surah_ar
     hook = plain(meta["hook"]).rstrip(".")
     surah = f"Surah {plain(meta['surah_en'])} {meta['ref']}"
     for title in (f"{hook} | {surah} | {plain(meta['reciter_en'])}", f"{hook} | {surah}"):

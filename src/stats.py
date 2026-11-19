@@ -146,7 +146,7 @@ def collect(history: list[dict], chans: dict, gql=None) -> dict:
                 "video": store.get(pid, {}).get("video"),
                 # opening line test and follow-along text (only videos made since they exist record them)
                 "hook_style": h.get("hook_style"), "follow_along": h.get("follow_along"),
-                "remake_of": h.get("remake_of"),
+                "remake_of": h.get("remake_of"), "variant": h.get("variant"),
                 "fetched": now.isoformat(timespec="seconds"), "m": m,
             }
     if youtube.key():
@@ -253,7 +253,7 @@ def scores(store: dict, now: dt.datetime | None = None) -> dict[str, dict]:
 
 
 # what the weights are learned for, and the metrics field each one reads
-FACTORS = {"theme": "theme", "reciter": "reciter", "mood": "mood", "hook": "hook_style"}
+FACTORS = {"theme": "theme", "reciter": "reciter", "mood": "mood", "hook": "hook_style", "kind": "variant"}
 
 
 def video_scores(store: dict | None = None) -> list[dict]:
@@ -334,9 +334,12 @@ def report(post_scores: dict, table: dict, store: dict, now: dt.datetime | None 
         lines.append(f"| {PLATFORM_NAMES[platform]} | {len(rows)} | {counted} | {median(vs):.0f} | {sum(vs):.0f} | "
                      f"{sum(_likes(r['m']) for r in rows):.0f} |")
     names = {"theme": "Passage themes", "reciter": "Reciters", "mood": "Footage moods",
-             "hook": "Opening line test (since it started)"}
-    labels = {"hook": {"verse": "the verse's own words", "you": "a line that speaks to the viewer"}}
-    for factor in ("hook", "theme", "reciter", "mood"):
+             "hook": "Opening line test (since it started)", "kind": "Live and Arabic-only tests (since they started)"}
+    labels = {"hook": {"verse": "the verse's own words", "you": "a line that speaks to the viewer",
+                       "arabic": "Arabic line (Arabic-only videos)"},
+              "kind": {"standard": "standard video", "live": "recorded live in the mosque",
+                       "arabic": "Arabic only (no English)"}}
+    for factor in ("kind", "hook", "theme", "reciter", "mood"):
         vals = table.get(factor) or {}
         if not vals:
             continue
