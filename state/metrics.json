@@ -7051,5 +7051,43 @@
   "variant": "arabic",
   "fetched": "2026-11-19T21:30:47+00:00",
   "m": {}
+ },
+ "6aff1c46caea26ff6a6ffd41": {
+  "platform": "instagram",
+  "due": "2026-11-20T06:15:00+00:00",
+  "date": "2026-11-20",
+  "slot": "C",
+  "passage": "23:1-11",
+  "theme": "salah",
+  "reciter": "mishary-alafasy",
+  "mood": "water",
+  "duration": 36.77,
+  "link": "https://www.instagram.com/reel/Df8_RLJB5gd/",
+  "video": null,
+  "hook_style": "you",
+  "follow_along": true,
+  "remake_of": null,
+  "variant": "standard",
+  "fetched": "2026-11-20T08:31:16+00:00",
+  "m": {}
+ },
+ "6aff1c47caea26ff6a6ffd82": {
+  "platform": "tiktok",
+  "due": "2026-11-20T04:00:00+00:00",
+  "date": "2026-11-20",
+  "slot": "E",
+  "passage": "12:86-87",
+  "theme": "grief",
+  "reciter": "abdulrahman-alsudais",
+  "mood": "night",
+  "duration": 33.08,
+  "link": "https://tiktok.com/@calmquraan.daily/video/7710098652596800775",
+  "video": null,
+  "hook_style": "you",
+  "follow_along": true,
+  "remake_of": null,
+  "variant": "standard",
+  "fetched": "2026-11-20T08:31:16+00:00",
+  "m": {}
  }
 }
