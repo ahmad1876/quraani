@@ -7068,7 +7068,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-20T08:31:16+00:00",
+  "fetched": "2026-11-21T08:16:56+00:00",
   "m": {}
  },
  "6aff1c47caea26ff6a6ffd82": {
@@ -7087,7 +7087,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-20T08:31:16+00:00",
+  "fetched": "2026-11-21T08:16:56+00:00",
   "m": {}
  },
  "6aff1c43caea26ff6a6ffaf2": {
@@ -7196,6 +7196,44 @@
   "remake_of": null,
   "variant": "standard",
   "fetched": "2026-11-20T21:04:36+00:00",
+  "m": {}
+ },
+ "6b0006d47b0a126cebbe7ad3": {
+  "platform": "instagram",
+  "due": "2026-11-21T06:15:00+00:00",
+  "date": "2026-11-21",
+  "slot": "C",
+  "passage": "65:3",
+  "theme": "tawakkul",
+  "reciter": "maher-almuaiqly",
+  "mood": "mountains",
+  "duration": 27.48,
+  "link": "https://www.instagram.com/reel/Df_kDYXRhkm/",
+  "video": null,
+  "hook_style": "you",
+  "follow_along": false,
+  "remake_of": null,
+  "variant": "standard",
+  "fetched": "2026-11-21T08:16:56+00:00",
+  "m": {}
+ },
+ "6b0006d5d5f8acdd0d847c09": {
+  "platform": "tiktok",
+  "due": "2026-11-21T04:00:00+00:00",
+  "date": "2026-11-21",
+  "slot": "E",
+  "passage": "10:57-58",
+  "theme": "healing",
+  "reciter": "yasser-aldosari",
+  "mood": "coast",
+  "duration": 41.74,
+  "link": "https://tiktok.com/@calmquraan.daily/video/7710469737536392466",
+  "video": null,
+  "hook_style": "you",
+  "follow_along": true,
+  "remake_of": null,
+  "variant": "standard",
+  "fetched": "2026-11-21T08:16:56+00:00",
   "m": {}
  }
 }

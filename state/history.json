@@ -5063,5 +5063,120 @@
     "due": "2026-11-21T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-22",
+  "slot": "A",
+  "made": "2026-11-21T10:16:55+02:00",
+  "passage": "21:87-88",
+  "ref": "21:87-88",
+  "reciter": "idris-abkar",
+  "duration": 40.47,
+  "clips": [
+   "pexels:32194310",
+   "pexels:34234729",
+   "pexels:12114126"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "variant": "live",
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-22_A_21-87-88_idris-abkar.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6b01550f9ffbc8503c0cbd8b",
+    "due": "2026-11-22T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6b01550fdd205ed779ce04d5",
+    "due": "2026-11-22T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-22",
+  "slot": "B",
+  "made": "2026-11-21T10:16:55+02:00",
+  "passage": "19:16-21",
+  "ref": "19:16-19",
+  "reciter": "hani-alrifai",
+  "duration": 39.57,
+  "clips": [
+   "pexels:39922345",
+   "pexels:39111270",
+   "pexels:32853476"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "variant": "standard",
+  "footage_theme": "lake",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-22_B_19-16-21_hani-alrifai.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b0155105e993799d8622ce4",
+    "due": "2026-11-22T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6b0155109ffbc8503c0cbe15",
+    "due": "2026-11-22T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6b0155115102766245097ab7",
+    "due": "2026-11-22T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-22",
+  "slot": "C",
+  "made": "2026-11-21T10:16:55+02:00",
+  "passage": "110:1-3",
+  "ref": "110:1-3",
+  "reciter": "mahmoud-alhusary",
+  "duration": 37.77,
+  "clips": [
+   "pexels:38542575",
+   "pexels:24797396",
+   "pexels:33596901"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "variant": "standard",
+  "footage_theme": "hills",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-22_C_110-1-3_mahmoud-alhusary.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b0155115e993799d8622d39",
+    "due": "2026-11-22T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6b015512d9cbb430a12eecf5",
+    "due": "2026-11-22T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-22",
+  "slot": "E",
+  "made": "2026-11-21T10:16:55+02:00",
+  "passage": "114:1-6",
+  "ref": "114:1-6",
+  "reciter": "minshawi",
+  "duration": 27.8,
+  "clips": [
+   "pexels:10344364",
+   "pexels:28213255"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "variant": "standard",
+  "footage_theme": "coast",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-22_E_114-1-6_minshawi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b0155125102766245097ba9",
+    "due": "2026-11-22T04:00:00.000Z"
+   }
+  }
  }
 ]
