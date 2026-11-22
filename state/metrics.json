@@ -7068,7 +7068,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-21T08:16:56+00:00",
+  "fetched": "2026-11-22T07:59:06+00:00",
   "m": {}
  },
  "6aff1c47caea26ff6a6ffd82": {
@@ -7081,13 +7081,13 @@
   "reciter": "abdulrahman-alsudais",
   "mood": "night",
   "duration": 33.08,
-  "link": "https://tiktok.com/@calmquraan.daily/video/7710098652596800775",
+  "link": "https://www.tiktok.com/@calmquraan.daily/video/7710098652596800775?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "video": null,
   "hook_style": "you",
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-21T08:16:56+00:00",
+  "fetched": "2026-11-22T07:59:06+00:00",
   "m": {}
  },
  "6aff1c43caea26ff6a6ffaf2": {
@@ -7214,7 +7214,7 @@
   "follow_along": false,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-21T08:16:56+00:00",
+  "fetched": "2026-11-22T07:59:06+00:00",
   "m": {}
  },
  "6b0006d5d5f8acdd0d847c09": {
@@ -7227,13 +7227,13 @@
   "reciter": "yasser-aldosari",
   "mood": "coast",
   "duration": 41.74,
-  "link": "https://tiktok.com/@calmquraan.daily/video/7710469737536392466",
+  "link": "https://www.tiktok.com/@calmquraan.daily/video/7710469737536392466?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
   "video": null,
   "hook_style": "you",
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-21T08:16:56+00:00",
+  "fetched": "2026-11-22T07:59:06+00:00",
   "m": {}
  },
  "6b0006d00f5eda1a57d50484": {
@@ -7358,6 +7358,44 @@
   "remake_of": null,
   "variant": "standard",
   "fetched": "2026-11-21T20:06:02+00:00",
+  "m": {}
+ },
+ "6b015512d9cbb430a12eecf5": {
+  "platform": "instagram",
+  "due": "2026-11-22T06:15:00+00:00",
+  "date": "2026-11-22",
+  "slot": "C",
+  "passage": "110:1-3",
+  "theme": "nasr",
+  "reciter": "mahmoud-alhusary",
+  "mood": "hills",
+  "duration": 37.77,
+  "link": "https://www.instagram.com/reel/DgCI2QYh4iO/",
+  "video": null,
+  "hook_style": "you",
+  "follow_along": true,
+  "remake_of": null,
+  "variant": "standard",
+  "fetched": "2026-11-22T07:59:06+00:00",
+  "m": {}
+ },
+ "6b0155125102766245097ba9": {
+  "platform": "tiktok",
+  "due": "2026-11-22T04:00:00+00:00",
+  "date": "2026-11-22",
+  "slot": "E",
+  "passage": "114:1-6",
+  "theme": "protection",
+  "reciter": "minshawi",
+  "mood": "coast",
+  "duration": 27.8,
+  "link": "https://tiktok.com/@calmquraan.daily/video/7710844623333231892",
+  "video": null,
+  "hook_style": "you",
+  "follow_along": true,
+  "remake_of": null,
+  "variant": "standard",
+  "fetched": "2026-11-22T07:59:06+00:00",
   "m": {}
  }
 }

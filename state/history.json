@@ -5178,5 +5178,121 @@
     "due": "2026-11-22T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "A",
+  "made": "2026-11-22T09:59:05+02:00",
+  "passage": "1:1-7",
+  "ref": "1:1-7",
+  "reciter": "abdulbasit-murattal",
+  "duration": 41.94,
+  "clips": [
+   "pexels:9245420",
+   "pexels:36124126",
+   "pexels:38957094"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "variant": "standard",
+  "footage_theme": "night",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-23_A_1-1-7_abdulbasit-murattal.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6b02a2120247969092336238",
+    "due": "2026-11-23T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6b02a212d5eabfb8cc9116e2",
+    "due": "2026-11-23T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "B",
+  "made": "2026-11-22T09:59:05+02:00",
+  "passage": "55:46-55",
+  "ref": "55:46-51",
+  "reciter": "idris-abkar",
+  "duration": 37.73,
+  "clips": [
+   "pexels:28615718",
+   "pexels:3703531",
+   "pexels:20118891"
+  ],
+  "hook_style": "arabic",
+  "follow_along": false,
+  "variant": "arabic",
+  "footage_theme": "tropic",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-23_B_55-46-55_idris-abkar.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b02a213846b0ee9076d3800",
+    "due": "2026-11-23T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6b02a2140247969092336278",
+    "due": "2026-11-23T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6b02a214d864a01105a8f95a",
+    "due": "2026-11-23T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "C",
+  "made": "2026-11-22T09:59:05+02:00",
+  "passage": "89:21-30",
+  "ref": "89:21-25",
+  "reciter": "fares-abbad",
+  "duration": 40.48,
+  "clips": [
+   "pexels:27692774",
+   "mixkit:44373",
+   "pexels:30474698"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "variant": "standard",
+  "footage_theme": "ocean",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-23_C_89-21-30_fares-abbad.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b02a215cc364169c139f869",
+    "due": "2026-11-23T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6b02a215846b0ee9076d3861",
+    "due": "2026-11-23T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "E",
+  "made": "2026-11-22T09:59:05+02:00",
+  "passage": "20:45-46",
+  "ref": "20:45-46",
+  "reciter": "abdulbasit-mujawwad",
+  "duration": 38.08,
+  "clips": [
+   "pexels:27694678",
+   "pexels:35118765",
+   "pexels:36111693"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "variant": "standard",
+  "footage_theme": "fog",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-23_E_20-45-46_abdulbasit-mujawwad.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b02a216d864a01105a8f994",
+    "due": "2026-11-23T04:00:00.000Z"
+   }
+  }
  }
 ]
