@@ -5294,5 +5294,120 @@
     "due": "2026-11-23T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "A",
+  "made": "2026-11-23T10:59:51+02:00",
+  "passage": "36:77-83",
+  "ref": "36:77-80",
+  "reciter": "abdullah-aljuhany",
+  "duration": 34.77,
+  "clips": [
+   "pexels:33813924",
+   "pexels:39321129",
+   "pexels:18209686"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "variant": "live",
+  "footage_theme": "golden",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-24_A_36-77-83_abdullah-aljuhany.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6b0402109c1a68014f6127f7",
+    "due": "2026-11-24T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6b04021000ec56c26fef6601",
+    "due": "2026-11-24T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "B",
+  "made": "2026-11-23T10:59:51+02:00",
+  "passage": "3:133-136",
+  "ref": "3:133-134",
+  "reciter": "abdulbasit-murattal",
+  "duration": 42.74,
+  "clips": [
+   "pexels:39552214",
+   "pexels:36915013",
+   "pexels:39173405"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "variant": "standard",
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-24_B_3-133-136_abdulbasit-murattal.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b04021151038c931ba983f7",
+    "due": "2026-11-24T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6b0402119c1a68014f6128ab",
+    "due": "2026-11-24T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6b04021100ec56c26fef6694",
+    "due": "2026-11-24T14:15:00.000Z"
+   }
+  },
+  "remake_of": "2026-10-15_B"
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "C",
+  "made": "2026-11-23T10:59:51+02:00",
+  "passage": "25:74",
+  "ref": "25:74",
+  "reciter": "haitham-aldukhain",
+  "duration": 26.87,
+  "clips": [
+   "pexels:4605077",
+   "pexels:28903958"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "variant": "standard",
+  "footage_theme": "glacier",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-24_C_25-74_haitham-aldukhain.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b040212beaafcdbe0db928b",
+    "due": "2026-11-24T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6b0402124d584ce268367618",
+    "due": "2026-11-24T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "E",
+  "made": "2026-11-23T10:59:51+02:00",
+  "passage": "97:1-5",
+  "ref": "97:1-5",
+  "reciter": "fares-abbad",
+  "duration": 31.13,
+  "clips": [
+   "pexels:27975701",
+   "pexels:38542182"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "variant": "standard",
+  "footage_theme": "fog",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-24_E_97-1-5_fares-abbad.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b0402129c207fed958bcf7d",
+    "due": "2026-11-24T04:00:00.000Z"
+   }
+  }
  }
 ]

@@ -7068,7 +7068,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-22T07:59:06+00:00",
+  "fetched": "2026-11-23T08:59:52+00:00",
   "m": {}
  },
  "6aff1c47caea26ff6a6ffd82": {
@@ -7087,7 +7087,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-22T07:59:06+00:00",
+  "fetched": "2026-11-23T08:59:52+00:00",
   "m": {}
  },
  "6aff1c43caea26ff6a6ffaf2": {
@@ -7214,7 +7214,7 @@
   "follow_along": false,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-22T07:59:06+00:00",
+  "fetched": "2026-11-23T08:59:52+00:00",
   "m": {}
  },
  "6b0006d5d5f8acdd0d847c09": {
@@ -7233,7 +7233,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-22T07:59:06+00:00",
+  "fetched": "2026-11-23T08:59:52+00:00",
   "m": {}
  },
  "6b0006d00f5eda1a57d50484": {
@@ -7376,7 +7376,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-22T07:59:06+00:00",
+  "fetched": "2026-11-23T08:59:52+00:00",
   "m": {}
  },
  "6b0155125102766245097ba9": {
@@ -7395,7 +7395,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-22T07:59:06+00:00",
+  "fetched": "2026-11-23T08:59:52+00:00",
   "m": {}
  },
  "6b01550f9ffbc8503c0cbd8b": {
@@ -7504,6 +7504,44 @@
   "remake_of": null,
   "variant": "standard",
   "fetched": "2026-11-22T20:20:04+00:00",
+  "m": {}
+ },
+ "6b02a215846b0ee9076d3861": {
+  "platform": "instagram",
+  "due": "2026-11-23T06:15:00+00:00",
+  "date": "2026-11-23",
+  "slot": "C",
+  "passage": "89:21-30",
+  "theme": "akhirah",
+  "reciter": "fares-abbad",
+  "mood": "ocean",
+  "duration": 40.48,
+  "link": "https://www.instagram.com/reel/DgEtxD8h4f8/",
+  "video": null,
+  "hook_style": "you",
+  "follow_along": false,
+  "remake_of": null,
+  "variant": "standard",
+  "fetched": "2026-11-23T08:59:52+00:00",
+  "m": {}
+ },
+ "6b02a216d864a01105a8f994": {
+  "platform": "tiktok",
+  "due": "2026-11-23T04:00:00+00:00",
+  "date": "2026-11-23",
+  "slot": "E",
+  "passage": "20:45-46",
+  "theme": "trust",
+  "reciter": "abdulbasit-mujawwad",
+  "mood": "fog",
+  "duration": 38.08,
+  "link": "https://tiktok.com/@calmquraan.daily/video/7711211900381433109",
+  "video": null,
+  "hook_style": "you",
+  "follow_along": true,
+  "remake_of": null,
+  "variant": "standard",
+  "fetched": "2026-11-23T08:59:52+00:00",
   "m": {}
  }
 }
