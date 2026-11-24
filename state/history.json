@@ -5524,5 +5524,119 @@
     "due": "2026-11-25T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "A",
+  "made": "2026-11-25T01:00:46+02:00",
+  "passage": "67:12-15",
+  "ref": "67:12-15",
+  "reciter": "abdullah-aljuhany",
+  "duration": 34.93,
+  "clips": [
+   "pexels:32915889",
+   "pexels:31442548",
+   "pexels:12095270"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "variant": "live",
+  "footage_theme": "blossom",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-26_A_67-12-15_abdullah-aljuhany.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6b06187dba5f0a2c87fbdb97",
+    "due": "2026-11-26T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6b06187e1ced59b7612eff54",
+    "due": "2026-11-26T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "B",
+  "made": "2026-11-25T01:00:46+02:00",
+  "passage": "9:40",
+  "ref": "9:40",
+  "reciter": "saud-alshuraim",
+  "duration": 38.0,
+  "clips": [
+   "pexels:39425593",
+   "pexels:35092789",
+   "pexels:39201728"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "variant": "standard",
+  "footage_theme": "sunset",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-26_B_9-40_saud-alshuraim.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b06187edccb7033eaf09670",
+    "due": "2026-11-26T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6b06187f1ced59b7612effa9",
+    "due": "2026-11-26T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6b06187fa97afa245207a882",
+    "due": "2026-11-26T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "C",
+  "made": "2026-11-25T01:00:46+02:00",
+  "passage": "29:69",
+  "ref": "29:69",
+  "reciter": "abdulbasit-mujawwad",
+  "duration": 28.27,
+  "clips": [
+   "pexels:15086974",
+   "pexels:29064708"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "variant": "standard",
+  "footage_theme": "forest",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-26_C_29-69_abdulbasit-mujawwad.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b0618801ced59b7612efffa",
+    "due": "2026-11-26T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6b061880ba5f0a2c87fbdcb2",
+    "due": "2026-11-26T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "E",
+  "made": "2026-11-25T01:00:46+02:00",
+  "passage": "51:56-58",
+  "ref": "51:56-58",
+  "reciter": "mansour-alsalimi",
+  "duration": 28.53,
+  "clips": [
+   "pexels:39126332",
+   "pexels:30575359"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "variant": "standard",
+  "footage_theme": "night",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-26_E_51-56-58_mansour-alsalimi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b061881ba5f0a2c87fbdd12",
+    "due": "2026-11-26T04:00:00.000Z"
+   }
+  }
  }
 ]
