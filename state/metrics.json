@@ -7068,7 +7068,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-24T10:54:48+00:00",
+  "fetched": "2026-11-25T09:50:50+00:00",
   "m": {}
  },
  "6aff1c47caea26ff6a6ffd82": {
@@ -7087,7 +7087,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-24T10:54:48+00:00",
+  "fetched": "2026-11-25T09:50:50+00:00",
   "m": {}
  },
  "6aff1c43caea26ff6a6ffaf2": {
@@ -7214,7 +7214,7 @@
   "follow_along": false,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-24T10:54:48+00:00",
+  "fetched": "2026-11-25T09:50:50+00:00",
   "m": {}
  },
  "6b0006d5d5f8acdd0d847c09": {
@@ -7233,7 +7233,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-24T10:54:48+00:00",
+  "fetched": "2026-11-25T09:50:50+00:00",
   "m": {}
  },
  "6b0006d00f5eda1a57d50484": {
@@ -7376,7 +7376,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-24T10:54:48+00:00",
+  "fetched": "2026-11-25T09:50:50+00:00",
   "m": {}
  },
  "6b0155125102766245097ba9": {
@@ -7395,7 +7395,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-24T10:54:48+00:00",
+  "fetched": "2026-11-25T09:50:50+00:00",
   "m": {}
  },
  "6b01550f9ffbc8503c0cbd8b": {
@@ -7522,7 +7522,7 @@
   "follow_along": false,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-24T10:54:48+00:00",
+  "fetched": "2026-11-25T09:50:50+00:00",
   "m": {}
  },
  "6b02a216d864a01105a8f994": {
@@ -7541,7 +7541,7 @@
   "follow_along": true,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-24T10:54:48+00:00",
+  "fetched": "2026-11-25T09:50:50+00:00",
   "m": {}
  },
  "6b02a2120247969092336238": {
@@ -7668,7 +7668,7 @@
   "follow_along": false,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-24T10:54:48+00:00",
+  "fetched": "2026-11-25T09:50:50+00:00",
   "m": {}
  },
  "6b0402124d584ce268367618": {
@@ -7687,7 +7687,7 @@
   "follow_along": false,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-24T10:54:48+00:00",
+  "fetched": "2026-11-25T09:50:50+00:00",
   "m": {}
  },
  "6b0402129c207fed958bcf7d": {
@@ -7706,7 +7706,7 @@
   "follow_along": false,
   "remake_of": null,
   "variant": "standard",
-  "fetched": "2026-11-24T10:54:48+00:00",
+  "fetched": "2026-11-25T09:50:50+00:00",
   "m": {}
  },
  "6b0402109c1a68014f6127f7": {
@@ -7813,5 +7813,43 @@
    "comments": 0
   },
   "source": "youtube"
+ },
+ "6b04e1a6db52b449cf125e31": {
+  "platform": "instagram",
+  "due": "2026-11-25T06:15:00+00:00",
+  "date": "2026-11-25",
+  "slot": "C",
+  "passage": "113:1-5",
+  "theme": "protection",
+  "reciter": "maher-almuaiqly",
+  "mood": "ocean",
+  "duration": 29.34,
+  "link": "https://www.instagram.com/reel/DgJ3PWyOIJc/",
+  "video": null,
+  "hook_style": "you",
+  "follow_along": false,
+  "remake_of": null,
+  "variant": "standard",
+  "fetched": "2026-11-25T09:50:50+00:00",
+  "m": {}
+ },
+ "6b04e1a76734c08a269d191b": {
+  "platform": "tiktok",
+  "due": "2026-11-25T04:00:00+00:00",
+  "date": "2026-11-25",
+  "slot": "E",
+  "passage": "17:82",
+  "theme": "healing",
+  "reciter": "ahmad-alnufais",
+  "mood": "storm",
+  "duration": 35.84,
+  "link": "https://tiktok.com/@calmquraan.daily/video/7711954264666524949",
+  "video": null,
+  "hook_style": "you",
+  "follow_along": false,
+  "remake_of": null,
+  "variant": "standard",
+  "fetched": "2026-11-25T09:50:50+00:00",
+  "m": {}
  }
 }
