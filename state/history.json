@@ -5638,5 +5638,146 @@
     "due": "2026-11-26T04:00:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "A",
+  "made": "2026-11-26T00:29:37+02:00",
+  "passage": "3:185",
+  "ref": "3:185",
+  "reciter": "maher-almuaiqly",
+  "duration": 35.1,
+  "clips": [
+   "pexels:35630519",
+   "pexels:38542420",
+   "pexels:39752936"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "variant": "standard",
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-27_A_3-185_maher-almuaiqly.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6b0763b607071a60673353c9",
+    "due": "2026-11-27T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6b0763b6b8e2338b856bb80e",
+    "due": "2026-11-27T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "B",
+  "made": "2026-11-26T00:29:37+02:00",
+  "passage": "12:101",
+  "ref": "12:101",
+  "reciter": "fares-abbad",
+  "duration": 25.37,
+  "clips": [
+   "pexels:6175187",
+   "pexels:38546572"
+  ],
+  "hook_style": "arabic",
+  "follow_along": false,
+  "variant": "arabic",
+  "footage_theme": "storm",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-27_B_12-101_fares-abbad.mp4",
+  "posts": {
+   "youtube": {
+    "id": "6b0763b79f6dda31cca1af6a",
+    "due": "2026-11-27T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "C",
+  "made": "2026-11-26T00:29:37+02:00",
+  "passage": "26:78-89",
+  "ref": "26:78-84",
+  "reciter": "minshawi",
+  "duration": 42.54,
+  "clips": [
+   "pexels:18352901",
+   "pexels:36738427",
+   "pexels:39831279"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "variant": "standard",
+  "footage_theme": "sunset",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-27_C_26-78-89_minshawi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b0763b89f6dda31cca1afe9",
+    "due": "2026-11-27T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6b0763b807071a6067335476",
+    "due": "2026-11-27T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "E",
+  "made": "2026-11-26T00:29:37+02:00",
+  "passage": "39:10",
+  "ref": "39:10",
+  "reciter": "abdulbasit-murattal",
+  "duration": 31.3,
+  "clips": [
+   "pexels:35867202",
+   "pexels:32043628",
+   "pexels:19680297"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "variant": "standard",
+  "footage_theme": "lake",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-27_E_39-10_abdulbasit-murattal.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b0763b9d4eda4b659b7d5f2",
+    "due": "2026-11-27T04:00:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "L",
+  "made": "2026-11-26T00:29:37+02:00",
+  "passage": "long:89:1-30",
+  "ref": "89:1-30",
+  "reciter": "khalid-aljalil",
+  "duration": 162.53,
+  "clips": [
+   "pexels:30025721",
+   "pexels:28874103",
+   "pexels:28195838",
+   "pexels:39394633",
+   "pexels:28483365",
+   "pexels:35230515",
+   "pexels:31071158",
+   "pexels:30991021"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "variant": "standard",
+  "footage_theme": "coast",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-27_L_89-1-30_khalid-aljalil.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b0763b9a791bea1b2319c7c",
+    "due": "2026-11-27T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6b0763baa791bea1b2319cae",
+    "due": "2026-11-27T11:15:00.000Z"
+   }
+  }
  }
 ]
