@@ -5779,5 +5779,118 @@
     "due": "2026-11-27T11:15:00.000Z"
    }
   }
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "A",
+  "made": "2026-11-27T00:20:27+02:00",
+  "passage": "2:285-286",
+  "ref": "2:285",
+  "reciter": "abdullah-aljuhany",
+  "duration": 26.54,
+  "clips": [
+   "pexels:15086976",
+   "pexels:35864804"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "variant": "live",
+  "footage_theme": "forest",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-28_A_2-285-286_abdullah-aljuhany.mp4",
+  "posts": {
+   "instagram": {
+    "id": "6b08b1eba30b64e55ea1a340",
+    "due": "2026-11-28T17:45:00.000Z"
+   },
+   "youtube": {
+    "id": "6b08b1eba784564d7d8e1a6f",
+    "due": "2026-11-28T17:45:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "B",
+  "made": "2026-11-27T00:20:27+02:00",
+  "passage": "95:1-8",
+  "ref": "95:1-5",
+  "reciter": "maher-almuaiqly",
+  "duration": 37.77,
+  "clips": [
+   "pexels:3059046",
+   "pexels:29048138",
+   "pexels:20468575"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "variant": "standard",
+  "footage_theme": "canyon",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-28_B_95-1-8_maher-almuaiqly.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b08b1ece44dd487fc011457",
+    "due": "2026-11-28T18:45:00.000Z"
+   },
+   "instagram": {
+    "id": "6b08b1ed6fabe326fab6a106",
+    "due": "2026-11-28T11:15:00.000Z"
+   },
+   "youtube": {
+    "id": "6b08b1eda30b64e55ea1a427",
+    "due": "2026-11-28T14:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "C",
+  "made": "2026-11-27T00:20:27+02:00",
+  "passage": "39:73-75",
+  "ref": "39:73",
+  "reciter": "saad-alghamdi",
+  "duration": 30.4,
+  "clips": [
+   "pexels:12279763",
+   "pexels:32911411"
+  ],
+  "hook_style": "you",
+  "follow_along": false,
+  "variant": "standard",
+  "footage_theme": "cloudsea",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-28_C_39-73-75_saad-alghamdi.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b08b1eea784564d7d8e1b5c",
+    "due": "2026-11-28T10:15:00.000Z"
+   },
+   "instagram": {
+    "id": "6b08b1eea579402cbee03eac",
+    "due": "2026-11-28T06:15:00.000Z"
+   }
+  }
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "E",
+  "made": "2026-11-27T00:20:27+02:00",
+  "passage": "39:53-54",
+  "ref": "39:53",
+  "reciter": "yasser-aldosari",
+  "duration": 27.84,
+  "clips": [
+   "pexels:4250244",
+   "pexels:16829181"
+  ],
+  "hook_style": "you",
+  "follow_along": true,
+  "variant": "standard",
+  "footage_theme": "night",
+  "url": "https://ahmad1876.github.io/quraani/v/2026-11-28_E_39-53-54_yasser-aldosari.mp4",
+  "posts": {
+   "tiktok": {
+    "id": "6b08b1efa30b64e55ea1a4c9",
+    "due": "2026-11-28T04:00:00.000Z"
+   }
+  }
  }
 ]

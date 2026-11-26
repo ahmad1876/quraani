@@ -1,10 +1,4 @@
 {
- "2026-10-27": {
-  "A": "57:16|abdulrahman-alsudais",
-  "B": "40:44|abdulbasit-murattal",
-  "C": "56:1-12|saud-alshuraim",
-  "E": "10:57-58|maher-almuaiqly"
- },
  "2026-10-28": {
   "A": "67:1-2|ahmad-alnufais",
   "B": "2:255|abdulrahman-alsudais",
@@ -193,5 +187,11 @@
   "C": "26:78-84|minshawi",
   "E": "39:10|abdulbasit-murattal",
   "L": "89:1-30|khalid-aljalil"
+ },
+ "2026-11-28": {
+  "A": "2:285|abdullah-aljuhany",
+  "B": "95:1-5|maher-almuaiqly",
+  "C": "39:73|saad-alghamdi",
+  "E": "39:53|yasser-aldosari"
  }
 }
