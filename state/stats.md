@@ -1,4 +1,4 @@
-# Quraani stats (updated 2026-11-27 23:57 SA time)
+# Quraani stats (updated 2026-11-28 10:54 SA time)
 
 Score = views (and a little likes) compared with a typical post of the same age on the same platform. 0 is typical, +0.7 is about twice the views, -0.7 about half. Posts count once they are 2 days old.
 
@@ -13,8 +13,8 @@ Score = views (and a little likes) compared with a typical post of the same age 
 | | Videos | Score | Weight now |
 |---|---|---|---|
 | Arabic only (no English) | 2 | +0.58 | 1.20 |
-| recorded live in the mosque | 2 | +0.56 | 1.20 |
-| standard video | 5 | +0.12 | 1.06 |
+| recorded live in the mosque | 2 | +0.55 | 1.19 |
+| standard video | 5 | +0.11 | 1.06 |
 
 ## Opening line test (since it started)
 
@@ -22,7 +22,7 @@ Score = views (and a little likes) compared with a typical post of the same age 
 |---|---|---|---|
 | Arabic line (Arabic-only videos) | 2 | +0.58 | 1.20 |
 | a line that speaks to the viewer | 42 | -0.04 | 0.97 |
-| the verse's own words | 29 | -0.29 | 0.81 |
+| the verse's own words | 29 | -0.28 | 0.81 |
 
 ## Passage themes
 
@@ -30,34 +30,34 @@ Score = views (and a little likes) compared with a typical post of the same age 
 |---|---|---|---|
 | jannah | 13 | +0.33 | 1.24 |
 | yasin | 3 | +0.44 | 1.19 |
-| fatiha | 5 | +0.34 | 1.18 |
+| fatiha | 5 | +0.34 | 1.19 |
 | akhirah | 9 | +0.24 | 1.15 |
 | salah | 1 | +0.61 | 1.13 |
 | purpose | 2 | +0.35 | 1.12 |
 | parents | 1 | +0.52 | 1.11 |
 | tawheed | 2 | +0.32 | 1.11 |
 | rahman | 3 | +0.24 | 1.10 |
-| marriage | 1 | +0.44 | 1.09 |
+| marriage | 1 | +0.45 | 1.09 |
 | mercy | 2 | +0.26 | 1.09 |
 | ikhlas | 1 | +0.38 | 1.08 |
-| maryam | 1 | +0.36 | 1.07 |
+| maryam | 1 | +0.35 | 1.07 |
 | names | 1 | +0.34 | 1.07 |
-| reminder | 8 | +0.10 | 1.06 |
+| reminder | 8 | +0.11 | 1.06 |
 | guidance | 1 | +0.29 | 1.06 |
 | nasr | 1 | +0.26 | 1.05 |
 | trust | 3 | +0.10 | 1.04 |
 | peace | 1 | +0.17 | 1.03 |
 | protection | 3 | +0.05 | 1.02 |
-| healing | 2 | +0.05 | 1.01 |
+| healing | 2 | +0.05 | 1.02 |
 | sabr | 3 | +0.03 | 1.01 |
 | tawakkul | 4 | +0.00 | 1.00 |
 | kahf | 3 | -0.03 | 0.99 |
 | taha | 1 | -0.15 | 0.97 |
-| dua | 12 | -0.09 | 0.95 |
+| dua | 12 | -0.08 | 0.95 |
 | dhikr | 3 | -0.15 | 0.94 |
-| mulk | 4 | -0.22 | 0.91 |
+| mulk | 4 | -0.21 | 0.91 |
 | character | 1 | -0.49 | 0.91 |
-| reflection | 1 | -0.58 | 0.89 |
+| reflection | 1 | -0.59 | 0.89 |
 | hope | 7 | -0.41 | 0.80 |
 | shukr | 3 | -1.55 | 0.60 |
 | dunya | 3 | -1.91 | 0.60 |
@@ -66,7 +66,7 @@ Score = views (and a little likes) compared with a typical post of the same age 
 
 | | Videos | Score | Weight now |
 |---|---|---|---|
-| idris-abkar | 3 | +0.51 | 1.23 |
+| idris-abkar | 3 | +0.51 | 1.22 |
 | haitham-aldukhain | 2 | +0.59 | 1.21 |
 | mansour-alsalimi | 3 | +0.47 | 1.21 |
 | saad-alghamdi | 6 | +0.31 | 1.18 |
@@ -76,19 +76,19 @@ Score = views (and a little likes) compared with a typical post of the same age 
 | minshawi | 5 | +0.17 | 1.09 |
 | nasser-alqatami | 3 | +0.21 | 1.09 |
 | abdulbasit-mujawwad | 5 | +0.14 | 1.07 |
-| abu-bakr-alshatri | 1 | +0.31 | 1.06 |
+| abu-bakr-alshatri | 1 | +0.32 | 1.07 |
 | bandar-baleela | 2 | +0.17 | 1.06 |
 | hani-alrifai | 1 | +0.26 | 1.05 |
-| abdullah-almousa | 1 | +0.18 | 1.04 |
+| abdullah-almousa | 1 | +0.17 | 1.03 |
 | mishary-alafasy | 6 | +0.02 | 1.01 |
 | abdulbasit-murattal | 5 | +0.01 | 1.01 |
 | maher-almuaiqly | 11 | -0.01 | 1.00 |
-| ahmed-alajmi | 2 | -0.08 | 0.97 |
 | raad-alkurdi | 3 | -0.07 | 0.97 |
+| ahmed-alajmi | 2 | -0.09 | 0.97 |
 | khalid-aljalil | 2 | -0.37 | 0.89 |
 | mahmoud-alhusary | 1 | -0.59 | 0.89 |
 | ahmad-alnufais | 4 | -0.33 | 0.86 |
-| wadee-alyamani | 2 | -0.65 | 0.81 |
+| wadee-alyamani | 2 | -0.66 | 0.81 |
 | abdulrahman-alossi | 3 | -0.59 | 0.79 |
 | yasser-aldosari | 10 | -0.52 | 0.73 |
 | saud-alshuraim | 4 | -0.80 | 0.69 |
@@ -102,9 +102,9 @@ Score = views (and a little likes) compared with a typical post of the same age 
 | cloudsea | 9 | +0.28 | 1.18 |
 | golden | 6 | +0.31 | 1.18 |
 | lake | 6 | +0.31 | 1.18 |
-| coast | 4 | +0.35 | 1.18 |
-| glacier | 4 | +0.31 | 1.15 |
-| night | 4 | +0.28 | 1.13 |
+| coast | 4 | +0.36 | 1.18 |
+| glacier | 4 | +0.30 | 1.15 |
+| night | 4 | +0.27 | 1.13 |
 | fog | 9 | +0.20 | 1.13 |
 | forest | 2 | +0.35 | 1.12 |
 | sunset | 6 | +0.21 | 1.12 |

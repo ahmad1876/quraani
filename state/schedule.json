@@ -1,10 +1,4 @@
 {
- "2026-10-28": {
-  "A": "67:1-2|ahmad-alnufais",
-  "B": "2:255|abdulrahman-alsudais",
-  "C": "12:86-87|yasser-aldosari",
-  "E": "40:60|fares-abbad"
- },
  "2026-10-29": {
   "A": "9:40|minshawi",
   "B": "17:82|abdulbasit-mujawwad",
@@ -193,5 +187,11 @@
   "B": "95:1-5|maher-almuaiqly",
   "C": "39:73|saad-alghamdi",
   "E": "39:53|yasser-aldosari"
+ },
+ "2026-11-29": {
+  "A": "13:28-29|ahmad-alnufais",
+  "B": "2:255|saud-alshuraim",
+  "C": "14:7|abdulbasit-mujawwad",
+  "E": "94:1-8|fares-abbad"
  }
 }
